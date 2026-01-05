@@ -13,7 +13,7 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
       <div class="card" [class.is-flipped]="isFlipped()">
         
         <div class="card-face card-front" 
-             [style.border-top-color]="frontBorderColor()">
+             [style.border-color]="frontBorderColor()">
              
           @if (mode() === 'DE_TO_EN') {
             <span class="gender-hint">{{ item().gender | uppercase }}</span>
@@ -27,7 +27,7 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
         </div>
 
         <div class="card-face card-back"
-             [style.border-top-color]="backBorderColor()">
+             [style.border-color]="backBorderColor()">
              
           @if (mode() === 'DE_TO_EN') {
             <h3 class="word-secondary">{{ item().english }}</h3>
@@ -50,8 +50,6 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
     </div>
   `,
   styles: [`
-    /* ... (Previous Card Styles remain mostly the same) ... */
-    
     :host { display: block; width: 100%; max-width: 400px; height: 500px; perspective: 1000px; }
     .scene { width: 100%; height: 100%; }
     .card { width: 100%; height: 100%; position: relative; transition: transform 0.6s; transform-style: preserve-3d; }
@@ -62,7 +60,7 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
       border-radius: 16px; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       padding: 2rem; box-sizing: border-box; text-align: center;
-      border-top: 8px solid transparent; /* Dynamic color */
+      border: 20px solid transparent; /* Dynamic color */
     }
 
     .card-back { transform: rotateY(180deg); background: #fafafa; }
