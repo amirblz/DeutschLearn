@@ -1,0 +1,67 @@
+{
+  "version": 1.0,
+  "lastUpdated": "2024-01-01",
+  "levels": [
+    {
+      "id": "A1",
+      "title": "A1: The Foundation",
+      "color": "#2c5282",
+      "missions": [
+        {
+          "id": "a1-basics",
+          "title": "The Basics",
+          "icon": "🏠",
+          "items": [
+            {
+              "id": "uuid-1",
+              "type": "noun",
+              "german": "Morgen",
+              "english": "Morning",
+              "gender": "der",
+              "example": "Guten Morgen!"
+            },
+            {
+              "id": "uuid-2",
+              "type": "noun",
+              "german": "Nacht",
+              "english": "Night",
+              "gender": "die",
+              "example": "Gute Nacht."
+            },
+            {
+              "id": "uuid-3",
+              "type": "phrase",
+              "german": "Wie geht's?",
+              "english": "How are you?",
+              "gender": "none",
+              "example": "Hallo, wie geht's dir?"
+            }
+          ]
+        },
+        {
+          "id": "a1-verbs",
+          "title": "Essential Verbs",
+          "icon": "⚡",
+          "items": [
+            {
+              "id": "uuid-4",
+              "type": "verb",
+              "german": "sein",
+              "english": "to be",
+              "gender": "none",
+              "example": "Ich bin müde."
+            },
+            {
+              "id": "uuid-5",
+              "type": "verb",
+              "german": "haben",
+              "english": "to have",
+              "gender": "none",
+              "example": "Ich habe Hunger."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

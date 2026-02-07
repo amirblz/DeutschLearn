@@ -1,3 +1,5 @@
+export type WordType = 'noun' | 'verb' | 'adjective' | 'phrase';
+
 export enum Gender {
     Masculine = 'der',
     Feminine = 'die',
@@ -14,15 +16,16 @@ export enum LeitnerBox {
 }
 
 export interface VocabularyItem {
-    id: string;              // UUID
-    missionId: string;       // Foreign Key to Mission
+    id: string;
+    missionId: string;
+    type: WordType;
     german: string;
     english: string;
     gender: Gender;
     exampleSentence?: string;
 
-    // Learning State (Mutable)
+    // Learning State
     box: LeitnerBox;
-    nextReviewDate: number;  // Timestamp (Date.now())
-    lastReviewedDate?: number;
+    nextReviewDate: number;     // When is it due?
+    lastReviewedDate?: number;  // NEW: When did we last look at it? (Optional)
 }

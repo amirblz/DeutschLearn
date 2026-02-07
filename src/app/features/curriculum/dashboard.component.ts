@@ -4,6 +4,7 @@ import { VocabularyRepository } from '../../core/repositories/vocabulary.reposit
 import { LearningSessionService, LearningMode } from '../learning/services/learning-session.service';
 import { CURRICULUM, LevelConfig } from '../../core/config/curriculum.config';
 import { VocabularyItem, LeitnerBox } from '../../core/models/vocabulary.model';
+import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
 
 // View Model for the Template
 interface MissionViewModel {
@@ -26,14 +27,18 @@ interface LevelViewModel {
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="dashboard-container">
-      <header>
-        <h1>My Curriculum</h1>
-        
-        <div class="mode-toggle">
-           <span [class.active]="mode() === 'DE_TO_EN'" (click)="mode.set('DE_TO_EN')">🇩🇪 &rarr; 🇬🇧</span>
-           <span [class.active]="mode() === 'EN_TO_DE'" (click)="mode.set('EN_TO_DE')">🇬🇧 &rarr; 🇩🇪</span>
-        </div>
-      </header>
+<header>
+  <h1>My Curriculum</h1>
+  <div style="display:flex; gap:1rem;">
+    <div class="mode-toggle">...</div>
+    
+    <button id="syncBtn" (click)="manualSync()" 
+            style="border:none; background:transparent; font-size:1.2rem; cursor:pointer;"
+            title="Check for content updates">
+      🔄
+    </button>
+  </div>
+</header>
 
       @if (curriculumData(); as levels) {
         <div class="levels-list">
@@ -121,6 +126,7 @@ export class DashboardComponent implements OnInit {
   private repo = inject(VocabularyRepository);
   private sessionStore = inject(LearningSessionService);
   private router = inject(Router);
+  private syncService = inject(ContentSyncService);
 
   mode = signal<LearningMode>('DE_TO_EN');
   curriculumData = signal<LevelViewModel[] | null>(null);
@@ -160,6 +166,16 @@ export class DashboardComponent implements OnInit {
     });
 
     this.curriculumData.set(viewData);
+  }
+
+  async manualSync() {
+    const btn = document.getElementById('syncBtn') as HTMLButtonElement;
+    if (btn) btn.innerText = 'Syncing...';
+
+    await this.syncService.sync();
+
+    // Refresh page to load new data from DB
+    window.location.reload();
   }
 
   start(missionId: string) {
