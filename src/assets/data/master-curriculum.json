@@ -1,5 +1,5 @@
 {
-  "version": 1.1,
+  "version": 1.2,
   "lastUpdated": "2026-02-07",
   "levels": [
     {
@@ -18,7 +18,7 @@
               "german": "null",
               "english": "Zero",
               "gender": "none",
-              "example": "Ich muss null."
+              "example": "Wir haben null Fehler gemacht."
             },
             {
               "id": "uuid-002",
@@ -26,7 +26,7 @@
               "german": "eins",
               "english": "One",
               "gender": "none",
-              "example": "Ich muss eins."
+              "example": "Nummer eins, bitte."
             },
             {
               "id": "uuid-003",
@@ -34,7 +34,7 @@
               "german": "zwei",
               "english": "Two",
               "gender": "none",
-              "example": "Ich muss zwei."
+              "example": "Ein Tisch für zwei Personen, bitte."
             },
             {
               "id": "uuid-004",
@@ -42,7 +42,7 @@
               "german": "drei",
               "english": "Three",
               "gender": "none",
-              "example": "Ich muss drei."
+              "example": "Aller guten Dinge sind drei."
             },
             {
               "id": "uuid-005",
@@ -50,7 +50,7 @@
               "german": "vier",
               "english": "Four",
               "gender": "none",
-              "example": "Ich muss vier."
+              "example": "Das Auto hat vier Räder."
             },
             {
               "id": "uuid-006",
@@ -58,7 +58,7 @@
               "german": "fünf",
               "english": "Five",
               "gender": "none",
-              "example": "Ich muss fünf."
+              "example": "Ich komme in fünf Minuten."
             },
             {
               "id": "uuid-007",
@@ -66,7 +66,7 @@
               "german": "sechs",
               "english": "Six",
               "gender": "none",
-              "example": "Ich muss sechs."
+              "example": "Ich stehe um sechs Uhr auf."
             },
             {
               "id": "uuid-008",
@@ -74,7 +74,7 @@
               "german": "sieben",
               "english": "Seven",
               "gender": "none",
-              "example": "Ich muss sieben."
+              "example": "Die Woche hat sieben Tage."
             },
             {
               "id": "uuid-009",
@@ -82,7 +82,7 @@
               "german": "acht",
               "english": "Eight",
               "gender": "none",
-              "example": "Ich muss acht."
+              "example": "Wir treffen uns um acht."
             },
             {
               "id": "uuid-010",
@@ -90,7 +90,7 @@
               "german": "neun",
               "english": "Nine",
               "gender": "none",
-              "example": "Ich muss neun."
+              "example": "Der Zug fährt um neun Uhr ab."
             },
             {
               "id": "uuid-011",
@@ -98,7 +98,7 @@
               "german": "zehn",
               "english": "Ten",
               "gender": "none",
-              "example": "Ich muss zehn."
+              "example": "Ich habe zehn Euro."
             },
             {
               "id": "uuid-012",
@@ -106,7 +106,7 @@
               "german": "elf",
               "english": "Eleven",
               "gender": "none",
-              "example": "Ich muss elf."
+              "example": "Es ist schon elf Uhr."
             },
             {
               "id": "uuid-013",
@@ -114,7 +114,7 @@
               "german": "zwölf",
               "english": "Twelve",
               "gender": "none",
-              "example": "Ich muss zwölf."
+              "example": "Mittagessen ist um zwölf."
             },
             {
               "id": "uuid-014",
@@ -122,7 +122,7 @@
               "german": "zwanzig",
               "english": "Twenty",
               "gender": "none",
-              "example": "Ich muss zwanzig."
+              "example": "Das kostet zwanzig Euro."
             },
             {
               "id": "uuid-015",
@@ -130,7 +130,7 @@
               "german": "dreißig",
               "english": "Thirty",
               "gender": "none",
-              "example": "Ich muss dreißig."
+              "example": "Er ist dreißig Jahre alt."
             },
             {
               "id": "uuid-016",
@@ -138,7 +138,7 @@
               "german": "hundert",
               "english": "Hundred",
               "gender": "none",
-              "example": "Ich muss hundert."
+              "example": "Ich bin zu hundert Prozent sicher."
             },
             {
               "id": "uuid-017",
@@ -146,7 +146,7 @@
               "german": "tausend",
               "english": "Thousand",
               "gender": "none",
-              "example": "Ich muss tausend."
+              "example": "Vielen Dank, tausend Dank!"
             },
             {
               "id": "uuid-018",
@@ -154,7 +154,7 @@
               "german": "Million",
               "english": "Million",
               "gender": "die",
-              "example": "Das ist eine Million."
+              "example": "Berlin hat mehr als drei Millionen Einwohner."
             },
             {
               "id": "uuid-019",
@@ -162,7 +162,7 @@
               "german": "erste",
               "english": "First",
               "gender": "none",
-              "example": "Ich muss erste."
+              "example": "Das ist mein erstes Mal hier."
             },
             {
               "id": "uuid-020",
@@ -170,7 +170,7 @@
               "german": "zweite",
               "english": "Second",
               "gender": "none",
-              "example": "Ich muss zweite."
+              "example": "Die zweite Straße links, bitte."
             },
             {
               "id": "uuid-021",
@@ -178,7 +178,7 @@
               "german": "dritte",
               "english": "Third",
               "gender": "none",
-              "example": "Ich muss dritte."
+              "example": "Er wohnt im dritten Stock."
             },
             {
               "id": "uuid-022",
@@ -186,7 +186,7 @@
               "german": "Morgen",
               "english": "Morning",
               "gender": "der",
-              "example": "Das ist ein Morgen."
+              "example": "Guten Morgen! Hast du gut geschlafen?"
             },
             {
               "id": "uuid-023",
@@ -194,7 +194,7 @@
               "german": "Mittag",
               "english": "Noon",
               "gender": "der",
-              "example": "Das ist ein Mittag."
+              "example": "Am Mittag essen wir zusammen."
             },
             {
               "id": "uuid-024",
@@ -202,7 +202,7 @@
               "german": "Abend",
               "english": "Evening",
               "gender": "der",
-              "example": "Das ist ein Abend."
+              "example": "Guten Abend, einen Tisch für zwei bitte."
             },
             {
               "id": "uuid-025",
@@ -210,7 +210,7 @@
               "german": "Nacht",
               "english": "Night",
               "gender": "die",
-              "example": "Das ist eine Nacht."
+              "example": "Gute Nacht, schlaf gut!"
             },
             {
               "id": "uuid-026",
@@ -218,7 +218,7 @@
               "german": "Tag",
               "english": "Day",
               "gender": "der",
-              "example": "Das ist ein Tag."
+              "example": "Ich wünsche dir einen schönen Tag."
             },
             {
               "id": "uuid-027",
@@ -226,7 +226,7 @@
               "german": "Woche",
               "english": "Week",
               "gender": "die",
-              "example": "Das ist eine Woche."
+              "example": "Nächste Woche habe ich Urlaub."
             },
             {
               "id": "uuid-028",
@@ -234,7 +234,7 @@
               "german": "Monat",
               "english": "Month",
               "gender": "der",
-              "example": "Das ist ein Monat."
+              "example": "Der Monat hat dreißig Tage."
             },
             {
               "id": "uuid-029",
@@ -242,7 +242,7 @@
               "german": "Jahr",
               "english": "Year",
               "gender": "das",
-              "example": "Das ist ein Jahr."
+              "example": "Frohes neues Jahr!"
             },
             {
               "id": "uuid-030",
@@ -250,7 +250,7 @@
               "german": "Minute",
               "english": "Minute",
               "gender": "die",
-              "example": "Das ist eine Minute."
+              "example": "Warte bitte eine Minute."
             },
             {
               "id": "uuid-031",
@@ -258,7 +258,7 @@
               "german": "Stunde",
               "english": "Hour",
               "gender": "die",
-              "example": "Das ist eine Stunde."
+              "example": "Der Film dauert zwei Stunden."
             },
             {
               "id": "uuid-032",
@@ -266,7 +266,7 @@
               "german": "Uhr",
               "english": "Clock/O'clock",
               "gender": "die",
-              "example": "Das ist eine Uhr."
+              "example": "Es ist vier Uhr."
             },
             {
               "id": "uuid-033",
@@ -274,7 +274,7 @@
               "german": "Montag",
               "english": "Monday",
               "gender": "der",
-              "example": "Das ist ein Montag."
+              "example": "Am Montag gehe ich zur Arbeit."
             },
             {
               "id": "uuid-034",
@@ -282,7 +282,7 @@
               "german": "Dienstag",
               "english": "Tuesday",
               "gender": "der",
-              "example": "Das ist ein Dienstag."
+              "example": "Dienstag habe ich Sport."
             },
             {
               "id": "uuid-035",
@@ -290,7 +290,7 @@
               "german": "Mittwoch",
               "english": "Wednesday",
               "gender": "der",
-              "example": "Das ist ein Mittwoch."
+              "example": "Mittwoch ist die Mitte der Woche."
             },
             {
               "id": "uuid-036",
@@ -298,7 +298,7 @@
               "german": "Donnerstag",
               "english": "Thursday",
               "gender": "der",
-              "example": "Das ist ein Donnerstag."
+              "example": "Wir sehen uns am Donnerstag."
             },
             {
               "id": "uuid-037",
@@ -306,7 +306,7 @@
               "german": "Freitag",
               "english": "Friday",
               "gender": "der",
-              "example": "Das ist ein Freitag."
+              "example": "Endlich ist Freitag!"
             },
             {
               "id": "uuid-038",
@@ -314,7 +314,7 @@
               "german": "Samstag",
               "english": "Saturday",
               "gender": "der",
-              "example": "Das ist ein Samstag."
+              "example": "Am Samstag gehe ich einkaufen."
             },
             {
               "id": "uuid-039",
@@ -322,7 +322,7 @@
               "german": "Sonntag",
               "english": "Sunday",
               "gender": "der",
-              "example": "Das ist ein Sonntag."
+              "example": "Sonntag ist ein Ruhetag."
             },
             {
               "id": "uuid-040",
@@ -330,7 +330,7 @@
               "german": "Januar",
               "english": "January",
               "gender": "der",
-              "example": "Das ist ein Januar."
+              "example": "Im Januar ist es sehr kalt."
             },
             {
               "id": "uuid-041",
@@ -338,7 +338,7 @@
               "german": "Februar",
               "english": "February",
               "gender": "der",
-              "example": "Das ist ein Februar."
+              "example": "Der Februar ist kurz."
             },
             {
               "id": "uuid-042",
@@ -346,7 +346,7 @@
               "german": "März",
               "english": "March",
               "gender": "der",
-              "example": "Das ist ein März."
+              "example": "Der Frühling beginnt im März."
             },
             {
               "id": "uuid-043",
@@ -354,7 +354,7 @@
               "german": "April",
               "english": "April",
               "gender": "der",
-              "example": "Das ist ein April."
+              "example": "Im April macht das Wetter, was es will."
             },
             {
               "id": "uuid-044",
@@ -362,7 +362,7 @@
               "german": "Mai",
               "english": "May",
               "gender": "der",
-              "example": "Das ist ein Mai."
+              "example": "Alles neu macht der Mai."
             },
             {
               "id": "uuid-045",
@@ -370,7 +370,7 @@
               "german": "Juni",
               "english": "June",
               "gender": "der",
-              "example": "Das ist ein Juni."
+              "example": "Im Juni wird es warm."
             },
             {
               "id": "uuid-046",
@@ -378,7 +378,7 @@
               "german": "Juli",
               "english": "July",
               "gender": "der",
-              "example": "Das ist ein Juli."
+              "example": "Wir fahren im Juli in den Urlaub."
             },
             {
               "id": "uuid-047",
@@ -386,7 +386,7 @@
               "german": "August",
               "english": "August",
               "gender": "der",
-              "example": "Das ist ein August."
+              "example": "Im August sind Schulferien."
             },
             {
               "id": "uuid-048",
@@ -394,7 +394,7 @@
               "german": "September",
               "english": "September",
               "gender": "der",
-              "example": "Das ist ein September."
+              "example": "Das Oktoberfest beginnt im September."
             },
             {
               "id": "uuid-049",
@@ -402,7 +402,7 @@
               "german": "Oktober",
               "english": "October",
               "gender": "der",
-              "example": "Das ist ein Oktober."
+              "example": "Im Oktober fallen die Blätter."
             },
             {
               "id": "uuid-050",
@@ -410,7 +410,7 @@
               "german": "November",
               "english": "November",
               "gender": "der",
-              "example": "Das ist ein November."
+              "example": "Der November ist oft grau."
             },
             {
               "id": "uuid-051",
@@ -418,7 +418,7 @@
               "german": "Dezember",
               "english": "December",
               "gender": "der",
-              "example": "Das ist ein Dezember."
+              "example": "Weihnachten ist im Dezember."
             },
             {
               "id": "uuid-052",
@@ -426,7 +426,7 @@
               "german": "Frühling",
               "english": "Spring",
               "gender": "der",
-              "example": "Das ist ein Frühling."
+              "example": "Ich liebe den Frühling."
             },
             {
               "id": "uuid-053",
@@ -434,7 +434,7 @@
               "german": "Sommer",
               "english": "Summer",
               "gender": "der",
-              "example": "Das ist ein Sommer."
+              "example": "Im Sommer gehen wir schwimmen."
             },
             {
               "id": "uuid-054",
@@ -442,7 +442,7 @@
               "german": "Herbst",
               "english": "Autumn",
               "gender": "der",
-              "example": "Das ist ein Herbst."
+              "example": "Im Herbst ist es windig."
             },
             {
               "id": "uuid-055",
@@ -450,7 +450,7 @@
               "german": "Winter",
               "english": "Winter",
               "gender": "der",
-              "example": "Das ist ein Winter."
+              "example": "Im Winter schneit es oft."
             },
             {
               "id": "uuid-056",
@@ -458,7 +458,7 @@
               "german": "blau",
               "english": "Blue",
               "gender": "none",
-              "example": "Ich muss blau."
+              "example": "Der Himmel ist blau."
             },
             {
               "id": "uuid-057",
@@ -466,7 +466,7 @@
               "german": "braun",
               "english": "Brown",
               "gender": "none",
-              "example": "Ich muss braun."
+              "example": "Ich habe braune Augen."
             },
             {
               "id": "uuid-058",
@@ -474,7 +474,7 @@
               "german": "gelb",
               "english": "Yellow",
               "gender": "none",
-              "example": "Ich muss gelb."
+              "example": "Die Zitrone ist gelb."
             },
             {
               "id": "uuid-059",
@@ -482,7 +482,7 @@
               "german": "grün",
               "english": "Green",
               "gender": "none",
-              "example": "Ich muss grün."
+              "example": "Die Ampel ist grün."
             },
             {
               "id": "uuid-060",
@@ -490,7 +490,7 @@
               "german": "rot",
               "english": "Red",
               "gender": "none",
-              "example": "Ich muss rot."
+              "example": "Mein Auto ist rot."
             },
             {
               "id": "uuid-061",
@@ -498,7 +498,7 @@
               "german": "schwarz",
               "english": "Black",
               "gender": "none",
-              "example": "Ich muss schwarz."
+              "example": "Ich trinke meinen Kaffee schwarz."
             },
             {
               "id": "uuid-062",
@@ -506,7 +506,7 @@
               "german": "weiß",
               "english": "White",
               "gender": "none",
-              "example": "Ich muss weiß."
+              "example": "Die Wand ist weiß."
             },
             {
               "id": "uuid-063",
@@ -514,7 +514,7 @@
               "german": "grau",
               "english": "Gray",
               "gender": "none",
-              "example": "Ich muss grau."
+              "example": "Das Wetter ist heute grau."
             }
           ]
         },
@@ -529,7 +529,7 @@
               "german": "sein",
               "english": "to be",
               "gender": "none",
-              "example": "Ich muss sein."
+              "example": "Ich bin müde."
             },
             {
               "id": "uuid-101",
@@ -537,7 +537,7 @@
               "german": "haben",
               "english": "to have",
               "gender": "none",
-              "example": "Ich muss haben."
+              "example": "Ich habe Hunger."
             },
             {
               "id": "uuid-102",
@@ -545,7 +545,7 @@
               "german": "werden",
               "english": "to become",
               "gender": "none",
-              "example": "Ich muss werden."
+              "example": "Es wird schon dunkel."
             },
             {
               "id": "uuid-103",
@@ -553,7 +553,7 @@
               "german": "können",
               "english": "can/to be able",
               "gender": "none",
-              "example": "Ich muss können."
+              "example": "Kannst du mir helfen?"
             },
             {
               "id": "uuid-104",
@@ -561,7 +561,7 @@
               "german": "müssen",
               "english": "must/to have to",
               "gender": "none",
-              "example": "Ich muss müssen."
+              "example": "Ich muss jetzt gehen."
             },
             {
               "id": "uuid-105",
@@ -569,7 +569,7 @@
               "german": "sollen",
               "english": "should",
               "gender": "none",
-              "example": "Ich muss sollen."
+              "example": "Was soll ich machen?"
             },
             {
               "id": "uuid-106",
@@ -577,7 +577,7 @@
               "german": "wollen",
               "english": "to want",
               "gender": "none",
-              "example": "Ich muss wollen."
+              "example": "Ich will nach Hause."
             },
             {
               "id": "uuid-107",
@@ -585,7 +585,7 @@
               "german": "dürfen",
               "english": "may/to be allowed",
               "gender": "none",
-              "example": "Ich muss dürfen."
+              "example": "Darf ich hier parken?"
             },
             {
               "id": "uuid-108",
@@ -593,7 +593,7 @@
               "german": "mögen",
               "english": "to like",
               "gender": "none",
-              "example": "Ich muss mögen."
+              "example": "Ich mag Pizza."
             },
             {
               "id": "uuid-109",
@@ -601,7 +601,7 @@
               "german": "möchten",
               "english": "would like",
               "gender": "none",
-              "example": "Ich muss möchten."
+              "example": "Ich möchte einen Kaffee, bitte."
             },
             {
               "id": "uuid-110",
@@ -609,7 +609,7 @@
               "german": "machen",
               "english": "to do/make",
               "gender": "none",
-              "example": "Ich muss machen."
+              "example": "Was machst du heute?"
             },
             {
               "id": "uuid-111",
@@ -617,7 +617,7 @@
               "german": "tun",
               "english": "to do",
               "gender": "none",
-              "example": "Ich muss tun."
+              "example": "Es tut mir leid."
             },
             {
               "id": "uuid-112",
@@ -625,7 +625,7 @@
               "german": "wissen",
               "english": "to know",
               "gender": "none",
-              "example": "Ich muss wissen."
+              "example": "Ich weiß es nicht."
             },
             {
               "id": "uuid-113",
@@ -633,7 +633,7 @@
               "german": "kennen",
               "english": "to know (person/place)",
               "gender": "none",
-              "example": "Ich muss kennen."
+              "example": "Kennst du Berlin?"
             },
             {
               "id": "uuid-114",
@@ -641,7 +641,7 @@
               "german": "denken",
               "english": "to think",
               "gender": "none",
-              "example": "Ich muss denken."
+              "example": "Was denkst du darüber?"
             },
             {
               "id": "uuid-115",
@@ -649,7 +649,7 @@
               "german": "glauben",
               "english": "to believe",
               "gender": "none",
-              "example": "Ich muss glauben."
+              "example": "Ich glaube, es regnet bald."
             },
             {
               "id": "uuid-116",
@@ -657,7 +657,7 @@
               "german": "fragen",
               "english": "to ask",
               "gender": "none",
-              "example": "Ich muss fragen."
+              "example": "Darf ich dich etwas fragen?"
             },
             {
               "id": "uuid-117",
@@ -665,7 +665,7 @@
               "german": "antworten",
               "english": "to answer",
               "gender": "none",
-              "example": "Ich muss antworten."
+              "example": "Bitte antworte mir schnell."
             },
             {
               "id": "uuid-118",
@@ -673,7 +673,7 @@
               "german": "heißen",
               "english": "to be called",
               "gender": "none",
-              "example": "Ich muss heißen."
+              "example": "Wie heißt du?"
             },
             {
               "id": "uuid-119",
@@ -681,7 +681,7 @@
               "german": "ich",
               "english": "I",
               "gender": "none",
-              "example": "Ich muss ich."
+              "example": "Ich bin Student."
             },
             {
               "id": "uuid-120",
@@ -689,7 +689,7 @@
               "german": "du",
               "english": "you",
               "gender": "none",
-              "example": "Ich muss du."
+              "example": "Kommst du mit?"
             },
             {
               "id": "uuid-121",
@@ -697,7 +697,7 @@
               "german": "er",
               "english": "he",
               "gender": "none",
-              "example": "Ich muss er."
+              "example": "Er ist mein Bruder."
             },
             {
               "id": "uuid-122",
@@ -705,7 +705,7 @@
               "german": "es",
               "english": "it",
               "gender": "none",
-              "example": "Ich muss es."
+              "example": "Es ist kalt draußen."
             },
             {
               "id": "uuid-123",
@@ -713,7 +713,7 @@
               "german": "sie",
               "english": "she/they",
               "gender": "none",
-              "example": "Ich muss sie."
+              "example": "Sie kommt aus Deutschland."
             },
             {
               "id": "uuid-124",
@@ -721,7 +721,7 @@
               "german": "wir",
               "english": "we",
               "gender": "none",
-              "example": "Ich muss wir."
+              "example": "Wir lernen Deutsch."
             },
             {
               "id": "uuid-125",
@@ -729,7 +729,7 @@
               "german": "ihr",
               "english": "you (plural)",
               "gender": "none",
-              "example": "Ich muss ihr."
+              "example": "Habt ihr Zeit?"
             },
             {
               "id": "uuid-126",
@@ -737,7 +737,7 @@
               "german": "Sie",
               "english": "You (formal)",
               "gender": "none",
-              "example": "Ich muss Sie."
+              "example": "Können Sie mir helfen?"
             },
             {
               "id": "uuid-127",
@@ -745,7 +745,7 @@
               "german": "mein",
               "english": "my",
               "gender": "none",
-              "example": "Ich muss mein."
+              "example": "Das ist mein Buch."
             },
             {
               "id": "uuid-128",
@@ -753,7 +753,7 @@
               "german": "dein",
               "english": "your",
               "gender": "none",
-              "example": "Ich muss dein."
+              "example": "Ist das dein Handy?"
             },
             {
               "id": "uuid-129",
@@ -761,7 +761,7 @@
               "german": "sein",
               "english": "his",
               "gender": "none",
-              "example": "Ich muss sein."
+              "example": "Sein Auto ist kaputt."
             },
             {
               "id": "uuid-130",
@@ -769,7 +769,7 @@
               "german": "ihr",
               "english": "her/their",
               "gender": "none",
-              "example": "Ich muss ihr."
+              "example": "Ihre Tasche ist schön."
             },
             {
               "id": "uuid-131",
@@ -777,7 +777,7 @@
               "german": "unser",
               "english": "our",
               "gender": "none",
-              "example": "Ich muss unser."
+              "example": "Unser Haus ist klein."
             },
             {
               "id": "uuid-132",
@@ -785,7 +785,7 @@
               "german": "euer",
               "english": "your (plural)",
               "gender": "none",
-              "example": "Ich muss euer."
+              "example": "Ist das euer Hund?"
             },
             {
               "id": "uuid-133",
@@ -793,7 +793,7 @@
               "german": "der",
               "english": "the (m)",
               "gender": "none",
-              "example": "Ich muss der."
+              "example": "Der Mann ist nett."
             },
             {
               "id": "uuid-134",
@@ -801,7 +801,7 @@
               "german": "die",
               "english": "the (f)",
               "gender": "none",
-              "example": "Ich muss die."
+              "example": "Die Frau liest."
             },
             {
               "id": "uuid-135",
@@ -809,7 +809,7 @@
               "german": "das",
               "english": "the (n)",
               "gender": "none",
-              "example": "Ich muss das."
+              "example": "Das Kind spielt."
             },
             {
               "id": "uuid-136",
@@ -817,7 +817,7 @@
               "german": "ein",
               "english": "a/an",
               "gender": "none",
-              "example": "Ich muss ein."
+              "example": "Ich möchte ein Bier."
             },
             {
               "id": "uuid-137",
@@ -825,7 +825,7 @@
               "german": "kein",
               "english": "no/none",
               "gender": "none",
-              "example": "Ich muss kein."
+              "example": "Ich habe keine Zeit."
             },
             {
               "id": "uuid-138",
@@ -833,7 +833,7 @@
               "german": "wer",
               "english": "who",
               "gender": "none",
-              "example": "Ich muss wer."
+              "example": "Wer ist das?"
             },
             {
               "id": "uuid-139",
@@ -841,7 +841,7 @@
               "german": "was",
               "english": "what",
               "gender": "none",
-              "example": "Ich muss was."
+              "example": "Was machst du?"
             },
             {
               "id": "uuid-140",
@@ -849,7 +849,7 @@
               "german": "wie",
               "english": "how",
               "gender": "none",
-              "example": "Ich muss wie."
+              "example": "Wie geht es dir?"
             },
             {
               "id": "uuid-141",
@@ -857,7 +857,7 @@
               "german": "wo",
               "english": "where",
               "gender": "none",
-              "example": "Ich muss wo."
+              "example": "Wo wohnst du?"
             },
             {
               "id": "uuid-142",
@@ -865,7 +865,7 @@
               "german": "woher",
               "english": "where from",
               "gender": "none",
-              "example": "Ich muss woher."
+              "example": "Woher kommst du?"
             },
             {
               "id": "uuid-143",
@@ -873,7 +873,7 @@
               "german": "wohin",
               "english": "where to",
               "gender": "none",
-              "example": "Ich muss wohin."
+              "example": "Wohin gehst du?"
             },
             {
               "id": "uuid-144",
@@ -881,7 +881,7 @@
               "german": "wann",
               "english": "when",
               "gender": "none",
-              "example": "Ich muss wann."
+              "example": "Wann beginnt der Film?"
             },
             {
               "id": "uuid-145",
@@ -889,7 +889,7 @@
               "german": "warum",
               "english": "why",
               "gender": "none",
-              "example": "Ich muss warum."
+              "example": "Warum lernst du Deutsch?"
             },
             {
               "id": "uuid-146",
@@ -897,7 +897,7 @@
               "german": "welch",
               "english": "which",
               "gender": "none",
-              "example": "Ich muss welch."
+              "example": "Welche Farbe magst du?"
             },
             {
               "id": "uuid-147",
@@ -905,7 +905,7 @@
               "german": "man",
               "english": "one (people)",
               "gender": "none",
-              "example": "Ich muss man."
+              "example": "Hier darf man nicht rauchen."
             },
             {
               "id": "uuid-148",
@@ -913,7 +913,7 @@
               "german": "jemand",
               "english": "someone",
               "gender": "none",
-              "example": "Ich muss jemand."
+              "example": "Ist jemand zu Hause?"
             },
             {
               "id": "uuid-149",
@@ -921,7 +921,7 @@
               "german": "ab",
               "english": "from",
               "gender": "none",
-              "example": "Ich muss ab."
+              "example": "Ab Montag mache ich Diät."
             },
             {
               "id": "uuid-150",
@@ -929,7 +929,7 @@
               "german": "an",
               "english": "at/on",
               "gender": "none",
-              "example": "Ich muss an."
+              "example": "Das Bild hängt an der Wand."
             },
             {
               "id": "uuid-151",
@@ -937,7 +937,7 @@
               "german": "auf",
               "english": "on",
               "gender": "none",
-              "example": "Ich muss auf."
+              "example": "Das Buch liegt auf dem Tisch."
             },
             {
               "id": "uuid-152",
@@ -945,7 +945,7 @@
               "german": "aus",
               "english": "out of/from",
               "gender": "none",
-              "example": "Ich muss aus."
+              "example": "Er kommt aus Spanien."
             },
             {
               "id": "uuid-153",
@@ -953,7 +953,7 @@
               "german": "bei",
               "english": "at/with",
               "gender": "none",
-              "example": "Ich muss bei."
+              "example": "Ich bin bei einem Freund."
             },
             {
               "id": "uuid-154",
@@ -961,7 +961,7 @@
               "german": "bis",
               "english": "until",
               "gender": "none",
-              "example": "Ich muss bis."
+              "example": "Bis morgen!"
             },
             {
               "id": "uuid-155",
@@ -969,7 +969,7 @@
               "german": "durch",
               "english": "through",
               "gender": "none",
-              "example": "Ich muss durch."
+              "example": "Wir fahren durch den Tunnel."
             },
             {
               "id": "uuid-156",
@@ -977,7 +977,7 @@
               "german": "für",
               "english": "for",
               "gender": "none",
-              "example": "Ich muss für."
+              "example": "Das Geschenk ist für dich."
             },
             {
               "id": "uuid-157",
@@ -985,7 +985,7 @@
               "german": "gegen",
               "english": "against",
               "gender": "none",
-              "example": "Ich muss gegen."
+              "example": "Er ist gegen den Krieg."
             },
             {
               "id": "uuid-158",
@@ -993,7 +993,7 @@
               "german": "in",
               "english": "in",
               "gender": "none",
-              "example": "Ich muss in."
+              "example": "Ich wohne in Berlin."
             },
             {
               "id": "uuid-159",
@@ -1001,7 +1001,7 @@
               "german": "mit",
               "english": "with",
               "gender": "none",
-              "example": "Ich muss mit."
+              "example": "Kommst du mit mir?"
             },
             {
               "id": "uuid-160",
@@ -1009,7 +1009,7 @@
               "german": "nach",
               "english": "after/to",
               "gender": "none",
-              "example": "Ich muss nach."
+              "example": "Wir fahren nach München."
             },
             {
               "id": "uuid-161",
@@ -1017,7 +1017,7 @@
               "german": "ohne",
               "english": "without",
               "gender": "none",
-              "example": "Ich muss ohne."
+              "example": "Ohne dich gehe ich nicht."
             },
             {
               "id": "uuid-162",
@@ -1025,7 +1025,7 @@
               "german": "seit",
               "english": "since",
               "gender": "none",
-              "example": "Ich muss seit."
+              "example": "Ich lerne seit einem Jahr Deutsch."
             },
             {
               "id": "uuid-163",
@@ -1033,7 +1033,7 @@
               "german": "um",
               "english": "around/at",
               "gender": "none",
-              "example": "Ich muss um."
+              "example": "Der Termin ist um drei Uhr."
             },
             {
               "id": "uuid-164",
@@ -1041,7 +1041,7 @@
               "german": "von",
               "english": "from/of",
               "gender": "none",
-              "example": "Ich muss von."
+              "example": "Das ist das Auto von Peter."
             },
             {
               "id": "uuid-165",
@@ -1049,7 +1049,7 @@
               "german": "vor",
               "english": "before/in front of",
               "gender": "none",
-              "example": "Ich muss vor."
+              "example": "Das Auto steht vor dem Haus."
             },
             {
               "id": "uuid-166",
@@ -1057,7 +1057,7 @@
               "german": "zu",
               "english": "to",
               "gender": "none",
-              "example": "Ich muss zu."
+              "example": "Ich gehe zu Fuß."
             },
             {
               "id": "uuid-167",
@@ -1065,7 +1065,7 @@
               "german": "zwischen",
               "english": "between",
               "gender": "none",
-              "example": "Ich muss zwischen."
+              "example": "Das Bad ist zwischen den Zimmern."
             },
             {
               "id": "uuid-168",
@@ -1073,7 +1073,7 @@
               "german": "über",
               "english": "over/about",
               "gender": "none",
-              "example": "Ich muss über."
+              "example": "Wir sprechen über das Wetter."
             },
             {
               "id": "uuid-169",
@@ -1081,7 +1081,7 @@
               "german": "unter",
               "english": "under",
               "gender": "none",
-              "example": "Ich muss unter."
+              "example": "Die Katze ist unter dem Tisch."
             },
             {
               "id": "uuid-170",
@@ -1089,7 +1089,7 @@
               "german": "aber",
               "english": "but",
               "gender": "none",
-              "example": "Ich muss aber."
+              "example": "Ich habe Zeit, aber kein Geld."
             },
             {
               "id": "uuid-171",
@@ -1097,7 +1097,7 @@
               "german": "als",
               "english": "as/than",
               "gender": "none",
-              "example": "Ich muss als."
+              "example": "Er ist größer als ich."
             },
             {
               "id": "uuid-172",
@@ -1105,7 +1105,7 @@
               "german": "denn",
               "english": "because",
               "gender": "none",
-              "example": "Ich muss denn."
+              "example": "Ich gehe nicht, denn ich bin krank."
             },
             {
               "id": "uuid-173",
@@ -1113,7 +1113,7 @@
               "german": "oder",
               "english": "or",
               "gender": "none",
-              "example": "Ich muss oder."
+              "example": "Tee oder Kaffee?"
             },
             {
               "id": "uuid-174",
@@ -1121,7 +1121,7 @@
               "german": "und",
               "english": "and",
               "gender": "none",
-              "example": "Ich muss und."
+              "example": "Peter und Maria sind hier."
             },
             {
               "id": "uuid-175",
@@ -1129,7 +1129,7 @@
               "german": "wenn",
               "english": "if/when",
               "gender": "none",
-              "example": "Ich muss wenn."
+              "example": "Wenn ich Zeit habe, komme ich."
             },
             {
               "id": "uuid-176",
@@ -1137,7 +1137,7 @@
               "german": "dass",
               "english": "that",
               "gender": "none",
-              "example": "Ich muss dass."
+              "example": "Ich weiß, dass du recht hast."
             },
             {
               "id": "uuid-177",
@@ -1145,7 +1145,7 @@
               "german": "weil",
               "english": "because",
               "gender": "none",
-              "example": "Ich muss weil."
+              "example": "Ich lerne Deutsch, weil ich in Berlin wohne."
             },
             {
               "id": "uuid-178",
@@ -1153,7 +1153,7 @@
               "german": "auch",
               "english": "also",
               "gender": "none",
-              "example": "Ich muss auch."
+              "example": "Ich komme auch mit."
             },
             {
               "id": "uuid-179",
@@ -1161,7 +1161,7 @@
               "german": "da",
               "english": "there",
               "gender": "none",
-              "example": "Ich muss da."
+              "example": "Da ist der Bahnhof."
             },
             {
               "id": "uuid-180",
@@ -1169,7 +1169,7 @@
               "german": "dort",
               "english": "there",
               "gender": "none",
-              "example": "Ich muss dort."
+              "example": "Wir treffen uns dort."
             },
             {
               "id": "uuid-181",
@@ -1177,7 +1177,7 @@
               "german": "hier",
               "english": "here",
               "gender": "none",
-              "example": "Ich muss hier."
+              "example": "Ich bin hier."
             },
             {
               "id": "uuid-182",
@@ -1185,7 +1185,7 @@
               "german": "jetzt",
               "english": "now",
               "gender": "none",
-              "example": "Ich muss jetzt."
+              "example": "Ich muss jetzt gehen."
             },
             {
               "id": "uuid-183",
@@ -1193,7 +1193,7 @@
               "german": "immer",
               "english": "always",
               "gender": "none",
-              "example": "Ich muss immer."
+              "example": "Du kommst immer zu spät."
             },
             {
               "id": "uuid-184",
@@ -1201,7 +1201,7 @@
               "german": "nie",
               "english": "never",
               "gender": "none",
-              "example": "Ich muss nie."
+              "example": "Ich war nie in Paris."
             },
             {
               "id": "uuid-185",
@@ -1209,7 +1209,7 @@
               "german": "oft",
               "english": "often",
               "gender": "none",
-              "example": "Ich muss oft."
+              "example": "Ich gehe oft ins Kino."
             },
             {
               "id": "uuid-186",
@@ -1217,7 +1217,7 @@
               "german": "schon",
               "english": "already",
               "gender": "none",
-              "example": "Ich muss schon."
+              "example": "Bist du schon fertig?"
             },
             {
               "id": "uuid-187",
@@ -1225,7 +1225,7 @@
               "german": "wieder",
               "english": "again",
               "gender": "none",
-              "example": "Ich muss wieder."
+              "example": "Komm bald wieder!"
             },
             {
               "id": "uuid-188",
@@ -1233,7 +1233,7 @@
               "german": "nicht",
               "english": "not",
               "gender": "none",
-              "example": "Ich muss nicht."
+              "example": "Das ist nicht gut."
             },
             {
               "id": "uuid-189",
@@ -1241,7 +1241,7 @@
               "german": "nichts",
               "english": "nothing",
               "gender": "none",
-              "example": "Ich muss nichts."
+              "example": "Ich habe nichts gehört."
             },
             {
               "id": "uuid-190",
@@ -1249,7 +1249,7 @@
               "german": "ja",
               "english": "yes",
               "gender": "none",
-              "example": "Ich muss ja."
+              "example": "Ja, bitte."
             },
             {
               "id": "uuid-191",
@@ -1257,7 +1257,7 @@
               "german": "nein",
               "english": "no",
               "gender": "none",
-              "example": "Ich muss nein."
+              "example": "Nein, danke."
             },
             {
               "id": "uuid-192",
@@ -1265,7 +1265,7 @@
               "german": "doch",
               "english": "yes (contradiction)",
               "gender": "none",
-              "example": "Ich muss doch."
+              "example": "Kommst du nicht? - Doch!"
             },
             {
               "id": "uuid-193",
@@ -1273,7 +1273,7 @@
               "german": "bitte",
               "english": "please",
               "gender": "none",
-              "example": "Ich muss bitte."
+              "example": "Die Rechnung, bitte."
             },
             {
               "id": "uuid-194",
@@ -1281,7 +1281,7 @@
               "german": "danke",
               "english": "thanks",
               "gender": "none",
-              "example": "Ich muss danke."
+              "example": "Vielen Dank für deine Hilfe."
             },
             {
               "id": "uuid-195",
@@ -1289,7 +1289,7 @@
               "german": "vielleicht",
               "english": "maybe",
               "gender": "none",
-              "example": "Ich muss vielleicht."
+              "example": "Vielleicht komme ich morgen."
             },
             {
               "id": "uuid-196",
@@ -1297,7 +1297,7 @@
               "german": "nur",
               "english": "only",
               "gender": "none",
-              "example": "Ich muss nur."
+              "example": "Ich habe nur fünf Euro."
             },
             {
               "id": "uuid-197",
@@ -1305,7 +1305,7 @@
               "german": "sehr",
               "english": "very",
               "gender": "none",
-              "example": "Ich muss sehr."
+              "example": "Das Essen ist sehr gut."
             },
             {
               "id": "uuid-198",
@@ -1313,7 +1313,7 @@
               "german": "viel",
               "english": "much/a lot",
               "gender": "none",
-              "example": "Ich muss viel."
+              "example": "Ich habe viel Arbeit."
             },
             {
               "id": "uuid-199",
@@ -1321,7 +1321,7 @@
               "german": "wenig",
               "english": "little/few",
               "gender": "none",
-              "example": "Ich muss wenig."
+              "example": "Ich habe wenig Zeit."
             },
             {
               "id": "uuid-200",
@@ -1329,7 +1329,7 @@
               "german": "gern",
               "english": "gladly",
               "gender": "none",
-              "example": "Ich muss gern."
+              "example": "Ich mache das gern."
             },
             {
               "id": "uuid-201",
@@ -1337,7 +1337,7 @@
               "german": "leider",
               "english": "unfortunately",
               "gender": "none",
-              "example": "Ich muss leider."
+              "example": "Leider habe ich keine Zeit."
             },
             {
               "id": "uuid-202",
@@ -1345,7 +1345,7 @@
               "german": "mal",
               "english": "times/once",
               "gender": "none",
-              "example": "Ich muss mal."
+              "example": "Sag das noch mal."
             },
             {
               "id": "uuid-203",
@@ -1353,7 +1353,7 @@
               "german": "so",
               "english": "so",
               "gender": "none",
-              "example": "Ich muss so."
+              "example": "Warum bist du so traurig?"
             },
             {
               "id": "uuid-204",
@@ -1361,7 +1361,7 @@
               "german": "auch",
               "english": "also",
               "gender": "none",
-              "example": "Ich muss auch."
+              "example": "Ich wohne auch in Berlin."
             },
             {
               "id": "uuid-205",
@@ -1369,7 +1369,7 @@
               "german": "weg",
               "english": "away",
               "gender": "none",
-              "example": "Ich muss weg."
+              "example": "Mein Schlüssel ist weg."
             },
             {
               "id": "uuid-206",
@@ -1377,7 +1377,7 @@
               "german": "zurück",
               "english": "back",
               "gender": "none",
-              "example": "Ich muss zurück."
+              "example": "Wann kommst du zurück?"
             },
             {
               "id": "uuid-207",
@@ -1385,7 +1385,7 @@
               "german": "zusammen",
               "english": "together",
               "gender": "none",
-              "example": "Ich muss zusammen."
+              "example": "Wir zahlen zusammen."
             }
           ]
         },
@@ -1400,7 +1400,7 @@
               "german": "alt",
               "english": "old",
               "gender": "none",
-              "example": "Ich muss alt."
+              "example": "Wie alt bist du?"
             },
             {
               "id": "uuid-301",
@@ -1408,7 +1408,7 @@
               "german": "neu",
               "english": "new",
               "gender": "none",
-              "example": "Ich muss neu."
+              "example": "Ich habe ein neues Handy."
             },
             {
               "id": "uuid-302",
@@ -1416,7 +1416,7 @@
               "german": "jung",
               "english": "young",
               "gender": "none",
-              "example": "Ich muss jung."
+              "example": "Sie ist noch sehr jung."
             },
             {
               "id": "uuid-303",
@@ -1424,7 +1424,7 @@
               "german": "schön",
               "english": "beautiful",
               "gender": "none",
-              "example": "Ich muss schön."
+              "example": "Das Wetter ist heute schön."
             },
             {
               "id": "uuid-304",
@@ -1432,7 +1432,7 @@
               "german": "gut",
               "english": "good",
               "gender": "none",
-              "example": "Ich muss gut."
+              "example": "Mir geht es gut, danke."
             },
             {
               "id": "uuid-305",
@@ -1440,7 +1440,7 @@
               "german": "schlecht",
               "english": "bad",
               "gender": "none",
-              "example": "Ich muss schlecht."
+              "example": "Das Wetter ist schlecht."
             },
             {
               "id": "uuid-306",
@@ -1448,7 +1448,7 @@
               "german": "groß",
               "english": "big",
               "gender": "none",
-              "example": "Ich muss groß."
+              "example": "Berlin ist eine große Stadt."
             },
             {
               "id": "uuid-307",
@@ -1456,7 +1456,7 @@
               "german": "klein",
               "english": "small",
               "gender": "none",
-              "example": "Ich muss klein."
+              "example": "Meine Wohnung ist klein."
             },
             {
               "id": "uuid-308",
@@ -1464,7 +1464,7 @@
               "german": "hell",
               "english": "bright",
               "gender": "none",
-              "example": "Ich muss hell."
+              "example": "Es ist noch hell draußen."
             },
             {
               "id": "uuid-309",
@@ -1472,7 +1472,7 @@
               "german": "dunkel",
               "english": "dark",
               "gender": "none",
-              "example": "Ich muss dunkel."
+              "example": "Im Winter wird es früh dunkel."
             },
             {
               "id": "uuid-310",
@@ -1480,7 +1480,7 @@
               "german": "hoch",
               "english": "high",
               "gender": "none",
-              "example": "Ich muss hoch."
+              "example": "Der Berg ist sehr hoch."
             },
             {
               "id": "uuid-311",
@@ -1488,7 +1488,7 @@
               "german": "tief",
               "english": "deep",
               "gender": "none",
-              "example": "Ich muss tief."
+              "example": "Das Wasser ist tief."
             },
             {
               "id": "uuid-312",
@@ -1496,7 +1496,7 @@
               "german": "laut",
               "english": "loud",
               "gender": "none",
-              "example": "Ich muss laut."
+              "example": "Die Musik ist zu laut."
             },
             {
               "id": "uuid-313",
@@ -1504,7 +1504,7 @@
               "german": "leise",
               "english": "quiet",
               "gender": "none",
-              "example": "Ich muss leise."
+              "example": "Sei bitte leise."
             },
             {
               "id": "uuid-314",
@@ -1512,7 +1512,7 @@
               "german": "richtig",
               "english": "correct",
               "gender": "none",
-              "example": "Ich muss richtig."
+              "example": "Das ist richtig."
             },
             {
               "id": "uuid-315",
@@ -1520,7 +1520,7 @@
               "german": "falsch",
               "english": "wrong",
               "gender": "none",
-              "example": "Ich muss falsch."
+              "example": "Die Nummer ist falsch."
             },
             {
               "id": "uuid-316",
@@ -1528,7 +1528,7 @@
               "german": "teuer",
               "english": "expensive",
               "gender": "none",
-              "example": "Ich muss teuer."
+              "example": "Das Auto ist zu teuer."
             },
             {
               "id": "uuid-317",
@@ -1536,7 +1536,7 @@
               "german": "billig",
               "english": "cheap",
               "gender": "none",
-              "example": "Ich muss billig."
+              "example": "Äpfel sind heute billig."
             },
             {
               "id": "uuid-318",
@@ -1544,7 +1544,7 @@
               "german": "einfach",
               "english": "simple/easy",
               "gender": "none",
-              "example": "Ich muss einfach."
+              "example": "Die Aufgabe ist einfach."
             },
             {
               "id": "uuid-319",
@@ -1552,7 +1552,7 @@
               "german": "schwer",
               "english": "heavy/difficult",
               "gender": "none",
-              "example": "Ich muss schwer."
+              "example": "Der Koffer ist sehr schwer."
             },
             {
               "id": "uuid-320",
@@ -1560,7 +1560,7 @@
               "german": "leicht",
               "english": "light/easy",
               "gender": "none",
-              "example": "Ich muss leicht."
+              "example": "Deutsch ist nicht leicht."
             },
             {
               "id": "uuid-321",
@@ -1568,7 +1568,7 @@
               "german": "schnell",
               "english": "fast",
               "gender": "none",
-              "example": "Ich muss schnell."
+              "example": "Der Zug fährt schnell."
             },
             {
               "id": "uuid-322",
@@ -1576,7 +1576,7 @@
               "german": "langsam",
               "english": "slow",
               "gender": "none",
-              "example": "Ich muss langsam."
+              "example": "Bitte sprechen Sie langsam."
             },
             {
               "id": "uuid-323",
@@ -1584,7 +1584,7 @@
               "german": "kalt",
               "english": "cold",
               "gender": "none",
-              "example": "Ich muss kalt."
+              "example": "Mir ist kalt."
             },
             {
               "id": "uuid-324",
@@ -1592,7 +1592,7 @@
               "german": "warm",
               "english": "warm",
               "gender": "none",
-              "example": "Ich muss warm."
+              "example": "Heute ist es warm."
             },
             {
               "id": "uuid-325",
@@ -1600,7 +1600,7 @@
               "german": "heiß",
               "english": "hot",
               "gender": "none",
-              "example": "Ich muss heiß."
+              "example": "Vorsicht, der Kaffee ist heiß!"
             },
             {
               "id": "uuid-326",
@@ -1608,7 +1608,7 @@
               "german": "stark",
               "english": "strong",
               "gender": "none",
-              "example": "Ich muss stark."
+              "example": "Der Kaffee ist sehr stark."
             },
             {
               "id": "uuid-327",
@@ -1616,7 +1616,7 @@
               "german": "kurz",
               "english": "short",
               "gender": "none",
-              "example": "Ich muss kurz."
+              "example": "Die Pause ist kurz."
             },
             {
               "id": "uuid-328",
@@ -1624,7 +1624,7 @@
               "german": "lang",
               "english": "long",
               "gender": "none",
-              "example": "Ich muss lang."
+              "example": "Der Weg ist lang."
             },
             {
               "id": "uuid-329",
@@ -1632,7 +1632,7 @@
               "german": "krank",
               "english": "sick",
               "gender": "none",
-              "example": "Ich muss krank."
+              "example": "Ich bin leider krank."
             },
             {
               "id": "uuid-330",
@@ -1640,7 +1640,7 @@
               "german": "gesund",
               "english": "healthy",
               "gender": "none",
-              "example": "Ich muss gesund."
+              "example": "Obst ist gesund."
             },
             {
               "id": "uuid-331",
@@ -1648,7 +1648,7 @@
               "german": "müde",
               "english": "tired",
               "gender": "none",
-              "example": "Ich muss müde."
+              "example": "Ich bin müde, ich gehe schlafen."
             },
             {
               "id": "uuid-332",
@@ -1656,7 +1656,7 @@
               "german": "wach",
               "english": "awake",
               "gender": "none",
-              "example": "Ich muss wach."
+              "example": "Bist du schon wach?"
             },
             {
               "id": "uuid-333",
@@ -1664,7 +1664,7 @@
               "german": "spät",
               "english": "late",
               "gender": "none",
-              "example": "Ich muss spät."
+              "example": "Es ist schon spät."
             },
             {
               "id": "uuid-334",
@@ -1672,7 +1672,7 @@
               "german": "früh",
               "english": "early",
               "gender": "none",
-              "example": "Ich muss früh."
+              "example": "Ich muss morgen früh aufstehen."
             },
             {
               "id": "uuid-335",
@@ -1680,7 +1680,7 @@
               "german": "früher",
               "english": "earlier/formerly",
               "gender": "none",
-              "example": "Ich muss früher."
+              "example": "Früher war alles besser."
             },
             {
               "id": "uuid-336",
@@ -1688,7 +1688,7 @@
               "german": "wichtig",
               "english": "important",
               "gender": "none",
-              "example": "Ich muss wichtig."
+              "example": "Das ist sehr wichtig."
             },
             {
               "id": "uuid-337",
@@ -1696,7 +1696,7 @@
               "german": "fertig",
               "english": "finished",
               "gender": "none",
-              "example": "Ich muss fertig."
+              "example": "Ich bin fertig mit der Arbeit."
             },
             {
               "id": "uuid-338",
@@ -1704,7 +1704,7 @@
               "german": "frei",
               "english": "free",
               "gender": "none",
-              "example": "Ich muss frei."
+              "example": "Ist dieser Platz noch frei?"
             },
             {
               "id": "uuid-339",
@@ -1712,7 +1712,7 @@
               "german": "besetzt",
               "english": "occupied",
               "gender": "none",
-              "example": "Ich muss besetzt."
+              "example": "Die Toilette ist besetzt."
             },
             {
               "id": "uuid-340",
@@ -1720,7 +1720,7 @@
               "german": "geöffnet",
               "english": "open",
               "gender": "none",
-              "example": "Ich muss geöffnet."
+              "example": "Das Geschäft ist bis 20 Uhr geöffnet."
             },
             {
               "id": "uuid-341",
@@ -1728,7 +1728,7 @@
               "german": "geschlossen",
               "english": "closed",
               "gender": "none",
-              "example": "Ich muss geschlossen."
+              "example": "Sonntags ist geschlossen."
             },
             {
               "id": "uuid-342",
@@ -1736,7 +1736,7 @@
               "german": "möglich",
               "english": "possible",
               "gender": "none",
-              "example": "Ich muss möglich."
+              "example": "Ist das möglich?"
             },
             {
               "id": "uuid-343",
@@ -1744,7 +1744,7 @@
               "german": "freundlich",
               "english": "friendly",
               "gender": "none",
-              "example": "Ich muss freundlich."
+              "example": "Der Kellner war sehr freundlich."
             },
             {
               "id": "uuid-344",
@@ -1752,7 +1752,7 @@
               "german": "glücklich",
               "english": "happy",
               "gender": "none",
-              "example": "Ich muss glücklich."
+              "example": "Sie ist sehr glücklich."
             },
             {
               "id": "uuid-345",
@@ -1760,7 +1760,7 @@
               "german": "traurig",
               "english": "sad",
               "gender": "none",
-              "example": "Ich muss traurig."
+              "example": "Warum bist du traurig?"
             },
             {
               "id": "uuid-346",
@@ -1768,7 +1768,7 @@
               "german": "zufrieden",
               "english": "satisfied",
               "gender": "none",
-              "example": "Ich muss zufrieden."
+              "example": "Ich bin mit der Arbeit zufrieden."
             },
             {
               "id": "uuid-347",
@@ -1776,7 +1776,7 @@
               "german": "bekannt",
               "english": "known/famous",
               "gender": "none",
-              "example": "Ich muss bekannt."
+              "example": "Dieser Schauspieler ist sehr bekannt."
             },
             {
               "id": "uuid-348",
@@ -1784,7 +1784,7 @@
               "german": "fremd",
               "english": "foreign/strange",
               "gender": "none",
-              "example": "Ich muss fremd."
+              "example": "Ich bin hier fremd."
             },
             {
               "id": "uuid-349",
@@ -1792,7 +1792,7 @@
               "german": "allein",
               "english": "alone",
               "gender": "none",
-              "example": "Ich muss allein."
+              "example": "Ich wohne allein."
             },
             {
               "id": "uuid-350",
@@ -1800,7 +1800,7 @@
               "german": "andere",
               "english": "other",
               "gender": "none",
-              "example": "Ich muss andere."
+              "example": "Ich möchte das andere Buch."
             },
             {
               "id": "uuid-351",
@@ -1808,7 +1808,7 @@
               "german": "beide",
               "english": "both",
               "gender": "none",
-              "example": "Ich muss beide."
+              "example": "Wir kommen beide."
             },
             {
               "id": "uuid-352",
@@ -1816,7 +1816,7 @@
               "german": "breit",
               "english": "wide",
               "gender": "none",
-              "example": "Ich muss breit."
+              "example": "Der Fluss ist sehr breit."
             },
             {
               "id": "uuid-353",
@@ -1824,7 +1824,7 @@
               "german": "lustig",
               "english": "funny",
               "gender": "none",
-              "example": "Ich muss lustig."
+              "example": "Der Film war sehr lustig."
             },
             {
               "id": "uuid-354",
@@ -1832,7 +1832,7 @@
               "german": "modern",
               "english": "modern",
               "gender": "none",
-              "example": "Ich muss modern."
+              "example": "Das Haus ist sehr modern."
             },
             {
               "id": "uuid-355",
@@ -1840,7 +1840,7 @@
               "german": "normal",
               "english": "normal",
               "gender": "none",
-              "example": "Ich muss normal."
+              "example": "Das ist ganz normal."
             },
             {
               "id": "uuid-356",
@@ -1848,7 +1848,7 @@
               "german": "super",
               "english": "super",
               "gender": "none",
-              "example": "Ich muss super."
+              "example": "Das Essen war super."
             },
             {
               "id": "uuid-357",
@@ -1856,7 +1856,7 @@
               "german": "toll",
               "english": "great",
               "gender": "none",
-              "example": "Ich muss toll."
+              "example": "Das hast du toll gemacht."
             },
             {
               "id": "uuid-358",
@@ -1864,7 +1864,7 @@
               "german": "wunderbar",
               "english": "wonderful",
               "gender": "none",
-              "example": "Ich muss wunderbar."
+              "example": "Das Wetter ist wunderbar."
             },
             {
               "id": "uuid-359",
@@ -1872,7 +1872,7 @@
               "german": "tot",
               "english": "dead",
               "gender": "none",
-              "example": "Ich muss tot."
+              "example": "Die Batterie ist tot."
             },
             {
               "id": "uuid-360",
@@ -1880,7 +1880,7 @@
               "german": "klar",
               "english": "clear",
               "gender": "none",
-              "example": "Ich muss klar."
+              "example": "Das ist mir klar."
             }
           ]
         },
@@ -1895,7 +1895,7 @@
               "german": "Familie",
               "english": "Family",
               "gender": "die",
-              "example": "Das ist eine Familie."
+              "example": "Ich habe eine große Familie."
             },
             {
               "id": "uuid-401",
@@ -1903,7 +1903,7 @@
               "german": "Mann",
               "english": "Man/Husband",
               "gender": "der",
-              "example": "Das ist ein Mann."
+              "example": "Das ist mein Mann."
             },
             {
               "id": "uuid-402",
@@ -1911,7 +1911,7 @@
               "german": "Frau",
               "english": "Woman/Wife",
               "gender": "die",
-              "example": "Das ist eine Frau."
+              "example": "Das ist meine Frau."
             },
             {
               "id": "uuid-403",
@@ -1919,7 +1919,7 @@
               "german": "Vater",
               "english": "Father",
               "gender": "der",
-              "example": "Das ist ein Vater."
+              "example": "Mein Vater heißt Hans."
             },
             {
               "id": "uuid-404",
@@ -1927,7 +1927,7 @@
               "german": "Mutter",
               "english": "Mother",
               "gender": "die",
-              "example": "Das ist eine Mutter."
+              "example": "Meine Mutter wohnt in Köln."
             },
             {
               "id": "uuid-405",
@@ -1935,7 +1935,7 @@
               "german": "Eltern",
               "english": "Parents",
               "gender": "die",
-              "example": "Das ist eine Eltern."
+              "example": "Meine Eltern besuchen mich."
             },
             {
               "id": "uuid-406",
@@ -1943,7 +1943,7 @@
               "german": "Sohn",
               "english": "Son",
               "gender": "der",
-              "example": "Das ist ein Sohn."
+              "example": "Mein Sohn spielt Fußball."
             },
             {
               "id": "uuid-407",
@@ -1951,7 +1951,7 @@
               "german": "Tochter",
               "english": "Daughter",
               "gender": "die",
-              "example": "Das ist eine Tochter."
+              "example": "Meine Tochter geht zur Schule."
             },
             {
               "id": "uuid-408",
@@ -1959,7 +1959,7 @@
               "german": "Bruder",
               "english": "Brother",
               "gender": "der",
-              "example": "Das ist ein Bruder."
+              "example": "Ich habe einen Bruder."
             },
             {
               "id": "uuid-409",
@@ -1967,7 +1967,7 @@
               "german": "Schwester",
               "english": "Sister",
               "gender": "die",
-              "example": "Das ist eine Schwester."
+              "example": "Meine Schwester ist älter als ich."
             },
             {
               "id": "uuid-410",
@@ -1975,7 +1975,7 @@
               "german": "Geschwister",
               "english": "Siblings",
               "gender": "die",
-              "example": "Das ist eine Geschwister."
+              "example": "Hast du Geschwister?"
             },
             {
               "id": "uuid-411",
@@ -1983,7 +1983,7 @@
               "german": "Großeltern",
               "english": "Grandparents",
               "gender": "die",
-              "example": "Das ist eine Großeltern."
+              "example": "Meine Großeltern leben auf dem Land."
             },
             {
               "id": "uuid-412",
@@ -1991,7 +1991,7 @@
               "german": "Großvater",
               "english": "Grandfather",
               "gender": "der",
-              "example": "Das ist ein Großvater."
+              "example": "Mein Großvater ist 80 Jahre alt."
             },
             {
               "id": "uuid-413",
@@ -1999,7 +1999,7 @@
               "german": "Großmutter",
               "english": "Grandmother",
               "gender": "die",
-              "example": "Das ist eine Großmutter."
+              "example": "Meine Großmutter backt Kuchen."
             },
             {
               "id": "uuid-414",
@@ -2007,7 +2007,7 @@
               "german": "Opa",
               "english": "Grandpa",
               "gender": "der",
-              "example": "Das ist ein Opa."
+              "example": "Mein Opa erzählt gern Geschichten."
             },
             {
               "id": "uuid-415",
@@ -2015,7 +2015,7 @@
               "german": "Oma",
               "english": "Grandma",
               "gender": "die",
-              "example": "Das ist eine Oma."
+              "example": "Ich besuche meine Oma."
             },
             {
               "id": "uuid-416",
@@ -2023,7 +2023,7 @@
               "german": "Kind",
               "english": "Child",
               "gender": "das",
-              "example": "Das ist ein Kind."
+              "example": "Das Kind spielt im Garten."
             },
             {
               "id": "uuid-417",
@@ -2031,7 +2031,7 @@
               "german": "Baby",
               "english": "Baby",
               "gender": "das",
-              "example": "Das ist ein Baby."
+              "example": "Das Baby schläft."
             },
             {
               "id": "uuid-418",
@@ -2039,7 +2039,7 @@
               "german": "Junge",
               "english": "Boy",
               "gender": "der",
-              "example": "Das ist ein Junge."
+              "example": "Der Junge spielt Ball."
             },
             {
               "id": "uuid-419",
@@ -2047,7 +2047,7 @@
               "german": "Mädchen",
               "english": "Girl",
               "gender": "das",
-              "example": "Das ist ein Mädchen."
+              "example": "Das Mädchen liest ein Buch."
             },
             {
               "id": "uuid-420",
@@ -2055,7 +2055,7 @@
               "german": "Freund",
               "english": "Friend (m)",
               "gender": "der",
-              "example": "Das ist ein Freund."
+              "example": "Ich treffe mich mit einem Freund."
             },
             {
               "id": "uuid-421",
@@ -2063,7 +2063,7 @@
               "german": "Freundin",
               "english": "Friend (f)",
               "gender": "die",
-              "example": "Das ist eine Freundin."
+              "example": "Das ist meine Freundin."
             },
             {
               "id": "uuid-422",
@@ -2071,7 +2071,7 @@
               "german": "Partner",
               "english": "Partner (m)",
               "gender": "der",
-              "example": "Das ist ein Partner."
+              "example": "Er ist mein Geschäftspartner."
             },
             {
               "id": "uuid-423",
@@ -2079,7 +2079,7 @@
               "german": "Partnerin",
               "english": "Partner (f)",
               "gender": "die",
-              "example": "Das ist eine Partnerin."
+              "example": "Sie ist meine Partnerin."
             },
             {
               "id": "uuid-424",
@@ -2087,7 +2087,7 @@
               "german": "Kollege",
               "english": "Colleague",
               "gender": "der",
-              "example": "Das ist ein Kollege."
+              "example": "Ich mag meine Kollegen."
             },
             {
               "id": "uuid-425",
@@ -2095,7 +2095,7 @@
               "german": "Bekannte",
               "english": "Acquaintance",
               "gender": "der",
-              "example": "Das ist ein Bekannte."
+              "example": "Er ist nur ein Bekannter."
             },
             {
               "id": "uuid-426",
@@ -2103,7 +2103,7 @@
               "german": "Nachbar",
               "english": "Neighbor",
               "gender": "der",
-              "example": "Das ist ein Nachbar."
+              "example": "Mein Nachbar ist sehr laut."
             },
             {
               "id": "uuid-427",
@@ -2111,7 +2111,7 @@
               "german": "Gast",
               "english": "Guest",
               "gender": "der",
-              "example": "Das ist ein Gast."
+              "example": "Wir haben heute Gäste."
             },
             {
               "id": "uuid-428",
@@ -2119,7 +2119,7 @@
               "german": "Leute",
               "english": "People",
               "gender": "die",
-              "example": "Das ist eine Leute."
+              "example": "Viele Leute waren auf der Party."
             },
             {
               "id": "uuid-429",
@@ -2127,7 +2127,7 @@
               "german": "Mensch",
               "english": "Human",
               "gender": "der",
-              "example": "Das ist ein Mensch."
+              "example": "Jeder Mensch ist gleich."
             },
             {
               "id": "uuid-430",
@@ -2135,7 +2135,7 @@
               "german": "Person",
               "english": "Person",
               "gender": "die",
-              "example": "Das ist eine Person."
+              "example": "Eine Person hat gefehlt."
             },
             {
               "id": "uuid-431",
@@ -2143,7 +2143,7 @@
               "german": "Erwachsene",
               "english": "Adult",
               "gender": "der",
-              "example": "Das ist ein Erwachsene."
+              "example": "Das ist nur für Erwachsene."
             },
             {
               "id": "uuid-432",
@@ -2151,7 +2151,7 @@
               "german": "Herr",
               "english": "Mr/Gentleman",
               "gender": "der",
-              "example": "Das ist ein Herr."
+              "example": "Guten Tag, Herr Müller."
             },
             {
               "id": "uuid-433",
@@ -2159,7 +2159,7 @@
               "german": "Dame",
               "english": "Lady",
               "gender": "die",
-              "example": "Das ist eine Dame."
+              "example": "Sehr geehrte Damen und Herren."
             },
             {
               "id": "uuid-434",
@@ -2167,7 +2167,7 @@
               "german": "Kopf",
               "english": "Head",
               "gender": "der",
-              "example": "Das ist ein Kopf."
+              "example": "Ich habe Kopfschmerzen."
             },
             {
               "id": "uuid-435",
@@ -2175,7 +2175,7 @@
               "german": "Auge",
               "english": "Eye",
               "gender": "das",
-              "example": "Das ist ein Auge."
+              "example": "Meine Augen tun weh."
             },
             {
               "id": "uuid-436",
@@ -2183,7 +2183,7 @@
               "german": "Mund",
               "english": "Mouth",
               "gender": "der",
-              "example": "Das ist ein Mund."
+              "example": "Mach bitte den Mund auf."
             },
             {
               "id": "uuid-437",
@@ -2191,7 +2191,7 @@
               "german": "Zahn",
               "english": "Tooth",
               "gender": "der",
-              "example": "Das ist ein Zahn."
+              "example": "Ich muss Zähne putzen."
             },
             {
               "id": "uuid-438",
@@ -2199,7 +2199,7 @@
               "german": "Arm",
               "english": "Arm",
               "gender": "der",
-              "example": "Das ist ein Arm."
+              "example": "Mein Arm tut weh."
             },
             {
               "id": "uuid-439",
@@ -2207,7 +2207,7 @@
               "german": "Hand",
               "english": "Hand",
               "gender": "die",
-              "example": "Das ist eine Hand."
+              "example": "Gib mir deine Hand."
             },
             {
               "id": "uuid-440",
@@ -2215,7 +2215,7 @@
               "german": "Finger",
               "english": "Finger",
               "gender": "der",
-              "example": "Das ist ein Finger."
+              "example": "Ich habe mich in den Finger geschnitten."
             },
             {
               "id": "uuid-441",
@@ -2223,7 +2223,7 @@
               "german": "Bauch",
               "english": "Stomach",
               "gender": "der",
-              "example": "Das ist ein Bauch."
+              "example": "Ich habe Bauchschmerzen."
             },
             {
               "id": "uuid-442",
@@ -2231,7 +2231,7 @@
               "german": "Bein",
               "english": "Leg",
               "gender": "das",
-              "example": "Das ist ein Bein."
+              "example": "Sein Bein ist gebrochen."
             },
             {
               "id": "uuid-443",
@@ -2239,7 +2239,7 @@
               "german": "Fuß",
               "english": "Foot",
               "gender": "der",
-              "example": "Das ist ein Fuß."
+              "example": "Wir gehen zu Fuß."
             },
             {
               "id": "uuid-444",
@@ -2247,7 +2247,7 @@
               "german": "Haar",
               "english": "Hair",
               "gender": "das",
-              "example": "Das ist ein Haar."
+              "example": "Deine Haare sind schön."
             },
             {
               "id": "uuid-445",
@@ -2255,7 +2255,7 @@
               "german": "Rücken",
               "english": "Back",
               "gender": "der",
-              "example": "Das ist ein Rücken."
+              "example": "Mein Rücken tut weh."
             },
             {
               "id": "uuid-446",
@@ -2263,7 +2263,7 @@
               "german": "Herz",
               "english": "Heart",
               "gender": "das",
-              "example": "Das ist ein Herz."
+              "example": "Mein Herz schlägt schnell."
             },
             {
               "id": "uuid-447",
@@ -2271,7 +2271,7 @@
               "german": "Schmerz",
               "english": "Pain",
               "gender": "der",
-              "example": "Das ist ein Schmerz."
+              "example": "Ich habe starke Schmerzen."
             },
             {
               "id": "uuid-448",
@@ -2279,7 +2279,7 @@
               "german": "Fieber",
               "english": "Fever",
               "gender": "das",
-              "example": "Das ist ein Fieber."
+              "example": "Das Kind hat Fieber."
             },
             {
               "id": "uuid-449",
@@ -2287,7 +2287,7 @@
               "german": "Name",
               "english": "Name",
               "gender": "der",
-              "example": "Das ist ein Name."
+              "example": "Wie ist dein Name?"
             },
             {
               "id": "uuid-450",
@@ -2295,7 +2295,7 @@
               "german": "Vorname",
               "english": "First Name",
               "gender": "der",
-              "example": "Das ist ein Vorname."
+              "example": "Mein Vorname ist Peter."
             },
             {
               "id": "uuid-451",
@@ -2303,7 +2303,7 @@
               "german": "Familienname",
               "english": "Surname",
               "gender": "der",
-              "example": "Das ist ein Familienname."
+              "example": "Mein Familienname ist Müller."
             },
             {
               "id": "uuid-452",
@@ -2311,7 +2311,7 @@
               "german": "Adresse",
               "english": "Address",
               "gender": "die",
-              "example": "Das ist eine Adresse."
+              "example": "Wie ist deine Adresse?"
             },
             {
               "id": "uuid-453",
@@ -2319,7 +2319,7 @@
               "german": "Alter",
               "english": "Age",
               "gender": "das",
-              "example": "Das ist ein Alter."
+              "example": "Alter spielt keine Rolle."
             },
             {
               "id": "uuid-454",
@@ -2327,7 +2327,7 @@
               "german": "Geburtsort",
               "english": "Place of Birth",
               "gender": "der",
-              "example": "Das ist ein Geburtsort."
+              "example": "Mein Geburtsort ist Berlin."
             },
             {
               "id": "uuid-455",
@@ -2335,7 +2335,7 @@
               "german": "Geburtsjahr",
               "english": "Year of Birth",
               "gender": "das",
-              "example": "Das ist ein Geburtsjahr."
+              "example": "Mein Geburtsjahr ist 1990."
             },
             {
               "id": "uuid-456",
@@ -2343,7 +2343,7 @@
               "german": "Geburtstag",
               "english": "Birthday",
               "gender": "der",
-              "example": "Das ist ein Geburtstag."
+              "example": "Herzlichen Glückwunsch zum Geburtstag!"
             },
             {
               "id": "uuid-457",
@@ -2351,7 +2351,7 @@
               "german": "Familienstand",
               "english": "Marital Status",
               "gender": "der",
-              "example": "Das ist ein Familienstand."
+              "example": "Was ist Ihr Familienstand?"
             },
             {
               "id": "uuid-458",
@@ -2359,7 +2359,7 @@
               "german": "ledig",
               "english": "single",
               "gender": "none",
-              "example": "Ich muss ledig."
+              "example": "Ich bin ledig."
             },
             {
               "id": "uuid-459",
@@ -2367,7 +2367,7 @@
               "german": "verheiratet",
               "english": "married",
               "gender": "none",
-              "example": "Ich muss verheiratet."
+              "example": "Ich bin seit drei Jahren verheiratet."
             },
             {
               "id": "uuid-460",
@@ -2375,7 +2375,7 @@
               "german": "männlich",
               "english": "male",
               "gender": "none",
-              "example": "Ich muss männlich."
+              "example": "Geschlecht: männlich."
             },
             {
               "id": "uuid-461",
@@ -2383,7 +2383,7 @@
               "german": "weiblich",
               "english": "female",
               "gender": "none",
-              "example": "Ich muss weiblich."
+              "example": "Geschlecht: weiblich."
             },
             {
               "id": "uuid-462",
@@ -2391,7 +2391,7 @@
               "german": "Heimat",
               "english": "Homeland",
               "gender": "die",
-              "example": "Das ist eine Heimat."
+              "example": "Ich vermisse meine Heimat."
             },
             {
               "id": "uuid-463",
@@ -2399,7 +2399,7 @@
               "german": "leben",
               "english": "to live",
               "gender": "none",
-              "example": "Ich muss leben."
+              "example": "Er lebt in München."
             },
             {
               "id": "uuid-464",
@@ -2407,7 +2407,7 @@
               "german": "wohnen",
               "english": "to reside",
               "gender": "none",
-              "example": "Ich muss wohnen."
+              "example": "Ich wohne in der Goethestraße."
             },
             {
               "id": "uuid-465",
@@ -2415,7 +2415,7 @@
               "german": "geboren",
               "english": "born",
               "gender": "none",
-              "example": "Ich muss geboren."
+              "example": "Ich bin in Hamburg geboren."
             },
             {
               "id": "uuid-466",
@@ -2423,7 +2423,7 @@
               "german": "sterben",
               "english": "to die",
               "gender": "none",
-              "example": "Ich muss sterben."
+              "example": "Niemand will sterben."
             },
             {
               "id": "uuid-467",
@@ -2431,7 +2431,7 @@
               "german": "gestorben",
               "english": "died",
               "gender": "none",
-              "example": "Ich muss gestorben."
+              "example": "Mein Großvater ist gestorben."
             },
             {
               "id": "uuid-468",
@@ -2439,7 +2439,7 @@
               "german": "sich vorstellen",
               "english": "to introduce oneself",
               "gender": "none",
-              "example": "Ich muss sich vorstellen."
+              "example": "Darf ich mich vorstellen?"
             }
           ]
         },
@@ -2454,7 +2454,7 @@
               "german": "Haus",
               "english": "House",
               "gender": "das",
-              "example": "Das ist ein Haus."
+              "example": "Wir bauen ein Haus."
             },
             {
               "id": "uuid-501",
@@ -2462,7 +2462,7 @@
               "german": "Wohnung",
               "english": "Apartment",
               "gender": "die",
-              "example": "Das ist eine Wohnung."
+              "example": "Ich suche eine Wohnung."
             },
             {
               "id": "uuid-502",
@@ -2470,7 +2470,7 @@
               "german": "Zimmer",
               "english": "Room",
               "gender": "das",
-              "example": "Das ist ein Zimmer."
+              "example": "Ich habe ein Zimmer reserviert."
             },
             {
               "id": "uuid-503",
@@ -2478,7 +2478,7 @@
               "german": "Küche",
               "english": "Kitchen",
               "gender": "die",
-              "example": "Das ist eine Küche."
+              "example": "Wir sitzen in der Küche."
             },
             {
               "id": "uuid-504",
@@ -2486,7 +2486,7 @@
               "german": "Bad",
               "english": "Bath",
               "gender": "das",
-              "example": "Das ist ein Bad."
+              "example": "Das Bad ist besetzt."
             },
             {
               "id": "uuid-505",
@@ -2494,7 +2494,7 @@
               "german": "Toilette",
               "english": "Toilet",
               "gender": "die",
-              "example": "Das ist eine Toilette."
+              "example": "Wo ist die Toilette?"
             },
             {
               "id": "uuid-506",
@@ -2502,7 +2502,7 @@
               "german": "Flur",
               "english": "Hallway",
               "gender": "der",
-              "example": "Das ist ein Flur."
+              "example": "Warte bitte im Flur."
             },
             {
               "id": "uuid-507",
@@ -2510,7 +2510,7 @@
               "german": "Balkon",
               "english": "Balcony",
               "gender": "der",
-              "example": "Das ist ein Balkon."
+              "example": "Die Wohnung hat einen Balkon."
             },
             {
               "id": "uuid-508",
@@ -2518,7 +2518,7 @@
               "german": "Keller",
               "english": "Basement",
               "gender": "der",
-              "example": "Das ist ein Keller."
+              "example": "Der Wein ist im Keller."
             },
             {
               "id": "uuid-509",
@@ -2526,7 +2526,7 @@
               "german": "Garten",
               "english": "Garden",
               "gender": "der",
-              "example": "Das ist ein Garten."
+              "example": "Wir grillen im Garten."
             },
             {
               "id": "uuid-510",
@@ -2534,7 +2534,7 @@
               "german": "Stock",
               "english": "Floor",
               "gender": "der",
-              "example": "Das ist ein Stock."
+              "example": "Ich wohne im dritten Stock."
             },
             {
               "id": "uuid-511",
@@ -2542,7 +2542,7 @@
               "german": "Erdgeschoss",
               "english": "Ground Floor",
               "gender": "das",
-              "example": "Das ist ein Erdgeschoss."
+              "example": "Das Büro ist im Erdgeschoss."
             },
             {
               "id": "uuid-512",
@@ -2550,7 +2550,7 @@
               "german": "Aufzug",
               "english": "Elevator",
               "gender": "der",
-              "example": "Das ist ein Aufzug."
+              "example": "Der Aufzug ist kaputt."
             },
             {
               "id": "uuid-513",
@@ -2558,7 +2558,7 @@
               "german": "Treppe",
               "english": "Stairs",
               "gender": "die",
-              "example": "Das ist eine Treppe."
+              "example": "Vorsicht auf der Treppe!"
             },
             {
               "id": "uuid-514",
@@ -2566,7 +2566,7 @@
               "german": "Tür",
               "english": "Door",
               "gender": "die",
-              "example": "Das ist eine Tür."
+              "example": "Mach bitte die Tür zu."
             },
             {
               "id": "uuid-515",
@@ -2574,7 +2574,7 @@
               "german": "Fenster",
               "english": "Window",
               "gender": "das",
-              "example": "Das ist ein Fenster."
+              "example": "Kannst du das Fenster öffnen?"
             },
             {
               "id": "uuid-516",
@@ -2582,7 +2582,7 @@
               "german": "Wand",
               "english": "Wall",
               "gender": "die",
-              "example": "Das ist eine Wand."
+              "example": "Das Bild hängt an der Wand."
             },
             {
               "id": "uuid-517",
@@ -2590,7 +2590,7 @@
               "german": "Möbel",
               "english": "Furniture",
               "gender": "das",
-              "example": "Das ist ein Möbel."
+              "example": "Wir kaufen neue Möbel."
             },
             {
               "id": "uuid-518",
@@ -2598,7 +2598,7 @@
               "german": "Tisch",
               "english": "Table",
               "gender": "der",
-              "example": "Das ist ein Tisch."
+              "example": "Das Essen steht auf dem Tisch."
             },
             {
               "id": "uuid-519",
@@ -2606,7 +2606,7 @@
               "german": "Stuhl",
               "english": "Chair",
               "gender": "der",
-              "example": "Das ist ein Stuhl."
+              "example": "Ist der Stuhl frei?"
             },
             {
               "id": "uuid-520",
@@ -2614,7 +2614,7 @@
               "german": "Bett",
               "english": "Bed",
               "gender": "das",
-              "example": "Das ist ein Bett."
+              "example": "Ich gehe ins Bett."
             },
             {
               "id": "uuid-521",
@@ -2622,7 +2622,7 @@
               "german": "Schrank",
               "english": "Cupboard",
               "gender": "der",
-              "example": "Das ist ein Schrank."
+              "example": "Die Kleidung ist im Schrank."
             },
             {
               "id": "uuid-522",
@@ -2630,7 +2630,7 @@
               "german": "Sofa",
               "english": "Sofa",
               "gender": "das",
-              "example": "Das ist ein Sofa."
+              "example": "Das Sofa ist bequem."
             },
             {
               "id": "uuid-523",
@@ -2638,7 +2638,7 @@
               "german": "Lampe",
               "english": "Lamp",
               "gender": "die",
-              "example": "Das ist eine Lampe."
+              "example": "Mach bitte die Lampe an."
             },
             {
               "id": "uuid-524",
@@ -2646,7 +2646,7 @@
               "german": "Herd",
               "english": "Stove",
               "gender": "der",
-              "example": "Das ist ein Herd."
+              "example": "Der Herd ist noch heiß."
             },
             {
               "id": "uuid-525",
@@ -2654,7 +2654,7 @@
               "german": "Kühlschrank",
               "english": "Fridge",
               "gender": "der",
-              "example": "Das ist ein Kühlschrank."
+              "example": "Das Bier ist im Kühlschrank."
             },
             {
               "id": "uuid-526",
@@ -2662,7 +2662,7 @@
               "german": "Waschmaschine",
               "english": "Washing Machine",
               "gender": "die",
-              "example": "Das ist eine Waschmaschine."
+              "example": "Die Waschmaschine läuft."
             },
             {
               "id": "uuid-527",
@@ -2670,7 +2670,7 @@
               "german": "Maschine",
               "english": "Machine",
               "gender": "die",
-              "example": "Das ist eine Maschine."
+              "example": "Die Maschine ist laut."
             },
             {
               "id": "uuid-528",
@@ -2678,7 +2678,7 @@
               "german": "Fernseher",
               "english": "TV Set",
               "gender": "der",
-              "example": "Das ist ein Fernseher."
+              "example": "Wir haben keinen Fernseher."
             },
             {
               "id": "uuid-529",
@@ -2686,7 +2686,7 @@
               "german": "Radio",
               "english": "Radio",
               "gender": "das",
-              "example": "Das ist ein Radio."
+              "example": "Ich höre Radio."
             },
             {
               "id": "uuid-530",
@@ -2694,7 +2694,7 @@
               "german": "Dusche",
               "english": "Shower",
               "gender": "die",
-              "example": "Das ist eine Dusche."
+              "example": "Ich gehe unter die Dusche."
             },
             {
               "id": "uuid-531",
@@ -2702,7 +2702,7 @@
               "german": "Badewanne",
               "english": "Bathtub",
               "gender": "die",
-              "example": "Das ist eine Badewanne."
+              "example": "Die Wohnung hat eine Badewanne."
             },
             {
               "id": "uuid-532",
@@ -2710,7 +2710,7 @@
               "german": "Handtuch",
               "english": "Towel",
               "gender": "das",
-              "example": "Das ist ein Handtuch."
+              "example": "Ich brauche ein Handtuch."
             },
             {
               "id": "uuid-533",
@@ -2718,7 +2718,7 @@
               "german": "Schlüssel",
               "english": "Key",
               "gender": "der",
-              "example": "Das ist ein Schlüssel."
+              "example": "Ich habe meinen Schlüssel vergessen."
             },
             {
               "id": "uuid-534",
@@ -2726,7 +2726,7 @@
               "german": "Bild",
               "english": "Picture",
               "gender": "das",
-              "example": "Das ist ein Bild."
+              "example": "Das Bild ist schön."
             },
             {
               "id": "uuid-535",
@@ -2734,7 +2734,7 @@
               "german": "Licht",
               "english": "Light",
               "gender": "das",
-              "example": "Das ist ein Licht."
+              "example": "Mach das Licht aus."
             },
             {
               "id": "uuid-536",
@@ -2742,7 +2742,7 @@
               "german": "Feuer",
               "english": "Fire",
               "gender": "das",
-              "example": "Das ist ein Feuer."
+              "example": "Hast du Feuer?"
             },
             {
               "id": "uuid-537",
@@ -2750,7 +2750,7 @@
               "german": "Miete",
               "english": "Rent",
               "gender": "die",
-              "example": "Das ist eine Miete."
+              "example": "Die Miete ist sehr hoch."
             },
             {
               "id": "uuid-538",
@@ -2758,7 +2758,7 @@
               "german": "Vermieter",
               "english": "Landlord",
               "gender": "der",
-              "example": "Das ist ein Vermieter."
+              "example": "Mein Vermieter ist nett."
             },
             {
               "id": "uuid-539",
@@ -2766,7 +2766,7 @@
               "german": "Hausfrau",
               "english": "Housewife",
               "gender": "die",
-              "example": "Das ist eine Hausfrau."
+              "example": "Sie ist Hausfrau."
             },
             {
               "id": "uuid-540",
@@ -2774,7 +2774,7 @@
               "german": "Hausmann",
               "english": "Househusband",
               "gender": "der",
-              "example": "Das ist ein Hausmann."
+              "example": "Er ist Hausmann."
             },
             {
               "id": "uuid-541",
@@ -2782,7 +2782,7 @@
               "german": "aufmachen",
               "english": "to open",
               "gender": "none",
-              "example": "Ich muss aufmachen."
+              "example": "Kannst du die Tür aufmachen?"
             },
             {
               "id": "uuid-542",
@@ -2790,7 +2790,7 @@
               "german": "zumachen",
               "english": "to close",
               "gender": "none",
-              "example": "Ich muss zumachen."
+              "example": "Mach bitte das Fenster zu."
             },
             {
               "id": "uuid-543",
@@ -2798,7 +2798,7 @@
               "german": "öffnen",
               "english": "to open",
               "gender": "none",
-              "example": "Ich muss öffnen."
+              "example": "Wann öffnet das Geschäft?"
             },
             {
               "id": "uuid-544",
@@ -2806,7 +2806,7 @@
               "german": "schließen",
               "english": "to close",
               "gender": "none",
-              "example": "Ich muss schließen."
+              "example": "Die Bank schließt um 16 Uhr."
             },
             {
               "id": "uuid-545",
@@ -2814,7 +2814,7 @@
               "german": "mieten",
               "english": "to rent",
               "gender": "none",
-              "example": "Ich muss mieten."
+              "example": "Wir möchten eine Wohnung mieten."
             },
             {
               "id": "uuid-546",
@@ -2822,7 +2822,7 @@
               "german": "vermieten",
               "english": "to rent out",
               "gender": "none",
-              "example": "Ich muss vermieten."
+              "example": "Zimmer zu vermieten."
             },
             {
               "id": "uuid-547",
@@ -2830,7 +2830,7 @@
               "german": "umziehen",
               "english": "to move house",
               "gender": "none",
-              "example": "Ich muss umziehen."
+              "example": "Wir ziehen nächste Woche um."
             },
             {
               "id": "uuid-548",
@@ -2838,7 +2838,7 @@
               "german": "waschen",
               "english": "to wash",
               "gender": "none",
-              "example": "Ich muss waschen."
+              "example": "Ich muss Wäsche waschen."
             },
             {
               "id": "uuid-549",
@@ -2846,7 +2846,7 @@
               "german": "duschen",
               "english": "to shower",
               "gender": "none",
-              "example": "Ich muss duschen."
+              "example": "Ich dusche jeden Morgen."
             },
             {
               "id": "uuid-550",
@@ -2854,7 +2854,7 @@
               "german": "baden",
               "english": "to bathe",
               "gender": "none",
-              "example": "Ich muss baden."
+              "example": "Ich bade gern."
             },
             {
               "id": "uuid-551",
@@ -2862,7 +2862,7 @@
               "german": "kochen",
               "english": "to cook",
               "gender": "none",
-              "example": "Ich muss kochen."
+              "example": "Ich koche heute Abend."
             },
             {
               "id": "uuid-552",
@@ -2870,7 +2870,7 @@
               "german": "schlafen",
               "english": "to sleep",
               "gender": "none",
-              "example": "Ich muss schlafen."
+              "example": "Ich habe gut geschlafen."
             }
           ]
         },
@@ -2885,7 +2885,7 @@
               "german": "Essen",
               "english": "Food",
               "gender": "das",
-              "example": "Das ist ein Essen."
+              "example": "Das Essen ist fertig."
             },
             {
               "id": "uuid-601",
@@ -2893,7 +2893,7 @@
               "german": "Getränk",
               "english": "Drink",
               "gender": "das",
-              "example": "Das ist ein Getränk."
+              "example": "Möchten Sie ein Getränk?"
             },
             {
               "id": "uuid-602",
@@ -2901,7 +2901,7 @@
               "german": "Lebensmittel",
               "english": "Groceries",
               "gender": "das",
-              "example": "Das ist ein Lebensmittel."
+              "example": "Wir brauchen Lebensmittel."
             },
             {
               "id": "uuid-603",
@@ -2909,7 +2909,7 @@
               "german": "Brot",
               "english": "Bread",
               "gender": "das",
-              "example": "Das ist ein Brot."
+              "example": "Ich esse gern frisches Brot."
             },
             {
               "id": "uuid-604",
@@ -2917,7 +2917,7 @@
               "german": "Brötchen",
               "english": "Roll",
               "gender": "das",
-              "example": "Das ist ein Brötchen."
+              "example": "Zwei Brötchen, bitte."
             },
             {
               "id": "uuid-605",
@@ -2925,7 +2925,7 @@
               "german": "Butter",
               "english": "Butter",
               "gender": "die",
-              "example": "Das ist eine Butter."
+              "example": "Brot mit Butter."
             },
             {
               "id": "uuid-606",
@@ -2933,7 +2933,7 @@
               "german": "Ei",
               "english": "Egg",
               "gender": "das",
-              "example": "Das ist ein Ei."
+              "example": "Ich möchte ein gekochtes Ei."
             },
             {
               "id": "uuid-607",
@@ -2941,7 +2941,7 @@
               "german": "Käse",
               "english": "Cheese",
               "gender": "der",
-              "example": "Das ist ein Käse."
+              "example": "Magst du Käse?"
             },
             {
               "id": "uuid-608",
@@ -2949,7 +2949,7 @@
               "german": "Wurst",
               "english": "Sausage",
               "gender": "die",
-              "example": "Das ist eine Wurst."
+              "example": "Eine Wurst, bitte."
             },
             {
               "id": "uuid-609",
@@ -2957,7 +2957,7 @@
               "german": "Fleisch",
               "english": "Meat",
               "gender": "das",
-              "example": "Das ist ein Fleisch."
+              "example": "Ich esse kein Fleisch."
             },
             {
               "id": "uuid-610",
@@ -2965,7 +2965,7 @@
               "german": "Fisch",
               "english": "Fish",
               "gender": "der",
-              "example": "Das ist ein Fisch."
+              "example": "Der Fisch ist frisch."
             },
             {
               "id": "uuid-611",
@@ -2973,7 +2973,7 @@
               "german": "Hähnchen",
               "english": "Chicken",
               "gender": "das",
-              "example": "Das ist ein Hähnchen."
+              "example": "Hähnchen mit Pommes."
             },
             {
               "id": "uuid-612",
@@ -2981,7 +2981,7 @@
               "german": "Schinken",
               "english": "Ham",
               "gender": "der",
-              "example": "Das ist ein Schinken."
+              "example": "Pizza mit Schinken."
             },
             {
               "id": "uuid-613",
@@ -2989,7 +2989,7 @@
               "german": "Reis",
               "english": "Rice",
               "gender": "der",
-              "example": "Das ist ein Reis."
+              "example": "Ich nehme den Reis."
             },
             {
               "id": "uuid-614",
@@ -2997,7 +2997,7 @@
               "german": "Nudel",
               "english": "Noodle",
               "gender": "die",
-              "example": "Das ist eine Nudel."
+              "example": "Ich liebe Nudeln."
             },
             {
               "id": "uuid-615",
@@ -3005,7 +3005,7 @@
               "german": "Kartoffel",
               "english": "Potato",
               "gender": "die",
-              "example": "Das ist eine Kartoffel."
+              "example": "Kartoffeln sind gesund."
             },
             {
               "id": "uuid-616",
@@ -3013,7 +3013,7 @@
               "german": "Pommes frites",
               "english": "Fries",
               "gender": "die",
-              "example": "Das ist eine Pommes frites."
+              "example": "Einmal Pommes mit Ketchup."
             },
             {
               "id": "uuid-617",
@@ -3021,7 +3021,7 @@
               "german": "Salat",
               "english": "Salad",
               "gender": "der",
-              "example": "Das ist ein Salat."
+              "example": "Ich möchte einen Salat."
             },
             {
               "id": "uuid-618",
@@ -3029,7 +3029,7 @@
               "german": "Obst",
               "english": "Fruit",
               "gender": "das",
-              "example": "Das ist ein Obst."
+              "example": "Iss mehr Obst!"
             },
             {
               "id": "uuid-619",
@@ -3037,7 +3037,7 @@
               "german": "Gemüse",
               "english": "Vegetables",
               "gender": "das",
-              "example": "Das ist ein Gemüse."
+              "example": "Gemüse ist wichtig."
             },
             {
               "id": "uuid-620",
@@ -3045,7 +3045,7 @@
               "german": "Apfel",
               "english": "Apple",
               "gender": "der",
-              "example": "Das ist ein Apfel."
+              "example": "Ein Apfel am Tag hält gesund."
             },
             {
               "id": "uuid-621",
@@ -3053,7 +3053,7 @@
               "german": "Banane",
               "english": "Banana",
               "gender": "die",
-              "example": "Das ist eine Banane."
+              "example": "Die Banane ist gelb."
             },
             {
               "id": "uuid-622",
@@ -3061,7 +3061,7 @@
               "german": "Birne",
               "english": "Pear",
               "gender": "die",
-              "example": "Das ist eine Birne."
+              "example": "Die Birne ist süß."
             },
             {
               "id": "uuid-623",
@@ -3069,7 +3069,7 @@
               "german": "Tomate",
               "english": "Tomato",
               "gender": "die",
-              "example": "Das ist eine Tomate."
+              "example": "Tomaten sind rot."
             },
             {
               "id": "uuid-624",
@@ -3077,7 +3077,7 @@
               "german": "Orange",
               "english": "Orange",
               "gender": "die",
-              "example": "Das ist eine Orange."
+              "example": "Ich trinke Orangensaft."
             },
             {
               "id": "uuid-625",
@@ -3085,7 +3085,7 @@
               "german": "Kuchen",
               "english": "Cake",
               "gender": "der",
-              "example": "Das ist ein Kuchen."
+              "example": "Ein Stück Kuchen, bitte."
             },
             {
               "id": "uuid-626",
@@ -3093,7 +3093,7 @@
               "german": "Eis",
               "english": "Ice Cream",
               "gender": "das",
-              "example": "Das ist ein Eis."
+              "example": "Ich möchte ein Eis essen."
             },
             {
               "id": "uuid-627",
@@ -3101,7 +3101,7 @@
               "german": "Schokolade",
               "english": "Chocolate",
               "gender": "die",
-              "example": "Das ist eine Schokolade."
+              "example": "Schokolade macht glücklich."
             },
             {
               "id": "uuid-628",
@@ -3109,7 +3109,7 @@
               "german": "Zucker",
               "english": "Sugar",
               "gender": "der",
-              "example": "Das ist ein Zucker."
+              "example": "Kaffee mit Zucker."
             },
             {
               "id": "uuid-629",
@@ -3117,7 +3117,7 @@
               "german": "Salz",
               "english": "Salt",
               "gender": "das",
-              "example": "Das ist ein Salz."
+              "example": "Gib mir bitte das Salz."
             },
             {
               "id": "uuid-630",
@@ -3125,7 +3125,7 @@
               "german": "Öl",
               "english": "Oil",
               "gender": "das",
-              "example": "Das ist ein Öl."
+              "example": "Salat mit Öl und Essig."
             },
             {
               "id": "uuid-631",
@@ -3133,7 +3133,7 @@
               "german": "Wasser",
               "english": "Water",
               "gender": "das",
-              "example": "Das ist ein Wasser."
+              "example": "Ein Glas Wasser, bitte."
             },
             {
               "id": "uuid-632",
@@ -3141,7 +3141,7 @@
               "german": "Milch",
               "english": "Milk",
               "gender": "die",
-              "example": "Das ist eine Milch."
+              "example": "Kaffee mit Milch."
             },
             {
               "id": "uuid-633",
@@ -3149,7 +3149,7 @@
               "german": "Kaffee",
               "english": "Coffee",
               "gender": "der",
-              "example": "Das ist ein Kaffee."
+              "example": "Einen Kaffee, bitte."
             },
             {
               "id": "uuid-634",
@@ -3157,7 +3157,7 @@
               "german": "Tee",
               "english": "Tea",
               "gender": "der",
-              "example": "Das ist ein Tee."
+              "example": "Ich trinke lieber Tee."
             },
             {
               "id": "uuid-635",
@@ -3165,7 +3165,7 @@
               "german": "Saft",
               "english": "Juice",
               "gender": "der",
-              "example": "Das ist ein Saft."
+              "example": "Ein Glas Saft, bitte."
             },
             {
               "id": "uuid-636",
@@ -3173,7 +3173,7 @@
               "german": "Bier",
               "english": "Beer",
               "gender": "das",
-              "example": "Das ist ein Bier."
+              "example": "Ein Bier, bitte."
             },
             {
               "id": "uuid-637",
@@ -3181,7 +3181,7 @@
               "german": "Wein",
               "english": "Wine",
               "gender": "der",
-              "example": "Das ist ein Wein."
+              "example": "Ein Glas Rotwein, bitte."
             },
             {
               "id": "uuid-638",
@@ -3189,7 +3189,7 @@
               "german": "Restaurant",
               "english": "Restaurant",
               "gender": "das",
-              "example": "Das ist ein Restaurant."
+              "example": "Wir gehen ins Restaurant."
             },
             {
               "id": "uuid-639",
@@ -3197,7 +3197,7 @@
               "german": "Café",
               "english": "Café",
               "gender": "das",
-              "example": "Das ist ein Café."
+              "example": "Treffen wir uns im Café?"
             },
             {
               "id": "uuid-640",
@@ -3205,7 +3205,7 @@
               "german": "Lokal",
               "english": "Pub/Bar",
               "gender": "das",
-              "example": "Das ist ein Lokal."
+              "example": "Das ist mein Lieblingslokal."
             },
             {
               "id": "uuid-641",
@@ -3213,7 +3213,7 @@
               "german": "Speisekarte",
               "english": "Menu",
               "gender": "die",
-              "example": "Das ist eine Speisekarte."
+              "example": "Die Speisekarte, bitte."
             },
             {
               "id": "uuid-642",
@@ -3221,7 +3221,7 @@
               "german": "Karte",
               "english": "Menu/Card",
               "gender": "die",
-              "example": "Das ist eine Karte."
+              "example": "Kann ich die Karte haben?"
             },
             {
               "id": "uuid-643",
@@ -3229,7 +3229,7 @@
               "german": "Platz",
               "english": "Seat",
               "gender": "der",
-              "example": "Das ist ein Platz."
+              "example": "Ist dieser Platz noch frei?"
             },
             {
               "id": "uuid-644",
@@ -3237,7 +3237,7 @@
               "german": "Rechnung",
               "english": "Bill",
               "gender": "die",
-              "example": "Das ist eine Rechnung."
+              "example": "Die Rechnung, bitte."
             },
             {
               "id": "uuid-645",
@@ -3245,7 +3245,7 @@
               "german": "Frühstück",
               "english": "Breakfast",
               "gender": "das",
-              "example": "Das ist ein Frühstück."
+              "example": "Was isst du zum Frühstück?"
             },
             {
               "id": "uuid-646",
@@ -3253,7 +3253,7 @@
               "german": "Mittagessen",
               "english": "Lunch",
               "gender": "das",
-              "example": "Das ist ein Mittagessen."
+              "example": "Das Mittagessen war gut."
             },
             {
               "id": "uuid-647",
@@ -3261,7 +3261,7 @@
               "german": "Abendessen",
               "english": "Dinner",
               "gender": "das",
-              "example": "Das ist ein Abendessen."
+              "example": "Was gibt es zum Abendessen?"
             },
             {
               "id": "uuid-648",
@@ -3269,7 +3269,7 @@
               "german": "Appetit",
               "english": "Appetite",
               "gender": "der",
-              "example": "Das ist ein Appetit."
+              "example": "Guten Appetit!"
             },
             {
               "id": "uuid-649",
@@ -3277,7 +3277,7 @@
               "german": "Hunger",
               "english": "Hunger",
               "gender": "der",
-              "example": "Das ist ein Hunger."
+              "example": "Ich habe großen Hunger."
             },
             {
               "id": "uuid-650",
@@ -3285,7 +3285,7 @@
               "german": "Durst",
               "english": "Thirst",
               "gender": "der",
-              "example": "Das ist ein Durst."
+              "example": "Ich habe Durst."
             },
             {
               "id": "uuid-651",
@@ -3293,7 +3293,7 @@
               "german": "Flasche",
               "english": "Bottle",
               "gender": "die",
-              "example": "Das ist eine Flasche."
+              "example": "Eine Flasche Wasser, bitte."
             },
             {
               "id": "uuid-652",
@@ -3301,7 +3301,7 @@
               "german": "Glas",
               "english": "Glass",
               "gender": "das",
-              "example": "Das ist ein Glas."
+              "example": "Ein Glas Wein, bitte."
             },
             {
               "id": "uuid-653",
@@ -3309,7 +3309,7 @@
               "german": "Tasse",
               "english": "Cup",
               "gender": "die",
-              "example": "Das ist eine Tasse."
+              "example": "Eine Tasse Kaffee, bitte."
             },
             {
               "id": "uuid-654",
@@ -3317,7 +3317,7 @@
               "german": "Löffel",
               "english": "Spoon",
               "gender": "der",
-              "example": "Das ist ein Löffel."
+              "example": "Ich brauche einen Löffel."
             },
             {
               "id": "uuid-655",
@@ -3325,7 +3325,7 @@
               "german": "Gabel",
               "english": "Fork",
               "gender": "die",
-              "example": "Das ist eine Gabel."
+              "example": "Messer und Gabel."
             },
             {
               "id": "uuid-656",
@@ -3333,7 +3333,7 @@
               "german": "Messer",
               "english": "Knife",
               "gender": "das",
-              "example": "Das ist ein Messer."
+              "example": "Das Messer ist scharf."
             },
             {
               "id": "uuid-657",
@@ -3341,7 +3341,7 @@
               "german": "Teller",
               "english": "Plate",
               "gender": "der",
-              "example": "Das ist ein Teller."
+              "example": "Der Teller ist leer."
             },
             {
               "id": "uuid-658",
@@ -3349,7 +3349,7 @@
               "german": "essen",
               "english": "to eat",
               "gender": "none",
-              "example": "Ich muss essen."
+              "example": "Wann essen wir?"
             },
             {
               "id": "uuid-659",
@@ -3357,7 +3357,7 @@
               "german": "trinken",
               "english": "to drink",
               "gender": "none",
-              "example": "Ich muss trinken."
+              "example": "Was möchtest du trinken?"
             },
             {
               "id": "uuid-660",
@@ -3365,7 +3365,7 @@
               "german": "frühstücken",
               "english": "to eat breakfast",
               "gender": "none",
-              "example": "Ich muss frühstücken."
+              "example": "Wir frühstücken um 8 Uhr."
             },
             {
               "id": "uuid-661",
@@ -3373,7 +3373,7 @@
               "german": "schmecken",
               "english": "to taste",
               "gender": "none",
-              "example": "Ich muss schmecken."
+              "example": "Das schmeckt sehr gut."
             },
             {
               "id": "uuid-662",
@@ -3381,7 +3381,7 @@
               "german": "bestellen",
               "english": "to order",
               "gender": "none",
-              "example": "Ich muss bestellen."
+              "example": "Wir möchten bestellen."
             },
             {
               "id": "uuid-663",
@@ -3389,7 +3389,7 @@
               "german": "bezahlen",
               "english": "to pay",
               "gender": "none",
-              "example": "Ich muss bezahlen."
+              "example": "Wir möchten bezahlen."
             },
             {
               "id": "uuid-664",
@@ -3397,7 +3397,7 @@
               "german": "zahlen",
               "english": "to pay",
               "gender": "none",
-              "example": "Ich muss zahlen."
+              "example": "Zahlen, bitte!"
             },
             {
               "id": "uuid-665",
@@ -3405,7 +3405,7 @@
               "german": "grillen",
               "english": "to grill",
               "gender": "none",
-              "example": "Ich muss grillen."
+              "example": "Im Sommer grillen wir oft."
             }
           ]
         },
@@ -3420,7 +3420,7 @@
               "german": "Geschäft",
               "english": "Shop",
               "gender": "das",
-              "example": "Das ist ein Geschäft."
+              "example": "Das Geschäft ist neu."
             },
             {
               "id": "uuid-701",
@@ -3428,7 +3428,7 @@
               "german": "Laden",
               "english": "Store",
               "gender": "der",
-              "example": "Das ist ein Laden."
+              "example": "Der Laden ist geschlossen."
             },
             {
               "id": "uuid-702",
@@ -3436,7 +3436,7 @@
               "german": "Supermarkt",
               "english": "Supermarket",
               "gender": "der",
-              "example": "Das ist ein Supermarkt."
+              "example": "Ich gehe in den Supermarkt."
             },
             {
               "id": "uuid-703",
@@ -3444,7 +3444,7 @@
               "german": "Bäckerei",
               "english": "Bakery",
               "gender": "die",
-              "example": "Das ist eine Bäckerei."
+              "example": "Brot kaufe ich in der Bäckerei."
             },
             {
               "id": "uuid-704",
@@ -3452,7 +3452,7 @@
               "german": "Kiosk",
               "english": "Kiosk",
               "gender": "der",
-              "example": "Das ist ein Kiosk."
+              "example": "Zeitung am Kiosk kaufen."
             },
             {
               "id": "uuid-705",
@@ -3460,7 +3460,7 @@
               "german": "Markt",
               "english": "Market",
               "gender": "der",
-              "example": "Das ist ein Markt."
+              "example": "Auf dem Markt gibt es frisches Obst."
             },
             {
               "id": "uuid-706",
@@ -3468,7 +3468,7 @@
               "german": "Apotheke",
               "english": "Pharmacy",
               "gender": "die",
-              "example": "Das ist eine Apotheke."
+              "example": "Wo ist die nächste Apotheke?"
             },
             {
               "id": "uuid-707",
@@ -3476,7 +3476,7 @@
               "german": "Geld",
               "english": "Money",
               "gender": "das",
-              "example": "Das ist ein Geld."
+              "example": "Ich habe kein Geld."
             },
             {
               "id": "uuid-708",
@@ -3484,7 +3484,7 @@
               "german": "Preis",
               "english": "Price",
               "gender": "der",
-              "example": "Das ist ein Preis."
+              "example": "Der Preis ist gut."
             },
             {
               "id": "uuid-709",
@@ -3492,7 +3492,7 @@
               "german": "Euro",
               "english": "Euro",
               "gender": "der",
-              "example": "Das ist ein Euro."
+              "example": "Das kostet 5 Euro."
             },
             {
               "id": "uuid-710",
@@ -3500,7 +3500,7 @@
               "german": "Cent",
               "english": "Cent",
               "gender": "der",
-              "example": "Das ist ein Cent."
+              "example": "50 Cent."
             },
             {
               "id": "uuid-711",
@@ -3508,7 +3508,7 @@
               "german": "Kasse",
               "english": "Cash Register",
               "gender": "die",
-              "example": "Das ist eine Kasse."
+              "example": "Bitte an der Kasse zahlen."
             },
             {
               "id": "uuid-712",
@@ -3516,7 +3516,7 @@
               "german": "Angebot",
               "english": "Offer",
               "gender": "das",
-              "example": "Das ist ein Angebot."
+              "example": "Das ist ein gutes Angebot."
             },
             {
               "id": "uuid-713",
@@ -3524,7 +3524,7 @@
               "german": "Kreditkarte",
               "english": "Credit Card",
               "gender": "die",
-              "example": "Das ist eine Kreditkarte."
+              "example": "Kann ich mit Kreditkarte zahlen?"
             },
             {
               "id": "uuid-714",
@@ -3532,7 +3532,7 @@
               "german": "Konto",
               "english": "Account",
               "gender": "der",
-              "example": "Das ist ein Konto."
+              "example": "Ich möchte ein Konto eröffnen."
             },
             {
               "id": "uuid-715",
@@ -3540,7 +3540,7 @@
               "german": "Kleidung",
               "english": "Clothing",
               "gender": "die",
-              "example": "Das ist eine Kleidung."
+              "example": "Ich brauche neue Kleidung."
             },
             {
               "id": "uuid-716",
@@ -3548,7 +3548,7 @@
               "german": "Jacke",
               "english": "Jacket",
               "gender": "die",
-              "example": "Das ist eine Jacke."
+              "example": "Zieh deine Jacke an."
             },
             {
               "id": "uuid-717",
@@ -3556,7 +3556,7 @@
               "german": "Hose",
               "english": "Trousers",
               "gender": "die",
-              "example": "Das ist eine Hose."
+              "example": "Die Hose passt mir nicht."
             },
             {
               "id": "uuid-718",
@@ -3564,7 +3564,7 @@
               "german": "Pullover",
               "english": "Sweater",
               "gender": "der",
-              "example": "Das ist ein Pullover."
+              "example": "Der Pullover ist warm."
             },
             {
               "id": "uuid-719",
@@ -3572,7 +3572,7 @@
               "german": "Schuh",
               "english": "Shoe",
               "gender": "der",
-              "example": "Das ist ein Schuh."
+              "example": "Die Schuhe sind neu."
             },
             {
               "id": "uuid-720",
@@ -3580,7 +3580,7 @@
               "german": "Tasche",
               "english": "Bag",
               "gender": "die",
-              "example": "Das ist eine Tasche."
+              "example": "Ich habe meine Tasche vergessen."
             },
             {
               "id": "uuid-721",
@@ -3588,7 +3588,7 @@
               "german": "Größe",
               "english": "Size",
               "gender": "die",
-              "example": "Das ist eine Größe."
+              "example": "Welche Größe haben Sie?"
             },
             {
               "id": "uuid-722",
@@ -3596,7 +3596,7 @@
               "german": "Zigarette",
               "english": "Cigarette",
               "gender": "die",
-              "example": "Das ist eine Zigarette."
+              "example": "Haben Sie Zigaretten?"
             },
             {
               "id": "uuid-723",
@@ -3604,7 +3604,7 @@
               "german": "kaufen",
               "english": "to buy",
               "gender": "none",
-              "example": "Ich muss kaufen."
+              "example": "Ich kaufe ein Brot."
             },
             {
               "id": "uuid-724",
@@ -3612,7 +3612,7 @@
               "german": "einkaufen",
               "english": "to shop",
               "gender": "none",
-              "example": "Ich muss einkaufen."
+              "example": "Ich gehe einkaufen."
             },
             {
               "id": "uuid-725",
@@ -3620,7 +3620,7 @@
               "german": "verkaufen",
               "english": "to sell",
               "gender": "none",
-              "example": "Ich muss verkaufen."
+              "example": "Er verkauft sein Auto."
             },
             {
               "id": "uuid-726",
@@ -3628,7 +3628,7 @@
               "german": "kosten",
               "english": "to cost",
               "gender": "none",
-              "example": "Ich muss kosten."
+              "example": "Was kostet das?"
             },
             {
               "id": "uuid-727",
@@ -3636,7 +3636,7 @@
               "german": "nehmen",
               "english": "to take",
               "gender": "none",
-              "example": "Ich muss nehmen."
+              "example": "Ich nehme die Pizza."
             },
             {
               "id": "uuid-728",
@@ -3644,7 +3644,7 @@
               "german": "suchen",
               "english": "to search",
               "gender": "none",
-              "example": "Ich muss suchen."
+              "example": "Was suchst du?"
             },
             {
               "id": "uuid-729",
@@ -3652,7 +3652,7 @@
               "german": "finden",
               "english": "to find",
               "gender": "none",
-              "example": "Ich muss finden."
+              "example": "Ich kann meinen Schlüssel nicht finden."
             },
             {
               "id": "uuid-730",
@@ -3660,7 +3660,7 @@
               "german": "brauchen",
               "english": "to need",
               "gender": "none",
-              "example": "Ich muss brauchen."
+              "example": "Ich brauche Hilfe."
             },
             {
               "id": "uuid-731",
@@ -3668,7 +3668,7 @@
               "german": "gefallen",
               "english": "to please/like",
               "gender": "none",
-              "example": "Ich muss gefallen."
+              "example": "Das gefällt mir."
             },
             {
               "id": "uuid-732",
@@ -3676,7 +3676,7 @@
               "german": "passen",
               "english": "to fit",
               "gender": "none",
-              "example": "Ich muss passen."
+              "example": "Die Hose passt mir."
             }
           ]
         },
@@ -3691,7 +3691,7 @@
               "german": "Auto",
               "english": "Car",
               "gender": "das",
-              "example": "Das ist ein Auto."
+              "example": "Ich fahre mit dem Auto."
             },
             {
               "id": "uuid-801",
@@ -3699,7 +3699,7 @@
               "german": "Bus",
               "english": "Bus",
               "gender": "der",
-              "example": "Das ist ein Bus."
+              "example": "Wann kommt der Bus?"
             },
             {
               "id": "uuid-802",
@@ -3707,7 +3707,7 @@
               "german": "Zug",
               "english": "Train",
               "gender": "der",
-              "example": "Das ist ein Zug."
+              "example": "Der Zug hat Verspätung."
             },
             {
               "id": "uuid-803",
@@ -3715,7 +3715,7 @@
               "german": "Bahn",
               "english": "Train",
               "gender": "die",
-              "example": "Das ist eine Bahn."
+              "example": "Ich fahre mit der Bahn."
             },
             {
               "id": "uuid-804",
@@ -3723,7 +3723,7 @@
               "german": "S-Bahn",
               "english": "Suburban Train",
               "gender": "die",
-              "example": "Das ist eine S-Bahn."
+              "example": "Nimm die S-Bahn."
             },
             {
               "id": "uuid-805",
@@ -3731,7 +3731,7 @@
               "german": "Straßenbahn",
               "english": "Tram",
               "gender": "die",
-              "example": "Das ist eine Straßenbahn."
+              "example": "Die Straßenbahn hält hier."
             },
             {
               "id": "uuid-806",
@@ -3739,7 +3739,7 @@
               "german": "U-Bahn",
               "english": "Subway",
               "gender": "die",
-              "example": "Das ist eine U-Bahn."
+              "example": "Wo ist die U-Bahn?"
             },
             {
               "id": "uuid-807",
@@ -3747,7 +3747,7 @@
               "german": "Fahrrad",
               "english": "Bicycle",
               "gender": "das",
-              "example": "Das ist ein Fahrrad."
+              "example": "Ich fahre gern Fahrrad."
             },
             {
               "id": "uuid-808",
@@ -3755,7 +3755,7 @@
               "german": "Rad",
               "english": "Bike",
               "gender": "das",
-              "example": "Das ist ein Rad."
+              "example": "Mein Rad ist kaputt."
             },
             {
               "id": "uuid-809",
@@ -3763,7 +3763,7 @@
               "german": "Motorrad",
               "english": "Motorcycle",
               "gender": "das",
-              "example": "Das ist ein Motorrad."
+              "example": "Er hat ein Motorrad."
             },
             {
               "id": "uuid-810",
@@ -3771,7 +3771,7 @@
               "german": "Lkw",
               "english": "Truck",
               "gender": "der",
-              "example": "Das ist ein Lkw."
+              "example": "Der Lkw ist groß."
             },
             {
               "id": "uuid-811",
@@ -3779,7 +3779,7 @@
               "german": "Taxi",
               "english": "Taxi",
               "gender": "das",
-              "example": "Das ist ein Taxi."
+              "example": "Ich nehme ein Taxi."
             },
             {
               "id": "uuid-812",
@@ -3787,7 +3787,7 @@
               "german": "Flugzeug",
               "english": "Airplane",
               "gender": "das",
-              "example": "Das ist ein Flugzeug."
+              "example": "Das Flugzeug startet."
             },
             {
               "id": "uuid-813",
@@ -3795,7 +3795,7 @@
               "german": "Bahnhof",
               "english": "Train Station",
               "gender": "der",
-              "example": "Das ist ein Bahnhof."
+              "example": "Wir treffen uns am Bahnhof."
             },
             {
               "id": "uuid-814",
@@ -3803,7 +3803,7 @@
               "german": "Flughafen",
               "english": "Airport",
               "gender": "der",
-              "example": "Das ist ein Flughafen."
+              "example": "Ich muss zum Flughafen."
             },
             {
               "id": "uuid-815",
@@ -3811,7 +3811,7 @@
               "german": "Haltestelle",
               "english": "Stop",
               "gender": "die",
-              "example": "Das ist eine Haltestelle."
+              "example": "An der nächsten Haltestelle aussteigen."
             },
             {
               "id": "uuid-816",
@@ -3819,7 +3819,7 @@
               "german": "Bahnsteig",
               "english": "Platform",
               "gender": "der",
-              "example": "Das ist ein Bahnsteig."
+              "example": "Der Zug fährt auf Bahnsteig 3 ab."
             },
             {
               "id": "uuid-817",
@@ -3827,7 +3827,7 @@
               "german": "Gleis",
               "english": "Track",
               "gender": "das",
-              "example": "Das ist ein Gleis."
+              "example": "Auf Gleis 5."
             },
             {
               "id": "uuid-818",
@@ -3835,7 +3835,7 @@
               "german": "Schalter",
               "english": "Counter",
               "gender": "der",
-              "example": "Das ist ein Schalter."
+              "example": "Tickets gibt es am Schalter."
             },
             {
               "id": "uuid-819",
@@ -3843,7 +3843,7 @@
               "german": "Eingang",
               "english": "Entrance",
               "gender": "der",
-              "example": "Das ist ein Eingang."
+              "example": "Wo ist der Eingang?"
             },
             {
               "id": "uuid-820",
@@ -3851,7 +3851,7 @@
               "german": "Ausgang",
               "english": "Exit",
               "gender": "der",
-              "example": "Das ist ein Ausgang."
+              "example": "Hier ist der Ausgang."
             },
             {
               "id": "uuid-821",
@@ -3859,7 +3859,7 @@
               "german": "Auskunft",
               "english": "Information",
               "gender": "die",
-              "example": "Das ist eine Auskunft."
+              "example": "Fragen Sie bei der Auskunft."
             },
             {
               "id": "uuid-822",
@@ -3867,7 +3867,7 @@
               "german": "Hotel",
               "english": "Hotel",
               "gender": "das",
-              "example": "Das ist ein Hotel."
+              "example": "Wir suchen ein Hotel."
             },
             {
               "id": "uuid-823",
@@ -3875,7 +3875,7 @@
               "german": "Rezeption",
               "english": "Reception",
               "gender": "die",
-              "example": "Das ist eine Rezeption."
+              "example": "Der Schlüssel ist an der Rezeption."
             },
             {
               "id": "uuid-824",
@@ -3883,7 +3883,7 @@
               "german": "Zoll",
               "english": "Customs",
               "gender": "der",
-              "example": "Das ist ein Zoll."
+              "example": "Wir müssen durch den Zoll."
             },
             {
               "id": "uuid-825",
@@ -3891,7 +3891,7 @@
               "german": "Brücke",
               "english": "Bridge",
               "gender": "die",
-              "example": "Das ist eine Brücke."
+              "example": "Wir gehen über die Brücke."
             },
             {
               "id": "uuid-826",
@@ -3899,7 +3899,7 @@
               "german": "Ampel",
               "english": "Traffic Light",
               "gender": "die",
-              "example": "Das ist eine Ampel."
+              "example": "An der Ampel rechts."
             },
             {
               "id": "uuid-827",
@@ -3907,7 +3907,7 @@
               "german": "Park",
               "english": "Park",
               "gender": "der",
-              "example": "Das ist ein Park."
+              "example": "Wir gehen im Park spazieren."
             },
             {
               "id": "uuid-828",
@@ -3915,7 +3915,7 @@
               "german": "Reise",
               "english": "Journey",
               "gender": "die",
-              "example": "Das ist eine Reise."
+              "example": "Gute Reise!"
             },
             {
               "id": "uuid-829",
@@ -3923,7 +3923,7 @@
               "german": "Urlaub",
               "english": "Vacation",
               "gender": "der",
-              "example": "Das ist ein Urlaub."
+              "example": "Schönen Urlaub!"
             },
             {
               "id": "uuid-830",
@@ -3931,7 +3931,7 @@
               "german": "Ausflug",
               "english": "Excursion",
               "gender": "der",
-              "example": "Das ist ein Ausflug."
+              "example": "Wir machen einen Ausflug."
             },
             {
               "id": "uuid-831",
@@ -3939,7 +3939,7 @@
               "german": "Fahrkarte",
               "english": "Ticket",
               "gender": "die",
-              "example": "Das ist eine Fahrkarte."
+              "example": "Ihre Fahrkarte, bitte."
             },
             {
               "id": "uuid-832",
@@ -3947,7 +3947,7 @@
               "german": "Ticket",
               "english": "Ticket",
               "gender": "das",
-              "example": "Das ist ein Ticket."
+              "example": "Ich habe ein Ticket gekauft."
             },
             {
               "id": "uuid-833",
@@ -3955,7 +3955,7 @@
               "german": "Gepäck",
               "english": "Luggage",
               "gender": "das",
-              "example": "Das ist ein Gepäck."
+              "example": "Ich habe viel Gepäck."
             },
             {
               "id": "uuid-834",
@@ -3963,7 +3963,7 @@
               "german": "Koffer",
               "english": "Suitcase",
               "gender": "der",
-              "example": "Das ist ein Koffer."
+              "example": "Mein Koffer ist schwer."
             },
             {
               "id": "uuid-835",
@@ -3971,7 +3971,7 @@
               "german": "Pass",
               "english": "Passport",
               "gender": "der",
-              "example": "Das ist ein Pass."
+              "example": "Ihren Pass, bitte."
             },
             {
               "id": "uuid-836",
@@ -3979,7 +3979,7 @@
               "german": "Ausweis",
               "english": "ID",
               "gender": "der",
-              "example": "Das ist ein Ausweis."
+              "example": "Haben Sie Ihren Ausweis dabei?"
             },
             {
               "id": "uuid-837",
@@ -3987,7 +3987,7 @@
               "german": "Abfahrt",
               "english": "Departure",
               "gender": "die",
-              "example": "Das ist eine Abfahrt."
+              "example": "Wann ist Abfahrt?"
             },
             {
               "id": "uuid-838",
@@ -3995,7 +3995,7 @@
               "german": "Ankunft",
               "english": "Arrival",
               "gender": "die",
-              "example": "Das ist eine Ankunft."
+              "example": "Ankunft ist um 10 Uhr."
             },
             {
               "id": "uuid-839",
@@ -4003,7 +4003,7 @@
               "german": "Abflug",
               "english": "Flight Departure",
               "gender": "der",
-              "example": "Das ist ein Abflug."
+              "example": "Der Abflug ist verspätet."
             },
             {
               "id": "uuid-840",
@@ -4011,7 +4011,7 @@
               "german": "Anschluss",
               "english": "Connection",
               "gender": "der",
-              "example": "Das ist ein Anschluss."
+              "example": "Ich habe den Anschluss verpasst."
             },
             {
               "id": "uuid-841",
@@ -4019,7 +4019,7 @@
               "german": "Durchsage",
               "english": "Announcement",
               "gender": "die",
-              "example": "Das ist eine Durchsage."
+              "example": "Achten Sie auf die Durchsage."
             },
             {
               "id": "uuid-842",
@@ -4027,7 +4027,7 @@
               "german": "Verspätung",
               "english": "Delay",
               "gender": "die",
-              "example": "Das ist eine Verspätung."
+              "example": "Der Zug hat 10 Minuten Verspätung."
             },
             {
               "id": "uuid-843",
@@ -4035,7 +4035,7 @@
               "german": "Stadtplan",
               "english": "Map",
               "gender": "der",
-              "example": "Das ist ein Stadtplan."
+              "example": "Ich brauche einen Stadtplan."
             },
             {
               "id": "uuid-844",
@@ -4043,7 +4043,7 @@
               "german": "Reiseführer",
               "english": "Guide",
               "gender": "der",
-              "example": "Das ist ein Reiseführer."
+              "example": "Das steht im Reiseführer."
             },
             {
               "id": "uuid-845",
@@ -4051,7 +4051,7 @@
               "german": "Weg",
               "english": "Way/Path",
               "gender": "der",
-              "example": "Das ist ein Weg."
+              "example": "Ich kenne den Weg nicht."
             },
             {
               "id": "uuid-846",
@@ -4059,7 +4059,7 @@
               "german": "Fahrt",
               "english": "Ride/Drive",
               "gender": "die",
-              "example": "Das ist eine Fahrt."
+              "example": "Gute Fahrt!"
             },
             {
               "id": "uuid-847",
@@ -4067,7 +4067,7 @@
               "german": "Stadt",
               "english": "City",
               "gender": "die",
-              "example": "Das ist eine Stadt."
+              "example": "Die Stadt ist schön."
             },
             {
               "id": "uuid-848",
@@ -4075,7 +4075,7 @@
               "german": "Dorf",
               "english": "Village",
               "gender": "das",
-              "example": "Das ist ein Dorf."
+              "example": "Er wohnt in einem Dorf."
             },
             {
               "id": "uuid-849",
@@ -4083,7 +4083,7 @@
               "german": "Land",
               "english": "Country",
               "gender": "das",
-              "example": "Das ist ein Land."
+              "example": "Welches Land ist das?"
             },
             {
               "id": "uuid-850",
@@ -4091,7 +4091,7 @@
               "german": "Ausland",
               "english": "Abroad",
               "gender": "das",
-              "example": "Das ist ein Ausland."
+              "example": "Wir fahren ins Ausland."
             },
             {
               "id": "uuid-851",
@@ -4099,7 +4099,7 @@
               "german": "Ort",
               "english": "Place",
               "gender": "der",
-              "example": "Das ist ein Ort."
+              "example": "Wohnort: Berlin."
             },
             {
               "id": "uuid-852",
@@ -4107,7 +4107,7 @@
               "german": "Straße",
               "english": "Street",
               "gender": "die",
-              "example": "Das ist eine Straße."
+              "example": "In welcher Straße wohnst du?"
             },
             {
               "id": "uuid-853",
@@ -4115,7 +4115,7 @@
               "german": "Platz",
               "english": "Square",
               "gender": "der",
-              "example": "Das ist ein Platz."
+              "example": "Wir treffen uns am Marktplatz."
             },
             {
               "id": "uuid-854",
@@ -4123,7 +4123,7 @@
               "german": "Ecke",
               "english": "Corner",
               "gender": "die",
-              "example": "Das ist eine Ecke."
+              "example": "An der nächsten Ecke links."
             },
             {
               "id": "uuid-855",
@@ -4131,7 +4131,7 @@
               "german": "Mitte",
               "english": "Middle/Center",
               "gender": "die",
-              "example": "Das ist eine Mitte."
+              "example": "Wir fahren in die Stadtmitte."
             },
             {
               "id": "uuid-856",
@@ -4139,7 +4139,7 @@
               "german": "Norden",
               "english": "North",
               "gender": "der",
-              "example": "Das ist ein Norden."
+              "example": "Hamburg liegt im Norden."
             },
             {
               "id": "uuid-857",
@@ -4147,7 +4147,7 @@
               "german": "Süden",
               "english": "South",
               "gender": "der",
-              "example": "Das ist ein Süden."
+              "example": "München liegt im Süden."
             },
             {
               "id": "uuid-858",
@@ -4155,7 +4155,7 @@
               "german": "Westen",
               "english": "West",
               "gender": "der",
-              "example": "Das ist ein Westen."
+              "example": "Köln liegt im Westen."
             },
             {
               "id": "uuid-859",
@@ -4163,7 +4163,7 @@
               "german": "Osten",
               "english": "East",
               "gender": "der",
-              "example": "Das ist ein Osten."
+              "example": "Die Sonne geht im Osten auf."
             },
             {
               "id": "uuid-860",
@@ -4171,7 +4171,7 @@
               "german": "fahren",
               "english": "to drive/go",
               "gender": "none",
-              "example": "Ich muss fahren."
+              "example": "Wir fahren nach Berlin."
             },
             {
               "id": "uuid-861",
@@ -4179,7 +4179,7 @@
               "german": "fliegen",
               "english": "to fly",
               "gender": "none",
-              "example": "Ich muss fliegen."
+              "example": "Wir fliegen in den Urlaub."
             },
             {
               "id": "uuid-862",
@@ -4187,7 +4187,7 @@
               "german": "reisen",
               "english": "to travel",
               "gender": "none",
-              "example": "Ich muss reisen."
+              "example": "Ich reise gern."
             },
             {
               "id": "uuid-863",
@@ -4195,7 +4195,7 @@
               "german": "laufen",
               "english": "to walk/run",
               "gender": "none",
-              "example": "Ich muss laufen."
+              "example": "Wir laufen nach Hause."
             },
             {
               "id": "uuid-864",
@@ -4203,7 +4203,7 @@
               "german": "gehen",
               "english": "to go",
               "gender": "none",
-              "example": "Ich muss gehen."
+              "example": "Ich gehe ins Kino."
             },
             {
               "id": "uuid-865",
@@ -4211,7 +4211,7 @@
               "german": "kommen",
               "english": "to come",
               "gender": "none",
-              "example": "Ich muss kommen."
+              "example": "Kommst du mit?"
             },
             {
               "id": "uuid-866",
@@ -4219,7 +4219,7 @@
               "german": "anrufen",
               "english": "to call",
               "gender": "none",
-              "example": "Ich muss anrufen."
+              "example": "Ich rufe dich später an."
             },
             {
               "id": "uuid-867",
@@ -4227,7 +4227,7 @@
               "german": "abfahren",
               "english": "to depart",
               "gender": "none",
-              "example": "Ich muss abfahren."
+              "example": "Der Zug fährt gleich ab."
             },
             {
               "id": "uuid-868",
@@ -4235,7 +4235,7 @@
               "german": "ankommen",
               "english": "to arrive",
               "gender": "none",
-              "example": "Ich muss ankommen."
+              "example": "Wann kommst du an?"
             },
             {
               "id": "uuid-869",
@@ -4243,7 +4243,7 @@
               "german": "abfliegen",
               "english": "to take off",
               "gender": "none",
-              "example": "Ich muss abfliegen."
+              "example": "Das Flugzeug fliegt um 9 Uhr ab."
             },
             {
               "id": "uuid-870",
@@ -4251,7 +4251,7 @@
               "german": "einsteigen",
               "english": "to board",
               "gender": "none",
-              "example": "Ich muss einsteigen."
+              "example": "Bitte einsteigen!"
             },
             {
               "id": "uuid-871",
@@ -4259,7 +4259,7 @@
               "german": "aussteigen",
               "english": "to disembark",
               "gender": "none",
-              "example": "Ich muss aussteigen."
+              "example": "Wir müssen hier aussteigen."
             },
             {
               "id": "uuid-872",
@@ -4267,7 +4267,7 @@
               "german": "umsteigen",
               "english": "to change (trains)",
               "gender": "none",
-              "example": "Ich muss umsteigen."
+              "example": "Wir müssen in Frankfurt umsteigen."
             },
             {
               "id": "uuid-873",
@@ -4275,7 +4275,7 @@
               "german": "abholen",
               "english": "to pick up",
               "gender": "none",
-              "example": "Ich muss abholen."
+              "example": "Ich hole dich ab."
             },
             {
               "id": "uuid-874",
@@ -4283,7 +4283,7 @@
               "german": "mitnehmen",
               "english": "to take along",
               "gender": "none",
-              "example": "Ich muss mitnehmen."
+              "example": "Ich nehme dich mit."
             },
             {
               "id": "uuid-875",
@@ -4291,7 +4291,7 @@
               "german": "mitkommen",
               "english": "to come along",
               "gender": "none",
-              "example": "Ich muss mitkommen."
+              "example": "Möchtest du mitkommen?"
             },
             {
               "id": "uuid-876",
@@ -4299,7 +4299,7 @@
               "german": "übernachten",
               "english": "to stay overnight",
               "gender": "none",
-              "example": "Ich muss übernachten."
+              "example": "Wir übernachten im Hotel."
             },
             {
               "id": "uuid-877",
@@ -4307,7 +4307,7 @@
               "german": "pünktlich",
               "english": "punctual",
               "gender": "none",
-              "example": "Ich muss pünktlich."
+              "example": "Der Zug ist pünktlich."
             },
             {
               "id": "uuid-878",
@@ -4315,7 +4315,7 @@
               "german": "geradeaus",
               "english": "straight ahead",
               "gender": "none",
-              "example": "Ich muss geradeaus."
+              "example": "Immer geradeaus."
             },
             {
               "id": "uuid-879",
@@ -4323,7 +4323,7 @@
               "german": "links",
               "english": "left",
               "gender": "none",
-              "example": "Ich muss links."
+              "example": "Hier links abbiegen."
             },
             {
               "id": "uuid-880",
@@ -4331,7 +4331,7 @@
               "german": "rechts",
               "english": "right",
               "gender": "none",
-              "example": "Ich muss rechts."
+              "example": "Dann rechts."
             },
             {
               "id": "uuid-881",
@@ -4339,7 +4339,7 @@
               "german": "oben",
               "english": "up/above",
               "gender": "none",
-              "example": "Ich muss oben."
+              "example": "Ich wohne oben."
             },
             {
               "id": "uuid-882",
@@ -4347,7 +4347,7 @@
               "german": "unten",
               "english": "down/below",
               "gender": "none",
-              "example": "Ich muss unten."
+              "example": "Warte bitte unten."
             },
             {
               "id": "uuid-883",
@@ -4355,7 +4355,7 @@
               "german": "vorn",
               "english": "in front",
               "gender": "none",
-              "example": "Ich muss vorn."
+              "example": "Bitte vorn einsteigen."
             },
             {
               "id": "uuid-884",
@@ -4363,7 +4363,7 @@
               "german": "hinten",
               "english": "behind/back",
               "gender": "none",
-              "example": "Ich muss hinten."
+              "example": "Bitte hinten aussteigen."
             },
             {
               "id": "uuid-885",
@@ -4371,7 +4371,7 @@
               "german": "draußen",
               "english": "outside",
               "gender": "none",
-              "example": "Ich muss draußen."
+              "example": "Die Kinder spielen draußen."
             },
             {
               "id": "uuid-886",
@@ -4379,7 +4379,7 @@
               "german": "drinnen",
               "english": "inside",
               "gender": "none",
-              "example": "Ich muss drinnen."
+              "example": "Wir gehen nach drinnen."
             },
             {
               "id": "uuid-887",
@@ -4387,7 +4387,7 @@
               "german": "weit",
               "english": "far",
               "gender": "none",
-              "example": "Ich muss weit."
+              "example": "Ist es weit?"
             },
             {
               "id": "uuid-888",
@@ -4395,7 +4395,7 @@
               "german": "nah",
               "english": "near",
               "gender": "none",
-              "example": "Ich muss nah."
+              "example": "Der Bahnhof ist ganz nah."
             }
           ]
         },
@@ -4410,7 +4410,7 @@
               "german": "Arbeit",
               "english": "Work",
               "gender": "die",
-              "example": "Das ist eine Arbeit."
+              "example": "Ich fahre zur Arbeit."
             },
             {
               "id": "uuid-901",
@@ -4418,7 +4418,7 @@
               "german": "Beruf",
               "english": "Job/Profession",
               "gender": "der",
-              "example": "Das ist ein Beruf."
+              "example": "Was ist Ihr Beruf?"
             },
             {
               "id": "uuid-902",
@@ -4426,7 +4426,7 @@
               "german": "Arbeitsplatz",
               "english": "Workplace",
               "gender": "der",
-              "example": "Das ist ein Arbeitsplatz."
+              "example": "Mein Arbeitsplatz ist in Berlin."
             },
             {
               "id": "uuid-903",
@@ -4434,7 +4434,7 @@
               "german": "Stelle",
               "english": "Position",
               "gender": "die",
-              "example": "Das ist eine Stelle."
+              "example": "Ich habe eine neue Stelle."
             },
             {
               "id": "uuid-904",
@@ -4442,7 +4442,7 @@
               "german": "Job",
               "english": "Job",
               "gender": "der",
-              "example": "Das ist ein Job."
+              "example": "Ich suche einen Job."
             },
             {
               "id": "uuid-905",
@@ -4450,7 +4450,7 @@
               "german": "Firma",
               "english": "Company",
               "gender": "die",
-              "example": "Das ist eine Firma."
+              "example": "Er arbeitet bei einer großen Firma."
             },
             {
               "id": "uuid-906",
@@ -4458,7 +4458,7 @@
               "german": "Büro",
               "english": "Office",
               "gender": "das",
-              "example": "Das ist ein Büro."
+              "example": "Ich bin heute im Büro."
             },
             {
               "id": "uuid-907",
@@ -4466,7 +4466,7 @@
               "german": "Chef",
               "english": "Boss",
               "gender": "der",
-              "example": "Das ist ein Chef."
+              "example": "Der Chef hat immer recht."
             },
             {
               "id": "uuid-908",
@@ -4474,7 +4474,7 @@
               "german": "Arzt",
               "english": "Doctor",
               "gender": "der",
-              "example": "Das ist ein Arzt."
+              "example": "Ich muss zum Arzt."
             },
             {
               "id": "uuid-909",
@@ -4482,7 +4482,7 @@
               "german": "Fahrer",
               "english": "Driver",
               "gender": "der",
-              "example": "Das ist ein Fahrer."
+              "example": "Der Fahrer wartet."
             },
             {
               "id": "uuid-910",
@@ -4490,7 +4490,7 @@
               "german": "Verkäufer",
               "english": "Salesperson",
               "gender": "der",
-              "example": "Das ist ein Verkäufer."
+              "example": "Fragen Sie den Verkäufer."
             },
             {
               "id": "uuid-911",
@@ -4498,7 +4498,7 @@
               "german": "Beamte",
               "english": "Official",
               "gender": "der",
-              "example": "Das ist ein Beamte."
+              "example": "Er ist Beamter."
             },
             {
               "id": "uuid-912",
@@ -4506,7 +4506,7 @@
               "german": "Polizei",
               "english": "Police",
               "gender": "die",
-              "example": "Das ist eine Polizei."
+              "example": "Rufen Sie die Polizei!"
             },
             {
               "id": "uuid-913",
@@ -4514,7 +4514,7 @@
               "german": "Schule",
               "english": "School",
               "gender": "die",
-              "example": "Das ist eine Schule."
+              "example": "Die Schule beginnt um 8 Uhr."
             },
             {
               "id": "uuid-914",
@@ -4522,7 +4522,7 @@
               "german": "Klasse",
               "english": "Class",
               "gender": "die",
-              "example": "Das ist eine Klasse."
+              "example": "Er geht in die erste Klasse."
             },
             {
               "id": "uuid-915",
@@ -4530,7 +4530,7 @@
               "german": "Unterricht",
               "english": "Lesson",
               "gender": "der",
-              "example": "Das ist ein Unterricht."
+              "example": "Der Unterricht ist interessant."
             },
             {
               "id": "uuid-916",
@@ -4538,7 +4538,7 @@
               "german": "Kurs",
               "english": "Course",
               "gender": "der",
-              "example": "Das ist ein Kurs."
+              "example": "Ich mache einen Deutschkurs."
             },
             {
               "id": "uuid-917",
@@ -4546,7 +4546,7 @@
               "german": "Lehrer",
               "english": "Teacher",
               "gender": "der",
-              "example": "Das ist ein Lehrer."
+              "example": "Der Lehrer erklärt gut."
             },
             {
               "id": "uuid-918",
@@ -4554,7 +4554,7 @@
               "german": "Schüler",
               "english": "Student (School)",
               "gender": "der",
-              "example": "Das ist ein Schüler."
+              "example": "Die Schüler lernen."
             },
             {
               "id": "uuid-919",
@@ -4562,7 +4562,7 @@
               "german": "Student",
               "english": "Student (Uni)",
               "gender": "der",
-              "example": "Das ist ein Student."
+              "example": "Ich bin Student an der Uni."
             },
             {
               "id": "uuid-920",
@@ -4570,7 +4570,7 @@
               "german": "Studium",
               "english": "Studies",
               "gender": "das",
-              "example": "Das ist ein Studium."
+              "example": "Das Studium dauert drei Jahre."
             },
             {
               "id": "uuid-921",
@@ -4578,7 +4578,7 @@
               "german": "Universität",
               "english": "University",
               "gender": "die",
-              "example": "Das ist eine Universität."
+              "example": "Die Universität ist alt."
             },
             {
               "id": "uuid-922",
@@ -4586,7 +4586,7 @@
               "german": "Prüfung",
               "english": "Exam",
               "gender": "die",
-              "example": "Das ist eine Prüfung."
+              "example": "Viel Glück für die Prüfung!"
             },
             {
               "id": "uuid-923",
@@ -4594,7 +4594,7 @@
               "german": "Test",
               "english": "Test",
               "gender": "der",
-              "example": "Das ist ein Test."
+              "example": "Wir schreiben einen Test."
             },
             {
               "id": "uuid-924",
@@ -4602,7 +4602,7 @@
               "german": "Aufgabe",
               "english": "Task",
               "gender": "die",
-              "example": "Das ist eine Aufgabe."
+              "example": "Das ist eine schwere Aufgabe."
             },
             {
               "id": "uuid-925",
@@ -4610,7 +4610,7 @@
               "german": "Hausaufgabe",
               "english": "Homework",
               "gender": "die",
-              "example": "Das ist eine Hausaufgabe."
+              "example": "Hast du deine Hausaufgaben gemacht?"
             },
             {
               "id": "uuid-926",
@@ -4618,7 +4618,7 @@
               "german": "Fehler",
               "english": "Mistake",
               "gender": "der",
-              "example": "Das ist ein Fehler."
+              "example": "Kein Mensch ist ohne Fehler."
             },
             {
               "id": "uuid-927",
@@ -4626,7 +4626,7 @@
               "german": "Pause",
               "english": "Break",
               "gender": "die",
-              "example": "Das ist eine Pause."
+              "example": "Wir machen eine Pause."
             },
             {
               "id": "uuid-928",
@@ -4634,7 +4634,7 @@
               "german": "Wort",
               "english": "Word",
               "gender": "das",
-              "example": "Das ist ein Wort."
+              "example": "Ich verstehe dieses Wort nicht."
             },
             {
               "id": "uuid-929",
@@ -4642,7 +4642,7 @@
               "german": "Satz",
               "english": "Sentence",
               "gender": "der",
-              "example": "Das ist ein Satz."
+              "example": "Bilde einen Satz."
             },
             {
               "id": "uuid-930",
@@ -4650,7 +4650,7 @@
               "german": "Sprache",
               "english": "Language",
               "gender": "die",
-              "example": "Das ist eine Sprache."
+              "example": "Welche Sprache sprichst du?"
             },
             {
               "id": "uuid-931",
@@ -4658,7 +4658,7 @@
               "german": "Buchstabe",
               "english": "Letter (A-Z)",
               "gender": "der",
-              "example": "Das ist ein Buchstabe."
+              "example": "Das A ist ein Buchstabe."
             },
             {
               "id": "uuid-932",
@@ -4666,7 +4666,7 @@
               "german": "Computer",
               "english": "Computer",
               "gender": "der",
-              "example": "Das ist ein Computer."
+              "example": "Ich arbeite am Computer."
             },
             {
               "id": "uuid-933",
@@ -4674,7 +4674,7 @@
               "german": "Laptop",
               "english": "Laptop",
               "gender": "der",
-              "example": "Das ist ein Laptop."
+              "example": "Mein Laptop ist neu."
             },
             {
               "id": "uuid-934",
@@ -4682,7 +4682,7 @@
               "german": "Drucker",
               "english": "Printer",
               "gender": "der",
-              "example": "Das ist ein Drucker."
+              "example": "Der Drucker hat kein Papier."
             },
             {
               "id": "uuid-935",
@@ -4690,7 +4690,7 @@
               "german": "Telefon",
               "english": "Phone",
               "gender": "das",
-              "example": "Das ist ein Telefon."
+              "example": "Das Telefon klingelt."
             },
             {
               "id": "uuid-936",
@@ -4698,7 +4698,7 @@
               "german": "Handy",
               "english": "Mobile Phone",
               "gender": "das",
-              "example": "Das ist ein Handy."
+              "example": "Gib mir deine Handynummer."
             },
             {
               "id": "uuid-937",
@@ -4706,7 +4706,7 @@
               "german": "Fax",
               "english": "Fax",
               "gender": "das",
-              "example": "Das ist ein Fax."
+              "example": "Schicken Sie mir ein Fax."
             },
             {
               "id": "uuid-938",
@@ -4714,7 +4714,7 @@
               "german": "E-Mail",
               "english": "Email",
               "gender": "die",
-              "example": "Das ist eine E-Mail."
+              "example": "Ich habe deine E-Mail bekommen."
             },
             {
               "id": "uuid-939",
@@ -4722,7 +4722,7 @@
               "german": "Brief",
               "english": "Letter",
               "gender": "der",
-              "example": "Das ist ein Brief."
+              "example": "Ich schreibe einen Brief."
             },
             {
               "id": "uuid-940",
@@ -4730,7 +4730,7 @@
               "german": "Briefmarke",
               "english": "Stamp",
               "gender": "die",
-              "example": "Das ist eine Briefmarke."
+              "example": "Ich brauche eine Briefmarke."
             },
             {
               "id": "uuid-941",
@@ -4738,7 +4738,7 @@
               "german": "Post",
               "english": "Post Office",
               "gender": "die",
-              "example": "Das ist eine Post."
+              "example": "Ich muss zur Post."
             },
             {
               "id": "uuid-942",
@@ -4746,7 +4746,7 @@
               "german": "Formular",
               "english": "Form",
               "gender": "das",
-              "example": "Das ist ein Formular."
+              "example": "Bitte füllen Sie das Formular aus."
             },
             {
               "id": "uuid-943",
@@ -4754,7 +4754,7 @@
               "german": "Stift",
               "english": "Pen",
               "gender": "der",
-              "example": "Das ist ein Stift."
+              "example": "Hast du einen Stift?"
             },
             {
               "id": "uuid-944",
@@ -4762,7 +4762,7 @@
               "german": "Bleistift",
               "english": "Pencil",
               "gender": "der",
-              "example": "Das ist ein Bleistift."
+              "example": "Schreib mit Bleistift."
             },
             {
               "id": "uuid-945",
@@ -4770,7 +4770,7 @@
               "german": "Kugelschreiber",
               "english": "Ballpoint",
               "gender": "der",
-              "example": "Das ist ein Kugelschreiber."
+              "example": "Mein Kugelschreiber ist leer."
             },
             {
               "id": "uuid-946",
@@ -4778,7 +4778,7 @@
               "german": "Papier",
               "english": "Paper",
               "gender": "das",
-              "example": "Das ist ein Papier."
+              "example": "Ich brauche Papier."
             },
             {
               "id": "uuid-947",
@@ -4786,7 +4786,7 @@
               "german": "Buch",
               "english": "Book",
               "gender": "das",
-              "example": "Das ist ein Buch."
+              "example": "Das Buch ist spannend."
             },
             {
               "id": "uuid-948",
@@ -4794,7 +4794,7 @@
               "german": "Termin",
               "english": "Appointment",
               "gender": "der",
-              "example": "Das ist ein Termin."
+              "example": "Ich habe einen Termin beim Arzt."
             },
             {
               "id": "uuid-949",
@@ -4802,7 +4802,7 @@
               "german": "Information",
               "english": "Information",
               "gender": "die",
-              "example": "Das ist eine Information."
+              "example": "Danke für die Information."
             },
             {
               "id": "uuid-950",
@@ -4810,7 +4810,7 @@
               "german": "Problem",
               "english": "Problem",
               "gender": "das",
-              "example": "Das ist ein Problem."
+              "example": "Kein Problem!"
             },
             {
               "id": "uuid-951",
@@ -4818,7 +4818,7 @@
               "german": "arbeiten",
               "english": "to work",
               "gender": "none",
-              "example": "Ich muss arbeiten."
+              "example": "Wo arbeiten Sie?"
             },
             {
               "id": "uuid-952",
@@ -4826,7 +4826,7 @@
               "german": "lernen",
               "english": "to learn",
               "gender": "none",
-              "example": "Ich muss lernen."
+              "example": "Ich lerne Deutsch."
             },
             {
               "id": "uuid-953",
@@ -4834,7 +4834,7 @@
               "german": "studieren",
               "english": "to study",
               "gender": "none",
-              "example": "Ich muss studieren."
+              "example": "Er studiert Medizin."
             },
             {
               "id": "uuid-954",
@@ -4842,7 +4842,7 @@
               "german": "lesen",
               "english": "to read",
               "gender": "none",
-              "example": "Ich muss lesen."
+              "example": "Ich lese gern."
             },
             {
               "id": "uuid-955",
@@ -4850,7 +4850,7 @@
               "german": "schreiben",
               "english": "to write",
               "gender": "none",
-              "example": "Ich muss schreiben."
+              "example": "Schreib mir eine E-Mail."
             },
             {
               "id": "uuid-956",
@@ -4858,7 +4858,7 @@
               "german": "sprechen",
               "english": "to speak",
               "gender": "none",
-              "example": "Ich muss sprechen."
+              "example": "Sprechen Sie Englisch?"
             },
             {
               "id": "uuid-957",
@@ -4866,7 +4866,7 @@
               "german": "hören",
               "english": "to hear/listen",
               "gender": "none",
-              "example": "Ich muss hören."
+              "example": "Ich höre Musik."
             },
             {
               "id": "uuid-958",
@@ -4874,7 +4874,7 @@
               "german": "sagen",
               "english": "to say",
               "gender": "none",
-              "example": "Ich muss sagen."
+              "example": "Was hast du gesagt?"
             },
             {
               "id": "uuid-959",
@@ -4882,7 +4882,7 @@
               "german": "erzählen",
               "english": "to tell",
               "gender": "none",
-              "example": "Ich muss erzählen."
+              "example": "Erzähl mir eine Geschichte."
             },
             {
               "id": "uuid-960",
@@ -4890,7 +4890,7 @@
               "german": "erklären",
               "english": "to explain",
               "gender": "none",
-              "example": "Ich muss erklären."
+              "example": "Kannst du mir das erklären?"
             },
             {
               "id": "uuid-961",
@@ -4898,7 +4898,7 @@
               "german": "verstehen",
               "english": "to understand",
               "gender": "none",
-              "example": "Ich muss verstehen."
+              "example": "Ich verstehe das nicht."
             },
             {
               "id": "uuid-962",
@@ -4906,7 +4906,7 @@
               "german": "wiederholen",
               "english": "to repeat",
               "gender": "none",
-              "example": "Ich muss wiederholen."
+              "example": "Können Sie das wiederholen?"
             },
             {
               "id": "uuid-963",
@@ -4914,7 +4914,7 @@
               "german": "buchstabieren",
               "english": "to spell",
               "gender": "none",
-              "example": "Ich muss buchstabieren."
+              "example": "Bitte buchstabieren Sie Ihren Namen."
             },
             {
               "id": "uuid-964",
@@ -4922,7 +4922,7 @@
               "german": "ausfüllen",
               "english": "to fill out",
               "gender": "none",
-              "example": "Ich muss ausfüllen."
+              "example": "Bitte das Formular ausfüllen."
             },
             {
               "id": "uuid-965",
@@ -4930,7 +4930,7 @@
               "german": "unterschreiben",
               "english": "to sign",
               "gender": "none",
-              "example": "Ich muss unterschreiben."
+              "example": "Bitte hier unterschreiben."
             },
             {
               "id": "uuid-966",
@@ -4938,7 +4938,7 @@
               "german": "anfangen",
               "english": "to begin",
               "gender": "none",
-              "example": "Ich muss anfangen."
+              "example": "Der Film fängt an."
             },
             {
               "id": "uuid-967",
@@ -4946,7 +4946,7 @@
               "german": "aufhören",
               "english": "to stop",
               "gender": "none",
-              "example": "Ich muss aufhören."
+              "example": "Hör auf damit!"
             },
             {
               "id": "uuid-968",
@@ -4954,7 +4954,7 @@
               "german": "verdienen",
               "english": "to earn",
               "gender": "none",
-              "example": "Ich muss verdienen."
+              "example": "Ich möchte viel Geld verdienen."
             },
             {
               "id": "uuid-969",
@@ -4962,7 +4962,7 @@
               "german": "bekommen",
               "english": "to receive/get",
               "gender": "none",
-              "example": "Ich muss bekommen."
+              "example": "Was bekommst du?"
             },
             {
               "id": "uuid-970",
@@ -4970,7 +4970,7 @@
               "german": "geben",
               "english": "to give",
               "gender": "none",
-              "example": "Ich muss geben."
+              "example": "Gib mir bitte das Buch."
             },
             {
               "id": "uuid-971",
@@ -4978,7 +4978,7 @@
               "german": "schicken",
               "english": "to send",
               "gender": "none",
-              "example": "Ich muss schicken."
+              "example": "Ich schicke dir eine SMS."
             },
             {
               "id": "uuid-972",
@@ -4986,7 +4986,7 @@
               "german": "benutzen",
               "english": "to use",
               "gender": "none",
-              "example": "Ich muss benutzen."
+              "example": "Darf ich dein Handy benutzen?"
             },
             {
               "id": "uuid-973",
@@ -4994,7 +4994,7 @@
               "german": "reparieren",
               "english": "to repair",
               "gender": "none",
-              "example": "Ich muss reparieren."
+              "example": "Kannst du das reparieren?"
             }
           ]
         },
@@ -5009,7 +5009,7 @@
               "german": "Freizeit",
               "english": "Free Time",
               "gender": "die",
-              "example": "Das ist eine Freizeit."
+              "example": "Was machst du in deiner Freizeit?"
             },
             {
               "id": "uuid-1001",
@@ -5017,7 +5017,7 @@
               "german": "Hobby",
               "english": "Hobby",
               "gender": "das",
-              "example": "Das ist ein Hobby."
+              "example": "Mein Hobby ist Lesen."
             },
             {
               "id": "uuid-1002",
@@ -5025,7 +5025,7 @@
               "german": "Spaß",
               "english": "Fun",
               "gender": "der",
-              "example": "Das ist ein Spaß."
+              "example": "Viel Spaß!"
             },
             {
               "id": "uuid-1003",
@@ -5033,7 +5033,7 @@
               "german": "Sport",
               "english": "Sport",
               "gender": "der",
-              "example": "Das ist ein Sport."
+              "example": "Ich mache gern Sport."
             },
             {
               "id": "uuid-1004",
@@ -5041,7 +5041,7 @@
               "german": "Fußball",
               "english": "Soccer",
               "gender": "der",
-              "example": "Das ist ein Fußball."
+              "example": "Er spielt Fußball."
             },
             {
               "id": "uuid-1005",
