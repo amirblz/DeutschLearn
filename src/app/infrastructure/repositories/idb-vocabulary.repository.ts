@@ -42,7 +42,6 @@ export class IdbVocabularyRepository implements VocabularyRepository {
 
     async getDueItems(timestamp: number): Promise<VocabularyItem[]> {
         const db = await this.dbPromise;
-        // Get all items where nextReviewDate is <= timestamp
         const range = IDBKeyRange.upperBound(timestamp);
         return db.getAllFromIndex('vocabulary', 'by-review-date', range);
     }
@@ -50,11 +49,12 @@ export class IdbVocabularyRepository implements VocabularyRepository {
     async addBulk(items: VocabularyItem[]): Promise<void> {
         const db = await this.dbPromise;
         const tx = db.transaction('vocabulary', 'readwrite');
-        // Parallelize promises for speed
-        await Promise.all([
-            ...items.map(item => tx.store.put(item)),
-            tx.done
-        ]);
+
+        // Performance: Map all put operations to promises
+        const promises = items.map(item => tx.store.put(item));
+
+        // Wait for all operations AND the transaction to complete
+        await Promise.all([...promises, tx.done]);
     }
 
     async updateProgress(id: string, newBox: LeitnerBox, nextReviewDate: number): Promise<void> {

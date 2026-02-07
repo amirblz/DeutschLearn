@@ -1,6 +1,6 @@
 {
-  "version": 1.0,
-  "lastUpdated": "2024-01-01",
+  "version": 1.1,
+  "lastUpdated": "2026-02-07",
   "levels": [
     {
       "id": "A1",
@@ -13,51 +13,5355 @@
           "icon": "🏠",
           "items": [
             {
-              "id": "uuid-1",
+              "id": "uuid-001",
+              "type": "number",
+              "german": "null",
+              "english": "Zero",
+              "gender": "none",
+              "example": "Ich muss null."
+            },
+            {
+              "id": "uuid-002",
+              "type": "number",
+              "german": "eins",
+              "english": "One",
+              "gender": "none",
+              "example": "Ich muss eins."
+            },
+            {
+              "id": "uuid-003",
+              "type": "number",
+              "german": "zwei",
+              "english": "Two",
+              "gender": "none",
+              "example": "Ich muss zwei."
+            },
+            {
+              "id": "uuid-004",
+              "type": "number",
+              "german": "drei",
+              "english": "Three",
+              "gender": "none",
+              "example": "Ich muss drei."
+            },
+            {
+              "id": "uuid-005",
+              "type": "number",
+              "german": "vier",
+              "english": "Four",
+              "gender": "none",
+              "example": "Ich muss vier."
+            },
+            {
+              "id": "uuid-006",
+              "type": "number",
+              "german": "fünf",
+              "english": "Five",
+              "gender": "none",
+              "example": "Ich muss fünf."
+            },
+            {
+              "id": "uuid-007",
+              "type": "number",
+              "german": "sechs",
+              "english": "Six",
+              "gender": "none",
+              "example": "Ich muss sechs."
+            },
+            {
+              "id": "uuid-008",
+              "type": "number",
+              "german": "sieben",
+              "english": "Seven",
+              "gender": "none",
+              "example": "Ich muss sieben."
+            },
+            {
+              "id": "uuid-009",
+              "type": "number",
+              "german": "acht",
+              "english": "Eight",
+              "gender": "none",
+              "example": "Ich muss acht."
+            },
+            {
+              "id": "uuid-010",
+              "type": "number",
+              "german": "neun",
+              "english": "Nine",
+              "gender": "none",
+              "example": "Ich muss neun."
+            },
+            {
+              "id": "uuid-011",
+              "type": "number",
+              "german": "zehn",
+              "english": "Ten",
+              "gender": "none",
+              "example": "Ich muss zehn."
+            },
+            {
+              "id": "uuid-012",
+              "type": "number",
+              "german": "elf",
+              "english": "Eleven",
+              "gender": "none",
+              "example": "Ich muss elf."
+            },
+            {
+              "id": "uuid-013",
+              "type": "number",
+              "german": "zwölf",
+              "english": "Twelve",
+              "gender": "none",
+              "example": "Ich muss zwölf."
+            },
+            {
+              "id": "uuid-014",
+              "type": "number",
+              "german": "zwanzig",
+              "english": "Twenty",
+              "gender": "none",
+              "example": "Ich muss zwanzig."
+            },
+            {
+              "id": "uuid-015",
+              "type": "number",
+              "german": "dreißig",
+              "english": "Thirty",
+              "gender": "none",
+              "example": "Ich muss dreißig."
+            },
+            {
+              "id": "uuid-016",
+              "type": "number",
+              "german": "hundert",
+              "english": "Hundred",
+              "gender": "none",
+              "example": "Ich muss hundert."
+            },
+            {
+              "id": "uuid-017",
+              "type": "number",
+              "german": "tausend",
+              "english": "Thousand",
+              "gender": "none",
+              "example": "Ich muss tausend."
+            },
+            {
+              "id": "uuid-018",
+              "type": "noun",
+              "german": "Million",
+              "english": "Million",
+              "gender": "die",
+              "example": "Das ist eine Million."
+            },
+            {
+              "id": "uuid-019",
+              "type": "adjective",
+              "german": "erste",
+              "english": "First",
+              "gender": "none",
+              "example": "Ich muss erste."
+            },
+            {
+              "id": "uuid-020",
+              "type": "adjective",
+              "german": "zweite",
+              "english": "Second",
+              "gender": "none",
+              "example": "Ich muss zweite."
+            },
+            {
+              "id": "uuid-021",
+              "type": "adjective",
+              "german": "dritte",
+              "english": "Third",
+              "gender": "none",
+              "example": "Ich muss dritte."
+            },
+            {
+              "id": "uuid-022",
               "type": "noun",
               "german": "Morgen",
               "english": "Morning",
               "gender": "der",
-              "example": "Guten Morgen!"
+              "example": "Das ist ein Morgen."
             },
             {
-              "id": "uuid-2",
+              "id": "uuid-023",
+              "type": "noun",
+              "german": "Mittag",
+              "english": "Noon",
+              "gender": "der",
+              "example": "Das ist ein Mittag."
+            },
+            {
+              "id": "uuid-024",
+              "type": "noun",
+              "german": "Abend",
+              "english": "Evening",
+              "gender": "der",
+              "example": "Das ist ein Abend."
+            },
+            {
+              "id": "uuid-025",
               "type": "noun",
               "german": "Nacht",
               "english": "Night",
               "gender": "die",
-              "example": "Gute Nacht."
+              "example": "Das ist eine Nacht."
             },
             {
-              "id": "uuid-3",
-              "type": "phrase",
-              "german": "Wie geht's?",
-              "english": "How are you?",
+              "id": "uuid-026",
+              "type": "noun",
+              "german": "Tag",
+              "english": "Day",
+              "gender": "der",
+              "example": "Das ist ein Tag."
+            },
+            {
+              "id": "uuid-027",
+              "type": "noun",
+              "german": "Woche",
+              "english": "Week",
+              "gender": "die",
+              "example": "Das ist eine Woche."
+            },
+            {
+              "id": "uuid-028",
+              "type": "noun",
+              "german": "Monat",
+              "english": "Month",
+              "gender": "der",
+              "example": "Das ist ein Monat."
+            },
+            {
+              "id": "uuid-029",
+              "type": "noun",
+              "german": "Jahr",
+              "english": "Year",
+              "gender": "das",
+              "example": "Das ist ein Jahr."
+            },
+            {
+              "id": "uuid-030",
+              "type": "noun",
+              "german": "Minute",
+              "english": "Minute",
+              "gender": "die",
+              "example": "Das ist eine Minute."
+            },
+            {
+              "id": "uuid-031",
+              "type": "noun",
+              "german": "Stunde",
+              "english": "Hour",
+              "gender": "die",
+              "example": "Das ist eine Stunde."
+            },
+            {
+              "id": "uuid-032",
+              "type": "noun",
+              "german": "Uhr",
+              "english": "Clock/O'clock",
+              "gender": "die",
+              "example": "Das ist eine Uhr."
+            },
+            {
+              "id": "uuid-033",
+              "type": "noun",
+              "german": "Montag",
+              "english": "Monday",
+              "gender": "der",
+              "example": "Das ist ein Montag."
+            },
+            {
+              "id": "uuid-034",
+              "type": "noun",
+              "german": "Dienstag",
+              "english": "Tuesday",
+              "gender": "der",
+              "example": "Das ist ein Dienstag."
+            },
+            {
+              "id": "uuid-035",
+              "type": "noun",
+              "german": "Mittwoch",
+              "english": "Wednesday",
+              "gender": "der",
+              "example": "Das ist ein Mittwoch."
+            },
+            {
+              "id": "uuid-036",
+              "type": "noun",
+              "german": "Donnerstag",
+              "english": "Thursday",
+              "gender": "der",
+              "example": "Das ist ein Donnerstag."
+            },
+            {
+              "id": "uuid-037",
+              "type": "noun",
+              "german": "Freitag",
+              "english": "Friday",
+              "gender": "der",
+              "example": "Das ist ein Freitag."
+            },
+            {
+              "id": "uuid-038",
+              "type": "noun",
+              "german": "Samstag",
+              "english": "Saturday",
+              "gender": "der",
+              "example": "Das ist ein Samstag."
+            },
+            {
+              "id": "uuid-039",
+              "type": "noun",
+              "german": "Sonntag",
+              "english": "Sunday",
+              "gender": "der",
+              "example": "Das ist ein Sonntag."
+            },
+            {
+              "id": "uuid-040",
+              "type": "noun",
+              "german": "Januar",
+              "english": "January",
+              "gender": "der",
+              "example": "Das ist ein Januar."
+            },
+            {
+              "id": "uuid-041",
+              "type": "noun",
+              "german": "Februar",
+              "english": "February",
+              "gender": "der",
+              "example": "Das ist ein Februar."
+            },
+            {
+              "id": "uuid-042",
+              "type": "noun",
+              "german": "März",
+              "english": "March",
+              "gender": "der",
+              "example": "Das ist ein März."
+            },
+            {
+              "id": "uuid-043",
+              "type": "noun",
+              "german": "April",
+              "english": "April",
+              "gender": "der",
+              "example": "Das ist ein April."
+            },
+            {
+              "id": "uuid-044",
+              "type": "noun",
+              "german": "Mai",
+              "english": "May",
+              "gender": "der",
+              "example": "Das ist ein Mai."
+            },
+            {
+              "id": "uuid-045",
+              "type": "noun",
+              "german": "Juni",
+              "english": "June",
+              "gender": "der",
+              "example": "Das ist ein Juni."
+            },
+            {
+              "id": "uuid-046",
+              "type": "noun",
+              "german": "Juli",
+              "english": "July",
+              "gender": "der",
+              "example": "Das ist ein Juli."
+            },
+            {
+              "id": "uuid-047",
+              "type": "noun",
+              "german": "August",
+              "english": "August",
+              "gender": "der",
+              "example": "Das ist ein August."
+            },
+            {
+              "id": "uuid-048",
+              "type": "noun",
+              "german": "September",
+              "english": "September",
+              "gender": "der",
+              "example": "Das ist ein September."
+            },
+            {
+              "id": "uuid-049",
+              "type": "noun",
+              "german": "Oktober",
+              "english": "October",
+              "gender": "der",
+              "example": "Das ist ein Oktober."
+            },
+            {
+              "id": "uuid-050",
+              "type": "noun",
+              "german": "November",
+              "english": "November",
+              "gender": "der",
+              "example": "Das ist ein November."
+            },
+            {
+              "id": "uuid-051",
+              "type": "noun",
+              "german": "Dezember",
+              "english": "December",
+              "gender": "der",
+              "example": "Das ist ein Dezember."
+            },
+            {
+              "id": "uuid-052",
+              "type": "noun",
+              "german": "Frühling",
+              "english": "Spring",
+              "gender": "der",
+              "example": "Das ist ein Frühling."
+            },
+            {
+              "id": "uuid-053",
+              "type": "noun",
+              "german": "Sommer",
+              "english": "Summer",
+              "gender": "der",
+              "example": "Das ist ein Sommer."
+            },
+            {
+              "id": "uuid-054",
+              "type": "noun",
+              "german": "Herbst",
+              "english": "Autumn",
+              "gender": "der",
+              "example": "Das ist ein Herbst."
+            },
+            {
+              "id": "uuid-055",
+              "type": "noun",
+              "german": "Winter",
+              "english": "Winter",
+              "gender": "der",
+              "example": "Das ist ein Winter."
+            },
+            {
+              "id": "uuid-056",
+              "type": "adjective",
+              "german": "blau",
+              "english": "Blue",
               "gender": "none",
-              "example": "Hallo, wie geht's dir?"
+              "example": "Ich muss blau."
+            },
+            {
+              "id": "uuid-057",
+              "type": "adjective",
+              "german": "braun",
+              "english": "Brown",
+              "gender": "none",
+              "example": "Ich muss braun."
+            },
+            {
+              "id": "uuid-058",
+              "type": "adjective",
+              "german": "gelb",
+              "english": "Yellow",
+              "gender": "none",
+              "example": "Ich muss gelb."
+            },
+            {
+              "id": "uuid-059",
+              "type": "adjective",
+              "german": "grün",
+              "english": "Green",
+              "gender": "none",
+              "example": "Ich muss grün."
+            },
+            {
+              "id": "uuid-060",
+              "type": "adjective",
+              "german": "rot",
+              "english": "Red",
+              "gender": "none",
+              "example": "Ich muss rot."
+            },
+            {
+              "id": "uuid-061",
+              "type": "adjective",
+              "german": "schwarz",
+              "english": "Black",
+              "gender": "none",
+              "example": "Ich muss schwarz."
+            },
+            {
+              "id": "uuid-062",
+              "type": "adjective",
+              "german": "weiß",
+              "english": "White",
+              "gender": "none",
+              "example": "Ich muss weiß."
+            },
+            {
+              "id": "uuid-063",
+              "type": "adjective",
+              "german": "grau",
+              "english": "Gray",
+              "gender": "none",
+              "example": "Ich muss grau."
             }
           ]
         },
         {
-          "id": "a1-verbs",
+          "id": "a1-structure",
           "title": "Essential Verbs",
           "icon": "⚡",
           "items": [
             {
-              "id": "uuid-4",
+              "id": "uuid-100",
               "type": "verb",
               "german": "sein",
               "english": "to be",
               "gender": "none",
-              "example": "Ich bin müde."
+              "example": "Ich muss sein."
             },
             {
-              "id": "uuid-5",
+              "id": "uuid-101",
               "type": "verb",
               "german": "haben",
               "english": "to have",
               "gender": "none",
-              "example": "Ich habe Hunger."
+              "example": "Ich muss haben."
+            },
+            {
+              "id": "uuid-102",
+              "type": "verb",
+              "german": "werden",
+              "english": "to become",
+              "gender": "none",
+              "example": "Ich muss werden."
+            },
+            {
+              "id": "uuid-103",
+              "type": "verb",
+              "german": "können",
+              "english": "can/to be able",
+              "gender": "none",
+              "example": "Ich muss können."
+            },
+            {
+              "id": "uuid-104",
+              "type": "verb",
+              "german": "müssen",
+              "english": "must/to have to",
+              "gender": "none",
+              "example": "Ich muss müssen."
+            },
+            {
+              "id": "uuid-105",
+              "type": "verb",
+              "german": "sollen",
+              "english": "should",
+              "gender": "none",
+              "example": "Ich muss sollen."
+            },
+            {
+              "id": "uuid-106",
+              "type": "verb",
+              "german": "wollen",
+              "english": "to want",
+              "gender": "none",
+              "example": "Ich muss wollen."
+            },
+            {
+              "id": "uuid-107",
+              "type": "verb",
+              "german": "dürfen",
+              "english": "may/to be allowed",
+              "gender": "none",
+              "example": "Ich muss dürfen."
+            },
+            {
+              "id": "uuid-108",
+              "type": "verb",
+              "german": "mögen",
+              "english": "to like",
+              "gender": "none",
+              "example": "Ich muss mögen."
+            },
+            {
+              "id": "uuid-109",
+              "type": "verb",
+              "german": "möchten",
+              "english": "would like",
+              "gender": "none",
+              "example": "Ich muss möchten."
+            },
+            {
+              "id": "uuid-110",
+              "type": "verb",
+              "german": "machen",
+              "english": "to do/make",
+              "gender": "none",
+              "example": "Ich muss machen."
+            },
+            {
+              "id": "uuid-111",
+              "type": "verb",
+              "german": "tun",
+              "english": "to do",
+              "gender": "none",
+              "example": "Ich muss tun."
+            },
+            {
+              "id": "uuid-112",
+              "type": "verb",
+              "german": "wissen",
+              "english": "to know",
+              "gender": "none",
+              "example": "Ich muss wissen."
+            },
+            {
+              "id": "uuid-113",
+              "type": "verb",
+              "german": "kennen",
+              "english": "to know (person/place)",
+              "gender": "none",
+              "example": "Ich muss kennen."
+            },
+            {
+              "id": "uuid-114",
+              "type": "verb",
+              "german": "denken",
+              "english": "to think",
+              "gender": "none",
+              "example": "Ich muss denken."
+            },
+            {
+              "id": "uuid-115",
+              "type": "verb",
+              "german": "glauben",
+              "english": "to believe",
+              "gender": "none",
+              "example": "Ich muss glauben."
+            },
+            {
+              "id": "uuid-116",
+              "type": "verb",
+              "german": "fragen",
+              "english": "to ask",
+              "gender": "none",
+              "example": "Ich muss fragen."
+            },
+            {
+              "id": "uuid-117",
+              "type": "verb",
+              "german": "antworten",
+              "english": "to answer",
+              "gender": "none",
+              "example": "Ich muss antworten."
+            },
+            {
+              "id": "uuid-118",
+              "type": "verb",
+              "german": "heißen",
+              "english": "to be called",
+              "gender": "none",
+              "example": "Ich muss heißen."
+            },
+            {
+              "id": "uuid-119",
+              "type": "pronoun",
+              "german": "ich",
+              "english": "I",
+              "gender": "none",
+              "example": "Ich muss ich."
+            },
+            {
+              "id": "uuid-120",
+              "type": "pronoun",
+              "german": "du",
+              "english": "you",
+              "gender": "none",
+              "example": "Ich muss du."
+            },
+            {
+              "id": "uuid-121",
+              "type": "pronoun",
+              "german": "er",
+              "english": "he",
+              "gender": "none",
+              "example": "Ich muss er."
+            },
+            {
+              "id": "uuid-122",
+              "type": "pronoun",
+              "german": "es",
+              "english": "it",
+              "gender": "none",
+              "example": "Ich muss es."
+            },
+            {
+              "id": "uuid-123",
+              "type": "pronoun",
+              "german": "sie",
+              "english": "she/they",
+              "gender": "none",
+              "example": "Ich muss sie."
+            },
+            {
+              "id": "uuid-124",
+              "type": "pronoun",
+              "german": "wir",
+              "english": "we",
+              "gender": "none",
+              "example": "Ich muss wir."
+            },
+            {
+              "id": "uuid-125",
+              "type": "pronoun",
+              "german": "ihr",
+              "english": "you (plural)",
+              "gender": "none",
+              "example": "Ich muss ihr."
+            },
+            {
+              "id": "uuid-126",
+              "type": "pronoun",
+              "german": "Sie",
+              "english": "You (formal)",
+              "gender": "none",
+              "example": "Ich muss Sie."
+            },
+            {
+              "id": "uuid-127",
+              "type": "pronoun",
+              "german": "mein",
+              "english": "my",
+              "gender": "none",
+              "example": "Ich muss mein."
+            },
+            {
+              "id": "uuid-128",
+              "type": "pronoun",
+              "german": "dein",
+              "english": "your",
+              "gender": "none",
+              "example": "Ich muss dein."
+            },
+            {
+              "id": "uuid-129",
+              "type": "pronoun",
+              "german": "sein",
+              "english": "his",
+              "gender": "none",
+              "example": "Ich muss sein."
+            },
+            {
+              "id": "uuid-130",
+              "type": "pronoun",
+              "german": "ihr",
+              "english": "her/their",
+              "gender": "none",
+              "example": "Ich muss ihr."
+            },
+            {
+              "id": "uuid-131",
+              "type": "pronoun",
+              "german": "unser",
+              "english": "our",
+              "gender": "none",
+              "example": "Ich muss unser."
+            },
+            {
+              "id": "uuid-132",
+              "type": "pronoun",
+              "german": "euer",
+              "english": "your (plural)",
+              "gender": "none",
+              "example": "Ich muss euer."
+            },
+            {
+              "id": "uuid-133",
+              "type": "article",
+              "german": "der",
+              "english": "the (m)",
+              "gender": "none",
+              "example": "Ich muss der."
+            },
+            {
+              "id": "uuid-134",
+              "type": "article",
+              "german": "die",
+              "english": "the (f)",
+              "gender": "none",
+              "example": "Ich muss die."
+            },
+            {
+              "id": "uuid-135",
+              "type": "article",
+              "german": "das",
+              "english": "the (n)",
+              "gender": "none",
+              "example": "Ich muss das."
+            },
+            {
+              "id": "uuid-136",
+              "type": "article",
+              "german": "ein",
+              "english": "a/an",
+              "gender": "none",
+              "example": "Ich muss ein."
+            },
+            {
+              "id": "uuid-137",
+              "type": "article",
+              "german": "kein",
+              "english": "no/none",
+              "gender": "none",
+              "example": "Ich muss kein."
+            },
+            {
+              "id": "uuid-138",
+              "type": "pronoun",
+              "german": "wer",
+              "english": "who",
+              "gender": "none",
+              "example": "Ich muss wer."
+            },
+            {
+              "id": "uuid-139",
+              "type": "pronoun",
+              "german": "was",
+              "english": "what",
+              "gender": "none",
+              "example": "Ich muss was."
+            },
+            {
+              "id": "uuid-140",
+              "type": "pronoun",
+              "german": "wie",
+              "english": "how",
+              "gender": "none",
+              "example": "Ich muss wie."
+            },
+            {
+              "id": "uuid-141",
+              "type": "pronoun",
+              "german": "wo",
+              "english": "where",
+              "gender": "none",
+              "example": "Ich muss wo."
+            },
+            {
+              "id": "uuid-142",
+              "type": "pronoun",
+              "german": "woher",
+              "english": "where from",
+              "gender": "none",
+              "example": "Ich muss woher."
+            },
+            {
+              "id": "uuid-143",
+              "type": "pronoun",
+              "german": "wohin",
+              "english": "where to",
+              "gender": "none",
+              "example": "Ich muss wohin."
+            },
+            {
+              "id": "uuid-144",
+              "type": "pronoun",
+              "german": "wann",
+              "english": "when",
+              "gender": "none",
+              "example": "Ich muss wann."
+            },
+            {
+              "id": "uuid-145",
+              "type": "pronoun",
+              "german": "warum",
+              "english": "why",
+              "gender": "none",
+              "example": "Ich muss warum."
+            },
+            {
+              "id": "uuid-146",
+              "type": "pronoun",
+              "german": "welch",
+              "english": "which",
+              "gender": "none",
+              "example": "Ich muss welch."
+            },
+            {
+              "id": "uuid-147",
+              "type": "pronoun",
+              "german": "man",
+              "english": "one (people)",
+              "gender": "none",
+              "example": "Ich muss man."
+            },
+            {
+              "id": "uuid-148",
+              "type": "pronoun",
+              "german": "jemand",
+              "english": "someone",
+              "gender": "none",
+              "example": "Ich muss jemand."
+            },
+            {
+              "id": "uuid-149",
+              "type": "preposition",
+              "german": "ab",
+              "english": "from",
+              "gender": "none",
+              "example": "Ich muss ab."
+            },
+            {
+              "id": "uuid-150",
+              "type": "preposition",
+              "german": "an",
+              "english": "at/on",
+              "gender": "none",
+              "example": "Ich muss an."
+            },
+            {
+              "id": "uuid-151",
+              "type": "preposition",
+              "german": "auf",
+              "english": "on",
+              "gender": "none",
+              "example": "Ich muss auf."
+            },
+            {
+              "id": "uuid-152",
+              "type": "preposition",
+              "german": "aus",
+              "english": "out of/from",
+              "gender": "none",
+              "example": "Ich muss aus."
+            },
+            {
+              "id": "uuid-153",
+              "type": "preposition",
+              "german": "bei",
+              "english": "at/with",
+              "gender": "none",
+              "example": "Ich muss bei."
+            },
+            {
+              "id": "uuid-154",
+              "type": "preposition",
+              "german": "bis",
+              "english": "until",
+              "gender": "none",
+              "example": "Ich muss bis."
+            },
+            {
+              "id": "uuid-155",
+              "type": "preposition",
+              "german": "durch",
+              "english": "through",
+              "gender": "none",
+              "example": "Ich muss durch."
+            },
+            {
+              "id": "uuid-156",
+              "type": "preposition",
+              "german": "für",
+              "english": "for",
+              "gender": "none",
+              "example": "Ich muss für."
+            },
+            {
+              "id": "uuid-157",
+              "type": "preposition",
+              "german": "gegen",
+              "english": "against",
+              "gender": "none",
+              "example": "Ich muss gegen."
+            },
+            {
+              "id": "uuid-158",
+              "type": "preposition",
+              "german": "in",
+              "english": "in",
+              "gender": "none",
+              "example": "Ich muss in."
+            },
+            {
+              "id": "uuid-159",
+              "type": "preposition",
+              "german": "mit",
+              "english": "with",
+              "gender": "none",
+              "example": "Ich muss mit."
+            },
+            {
+              "id": "uuid-160",
+              "type": "preposition",
+              "german": "nach",
+              "english": "after/to",
+              "gender": "none",
+              "example": "Ich muss nach."
+            },
+            {
+              "id": "uuid-161",
+              "type": "preposition",
+              "german": "ohne",
+              "english": "without",
+              "gender": "none",
+              "example": "Ich muss ohne."
+            },
+            {
+              "id": "uuid-162",
+              "type": "preposition",
+              "german": "seit",
+              "english": "since",
+              "gender": "none",
+              "example": "Ich muss seit."
+            },
+            {
+              "id": "uuid-163",
+              "type": "preposition",
+              "german": "um",
+              "english": "around/at",
+              "gender": "none",
+              "example": "Ich muss um."
+            },
+            {
+              "id": "uuid-164",
+              "type": "preposition",
+              "german": "von",
+              "english": "from/of",
+              "gender": "none",
+              "example": "Ich muss von."
+            },
+            {
+              "id": "uuid-165",
+              "type": "preposition",
+              "german": "vor",
+              "english": "before/in front of",
+              "gender": "none",
+              "example": "Ich muss vor."
+            },
+            {
+              "id": "uuid-166",
+              "type": "preposition",
+              "german": "zu",
+              "english": "to",
+              "gender": "none",
+              "example": "Ich muss zu."
+            },
+            {
+              "id": "uuid-167",
+              "type": "preposition",
+              "german": "zwischen",
+              "english": "between",
+              "gender": "none",
+              "example": "Ich muss zwischen."
+            },
+            {
+              "id": "uuid-168",
+              "type": "preposition",
+              "german": "über",
+              "english": "over/about",
+              "gender": "none",
+              "example": "Ich muss über."
+            },
+            {
+              "id": "uuid-169",
+              "type": "preposition",
+              "german": "unter",
+              "english": "under",
+              "gender": "none",
+              "example": "Ich muss unter."
+            },
+            {
+              "id": "uuid-170",
+              "type": "conjunction",
+              "german": "aber",
+              "english": "but",
+              "gender": "none",
+              "example": "Ich muss aber."
+            },
+            {
+              "id": "uuid-171",
+              "type": "conjunction",
+              "german": "als",
+              "english": "as/than",
+              "gender": "none",
+              "example": "Ich muss als."
+            },
+            {
+              "id": "uuid-172",
+              "type": "conjunction",
+              "german": "denn",
+              "english": "because",
+              "gender": "none",
+              "example": "Ich muss denn."
+            },
+            {
+              "id": "uuid-173",
+              "type": "conjunction",
+              "german": "oder",
+              "english": "or",
+              "gender": "none",
+              "example": "Ich muss oder."
+            },
+            {
+              "id": "uuid-174",
+              "type": "conjunction",
+              "german": "und",
+              "english": "and",
+              "gender": "none",
+              "example": "Ich muss und."
+            },
+            {
+              "id": "uuid-175",
+              "type": "conjunction",
+              "german": "wenn",
+              "english": "if/when",
+              "gender": "none",
+              "example": "Ich muss wenn."
+            },
+            {
+              "id": "uuid-176",
+              "type": "conjunction",
+              "german": "dass",
+              "english": "that",
+              "gender": "none",
+              "example": "Ich muss dass."
+            },
+            {
+              "id": "uuid-177",
+              "type": "conjunction",
+              "german": "weil",
+              "english": "because",
+              "gender": "none",
+              "example": "Ich muss weil."
+            },
+            {
+              "id": "uuid-178",
+              "type": "adverb",
+              "german": "auch",
+              "english": "also",
+              "gender": "none",
+              "example": "Ich muss auch."
+            },
+            {
+              "id": "uuid-179",
+              "type": "adverb",
+              "german": "da",
+              "english": "there",
+              "gender": "none",
+              "example": "Ich muss da."
+            },
+            {
+              "id": "uuid-180",
+              "type": "adverb",
+              "german": "dort",
+              "english": "there",
+              "gender": "none",
+              "example": "Ich muss dort."
+            },
+            {
+              "id": "uuid-181",
+              "type": "adverb",
+              "german": "hier",
+              "english": "here",
+              "gender": "none",
+              "example": "Ich muss hier."
+            },
+            {
+              "id": "uuid-182",
+              "type": "adverb",
+              "german": "jetzt",
+              "english": "now",
+              "gender": "none",
+              "example": "Ich muss jetzt."
+            },
+            {
+              "id": "uuid-183",
+              "type": "adverb",
+              "german": "immer",
+              "english": "always",
+              "gender": "none",
+              "example": "Ich muss immer."
+            },
+            {
+              "id": "uuid-184",
+              "type": "adverb",
+              "german": "nie",
+              "english": "never",
+              "gender": "none",
+              "example": "Ich muss nie."
+            },
+            {
+              "id": "uuid-185",
+              "type": "adverb",
+              "german": "oft",
+              "english": "often",
+              "gender": "none",
+              "example": "Ich muss oft."
+            },
+            {
+              "id": "uuid-186",
+              "type": "adverb",
+              "german": "schon",
+              "english": "already",
+              "gender": "none",
+              "example": "Ich muss schon."
+            },
+            {
+              "id": "uuid-187",
+              "type": "adverb",
+              "german": "wieder",
+              "english": "again",
+              "gender": "none",
+              "example": "Ich muss wieder."
+            },
+            {
+              "id": "uuid-188",
+              "type": "adverb",
+              "german": "nicht",
+              "english": "not",
+              "gender": "none",
+              "example": "Ich muss nicht."
+            },
+            {
+              "id": "uuid-189",
+              "type": "adverb",
+              "german": "nichts",
+              "english": "nothing",
+              "gender": "none",
+              "example": "Ich muss nichts."
+            },
+            {
+              "id": "uuid-190",
+              "type": "adverb",
+              "german": "ja",
+              "english": "yes",
+              "gender": "none",
+              "example": "Ich muss ja."
+            },
+            {
+              "id": "uuid-191",
+              "type": "adverb",
+              "german": "nein",
+              "english": "no",
+              "gender": "none",
+              "example": "Ich muss nein."
+            },
+            {
+              "id": "uuid-192",
+              "type": "adverb",
+              "german": "doch",
+              "english": "yes (contradiction)",
+              "gender": "none",
+              "example": "Ich muss doch."
+            },
+            {
+              "id": "uuid-193",
+              "type": "adverb",
+              "german": "bitte",
+              "english": "please",
+              "gender": "none",
+              "example": "Ich muss bitte."
+            },
+            {
+              "id": "uuid-194",
+              "type": "adverb",
+              "german": "danke",
+              "english": "thanks",
+              "gender": "none",
+              "example": "Ich muss danke."
+            },
+            {
+              "id": "uuid-195",
+              "type": "adverb",
+              "german": "vielleicht",
+              "english": "maybe",
+              "gender": "none",
+              "example": "Ich muss vielleicht."
+            },
+            {
+              "id": "uuid-196",
+              "type": "adverb",
+              "german": "nur",
+              "english": "only",
+              "gender": "none",
+              "example": "Ich muss nur."
+            },
+            {
+              "id": "uuid-197",
+              "type": "adverb",
+              "german": "sehr",
+              "english": "very",
+              "gender": "none",
+              "example": "Ich muss sehr."
+            },
+            {
+              "id": "uuid-198",
+              "type": "adverb",
+              "german": "viel",
+              "english": "much/a lot",
+              "gender": "none",
+              "example": "Ich muss viel."
+            },
+            {
+              "id": "uuid-199",
+              "type": "adverb",
+              "german": "wenig",
+              "english": "little/few",
+              "gender": "none",
+              "example": "Ich muss wenig."
+            },
+            {
+              "id": "uuid-200",
+              "type": "adverb",
+              "german": "gern",
+              "english": "gladly",
+              "gender": "none",
+              "example": "Ich muss gern."
+            },
+            {
+              "id": "uuid-201",
+              "type": "adverb",
+              "german": "leider",
+              "english": "unfortunately",
+              "gender": "none",
+              "example": "Ich muss leider."
+            },
+            {
+              "id": "uuid-202",
+              "type": "adverb",
+              "german": "mal",
+              "english": "times/once",
+              "gender": "none",
+              "example": "Ich muss mal."
+            },
+            {
+              "id": "uuid-203",
+              "type": "adverb",
+              "german": "so",
+              "english": "so",
+              "gender": "none",
+              "example": "Ich muss so."
+            },
+            {
+              "id": "uuid-204",
+              "type": "adverb",
+              "german": "auch",
+              "english": "also",
+              "gender": "none",
+              "example": "Ich muss auch."
+            },
+            {
+              "id": "uuid-205",
+              "type": "adverb",
+              "german": "weg",
+              "english": "away",
+              "gender": "none",
+              "example": "Ich muss weg."
+            },
+            {
+              "id": "uuid-206",
+              "type": "adverb",
+              "german": "zurück",
+              "english": "back",
+              "gender": "none",
+              "example": "Ich muss zurück."
+            },
+            {
+              "id": "uuid-207",
+              "type": "adverb",
+              "german": "zusammen",
+              "english": "together",
+              "gender": "none",
+              "example": "Ich muss zusammen."
+            }
+          ]
+        },
+        {
+          "id": "a1-attributes",
+          "title": "Adjectives & Adverbs",
+          "icon": "✨",
+          "items": [
+            {
+              "id": "uuid-300",
+              "type": "adjective",
+              "german": "alt",
+              "english": "old",
+              "gender": "none",
+              "example": "Ich muss alt."
+            },
+            {
+              "id": "uuid-301",
+              "type": "adjective",
+              "german": "neu",
+              "english": "new",
+              "gender": "none",
+              "example": "Ich muss neu."
+            },
+            {
+              "id": "uuid-302",
+              "type": "adjective",
+              "german": "jung",
+              "english": "young",
+              "gender": "none",
+              "example": "Ich muss jung."
+            },
+            {
+              "id": "uuid-303",
+              "type": "adjective",
+              "german": "schön",
+              "english": "beautiful",
+              "gender": "none",
+              "example": "Ich muss schön."
+            },
+            {
+              "id": "uuid-304",
+              "type": "adjective",
+              "german": "gut",
+              "english": "good",
+              "gender": "none",
+              "example": "Ich muss gut."
+            },
+            {
+              "id": "uuid-305",
+              "type": "adjective",
+              "german": "schlecht",
+              "english": "bad",
+              "gender": "none",
+              "example": "Ich muss schlecht."
+            },
+            {
+              "id": "uuid-306",
+              "type": "adjective",
+              "german": "groß",
+              "english": "big",
+              "gender": "none",
+              "example": "Ich muss groß."
+            },
+            {
+              "id": "uuid-307",
+              "type": "adjective",
+              "german": "klein",
+              "english": "small",
+              "gender": "none",
+              "example": "Ich muss klein."
+            },
+            {
+              "id": "uuid-308",
+              "type": "adjective",
+              "german": "hell",
+              "english": "bright",
+              "gender": "none",
+              "example": "Ich muss hell."
+            },
+            {
+              "id": "uuid-309",
+              "type": "adjective",
+              "german": "dunkel",
+              "english": "dark",
+              "gender": "none",
+              "example": "Ich muss dunkel."
+            },
+            {
+              "id": "uuid-310",
+              "type": "adjective",
+              "german": "hoch",
+              "english": "high",
+              "gender": "none",
+              "example": "Ich muss hoch."
+            },
+            {
+              "id": "uuid-311",
+              "type": "adjective",
+              "german": "tief",
+              "english": "deep",
+              "gender": "none",
+              "example": "Ich muss tief."
+            },
+            {
+              "id": "uuid-312",
+              "type": "adjective",
+              "german": "laut",
+              "english": "loud",
+              "gender": "none",
+              "example": "Ich muss laut."
+            },
+            {
+              "id": "uuid-313",
+              "type": "adjective",
+              "german": "leise",
+              "english": "quiet",
+              "gender": "none",
+              "example": "Ich muss leise."
+            },
+            {
+              "id": "uuid-314",
+              "type": "adjective",
+              "german": "richtig",
+              "english": "correct",
+              "gender": "none",
+              "example": "Ich muss richtig."
+            },
+            {
+              "id": "uuid-315",
+              "type": "adjective",
+              "german": "falsch",
+              "english": "wrong",
+              "gender": "none",
+              "example": "Ich muss falsch."
+            },
+            {
+              "id": "uuid-316",
+              "type": "adjective",
+              "german": "teuer",
+              "english": "expensive",
+              "gender": "none",
+              "example": "Ich muss teuer."
+            },
+            {
+              "id": "uuid-317",
+              "type": "adjective",
+              "german": "billig",
+              "english": "cheap",
+              "gender": "none",
+              "example": "Ich muss billig."
+            },
+            {
+              "id": "uuid-318",
+              "type": "adjective",
+              "german": "einfach",
+              "english": "simple/easy",
+              "gender": "none",
+              "example": "Ich muss einfach."
+            },
+            {
+              "id": "uuid-319",
+              "type": "adjective",
+              "german": "schwer",
+              "english": "heavy/difficult",
+              "gender": "none",
+              "example": "Ich muss schwer."
+            },
+            {
+              "id": "uuid-320",
+              "type": "adjective",
+              "german": "leicht",
+              "english": "light/easy",
+              "gender": "none",
+              "example": "Ich muss leicht."
+            },
+            {
+              "id": "uuid-321",
+              "type": "adjective",
+              "german": "schnell",
+              "english": "fast",
+              "gender": "none",
+              "example": "Ich muss schnell."
+            },
+            {
+              "id": "uuid-322",
+              "type": "adjective",
+              "german": "langsam",
+              "english": "slow",
+              "gender": "none",
+              "example": "Ich muss langsam."
+            },
+            {
+              "id": "uuid-323",
+              "type": "adjective",
+              "german": "kalt",
+              "english": "cold",
+              "gender": "none",
+              "example": "Ich muss kalt."
+            },
+            {
+              "id": "uuid-324",
+              "type": "adjective",
+              "german": "warm",
+              "english": "warm",
+              "gender": "none",
+              "example": "Ich muss warm."
+            },
+            {
+              "id": "uuid-325",
+              "type": "adjective",
+              "german": "heiß",
+              "english": "hot",
+              "gender": "none",
+              "example": "Ich muss heiß."
+            },
+            {
+              "id": "uuid-326",
+              "type": "adjective",
+              "german": "stark",
+              "english": "strong",
+              "gender": "none",
+              "example": "Ich muss stark."
+            },
+            {
+              "id": "uuid-327",
+              "type": "adjective",
+              "german": "kurz",
+              "english": "short",
+              "gender": "none",
+              "example": "Ich muss kurz."
+            },
+            {
+              "id": "uuid-328",
+              "type": "adjective",
+              "german": "lang",
+              "english": "long",
+              "gender": "none",
+              "example": "Ich muss lang."
+            },
+            {
+              "id": "uuid-329",
+              "type": "adjective",
+              "german": "krank",
+              "english": "sick",
+              "gender": "none",
+              "example": "Ich muss krank."
+            },
+            {
+              "id": "uuid-330",
+              "type": "adjective",
+              "german": "gesund",
+              "english": "healthy",
+              "gender": "none",
+              "example": "Ich muss gesund."
+            },
+            {
+              "id": "uuid-331",
+              "type": "adjective",
+              "german": "müde",
+              "english": "tired",
+              "gender": "none",
+              "example": "Ich muss müde."
+            },
+            {
+              "id": "uuid-332",
+              "type": "adjective",
+              "german": "wach",
+              "english": "awake",
+              "gender": "none",
+              "example": "Ich muss wach."
+            },
+            {
+              "id": "uuid-333",
+              "type": "adjective",
+              "german": "spät",
+              "english": "late",
+              "gender": "none",
+              "example": "Ich muss spät."
+            },
+            {
+              "id": "uuid-334",
+              "type": "adjective",
+              "german": "früh",
+              "english": "early",
+              "gender": "none",
+              "example": "Ich muss früh."
+            },
+            {
+              "id": "uuid-335",
+              "type": "adjective",
+              "german": "früher",
+              "english": "earlier/formerly",
+              "gender": "none",
+              "example": "Ich muss früher."
+            },
+            {
+              "id": "uuid-336",
+              "type": "adjective",
+              "german": "wichtig",
+              "english": "important",
+              "gender": "none",
+              "example": "Ich muss wichtig."
+            },
+            {
+              "id": "uuid-337",
+              "type": "adjective",
+              "german": "fertig",
+              "english": "finished",
+              "gender": "none",
+              "example": "Ich muss fertig."
+            },
+            {
+              "id": "uuid-338",
+              "type": "adjective",
+              "german": "frei",
+              "english": "free",
+              "gender": "none",
+              "example": "Ich muss frei."
+            },
+            {
+              "id": "uuid-339",
+              "type": "adjective",
+              "german": "besetzt",
+              "english": "occupied",
+              "gender": "none",
+              "example": "Ich muss besetzt."
+            },
+            {
+              "id": "uuid-340",
+              "type": "adjective",
+              "german": "geöffnet",
+              "english": "open",
+              "gender": "none",
+              "example": "Ich muss geöffnet."
+            },
+            {
+              "id": "uuid-341",
+              "type": "adjective",
+              "german": "geschlossen",
+              "english": "closed",
+              "gender": "none",
+              "example": "Ich muss geschlossen."
+            },
+            {
+              "id": "uuid-342",
+              "type": "adjective",
+              "german": "möglich",
+              "english": "possible",
+              "gender": "none",
+              "example": "Ich muss möglich."
+            },
+            {
+              "id": "uuid-343",
+              "type": "adjective",
+              "german": "freundlich",
+              "english": "friendly",
+              "gender": "none",
+              "example": "Ich muss freundlich."
+            },
+            {
+              "id": "uuid-344",
+              "type": "adjective",
+              "german": "glücklich",
+              "english": "happy",
+              "gender": "none",
+              "example": "Ich muss glücklich."
+            },
+            {
+              "id": "uuid-345",
+              "type": "adjective",
+              "german": "traurig",
+              "english": "sad",
+              "gender": "none",
+              "example": "Ich muss traurig."
+            },
+            {
+              "id": "uuid-346",
+              "type": "adjective",
+              "german": "zufrieden",
+              "english": "satisfied",
+              "gender": "none",
+              "example": "Ich muss zufrieden."
+            },
+            {
+              "id": "uuid-347",
+              "type": "adjective",
+              "german": "bekannt",
+              "english": "known/famous",
+              "gender": "none",
+              "example": "Ich muss bekannt."
+            },
+            {
+              "id": "uuid-348",
+              "type": "adjective",
+              "german": "fremd",
+              "english": "foreign/strange",
+              "gender": "none",
+              "example": "Ich muss fremd."
+            },
+            {
+              "id": "uuid-349",
+              "type": "adjective",
+              "german": "allein",
+              "english": "alone",
+              "gender": "none",
+              "example": "Ich muss allein."
+            },
+            {
+              "id": "uuid-350",
+              "type": "adjective",
+              "german": "andere",
+              "english": "other",
+              "gender": "none",
+              "example": "Ich muss andere."
+            },
+            {
+              "id": "uuid-351",
+              "type": "adjective",
+              "german": "beide",
+              "english": "both",
+              "gender": "none",
+              "example": "Ich muss beide."
+            },
+            {
+              "id": "uuid-352",
+              "type": "adjective",
+              "german": "breit",
+              "english": "wide",
+              "gender": "none",
+              "example": "Ich muss breit."
+            },
+            {
+              "id": "uuid-353",
+              "type": "adjective",
+              "german": "lustig",
+              "english": "funny",
+              "gender": "none",
+              "example": "Ich muss lustig."
+            },
+            {
+              "id": "uuid-354",
+              "type": "adjective",
+              "german": "modern",
+              "english": "modern",
+              "gender": "none",
+              "example": "Ich muss modern."
+            },
+            {
+              "id": "uuid-355",
+              "type": "adjective",
+              "german": "normal",
+              "english": "normal",
+              "gender": "none",
+              "example": "Ich muss normal."
+            },
+            {
+              "id": "uuid-356",
+              "type": "adjective",
+              "german": "super",
+              "english": "super",
+              "gender": "none",
+              "example": "Ich muss super."
+            },
+            {
+              "id": "uuid-357",
+              "type": "adjective",
+              "german": "toll",
+              "english": "great",
+              "gender": "none",
+              "example": "Ich muss toll."
+            },
+            {
+              "id": "uuid-358",
+              "type": "adjective",
+              "german": "wunderbar",
+              "english": "wonderful",
+              "gender": "none",
+              "example": "Ich muss wunderbar."
+            },
+            {
+              "id": "uuid-359",
+              "type": "adjective",
+              "german": "tot",
+              "english": "dead",
+              "gender": "none",
+              "example": "Ich muss tot."
+            },
+            {
+              "id": "uuid-360",
+              "type": "adjective",
+              "german": "klar",
+              "english": "clear",
+              "gender": "none",
+              "example": "Ich muss klar."
+            }
+          ]
+        },
+        {
+          "id": "a1-people",
+          "title": "Family, Body, Roles",
+          "icon": "👨‍👩‍👧",
+          "items": [
+            {
+              "id": "uuid-400",
+              "type": "noun",
+              "german": "Familie",
+              "english": "Family",
+              "gender": "die",
+              "example": "Das ist eine Familie."
+            },
+            {
+              "id": "uuid-401",
+              "type": "noun",
+              "german": "Mann",
+              "english": "Man/Husband",
+              "gender": "der",
+              "example": "Das ist ein Mann."
+            },
+            {
+              "id": "uuid-402",
+              "type": "noun",
+              "german": "Frau",
+              "english": "Woman/Wife",
+              "gender": "die",
+              "example": "Das ist eine Frau."
+            },
+            {
+              "id": "uuid-403",
+              "type": "noun",
+              "german": "Vater",
+              "english": "Father",
+              "gender": "der",
+              "example": "Das ist ein Vater."
+            },
+            {
+              "id": "uuid-404",
+              "type": "noun",
+              "german": "Mutter",
+              "english": "Mother",
+              "gender": "die",
+              "example": "Das ist eine Mutter."
+            },
+            {
+              "id": "uuid-405",
+              "type": "noun",
+              "german": "Eltern",
+              "english": "Parents",
+              "gender": "die",
+              "example": "Das ist eine Eltern."
+            },
+            {
+              "id": "uuid-406",
+              "type": "noun",
+              "german": "Sohn",
+              "english": "Son",
+              "gender": "der",
+              "example": "Das ist ein Sohn."
+            },
+            {
+              "id": "uuid-407",
+              "type": "noun",
+              "german": "Tochter",
+              "english": "Daughter",
+              "gender": "die",
+              "example": "Das ist eine Tochter."
+            },
+            {
+              "id": "uuid-408",
+              "type": "noun",
+              "german": "Bruder",
+              "english": "Brother",
+              "gender": "der",
+              "example": "Das ist ein Bruder."
+            },
+            {
+              "id": "uuid-409",
+              "type": "noun",
+              "german": "Schwester",
+              "english": "Sister",
+              "gender": "die",
+              "example": "Das ist eine Schwester."
+            },
+            {
+              "id": "uuid-410",
+              "type": "noun",
+              "german": "Geschwister",
+              "english": "Siblings",
+              "gender": "die",
+              "example": "Das ist eine Geschwister."
+            },
+            {
+              "id": "uuid-411",
+              "type": "noun",
+              "german": "Großeltern",
+              "english": "Grandparents",
+              "gender": "die",
+              "example": "Das ist eine Großeltern."
+            },
+            {
+              "id": "uuid-412",
+              "type": "noun",
+              "german": "Großvater",
+              "english": "Grandfather",
+              "gender": "der",
+              "example": "Das ist ein Großvater."
+            },
+            {
+              "id": "uuid-413",
+              "type": "noun",
+              "german": "Großmutter",
+              "english": "Grandmother",
+              "gender": "die",
+              "example": "Das ist eine Großmutter."
+            },
+            {
+              "id": "uuid-414",
+              "type": "noun",
+              "german": "Opa",
+              "english": "Grandpa",
+              "gender": "der",
+              "example": "Das ist ein Opa."
+            },
+            {
+              "id": "uuid-415",
+              "type": "noun",
+              "german": "Oma",
+              "english": "Grandma",
+              "gender": "die",
+              "example": "Das ist eine Oma."
+            },
+            {
+              "id": "uuid-416",
+              "type": "noun",
+              "german": "Kind",
+              "english": "Child",
+              "gender": "das",
+              "example": "Das ist ein Kind."
+            },
+            {
+              "id": "uuid-417",
+              "type": "noun",
+              "german": "Baby",
+              "english": "Baby",
+              "gender": "das",
+              "example": "Das ist ein Baby."
+            },
+            {
+              "id": "uuid-418",
+              "type": "noun",
+              "german": "Junge",
+              "english": "Boy",
+              "gender": "der",
+              "example": "Das ist ein Junge."
+            },
+            {
+              "id": "uuid-419",
+              "type": "noun",
+              "german": "Mädchen",
+              "english": "Girl",
+              "gender": "das",
+              "example": "Das ist ein Mädchen."
+            },
+            {
+              "id": "uuid-420",
+              "type": "noun",
+              "german": "Freund",
+              "english": "Friend (m)",
+              "gender": "der",
+              "example": "Das ist ein Freund."
+            },
+            {
+              "id": "uuid-421",
+              "type": "noun",
+              "german": "Freundin",
+              "english": "Friend (f)",
+              "gender": "die",
+              "example": "Das ist eine Freundin."
+            },
+            {
+              "id": "uuid-422",
+              "type": "noun",
+              "german": "Partner",
+              "english": "Partner (m)",
+              "gender": "der",
+              "example": "Das ist ein Partner."
+            },
+            {
+              "id": "uuid-423",
+              "type": "noun",
+              "german": "Partnerin",
+              "english": "Partner (f)",
+              "gender": "die",
+              "example": "Das ist eine Partnerin."
+            },
+            {
+              "id": "uuid-424",
+              "type": "noun",
+              "german": "Kollege",
+              "english": "Colleague",
+              "gender": "der",
+              "example": "Das ist ein Kollege."
+            },
+            {
+              "id": "uuid-425",
+              "type": "noun",
+              "german": "Bekannte",
+              "english": "Acquaintance",
+              "gender": "der",
+              "example": "Das ist ein Bekannte."
+            },
+            {
+              "id": "uuid-426",
+              "type": "noun",
+              "german": "Nachbar",
+              "english": "Neighbor",
+              "gender": "der",
+              "example": "Das ist ein Nachbar."
+            },
+            {
+              "id": "uuid-427",
+              "type": "noun",
+              "german": "Gast",
+              "english": "Guest",
+              "gender": "der",
+              "example": "Das ist ein Gast."
+            },
+            {
+              "id": "uuid-428",
+              "type": "noun",
+              "german": "Leute",
+              "english": "People",
+              "gender": "die",
+              "example": "Das ist eine Leute."
+            },
+            {
+              "id": "uuid-429",
+              "type": "noun",
+              "german": "Mensch",
+              "english": "Human",
+              "gender": "der",
+              "example": "Das ist ein Mensch."
+            },
+            {
+              "id": "uuid-430",
+              "type": "noun",
+              "german": "Person",
+              "english": "Person",
+              "gender": "die",
+              "example": "Das ist eine Person."
+            },
+            {
+              "id": "uuid-431",
+              "type": "noun",
+              "german": "Erwachsene",
+              "english": "Adult",
+              "gender": "der",
+              "example": "Das ist ein Erwachsene."
+            },
+            {
+              "id": "uuid-432",
+              "type": "noun",
+              "german": "Herr",
+              "english": "Mr/Gentleman",
+              "gender": "der",
+              "example": "Das ist ein Herr."
+            },
+            {
+              "id": "uuid-433",
+              "type": "noun",
+              "german": "Dame",
+              "english": "Lady",
+              "gender": "die",
+              "example": "Das ist eine Dame."
+            },
+            {
+              "id": "uuid-434",
+              "type": "noun",
+              "german": "Kopf",
+              "english": "Head",
+              "gender": "der",
+              "example": "Das ist ein Kopf."
+            },
+            {
+              "id": "uuid-435",
+              "type": "noun",
+              "german": "Auge",
+              "english": "Eye",
+              "gender": "das",
+              "example": "Das ist ein Auge."
+            },
+            {
+              "id": "uuid-436",
+              "type": "noun",
+              "german": "Mund",
+              "english": "Mouth",
+              "gender": "der",
+              "example": "Das ist ein Mund."
+            },
+            {
+              "id": "uuid-437",
+              "type": "noun",
+              "german": "Zahn",
+              "english": "Tooth",
+              "gender": "der",
+              "example": "Das ist ein Zahn."
+            },
+            {
+              "id": "uuid-438",
+              "type": "noun",
+              "german": "Arm",
+              "english": "Arm",
+              "gender": "der",
+              "example": "Das ist ein Arm."
+            },
+            {
+              "id": "uuid-439",
+              "type": "noun",
+              "german": "Hand",
+              "english": "Hand",
+              "gender": "die",
+              "example": "Das ist eine Hand."
+            },
+            {
+              "id": "uuid-440",
+              "type": "noun",
+              "german": "Finger",
+              "english": "Finger",
+              "gender": "der",
+              "example": "Das ist ein Finger."
+            },
+            {
+              "id": "uuid-441",
+              "type": "noun",
+              "german": "Bauch",
+              "english": "Stomach",
+              "gender": "der",
+              "example": "Das ist ein Bauch."
+            },
+            {
+              "id": "uuid-442",
+              "type": "noun",
+              "german": "Bein",
+              "english": "Leg",
+              "gender": "das",
+              "example": "Das ist ein Bein."
+            },
+            {
+              "id": "uuid-443",
+              "type": "noun",
+              "german": "Fuß",
+              "english": "Foot",
+              "gender": "der",
+              "example": "Das ist ein Fuß."
+            },
+            {
+              "id": "uuid-444",
+              "type": "noun",
+              "german": "Haar",
+              "english": "Hair",
+              "gender": "das",
+              "example": "Das ist ein Haar."
+            },
+            {
+              "id": "uuid-445",
+              "type": "noun",
+              "german": "Rücken",
+              "english": "Back",
+              "gender": "der",
+              "example": "Das ist ein Rücken."
+            },
+            {
+              "id": "uuid-446",
+              "type": "noun",
+              "german": "Herz",
+              "english": "Heart",
+              "gender": "das",
+              "example": "Das ist ein Herz."
+            },
+            {
+              "id": "uuid-447",
+              "type": "noun",
+              "german": "Schmerz",
+              "english": "Pain",
+              "gender": "der",
+              "example": "Das ist ein Schmerz."
+            },
+            {
+              "id": "uuid-448",
+              "type": "noun",
+              "german": "Fieber",
+              "english": "Fever",
+              "gender": "das",
+              "example": "Das ist ein Fieber."
+            },
+            {
+              "id": "uuid-449",
+              "type": "noun",
+              "german": "Name",
+              "english": "Name",
+              "gender": "der",
+              "example": "Das ist ein Name."
+            },
+            {
+              "id": "uuid-450",
+              "type": "noun",
+              "german": "Vorname",
+              "english": "First Name",
+              "gender": "der",
+              "example": "Das ist ein Vorname."
+            },
+            {
+              "id": "uuid-451",
+              "type": "noun",
+              "german": "Familienname",
+              "english": "Surname",
+              "gender": "der",
+              "example": "Das ist ein Familienname."
+            },
+            {
+              "id": "uuid-452",
+              "type": "noun",
+              "german": "Adresse",
+              "english": "Address",
+              "gender": "die",
+              "example": "Das ist eine Adresse."
+            },
+            {
+              "id": "uuid-453",
+              "type": "noun",
+              "german": "Alter",
+              "english": "Age",
+              "gender": "das",
+              "example": "Das ist ein Alter."
+            },
+            {
+              "id": "uuid-454",
+              "type": "noun",
+              "german": "Geburtsort",
+              "english": "Place of Birth",
+              "gender": "der",
+              "example": "Das ist ein Geburtsort."
+            },
+            {
+              "id": "uuid-455",
+              "type": "noun",
+              "german": "Geburtsjahr",
+              "english": "Year of Birth",
+              "gender": "das",
+              "example": "Das ist ein Geburtsjahr."
+            },
+            {
+              "id": "uuid-456",
+              "type": "noun",
+              "german": "Geburtstag",
+              "english": "Birthday",
+              "gender": "der",
+              "example": "Das ist ein Geburtstag."
+            },
+            {
+              "id": "uuid-457",
+              "type": "noun",
+              "german": "Familienstand",
+              "english": "Marital Status",
+              "gender": "der",
+              "example": "Das ist ein Familienstand."
+            },
+            {
+              "id": "uuid-458",
+              "type": "adjective",
+              "german": "ledig",
+              "english": "single",
+              "gender": "none",
+              "example": "Ich muss ledig."
+            },
+            {
+              "id": "uuid-459",
+              "type": "adjective",
+              "german": "verheiratet",
+              "english": "married",
+              "gender": "none",
+              "example": "Ich muss verheiratet."
+            },
+            {
+              "id": "uuid-460",
+              "type": "adjective",
+              "german": "männlich",
+              "english": "male",
+              "gender": "none",
+              "example": "Ich muss männlich."
+            },
+            {
+              "id": "uuid-461",
+              "type": "adjective",
+              "german": "weiblich",
+              "english": "female",
+              "gender": "none",
+              "example": "Ich muss weiblich."
+            },
+            {
+              "id": "uuid-462",
+              "type": "noun",
+              "german": "Heimat",
+              "english": "Homeland",
+              "gender": "die",
+              "example": "Das ist eine Heimat."
+            },
+            {
+              "id": "uuid-463",
+              "type": "verb",
+              "german": "leben",
+              "english": "to live",
+              "gender": "none",
+              "example": "Ich muss leben."
+            },
+            {
+              "id": "uuid-464",
+              "type": "verb",
+              "german": "wohnen",
+              "english": "to reside",
+              "gender": "none",
+              "example": "Ich muss wohnen."
+            },
+            {
+              "id": "uuid-465",
+              "type": "verb",
+              "german": "geboren",
+              "english": "born",
+              "gender": "none",
+              "example": "Ich muss geboren."
+            },
+            {
+              "id": "uuid-466",
+              "type": "verb",
+              "german": "sterben",
+              "english": "to die",
+              "gender": "none",
+              "example": "Ich muss sterben."
+            },
+            {
+              "id": "uuid-467",
+              "type": "verb",
+              "german": "gestorben",
+              "english": "died",
+              "gender": "none",
+              "example": "Ich muss gestorben."
+            },
+            {
+              "id": "uuid-468",
+              "type": "verb",
+              "german": "sich vorstellen",
+              "english": "to introduce oneself",
+              "gender": "none",
+              "example": "Ich muss sich vorstellen."
+            }
+          ]
+        },
+        {
+          "id": "a1-housing",
+          "title": "House, Furniture, Living",
+          "icon": "🏢",
+          "items": [
+            {
+              "id": "uuid-500",
+              "type": "noun",
+              "german": "Haus",
+              "english": "House",
+              "gender": "das",
+              "example": "Das ist ein Haus."
+            },
+            {
+              "id": "uuid-501",
+              "type": "noun",
+              "german": "Wohnung",
+              "english": "Apartment",
+              "gender": "die",
+              "example": "Das ist eine Wohnung."
+            },
+            {
+              "id": "uuid-502",
+              "type": "noun",
+              "german": "Zimmer",
+              "english": "Room",
+              "gender": "das",
+              "example": "Das ist ein Zimmer."
+            },
+            {
+              "id": "uuid-503",
+              "type": "noun",
+              "german": "Küche",
+              "english": "Kitchen",
+              "gender": "die",
+              "example": "Das ist eine Küche."
+            },
+            {
+              "id": "uuid-504",
+              "type": "noun",
+              "german": "Bad",
+              "english": "Bath",
+              "gender": "das",
+              "example": "Das ist ein Bad."
+            },
+            {
+              "id": "uuid-505",
+              "type": "noun",
+              "german": "Toilette",
+              "english": "Toilet",
+              "gender": "die",
+              "example": "Das ist eine Toilette."
+            },
+            {
+              "id": "uuid-506",
+              "type": "noun",
+              "german": "Flur",
+              "english": "Hallway",
+              "gender": "der",
+              "example": "Das ist ein Flur."
+            },
+            {
+              "id": "uuid-507",
+              "type": "noun",
+              "german": "Balkon",
+              "english": "Balcony",
+              "gender": "der",
+              "example": "Das ist ein Balkon."
+            },
+            {
+              "id": "uuid-508",
+              "type": "noun",
+              "german": "Keller",
+              "english": "Basement",
+              "gender": "der",
+              "example": "Das ist ein Keller."
+            },
+            {
+              "id": "uuid-509",
+              "type": "noun",
+              "german": "Garten",
+              "english": "Garden",
+              "gender": "der",
+              "example": "Das ist ein Garten."
+            },
+            {
+              "id": "uuid-510",
+              "type": "noun",
+              "german": "Stock",
+              "english": "Floor",
+              "gender": "der",
+              "example": "Das ist ein Stock."
+            },
+            {
+              "id": "uuid-511",
+              "type": "noun",
+              "german": "Erdgeschoss",
+              "english": "Ground Floor",
+              "gender": "das",
+              "example": "Das ist ein Erdgeschoss."
+            },
+            {
+              "id": "uuid-512",
+              "type": "noun",
+              "german": "Aufzug",
+              "english": "Elevator",
+              "gender": "der",
+              "example": "Das ist ein Aufzug."
+            },
+            {
+              "id": "uuid-513",
+              "type": "noun",
+              "german": "Treppe",
+              "english": "Stairs",
+              "gender": "die",
+              "example": "Das ist eine Treppe."
+            },
+            {
+              "id": "uuid-514",
+              "type": "noun",
+              "german": "Tür",
+              "english": "Door",
+              "gender": "die",
+              "example": "Das ist eine Tür."
+            },
+            {
+              "id": "uuid-515",
+              "type": "noun",
+              "german": "Fenster",
+              "english": "Window",
+              "gender": "das",
+              "example": "Das ist ein Fenster."
+            },
+            {
+              "id": "uuid-516",
+              "type": "noun",
+              "german": "Wand",
+              "english": "Wall",
+              "gender": "die",
+              "example": "Das ist eine Wand."
+            },
+            {
+              "id": "uuid-517",
+              "type": "noun",
+              "german": "Möbel",
+              "english": "Furniture",
+              "gender": "das",
+              "example": "Das ist ein Möbel."
+            },
+            {
+              "id": "uuid-518",
+              "type": "noun",
+              "german": "Tisch",
+              "english": "Table",
+              "gender": "der",
+              "example": "Das ist ein Tisch."
+            },
+            {
+              "id": "uuid-519",
+              "type": "noun",
+              "german": "Stuhl",
+              "english": "Chair",
+              "gender": "der",
+              "example": "Das ist ein Stuhl."
+            },
+            {
+              "id": "uuid-520",
+              "type": "noun",
+              "german": "Bett",
+              "english": "Bed",
+              "gender": "das",
+              "example": "Das ist ein Bett."
+            },
+            {
+              "id": "uuid-521",
+              "type": "noun",
+              "german": "Schrank",
+              "english": "Cupboard",
+              "gender": "der",
+              "example": "Das ist ein Schrank."
+            },
+            {
+              "id": "uuid-522",
+              "type": "noun",
+              "german": "Sofa",
+              "english": "Sofa",
+              "gender": "das",
+              "example": "Das ist ein Sofa."
+            },
+            {
+              "id": "uuid-523",
+              "type": "noun",
+              "german": "Lampe",
+              "english": "Lamp",
+              "gender": "die",
+              "example": "Das ist eine Lampe."
+            },
+            {
+              "id": "uuid-524",
+              "type": "noun",
+              "german": "Herd",
+              "english": "Stove",
+              "gender": "der",
+              "example": "Das ist ein Herd."
+            },
+            {
+              "id": "uuid-525",
+              "type": "noun",
+              "german": "Kühlschrank",
+              "english": "Fridge",
+              "gender": "der",
+              "example": "Das ist ein Kühlschrank."
+            },
+            {
+              "id": "uuid-526",
+              "type": "noun",
+              "german": "Waschmaschine",
+              "english": "Washing Machine",
+              "gender": "die",
+              "example": "Das ist eine Waschmaschine."
+            },
+            {
+              "id": "uuid-527",
+              "type": "noun",
+              "german": "Maschine",
+              "english": "Machine",
+              "gender": "die",
+              "example": "Das ist eine Maschine."
+            },
+            {
+              "id": "uuid-528",
+              "type": "noun",
+              "german": "Fernseher",
+              "english": "TV Set",
+              "gender": "der",
+              "example": "Das ist ein Fernseher."
+            },
+            {
+              "id": "uuid-529",
+              "type": "noun",
+              "german": "Radio",
+              "english": "Radio",
+              "gender": "das",
+              "example": "Das ist ein Radio."
+            },
+            {
+              "id": "uuid-530",
+              "type": "noun",
+              "german": "Dusche",
+              "english": "Shower",
+              "gender": "die",
+              "example": "Das ist eine Dusche."
+            },
+            {
+              "id": "uuid-531",
+              "type": "noun",
+              "german": "Badewanne",
+              "english": "Bathtub",
+              "gender": "die",
+              "example": "Das ist eine Badewanne."
+            },
+            {
+              "id": "uuid-532",
+              "type": "noun",
+              "german": "Handtuch",
+              "english": "Towel",
+              "gender": "das",
+              "example": "Das ist ein Handtuch."
+            },
+            {
+              "id": "uuid-533",
+              "type": "noun",
+              "german": "Schlüssel",
+              "english": "Key",
+              "gender": "der",
+              "example": "Das ist ein Schlüssel."
+            },
+            {
+              "id": "uuid-534",
+              "type": "noun",
+              "german": "Bild",
+              "english": "Picture",
+              "gender": "das",
+              "example": "Das ist ein Bild."
+            },
+            {
+              "id": "uuid-535",
+              "type": "noun",
+              "german": "Licht",
+              "english": "Light",
+              "gender": "das",
+              "example": "Das ist ein Licht."
+            },
+            {
+              "id": "uuid-536",
+              "type": "noun",
+              "german": "Feuer",
+              "english": "Fire",
+              "gender": "das",
+              "example": "Das ist ein Feuer."
+            },
+            {
+              "id": "uuid-537",
+              "type": "noun",
+              "german": "Miete",
+              "english": "Rent",
+              "gender": "die",
+              "example": "Das ist eine Miete."
+            },
+            {
+              "id": "uuid-538",
+              "type": "noun",
+              "german": "Vermieter",
+              "english": "Landlord",
+              "gender": "der",
+              "example": "Das ist ein Vermieter."
+            },
+            {
+              "id": "uuid-539",
+              "type": "noun",
+              "german": "Hausfrau",
+              "english": "Housewife",
+              "gender": "die",
+              "example": "Das ist eine Hausfrau."
+            },
+            {
+              "id": "uuid-540",
+              "type": "noun",
+              "german": "Hausmann",
+              "english": "Househusband",
+              "gender": "der",
+              "example": "Das ist ein Hausmann."
+            },
+            {
+              "id": "uuid-541",
+              "type": "verb",
+              "german": "aufmachen",
+              "english": "to open",
+              "gender": "none",
+              "example": "Ich muss aufmachen."
+            },
+            {
+              "id": "uuid-542",
+              "type": "verb",
+              "german": "zumachen",
+              "english": "to close",
+              "gender": "none",
+              "example": "Ich muss zumachen."
+            },
+            {
+              "id": "uuid-543",
+              "type": "verb",
+              "german": "öffnen",
+              "english": "to open",
+              "gender": "none",
+              "example": "Ich muss öffnen."
+            },
+            {
+              "id": "uuid-544",
+              "type": "verb",
+              "german": "schließen",
+              "english": "to close",
+              "gender": "none",
+              "example": "Ich muss schließen."
+            },
+            {
+              "id": "uuid-545",
+              "type": "verb",
+              "german": "mieten",
+              "english": "to rent",
+              "gender": "none",
+              "example": "Ich muss mieten."
+            },
+            {
+              "id": "uuid-546",
+              "type": "verb",
+              "german": "vermieten",
+              "english": "to rent out",
+              "gender": "none",
+              "example": "Ich muss vermieten."
+            },
+            {
+              "id": "uuid-547",
+              "type": "verb",
+              "german": "umziehen",
+              "english": "to move house",
+              "gender": "none",
+              "example": "Ich muss umziehen."
+            },
+            {
+              "id": "uuid-548",
+              "type": "verb",
+              "german": "waschen",
+              "english": "to wash",
+              "gender": "none",
+              "example": "Ich muss waschen."
+            },
+            {
+              "id": "uuid-549",
+              "type": "verb",
+              "german": "duschen",
+              "english": "to shower",
+              "gender": "none",
+              "example": "Ich muss duschen."
+            },
+            {
+              "id": "uuid-550",
+              "type": "verb",
+              "german": "baden",
+              "english": "to bathe",
+              "gender": "none",
+              "example": "Ich muss baden."
+            },
+            {
+              "id": "uuid-551",
+              "type": "verb",
+              "german": "kochen",
+              "english": "to cook",
+              "gender": "none",
+              "example": "Ich muss kochen."
+            },
+            {
+              "id": "uuid-552",
+              "type": "verb",
+              "german": "schlafen",
+              "english": "to sleep",
+              "gender": "none",
+              "example": "Ich muss schlafen."
+            }
+          ]
+        },
+        {
+          "id": "a1-food",
+          "title": "Food, Drink, Gastro",
+          "icon": "🍎",
+          "items": [
+            {
+              "id": "uuid-600",
+              "type": "noun",
+              "german": "Essen",
+              "english": "Food",
+              "gender": "das",
+              "example": "Das ist ein Essen."
+            },
+            {
+              "id": "uuid-601",
+              "type": "noun",
+              "german": "Getränk",
+              "english": "Drink",
+              "gender": "das",
+              "example": "Das ist ein Getränk."
+            },
+            {
+              "id": "uuid-602",
+              "type": "noun",
+              "german": "Lebensmittel",
+              "english": "Groceries",
+              "gender": "das",
+              "example": "Das ist ein Lebensmittel."
+            },
+            {
+              "id": "uuid-603",
+              "type": "noun",
+              "german": "Brot",
+              "english": "Bread",
+              "gender": "das",
+              "example": "Das ist ein Brot."
+            },
+            {
+              "id": "uuid-604",
+              "type": "noun",
+              "german": "Brötchen",
+              "english": "Roll",
+              "gender": "das",
+              "example": "Das ist ein Brötchen."
+            },
+            {
+              "id": "uuid-605",
+              "type": "noun",
+              "german": "Butter",
+              "english": "Butter",
+              "gender": "die",
+              "example": "Das ist eine Butter."
+            },
+            {
+              "id": "uuid-606",
+              "type": "noun",
+              "german": "Ei",
+              "english": "Egg",
+              "gender": "das",
+              "example": "Das ist ein Ei."
+            },
+            {
+              "id": "uuid-607",
+              "type": "noun",
+              "german": "Käse",
+              "english": "Cheese",
+              "gender": "der",
+              "example": "Das ist ein Käse."
+            },
+            {
+              "id": "uuid-608",
+              "type": "noun",
+              "german": "Wurst",
+              "english": "Sausage",
+              "gender": "die",
+              "example": "Das ist eine Wurst."
+            },
+            {
+              "id": "uuid-609",
+              "type": "noun",
+              "german": "Fleisch",
+              "english": "Meat",
+              "gender": "das",
+              "example": "Das ist ein Fleisch."
+            },
+            {
+              "id": "uuid-610",
+              "type": "noun",
+              "german": "Fisch",
+              "english": "Fish",
+              "gender": "der",
+              "example": "Das ist ein Fisch."
+            },
+            {
+              "id": "uuid-611",
+              "type": "noun",
+              "german": "Hähnchen",
+              "english": "Chicken",
+              "gender": "das",
+              "example": "Das ist ein Hähnchen."
+            },
+            {
+              "id": "uuid-612",
+              "type": "noun",
+              "german": "Schinken",
+              "english": "Ham",
+              "gender": "der",
+              "example": "Das ist ein Schinken."
+            },
+            {
+              "id": "uuid-613",
+              "type": "noun",
+              "german": "Reis",
+              "english": "Rice",
+              "gender": "der",
+              "example": "Das ist ein Reis."
+            },
+            {
+              "id": "uuid-614",
+              "type": "noun",
+              "german": "Nudel",
+              "english": "Noodle",
+              "gender": "die",
+              "example": "Das ist eine Nudel."
+            },
+            {
+              "id": "uuid-615",
+              "type": "noun",
+              "german": "Kartoffel",
+              "english": "Potato",
+              "gender": "die",
+              "example": "Das ist eine Kartoffel."
+            },
+            {
+              "id": "uuid-616",
+              "type": "noun",
+              "german": "Pommes frites",
+              "english": "Fries",
+              "gender": "die",
+              "example": "Das ist eine Pommes frites."
+            },
+            {
+              "id": "uuid-617",
+              "type": "noun",
+              "german": "Salat",
+              "english": "Salad",
+              "gender": "der",
+              "example": "Das ist ein Salat."
+            },
+            {
+              "id": "uuid-618",
+              "type": "noun",
+              "german": "Obst",
+              "english": "Fruit",
+              "gender": "das",
+              "example": "Das ist ein Obst."
+            },
+            {
+              "id": "uuid-619",
+              "type": "noun",
+              "german": "Gemüse",
+              "english": "Vegetables",
+              "gender": "das",
+              "example": "Das ist ein Gemüse."
+            },
+            {
+              "id": "uuid-620",
+              "type": "noun",
+              "german": "Apfel",
+              "english": "Apple",
+              "gender": "der",
+              "example": "Das ist ein Apfel."
+            },
+            {
+              "id": "uuid-621",
+              "type": "noun",
+              "german": "Banane",
+              "english": "Banana",
+              "gender": "die",
+              "example": "Das ist eine Banane."
+            },
+            {
+              "id": "uuid-622",
+              "type": "noun",
+              "german": "Birne",
+              "english": "Pear",
+              "gender": "die",
+              "example": "Das ist eine Birne."
+            },
+            {
+              "id": "uuid-623",
+              "type": "noun",
+              "german": "Tomate",
+              "english": "Tomato",
+              "gender": "die",
+              "example": "Das ist eine Tomate."
+            },
+            {
+              "id": "uuid-624",
+              "type": "noun",
+              "german": "Orange",
+              "english": "Orange",
+              "gender": "die",
+              "example": "Das ist eine Orange."
+            },
+            {
+              "id": "uuid-625",
+              "type": "noun",
+              "german": "Kuchen",
+              "english": "Cake",
+              "gender": "der",
+              "example": "Das ist ein Kuchen."
+            },
+            {
+              "id": "uuid-626",
+              "type": "noun",
+              "german": "Eis",
+              "english": "Ice Cream",
+              "gender": "das",
+              "example": "Das ist ein Eis."
+            },
+            {
+              "id": "uuid-627",
+              "type": "noun",
+              "german": "Schokolade",
+              "english": "Chocolate",
+              "gender": "die",
+              "example": "Das ist eine Schokolade."
+            },
+            {
+              "id": "uuid-628",
+              "type": "noun",
+              "german": "Zucker",
+              "english": "Sugar",
+              "gender": "der",
+              "example": "Das ist ein Zucker."
+            },
+            {
+              "id": "uuid-629",
+              "type": "noun",
+              "german": "Salz",
+              "english": "Salt",
+              "gender": "das",
+              "example": "Das ist ein Salz."
+            },
+            {
+              "id": "uuid-630",
+              "type": "noun",
+              "german": "Öl",
+              "english": "Oil",
+              "gender": "das",
+              "example": "Das ist ein Öl."
+            },
+            {
+              "id": "uuid-631",
+              "type": "noun",
+              "german": "Wasser",
+              "english": "Water",
+              "gender": "das",
+              "example": "Das ist ein Wasser."
+            },
+            {
+              "id": "uuid-632",
+              "type": "noun",
+              "german": "Milch",
+              "english": "Milk",
+              "gender": "die",
+              "example": "Das ist eine Milch."
+            },
+            {
+              "id": "uuid-633",
+              "type": "noun",
+              "german": "Kaffee",
+              "english": "Coffee",
+              "gender": "der",
+              "example": "Das ist ein Kaffee."
+            },
+            {
+              "id": "uuid-634",
+              "type": "noun",
+              "german": "Tee",
+              "english": "Tea",
+              "gender": "der",
+              "example": "Das ist ein Tee."
+            },
+            {
+              "id": "uuid-635",
+              "type": "noun",
+              "german": "Saft",
+              "english": "Juice",
+              "gender": "der",
+              "example": "Das ist ein Saft."
+            },
+            {
+              "id": "uuid-636",
+              "type": "noun",
+              "german": "Bier",
+              "english": "Beer",
+              "gender": "das",
+              "example": "Das ist ein Bier."
+            },
+            {
+              "id": "uuid-637",
+              "type": "noun",
+              "german": "Wein",
+              "english": "Wine",
+              "gender": "der",
+              "example": "Das ist ein Wein."
+            },
+            {
+              "id": "uuid-638",
+              "type": "noun",
+              "german": "Restaurant",
+              "english": "Restaurant",
+              "gender": "das",
+              "example": "Das ist ein Restaurant."
+            },
+            {
+              "id": "uuid-639",
+              "type": "noun",
+              "german": "Café",
+              "english": "Café",
+              "gender": "das",
+              "example": "Das ist ein Café."
+            },
+            {
+              "id": "uuid-640",
+              "type": "noun",
+              "german": "Lokal",
+              "english": "Pub/Bar",
+              "gender": "das",
+              "example": "Das ist ein Lokal."
+            },
+            {
+              "id": "uuid-641",
+              "type": "noun",
+              "german": "Speisekarte",
+              "english": "Menu",
+              "gender": "die",
+              "example": "Das ist eine Speisekarte."
+            },
+            {
+              "id": "uuid-642",
+              "type": "noun",
+              "german": "Karte",
+              "english": "Menu/Card",
+              "gender": "die",
+              "example": "Das ist eine Karte."
+            },
+            {
+              "id": "uuid-643",
+              "type": "noun",
+              "german": "Platz",
+              "english": "Seat",
+              "gender": "der",
+              "example": "Das ist ein Platz."
+            },
+            {
+              "id": "uuid-644",
+              "type": "noun",
+              "german": "Rechnung",
+              "english": "Bill",
+              "gender": "die",
+              "example": "Das ist eine Rechnung."
+            },
+            {
+              "id": "uuid-645",
+              "type": "noun",
+              "german": "Frühstück",
+              "english": "Breakfast",
+              "gender": "das",
+              "example": "Das ist ein Frühstück."
+            },
+            {
+              "id": "uuid-646",
+              "type": "noun",
+              "german": "Mittagessen",
+              "english": "Lunch",
+              "gender": "das",
+              "example": "Das ist ein Mittagessen."
+            },
+            {
+              "id": "uuid-647",
+              "type": "noun",
+              "german": "Abendessen",
+              "english": "Dinner",
+              "gender": "das",
+              "example": "Das ist ein Abendessen."
+            },
+            {
+              "id": "uuid-648",
+              "type": "noun",
+              "german": "Appetit",
+              "english": "Appetite",
+              "gender": "der",
+              "example": "Das ist ein Appetit."
+            },
+            {
+              "id": "uuid-649",
+              "type": "noun",
+              "german": "Hunger",
+              "english": "Hunger",
+              "gender": "der",
+              "example": "Das ist ein Hunger."
+            },
+            {
+              "id": "uuid-650",
+              "type": "noun",
+              "german": "Durst",
+              "english": "Thirst",
+              "gender": "der",
+              "example": "Das ist ein Durst."
+            },
+            {
+              "id": "uuid-651",
+              "type": "noun",
+              "german": "Flasche",
+              "english": "Bottle",
+              "gender": "die",
+              "example": "Das ist eine Flasche."
+            },
+            {
+              "id": "uuid-652",
+              "type": "noun",
+              "german": "Glas",
+              "english": "Glass",
+              "gender": "das",
+              "example": "Das ist ein Glas."
+            },
+            {
+              "id": "uuid-653",
+              "type": "noun",
+              "german": "Tasse",
+              "english": "Cup",
+              "gender": "die",
+              "example": "Das ist eine Tasse."
+            },
+            {
+              "id": "uuid-654",
+              "type": "noun",
+              "german": "Löffel",
+              "english": "Spoon",
+              "gender": "der",
+              "example": "Das ist ein Löffel."
+            },
+            {
+              "id": "uuid-655",
+              "type": "noun",
+              "german": "Gabel",
+              "english": "Fork",
+              "gender": "die",
+              "example": "Das ist eine Gabel."
+            },
+            {
+              "id": "uuid-656",
+              "type": "noun",
+              "german": "Messer",
+              "english": "Knife",
+              "gender": "das",
+              "example": "Das ist ein Messer."
+            },
+            {
+              "id": "uuid-657",
+              "type": "noun",
+              "german": "Teller",
+              "english": "Plate",
+              "gender": "der",
+              "example": "Das ist ein Teller."
+            },
+            {
+              "id": "uuid-658",
+              "type": "verb",
+              "german": "essen",
+              "english": "to eat",
+              "gender": "none",
+              "example": "Ich muss essen."
+            },
+            {
+              "id": "uuid-659",
+              "type": "verb",
+              "german": "trinken",
+              "english": "to drink",
+              "gender": "none",
+              "example": "Ich muss trinken."
+            },
+            {
+              "id": "uuid-660",
+              "type": "verb",
+              "german": "frühstücken",
+              "english": "to eat breakfast",
+              "gender": "none",
+              "example": "Ich muss frühstücken."
+            },
+            {
+              "id": "uuid-661",
+              "type": "verb",
+              "german": "schmecken",
+              "english": "to taste",
+              "gender": "none",
+              "example": "Ich muss schmecken."
+            },
+            {
+              "id": "uuid-662",
+              "type": "verb",
+              "german": "bestellen",
+              "english": "to order",
+              "gender": "none",
+              "example": "Ich muss bestellen."
+            },
+            {
+              "id": "uuid-663",
+              "type": "verb",
+              "german": "bezahlen",
+              "english": "to pay",
+              "gender": "none",
+              "example": "Ich muss bezahlen."
+            },
+            {
+              "id": "uuid-664",
+              "type": "verb",
+              "german": "zahlen",
+              "english": "to pay",
+              "gender": "none",
+              "example": "Ich muss zahlen."
+            },
+            {
+              "id": "uuid-665",
+              "type": "verb",
+              "german": "grillen",
+              "english": "to grill",
+              "gender": "none",
+              "example": "Ich muss grillen."
+            }
+          ]
+        },
+        {
+          "id": "a1-shopping",
+          "title": "Money, Stores, Clothing",
+          "icon": "🛍️",
+          "items": [
+            {
+              "id": "uuid-700",
+              "type": "noun",
+              "german": "Geschäft",
+              "english": "Shop",
+              "gender": "das",
+              "example": "Das ist ein Geschäft."
+            },
+            {
+              "id": "uuid-701",
+              "type": "noun",
+              "german": "Laden",
+              "english": "Store",
+              "gender": "der",
+              "example": "Das ist ein Laden."
+            },
+            {
+              "id": "uuid-702",
+              "type": "noun",
+              "german": "Supermarkt",
+              "english": "Supermarket",
+              "gender": "der",
+              "example": "Das ist ein Supermarkt."
+            },
+            {
+              "id": "uuid-703",
+              "type": "noun",
+              "german": "Bäckerei",
+              "english": "Bakery",
+              "gender": "die",
+              "example": "Das ist eine Bäckerei."
+            },
+            {
+              "id": "uuid-704",
+              "type": "noun",
+              "german": "Kiosk",
+              "english": "Kiosk",
+              "gender": "der",
+              "example": "Das ist ein Kiosk."
+            },
+            {
+              "id": "uuid-705",
+              "type": "noun",
+              "german": "Markt",
+              "english": "Market",
+              "gender": "der",
+              "example": "Das ist ein Markt."
+            },
+            {
+              "id": "uuid-706",
+              "type": "noun",
+              "german": "Apotheke",
+              "english": "Pharmacy",
+              "gender": "die",
+              "example": "Das ist eine Apotheke."
+            },
+            {
+              "id": "uuid-707",
+              "type": "noun",
+              "german": "Geld",
+              "english": "Money",
+              "gender": "das",
+              "example": "Das ist ein Geld."
+            },
+            {
+              "id": "uuid-708",
+              "type": "noun",
+              "german": "Preis",
+              "english": "Price",
+              "gender": "der",
+              "example": "Das ist ein Preis."
+            },
+            {
+              "id": "uuid-709",
+              "type": "noun",
+              "german": "Euro",
+              "english": "Euro",
+              "gender": "der",
+              "example": "Das ist ein Euro."
+            },
+            {
+              "id": "uuid-710",
+              "type": "noun",
+              "german": "Cent",
+              "english": "Cent",
+              "gender": "der",
+              "example": "Das ist ein Cent."
+            },
+            {
+              "id": "uuid-711",
+              "type": "noun",
+              "german": "Kasse",
+              "english": "Cash Register",
+              "gender": "die",
+              "example": "Das ist eine Kasse."
+            },
+            {
+              "id": "uuid-712",
+              "type": "noun",
+              "german": "Angebot",
+              "english": "Offer",
+              "gender": "das",
+              "example": "Das ist ein Angebot."
+            },
+            {
+              "id": "uuid-713",
+              "type": "noun",
+              "german": "Kreditkarte",
+              "english": "Credit Card",
+              "gender": "die",
+              "example": "Das ist eine Kreditkarte."
+            },
+            {
+              "id": "uuid-714",
+              "type": "noun",
+              "german": "Konto",
+              "english": "Account",
+              "gender": "der",
+              "example": "Das ist ein Konto."
+            },
+            {
+              "id": "uuid-715",
+              "type": "noun",
+              "german": "Kleidung",
+              "english": "Clothing",
+              "gender": "die",
+              "example": "Das ist eine Kleidung."
+            },
+            {
+              "id": "uuid-716",
+              "type": "noun",
+              "german": "Jacke",
+              "english": "Jacket",
+              "gender": "die",
+              "example": "Das ist eine Jacke."
+            },
+            {
+              "id": "uuid-717",
+              "type": "noun",
+              "german": "Hose",
+              "english": "Trousers",
+              "gender": "die",
+              "example": "Das ist eine Hose."
+            },
+            {
+              "id": "uuid-718",
+              "type": "noun",
+              "german": "Pullover",
+              "english": "Sweater",
+              "gender": "der",
+              "example": "Das ist ein Pullover."
+            },
+            {
+              "id": "uuid-719",
+              "type": "noun",
+              "german": "Schuh",
+              "english": "Shoe",
+              "gender": "der",
+              "example": "Das ist ein Schuh."
+            },
+            {
+              "id": "uuid-720",
+              "type": "noun",
+              "german": "Tasche",
+              "english": "Bag",
+              "gender": "die",
+              "example": "Das ist eine Tasche."
+            },
+            {
+              "id": "uuid-721",
+              "type": "noun",
+              "german": "Größe",
+              "english": "Size",
+              "gender": "die",
+              "example": "Das ist eine Größe."
+            },
+            {
+              "id": "uuid-722",
+              "type": "noun",
+              "german": "Zigarette",
+              "english": "Cigarette",
+              "gender": "die",
+              "example": "Das ist eine Zigarette."
+            },
+            {
+              "id": "uuid-723",
+              "type": "verb",
+              "german": "kaufen",
+              "english": "to buy",
+              "gender": "none",
+              "example": "Ich muss kaufen."
+            },
+            {
+              "id": "uuid-724",
+              "type": "verb",
+              "german": "einkaufen",
+              "english": "to shop",
+              "gender": "none",
+              "example": "Ich muss einkaufen."
+            },
+            {
+              "id": "uuid-725",
+              "type": "verb",
+              "german": "verkaufen",
+              "english": "to sell",
+              "gender": "none",
+              "example": "Ich muss verkaufen."
+            },
+            {
+              "id": "uuid-726",
+              "type": "verb",
+              "german": "kosten",
+              "english": "to cost",
+              "gender": "none",
+              "example": "Ich muss kosten."
+            },
+            {
+              "id": "uuid-727",
+              "type": "verb",
+              "german": "nehmen",
+              "english": "to take",
+              "gender": "none",
+              "example": "Ich muss nehmen."
+            },
+            {
+              "id": "uuid-728",
+              "type": "verb",
+              "german": "suchen",
+              "english": "to search",
+              "gender": "none",
+              "example": "Ich muss suchen."
+            },
+            {
+              "id": "uuid-729",
+              "type": "verb",
+              "german": "finden",
+              "english": "to find",
+              "gender": "none",
+              "example": "Ich muss finden."
+            },
+            {
+              "id": "uuid-730",
+              "type": "verb",
+              "german": "brauchen",
+              "english": "to need",
+              "gender": "none",
+              "example": "Ich muss brauchen."
+            },
+            {
+              "id": "uuid-731",
+              "type": "verb",
+              "german": "gefallen",
+              "english": "to please/like",
+              "gender": "none",
+              "example": "Ich muss gefallen."
+            },
+            {
+              "id": "uuid-732",
+              "type": "verb",
+              "german": "passen",
+              "english": "to fit",
+              "gender": "none",
+              "example": "Ich muss passen."
+            }
+          ]
+        },
+        {
+          "id": "a1-travel",
+          "title": "Transport, Directions, Places",
+          "icon": "✈️",
+          "items": [
+            {
+              "id": "uuid-800",
+              "type": "noun",
+              "german": "Auto",
+              "english": "Car",
+              "gender": "das",
+              "example": "Das ist ein Auto."
+            },
+            {
+              "id": "uuid-801",
+              "type": "noun",
+              "german": "Bus",
+              "english": "Bus",
+              "gender": "der",
+              "example": "Das ist ein Bus."
+            },
+            {
+              "id": "uuid-802",
+              "type": "noun",
+              "german": "Zug",
+              "english": "Train",
+              "gender": "der",
+              "example": "Das ist ein Zug."
+            },
+            {
+              "id": "uuid-803",
+              "type": "noun",
+              "german": "Bahn",
+              "english": "Train",
+              "gender": "die",
+              "example": "Das ist eine Bahn."
+            },
+            {
+              "id": "uuid-804",
+              "type": "noun",
+              "german": "S-Bahn",
+              "english": "Suburban Train",
+              "gender": "die",
+              "example": "Das ist eine S-Bahn."
+            },
+            {
+              "id": "uuid-805",
+              "type": "noun",
+              "german": "Straßenbahn",
+              "english": "Tram",
+              "gender": "die",
+              "example": "Das ist eine Straßenbahn."
+            },
+            {
+              "id": "uuid-806",
+              "type": "noun",
+              "german": "U-Bahn",
+              "english": "Subway",
+              "gender": "die",
+              "example": "Das ist eine U-Bahn."
+            },
+            {
+              "id": "uuid-807",
+              "type": "noun",
+              "german": "Fahrrad",
+              "english": "Bicycle",
+              "gender": "das",
+              "example": "Das ist ein Fahrrad."
+            },
+            {
+              "id": "uuid-808",
+              "type": "noun",
+              "german": "Rad",
+              "english": "Bike",
+              "gender": "das",
+              "example": "Das ist ein Rad."
+            },
+            {
+              "id": "uuid-809",
+              "type": "noun",
+              "german": "Motorrad",
+              "english": "Motorcycle",
+              "gender": "das",
+              "example": "Das ist ein Motorrad."
+            },
+            {
+              "id": "uuid-810",
+              "type": "noun",
+              "german": "Lkw",
+              "english": "Truck",
+              "gender": "der",
+              "example": "Das ist ein Lkw."
+            },
+            {
+              "id": "uuid-811",
+              "type": "noun",
+              "german": "Taxi",
+              "english": "Taxi",
+              "gender": "das",
+              "example": "Das ist ein Taxi."
+            },
+            {
+              "id": "uuid-812",
+              "type": "noun",
+              "german": "Flugzeug",
+              "english": "Airplane",
+              "gender": "das",
+              "example": "Das ist ein Flugzeug."
+            },
+            {
+              "id": "uuid-813",
+              "type": "noun",
+              "german": "Bahnhof",
+              "english": "Train Station",
+              "gender": "der",
+              "example": "Das ist ein Bahnhof."
+            },
+            {
+              "id": "uuid-814",
+              "type": "noun",
+              "german": "Flughafen",
+              "english": "Airport",
+              "gender": "der",
+              "example": "Das ist ein Flughafen."
+            },
+            {
+              "id": "uuid-815",
+              "type": "noun",
+              "german": "Haltestelle",
+              "english": "Stop",
+              "gender": "die",
+              "example": "Das ist eine Haltestelle."
+            },
+            {
+              "id": "uuid-816",
+              "type": "noun",
+              "german": "Bahnsteig",
+              "english": "Platform",
+              "gender": "der",
+              "example": "Das ist ein Bahnsteig."
+            },
+            {
+              "id": "uuid-817",
+              "type": "noun",
+              "german": "Gleis",
+              "english": "Track",
+              "gender": "das",
+              "example": "Das ist ein Gleis."
+            },
+            {
+              "id": "uuid-818",
+              "type": "noun",
+              "german": "Schalter",
+              "english": "Counter",
+              "gender": "der",
+              "example": "Das ist ein Schalter."
+            },
+            {
+              "id": "uuid-819",
+              "type": "noun",
+              "german": "Eingang",
+              "english": "Entrance",
+              "gender": "der",
+              "example": "Das ist ein Eingang."
+            },
+            {
+              "id": "uuid-820",
+              "type": "noun",
+              "german": "Ausgang",
+              "english": "Exit",
+              "gender": "der",
+              "example": "Das ist ein Ausgang."
+            },
+            {
+              "id": "uuid-821",
+              "type": "noun",
+              "german": "Auskunft",
+              "english": "Information",
+              "gender": "die",
+              "example": "Das ist eine Auskunft."
+            },
+            {
+              "id": "uuid-822",
+              "type": "noun",
+              "german": "Hotel",
+              "english": "Hotel",
+              "gender": "das",
+              "example": "Das ist ein Hotel."
+            },
+            {
+              "id": "uuid-823",
+              "type": "noun",
+              "german": "Rezeption",
+              "english": "Reception",
+              "gender": "die",
+              "example": "Das ist eine Rezeption."
+            },
+            {
+              "id": "uuid-824",
+              "type": "noun",
+              "german": "Zoll",
+              "english": "Customs",
+              "gender": "der",
+              "example": "Das ist ein Zoll."
+            },
+            {
+              "id": "uuid-825",
+              "type": "noun",
+              "german": "Brücke",
+              "english": "Bridge",
+              "gender": "die",
+              "example": "Das ist eine Brücke."
+            },
+            {
+              "id": "uuid-826",
+              "type": "noun",
+              "german": "Ampel",
+              "english": "Traffic Light",
+              "gender": "die",
+              "example": "Das ist eine Ampel."
+            },
+            {
+              "id": "uuid-827",
+              "type": "noun",
+              "german": "Park",
+              "english": "Park",
+              "gender": "der",
+              "example": "Das ist ein Park."
+            },
+            {
+              "id": "uuid-828",
+              "type": "noun",
+              "german": "Reise",
+              "english": "Journey",
+              "gender": "die",
+              "example": "Das ist eine Reise."
+            },
+            {
+              "id": "uuid-829",
+              "type": "noun",
+              "german": "Urlaub",
+              "english": "Vacation",
+              "gender": "der",
+              "example": "Das ist ein Urlaub."
+            },
+            {
+              "id": "uuid-830",
+              "type": "noun",
+              "german": "Ausflug",
+              "english": "Excursion",
+              "gender": "der",
+              "example": "Das ist ein Ausflug."
+            },
+            {
+              "id": "uuid-831",
+              "type": "noun",
+              "german": "Fahrkarte",
+              "english": "Ticket",
+              "gender": "die",
+              "example": "Das ist eine Fahrkarte."
+            },
+            {
+              "id": "uuid-832",
+              "type": "noun",
+              "german": "Ticket",
+              "english": "Ticket",
+              "gender": "das",
+              "example": "Das ist ein Ticket."
+            },
+            {
+              "id": "uuid-833",
+              "type": "noun",
+              "german": "Gepäck",
+              "english": "Luggage",
+              "gender": "das",
+              "example": "Das ist ein Gepäck."
+            },
+            {
+              "id": "uuid-834",
+              "type": "noun",
+              "german": "Koffer",
+              "english": "Suitcase",
+              "gender": "der",
+              "example": "Das ist ein Koffer."
+            },
+            {
+              "id": "uuid-835",
+              "type": "noun",
+              "german": "Pass",
+              "english": "Passport",
+              "gender": "der",
+              "example": "Das ist ein Pass."
+            },
+            {
+              "id": "uuid-836",
+              "type": "noun",
+              "german": "Ausweis",
+              "english": "ID",
+              "gender": "der",
+              "example": "Das ist ein Ausweis."
+            },
+            {
+              "id": "uuid-837",
+              "type": "noun",
+              "german": "Abfahrt",
+              "english": "Departure",
+              "gender": "die",
+              "example": "Das ist eine Abfahrt."
+            },
+            {
+              "id": "uuid-838",
+              "type": "noun",
+              "german": "Ankunft",
+              "english": "Arrival",
+              "gender": "die",
+              "example": "Das ist eine Ankunft."
+            },
+            {
+              "id": "uuid-839",
+              "type": "noun",
+              "german": "Abflug",
+              "english": "Flight Departure",
+              "gender": "der",
+              "example": "Das ist ein Abflug."
+            },
+            {
+              "id": "uuid-840",
+              "type": "noun",
+              "german": "Anschluss",
+              "english": "Connection",
+              "gender": "der",
+              "example": "Das ist ein Anschluss."
+            },
+            {
+              "id": "uuid-841",
+              "type": "noun",
+              "german": "Durchsage",
+              "english": "Announcement",
+              "gender": "die",
+              "example": "Das ist eine Durchsage."
+            },
+            {
+              "id": "uuid-842",
+              "type": "noun",
+              "german": "Verspätung",
+              "english": "Delay",
+              "gender": "die",
+              "example": "Das ist eine Verspätung."
+            },
+            {
+              "id": "uuid-843",
+              "type": "noun",
+              "german": "Stadtplan",
+              "english": "Map",
+              "gender": "der",
+              "example": "Das ist ein Stadtplan."
+            },
+            {
+              "id": "uuid-844",
+              "type": "noun",
+              "german": "Reiseführer",
+              "english": "Guide",
+              "gender": "der",
+              "example": "Das ist ein Reiseführer."
+            },
+            {
+              "id": "uuid-845",
+              "type": "noun",
+              "german": "Weg",
+              "english": "Way/Path",
+              "gender": "der",
+              "example": "Das ist ein Weg."
+            },
+            {
+              "id": "uuid-846",
+              "type": "noun",
+              "german": "Fahrt",
+              "english": "Ride/Drive",
+              "gender": "die",
+              "example": "Das ist eine Fahrt."
+            },
+            {
+              "id": "uuid-847",
+              "type": "noun",
+              "german": "Stadt",
+              "english": "City",
+              "gender": "die",
+              "example": "Das ist eine Stadt."
+            },
+            {
+              "id": "uuid-848",
+              "type": "noun",
+              "german": "Dorf",
+              "english": "Village",
+              "gender": "das",
+              "example": "Das ist ein Dorf."
+            },
+            {
+              "id": "uuid-849",
+              "type": "noun",
+              "german": "Land",
+              "english": "Country",
+              "gender": "das",
+              "example": "Das ist ein Land."
+            },
+            {
+              "id": "uuid-850",
+              "type": "noun",
+              "german": "Ausland",
+              "english": "Abroad",
+              "gender": "das",
+              "example": "Das ist ein Ausland."
+            },
+            {
+              "id": "uuid-851",
+              "type": "noun",
+              "german": "Ort",
+              "english": "Place",
+              "gender": "der",
+              "example": "Das ist ein Ort."
+            },
+            {
+              "id": "uuid-852",
+              "type": "noun",
+              "german": "Straße",
+              "english": "Street",
+              "gender": "die",
+              "example": "Das ist eine Straße."
+            },
+            {
+              "id": "uuid-853",
+              "type": "noun",
+              "german": "Platz",
+              "english": "Square",
+              "gender": "der",
+              "example": "Das ist ein Platz."
+            },
+            {
+              "id": "uuid-854",
+              "type": "noun",
+              "german": "Ecke",
+              "english": "Corner",
+              "gender": "die",
+              "example": "Das ist eine Ecke."
+            },
+            {
+              "id": "uuid-855",
+              "type": "noun",
+              "german": "Mitte",
+              "english": "Middle/Center",
+              "gender": "die",
+              "example": "Das ist eine Mitte."
+            },
+            {
+              "id": "uuid-856",
+              "type": "noun",
+              "german": "Norden",
+              "english": "North",
+              "gender": "der",
+              "example": "Das ist ein Norden."
+            },
+            {
+              "id": "uuid-857",
+              "type": "noun",
+              "german": "Süden",
+              "english": "South",
+              "gender": "der",
+              "example": "Das ist ein Süden."
+            },
+            {
+              "id": "uuid-858",
+              "type": "noun",
+              "german": "Westen",
+              "english": "West",
+              "gender": "der",
+              "example": "Das ist ein Westen."
+            },
+            {
+              "id": "uuid-859",
+              "type": "noun",
+              "german": "Osten",
+              "english": "East",
+              "gender": "der",
+              "example": "Das ist ein Osten."
+            },
+            {
+              "id": "uuid-860",
+              "type": "verb",
+              "german": "fahren",
+              "english": "to drive/go",
+              "gender": "none",
+              "example": "Ich muss fahren."
+            },
+            {
+              "id": "uuid-861",
+              "type": "verb",
+              "german": "fliegen",
+              "english": "to fly",
+              "gender": "none",
+              "example": "Ich muss fliegen."
+            },
+            {
+              "id": "uuid-862",
+              "type": "verb",
+              "german": "reisen",
+              "english": "to travel",
+              "gender": "none",
+              "example": "Ich muss reisen."
+            },
+            {
+              "id": "uuid-863",
+              "type": "verb",
+              "german": "laufen",
+              "english": "to walk/run",
+              "gender": "none",
+              "example": "Ich muss laufen."
+            },
+            {
+              "id": "uuid-864",
+              "type": "verb",
+              "german": "gehen",
+              "english": "to go",
+              "gender": "none",
+              "example": "Ich muss gehen."
+            },
+            {
+              "id": "uuid-865",
+              "type": "verb",
+              "german": "kommen",
+              "english": "to come",
+              "gender": "none",
+              "example": "Ich muss kommen."
+            },
+            {
+              "id": "uuid-866",
+              "type": "verb",
+              "german": "anrufen",
+              "english": "to call",
+              "gender": "none",
+              "example": "Ich muss anrufen."
+            },
+            {
+              "id": "uuid-867",
+              "type": "verb",
+              "german": "abfahren",
+              "english": "to depart",
+              "gender": "none",
+              "example": "Ich muss abfahren."
+            },
+            {
+              "id": "uuid-868",
+              "type": "verb",
+              "german": "ankommen",
+              "english": "to arrive",
+              "gender": "none",
+              "example": "Ich muss ankommen."
+            },
+            {
+              "id": "uuid-869",
+              "type": "verb",
+              "german": "abfliegen",
+              "english": "to take off",
+              "gender": "none",
+              "example": "Ich muss abfliegen."
+            },
+            {
+              "id": "uuid-870",
+              "type": "verb",
+              "german": "einsteigen",
+              "english": "to board",
+              "gender": "none",
+              "example": "Ich muss einsteigen."
+            },
+            {
+              "id": "uuid-871",
+              "type": "verb",
+              "german": "aussteigen",
+              "english": "to disembark",
+              "gender": "none",
+              "example": "Ich muss aussteigen."
+            },
+            {
+              "id": "uuid-872",
+              "type": "verb",
+              "german": "umsteigen",
+              "english": "to change (trains)",
+              "gender": "none",
+              "example": "Ich muss umsteigen."
+            },
+            {
+              "id": "uuid-873",
+              "type": "verb",
+              "german": "abholen",
+              "english": "to pick up",
+              "gender": "none",
+              "example": "Ich muss abholen."
+            },
+            {
+              "id": "uuid-874",
+              "type": "verb",
+              "german": "mitnehmen",
+              "english": "to take along",
+              "gender": "none",
+              "example": "Ich muss mitnehmen."
+            },
+            {
+              "id": "uuid-875",
+              "type": "verb",
+              "german": "mitkommen",
+              "english": "to come along",
+              "gender": "none",
+              "example": "Ich muss mitkommen."
+            },
+            {
+              "id": "uuid-876",
+              "type": "verb",
+              "german": "übernachten",
+              "english": "to stay overnight",
+              "gender": "none",
+              "example": "Ich muss übernachten."
+            },
+            {
+              "id": "uuid-877",
+              "type": "adjective",
+              "german": "pünktlich",
+              "english": "punctual",
+              "gender": "none",
+              "example": "Ich muss pünktlich."
+            },
+            {
+              "id": "uuid-878",
+              "type": "adjective",
+              "german": "geradeaus",
+              "english": "straight ahead",
+              "gender": "none",
+              "example": "Ich muss geradeaus."
+            },
+            {
+              "id": "uuid-879",
+              "type": "adjective",
+              "german": "links",
+              "english": "left",
+              "gender": "none",
+              "example": "Ich muss links."
+            },
+            {
+              "id": "uuid-880",
+              "type": "adjective",
+              "german": "rechts",
+              "english": "right",
+              "gender": "none",
+              "example": "Ich muss rechts."
+            },
+            {
+              "id": "uuid-881",
+              "type": "adjective",
+              "german": "oben",
+              "english": "up/above",
+              "gender": "none",
+              "example": "Ich muss oben."
+            },
+            {
+              "id": "uuid-882",
+              "type": "adjective",
+              "german": "unten",
+              "english": "down/below",
+              "gender": "none",
+              "example": "Ich muss unten."
+            },
+            {
+              "id": "uuid-883",
+              "type": "adjective",
+              "german": "vorn",
+              "english": "in front",
+              "gender": "none",
+              "example": "Ich muss vorn."
+            },
+            {
+              "id": "uuid-884",
+              "type": "adjective",
+              "german": "hinten",
+              "english": "behind/back",
+              "gender": "none",
+              "example": "Ich muss hinten."
+            },
+            {
+              "id": "uuid-885",
+              "type": "adjective",
+              "german": "draußen",
+              "english": "outside",
+              "gender": "none",
+              "example": "Ich muss draußen."
+            },
+            {
+              "id": "uuid-886",
+              "type": "adjective",
+              "german": "drinnen",
+              "english": "inside",
+              "gender": "none",
+              "example": "Ich muss drinnen."
+            },
+            {
+              "id": "uuid-887",
+              "type": "adjective",
+              "german": "weit",
+              "english": "far",
+              "gender": "none",
+              "example": "Ich muss weit."
+            },
+            {
+              "id": "uuid-888",
+              "type": "adjective",
+              "german": "nah",
+              "english": "near",
+              "gender": "none",
+              "example": "Ich muss nah."
+            }
+          ]
+        },
+        {
+          "id": "a1-work-school",
+          "title": "Work, Education, Office",
+          "icon": "💼",
+          "items": [
+            {
+              "id": "uuid-900",
+              "type": "noun",
+              "german": "Arbeit",
+              "english": "Work",
+              "gender": "die",
+              "example": "Das ist eine Arbeit."
+            },
+            {
+              "id": "uuid-901",
+              "type": "noun",
+              "german": "Beruf",
+              "english": "Job/Profession",
+              "gender": "der",
+              "example": "Das ist ein Beruf."
+            },
+            {
+              "id": "uuid-902",
+              "type": "noun",
+              "german": "Arbeitsplatz",
+              "english": "Workplace",
+              "gender": "der",
+              "example": "Das ist ein Arbeitsplatz."
+            },
+            {
+              "id": "uuid-903",
+              "type": "noun",
+              "german": "Stelle",
+              "english": "Position",
+              "gender": "die",
+              "example": "Das ist eine Stelle."
+            },
+            {
+              "id": "uuid-904",
+              "type": "noun",
+              "german": "Job",
+              "english": "Job",
+              "gender": "der",
+              "example": "Das ist ein Job."
+            },
+            {
+              "id": "uuid-905",
+              "type": "noun",
+              "german": "Firma",
+              "english": "Company",
+              "gender": "die",
+              "example": "Das ist eine Firma."
+            },
+            {
+              "id": "uuid-906",
+              "type": "noun",
+              "german": "Büro",
+              "english": "Office",
+              "gender": "das",
+              "example": "Das ist ein Büro."
+            },
+            {
+              "id": "uuid-907",
+              "type": "noun",
+              "german": "Chef",
+              "english": "Boss",
+              "gender": "der",
+              "example": "Das ist ein Chef."
+            },
+            {
+              "id": "uuid-908",
+              "type": "noun",
+              "german": "Arzt",
+              "english": "Doctor",
+              "gender": "der",
+              "example": "Das ist ein Arzt."
+            },
+            {
+              "id": "uuid-909",
+              "type": "noun",
+              "german": "Fahrer",
+              "english": "Driver",
+              "gender": "der",
+              "example": "Das ist ein Fahrer."
+            },
+            {
+              "id": "uuid-910",
+              "type": "noun",
+              "german": "Verkäufer",
+              "english": "Salesperson",
+              "gender": "der",
+              "example": "Das ist ein Verkäufer."
+            },
+            {
+              "id": "uuid-911",
+              "type": "noun",
+              "german": "Beamte",
+              "english": "Official",
+              "gender": "der",
+              "example": "Das ist ein Beamte."
+            },
+            {
+              "id": "uuid-912",
+              "type": "noun",
+              "german": "Polizei",
+              "english": "Police",
+              "gender": "die",
+              "example": "Das ist eine Polizei."
+            },
+            {
+              "id": "uuid-913",
+              "type": "noun",
+              "german": "Schule",
+              "english": "School",
+              "gender": "die",
+              "example": "Das ist eine Schule."
+            },
+            {
+              "id": "uuid-914",
+              "type": "noun",
+              "german": "Klasse",
+              "english": "Class",
+              "gender": "die",
+              "example": "Das ist eine Klasse."
+            },
+            {
+              "id": "uuid-915",
+              "type": "noun",
+              "german": "Unterricht",
+              "english": "Lesson",
+              "gender": "der",
+              "example": "Das ist ein Unterricht."
+            },
+            {
+              "id": "uuid-916",
+              "type": "noun",
+              "german": "Kurs",
+              "english": "Course",
+              "gender": "der",
+              "example": "Das ist ein Kurs."
+            },
+            {
+              "id": "uuid-917",
+              "type": "noun",
+              "german": "Lehrer",
+              "english": "Teacher",
+              "gender": "der",
+              "example": "Das ist ein Lehrer."
+            },
+            {
+              "id": "uuid-918",
+              "type": "noun",
+              "german": "Schüler",
+              "english": "Student (School)",
+              "gender": "der",
+              "example": "Das ist ein Schüler."
+            },
+            {
+              "id": "uuid-919",
+              "type": "noun",
+              "german": "Student",
+              "english": "Student (Uni)",
+              "gender": "der",
+              "example": "Das ist ein Student."
+            },
+            {
+              "id": "uuid-920",
+              "type": "noun",
+              "german": "Studium",
+              "english": "Studies",
+              "gender": "das",
+              "example": "Das ist ein Studium."
+            },
+            {
+              "id": "uuid-921",
+              "type": "noun",
+              "german": "Universität",
+              "english": "University",
+              "gender": "die",
+              "example": "Das ist eine Universität."
+            },
+            {
+              "id": "uuid-922",
+              "type": "noun",
+              "german": "Prüfung",
+              "english": "Exam",
+              "gender": "die",
+              "example": "Das ist eine Prüfung."
+            },
+            {
+              "id": "uuid-923",
+              "type": "noun",
+              "german": "Test",
+              "english": "Test",
+              "gender": "der",
+              "example": "Das ist ein Test."
+            },
+            {
+              "id": "uuid-924",
+              "type": "noun",
+              "german": "Aufgabe",
+              "english": "Task",
+              "gender": "die",
+              "example": "Das ist eine Aufgabe."
+            },
+            {
+              "id": "uuid-925",
+              "type": "noun",
+              "german": "Hausaufgabe",
+              "english": "Homework",
+              "gender": "die",
+              "example": "Das ist eine Hausaufgabe."
+            },
+            {
+              "id": "uuid-926",
+              "type": "noun",
+              "german": "Fehler",
+              "english": "Mistake",
+              "gender": "der",
+              "example": "Das ist ein Fehler."
+            },
+            {
+              "id": "uuid-927",
+              "type": "noun",
+              "german": "Pause",
+              "english": "Break",
+              "gender": "die",
+              "example": "Das ist eine Pause."
+            },
+            {
+              "id": "uuid-928",
+              "type": "noun",
+              "german": "Wort",
+              "english": "Word",
+              "gender": "das",
+              "example": "Das ist ein Wort."
+            },
+            {
+              "id": "uuid-929",
+              "type": "noun",
+              "german": "Satz",
+              "english": "Sentence",
+              "gender": "der",
+              "example": "Das ist ein Satz."
+            },
+            {
+              "id": "uuid-930",
+              "type": "noun",
+              "german": "Sprache",
+              "english": "Language",
+              "gender": "die",
+              "example": "Das ist eine Sprache."
+            },
+            {
+              "id": "uuid-931",
+              "type": "noun",
+              "german": "Buchstabe",
+              "english": "Letter (A-Z)",
+              "gender": "der",
+              "example": "Das ist ein Buchstabe."
+            },
+            {
+              "id": "uuid-932",
+              "type": "noun",
+              "german": "Computer",
+              "english": "Computer",
+              "gender": "der",
+              "example": "Das ist ein Computer."
+            },
+            {
+              "id": "uuid-933",
+              "type": "noun",
+              "german": "Laptop",
+              "english": "Laptop",
+              "gender": "der",
+              "example": "Das ist ein Laptop."
+            },
+            {
+              "id": "uuid-934",
+              "type": "noun",
+              "german": "Drucker",
+              "english": "Printer",
+              "gender": "der",
+              "example": "Das ist ein Drucker."
+            },
+            {
+              "id": "uuid-935",
+              "type": "noun",
+              "german": "Telefon",
+              "english": "Phone",
+              "gender": "das",
+              "example": "Das ist ein Telefon."
+            },
+            {
+              "id": "uuid-936",
+              "type": "noun",
+              "german": "Handy",
+              "english": "Mobile Phone",
+              "gender": "das",
+              "example": "Das ist ein Handy."
+            },
+            {
+              "id": "uuid-937",
+              "type": "noun",
+              "german": "Fax",
+              "english": "Fax",
+              "gender": "das",
+              "example": "Das ist ein Fax."
+            },
+            {
+              "id": "uuid-938",
+              "type": "noun",
+              "german": "E-Mail",
+              "english": "Email",
+              "gender": "die",
+              "example": "Das ist eine E-Mail."
+            },
+            {
+              "id": "uuid-939",
+              "type": "noun",
+              "german": "Brief",
+              "english": "Letter",
+              "gender": "der",
+              "example": "Das ist ein Brief."
+            },
+            {
+              "id": "uuid-940",
+              "type": "noun",
+              "german": "Briefmarke",
+              "english": "Stamp",
+              "gender": "die",
+              "example": "Das ist eine Briefmarke."
+            },
+            {
+              "id": "uuid-941",
+              "type": "noun",
+              "german": "Post",
+              "english": "Post Office",
+              "gender": "die",
+              "example": "Das ist eine Post."
+            },
+            {
+              "id": "uuid-942",
+              "type": "noun",
+              "german": "Formular",
+              "english": "Form",
+              "gender": "das",
+              "example": "Das ist ein Formular."
+            },
+            {
+              "id": "uuid-943",
+              "type": "noun",
+              "german": "Stift",
+              "english": "Pen",
+              "gender": "der",
+              "example": "Das ist ein Stift."
+            },
+            {
+              "id": "uuid-944",
+              "type": "noun",
+              "german": "Bleistift",
+              "english": "Pencil",
+              "gender": "der",
+              "example": "Das ist ein Bleistift."
+            },
+            {
+              "id": "uuid-945",
+              "type": "noun",
+              "german": "Kugelschreiber",
+              "english": "Ballpoint",
+              "gender": "der",
+              "example": "Das ist ein Kugelschreiber."
+            },
+            {
+              "id": "uuid-946",
+              "type": "noun",
+              "german": "Papier",
+              "english": "Paper",
+              "gender": "das",
+              "example": "Das ist ein Papier."
+            },
+            {
+              "id": "uuid-947",
+              "type": "noun",
+              "german": "Buch",
+              "english": "Book",
+              "gender": "das",
+              "example": "Das ist ein Buch."
+            },
+            {
+              "id": "uuid-948",
+              "type": "noun",
+              "german": "Termin",
+              "english": "Appointment",
+              "gender": "der",
+              "example": "Das ist ein Termin."
+            },
+            {
+              "id": "uuid-949",
+              "type": "noun",
+              "german": "Information",
+              "english": "Information",
+              "gender": "die",
+              "example": "Das ist eine Information."
+            },
+            {
+              "id": "uuid-950",
+              "type": "noun",
+              "german": "Problem",
+              "english": "Problem",
+              "gender": "das",
+              "example": "Das ist ein Problem."
+            },
+            {
+              "id": "uuid-951",
+              "type": "verb",
+              "german": "arbeiten",
+              "english": "to work",
+              "gender": "none",
+              "example": "Ich muss arbeiten."
+            },
+            {
+              "id": "uuid-952",
+              "type": "verb",
+              "german": "lernen",
+              "english": "to learn",
+              "gender": "none",
+              "example": "Ich muss lernen."
+            },
+            {
+              "id": "uuid-953",
+              "type": "verb",
+              "german": "studieren",
+              "english": "to study",
+              "gender": "none",
+              "example": "Ich muss studieren."
+            },
+            {
+              "id": "uuid-954",
+              "type": "verb",
+              "german": "lesen",
+              "english": "to read",
+              "gender": "none",
+              "example": "Ich muss lesen."
+            },
+            {
+              "id": "uuid-955",
+              "type": "verb",
+              "german": "schreiben",
+              "english": "to write",
+              "gender": "none",
+              "example": "Ich muss schreiben."
+            },
+            {
+              "id": "uuid-956",
+              "type": "verb",
+              "german": "sprechen",
+              "english": "to speak",
+              "gender": "none",
+              "example": "Ich muss sprechen."
+            },
+            {
+              "id": "uuid-957",
+              "type": "verb",
+              "german": "hören",
+              "english": "to hear/listen",
+              "gender": "none",
+              "example": "Ich muss hören."
+            },
+            {
+              "id": "uuid-958",
+              "type": "verb",
+              "german": "sagen",
+              "english": "to say",
+              "gender": "none",
+              "example": "Ich muss sagen."
+            },
+            {
+              "id": "uuid-959",
+              "type": "verb",
+              "german": "erzählen",
+              "english": "to tell",
+              "gender": "none",
+              "example": "Ich muss erzählen."
+            },
+            {
+              "id": "uuid-960",
+              "type": "verb",
+              "german": "erklären",
+              "english": "to explain",
+              "gender": "none",
+              "example": "Ich muss erklären."
+            },
+            {
+              "id": "uuid-961",
+              "type": "verb",
+              "german": "verstehen",
+              "english": "to understand",
+              "gender": "none",
+              "example": "Ich muss verstehen."
+            },
+            {
+              "id": "uuid-962",
+              "type": "verb",
+              "german": "wiederholen",
+              "english": "to repeat",
+              "gender": "none",
+              "example": "Ich muss wiederholen."
+            },
+            {
+              "id": "uuid-963",
+              "type": "verb",
+              "german": "buchstabieren",
+              "english": "to spell",
+              "gender": "none",
+              "example": "Ich muss buchstabieren."
+            },
+            {
+              "id": "uuid-964",
+              "type": "verb",
+              "german": "ausfüllen",
+              "english": "to fill out",
+              "gender": "none",
+              "example": "Ich muss ausfüllen."
+            },
+            {
+              "id": "uuid-965",
+              "type": "verb",
+              "german": "unterschreiben",
+              "english": "to sign",
+              "gender": "none",
+              "example": "Ich muss unterschreiben."
+            },
+            {
+              "id": "uuid-966",
+              "type": "verb",
+              "german": "anfangen",
+              "english": "to begin",
+              "gender": "none",
+              "example": "Ich muss anfangen."
+            },
+            {
+              "id": "uuid-967",
+              "type": "verb",
+              "german": "aufhören",
+              "english": "to stop",
+              "gender": "none",
+              "example": "Ich muss aufhören."
+            },
+            {
+              "id": "uuid-968",
+              "type": "verb",
+              "german": "verdienen",
+              "english": "to earn",
+              "gender": "none",
+              "example": "Ich muss verdienen."
+            },
+            {
+              "id": "uuid-969",
+              "type": "verb",
+              "german": "bekommen",
+              "english": "to receive/get",
+              "gender": "none",
+              "example": "Ich muss bekommen."
+            },
+            {
+              "id": "uuid-970",
+              "type": "verb",
+              "german": "geben",
+              "english": "to give",
+              "gender": "none",
+              "example": "Ich muss geben."
+            },
+            {
+              "id": "uuid-971",
+              "type": "verb",
+              "german": "schicken",
+              "english": "to send",
+              "gender": "none",
+              "example": "Ich muss schicken."
+            },
+            {
+              "id": "uuid-972",
+              "type": "verb",
+              "german": "benutzen",
+              "english": "to use",
+              "gender": "none",
+              "example": "Ich muss benutzen."
+            },
+            {
+              "id": "uuid-973",
+              "type": "verb",
+              "german": "reparieren",
+              "english": "to repair",
+              "gender": "none",
+              "example": "Ich muss reparieren."
+            }
+          ]
+        },
+        {
+          "id": "a1-leisure",
+          "title": "Hobbies, Nature, Misc",
+          "icon": "⚽",
+          "items": [
+            {
+              "id": "uuid-1000",
+              "type": "noun",
+              "german": "Freizeit",
+              "english": "Free Time",
+              "gender": "die",
+              "example": "Das ist eine Freizeit."
+            },
+            {
+              "id": "uuid-1001",
+              "type": "noun",
+              "german": "Hobby",
+              "english": "Hobby",
+              "gender": "das",
+              "example": "Das ist ein Hobby."
+            },
+            {
+              "id": "uuid-1002",
+              "type": "noun",
+              "german": "Spaß",
+              "english": "Fun",
+              "gender": "der",
+              "example": "Das ist ein Spaß."
+            },
+            {
+              "id": "uuid-1003",
+              "type": "noun",
+              "german": "Sport",
+              "english": "Sport",
+              "gender": "der",
+              "example": "Das ist ein Sport."
+            },
+            {
+              "id": "uuid-1004",
+              "type": "noun",
+              "german": "Fußball",
+              "english": "Soccer",
+              "gender": "der",
+              "example": "Das ist ein Fußball."
+            },
+            {
+              "id": "uuid-1005",
+              "type": "noun",
+              "german": "Schwimmbad",
+              "english": "Pool",
+              "gender": "das",
+              "example": "Das ist ein Schwimmbad."
+            },
+            {
+              "id": "uuid-1006",
+              "type": "noun",
+              "german": "Kino",
+              "english": "Cinema",
+              "gender": "das",
+              "example": "Das ist ein Kino."
+            },
+            {
+              "id": "uuid-1007",
+              "type": "noun",
+              "german": "Film",
+              "english": "Movie",
+              "gender": "der",
+              "example": "Das ist ein Film."
+            },
+            {
+              "id": "uuid-1008",
+              "type": "noun",
+              "german": "Theater",
+              "english": "Theater",
+              "gender": "das",
+              "example": "Das ist ein Theater."
+            },
+            {
+              "id": "uuid-1009",
+              "type": "noun",
+              "german": "Museum",
+              "english": "Museum",
+              "gender": "das",
+              "example": "Das ist ein Museum."
+            },
+            {
+              "id": "uuid-1010",
+              "type": "noun",
+              "german": "Disko",
+              "english": "Disco",
+              "gender": "die",
+              "example": "Das ist eine Disko."
+            },
+            {
+              "id": "uuid-1011",
+              "type": "noun",
+              "german": "Party",
+              "english": "Party",
+              "gender": "die",
+              "example": "Das ist eine Party."
+            },
+            {
+              "id": "uuid-1012",
+              "type": "noun",
+              "german": "Einladung",
+              "english": "Invitation",
+              "gender": "die",
+              "example": "Das ist eine Einladung."
+            },
+            {
+              "id": "uuid-1013",
+              "type": "noun",
+              "german": "Geschenk",
+              "english": "Gift",
+              "gender": "das",
+              "example": "Das ist ein Geschenk."
+            },
+            {
+              "id": "uuid-1014",
+              "type": "noun",
+              "german": "Zeitung",
+              "english": "Newspaper",
+              "gender": "die",
+              "example": "Das ist eine Zeitung."
+            },
+            {
+              "id": "uuid-1015",
+              "type": "noun",
+              "german": "Bild",
+              "english": "Picture",
+              "gender": "das",
+              "example": "Das ist ein Bild."
+            },
+            {
+              "id": "uuid-1016",
+              "type": "noun",
+              "german": "Foto",
+              "english": "Photo",
+              "gender": "das",
+              "example": "Das ist ein Foto."
+            },
+            {
+              "id": "uuid-1017",
+              "type": "noun",
+              "german": "Kamera",
+              "english": "Camera",
+              "gender": "die",
+              "example": "Das ist eine Kamera."
+            },
+            {
+              "id": "uuid-1018",
+              "type": "noun",
+              "german": "Lied",
+              "english": "Song",
+              "gender": "das",
+              "example": "Das ist ein Lied."
+            },
+            {
+              "id": "uuid-1019",
+              "type": "noun",
+              "german": "Welt",
+              "english": "World",
+              "gender": "die",
+              "example": "Das ist eine Welt."
+            },
+            {
+              "id": "uuid-1020",
+              "type": "noun",
+              "german": "Natur",
+              "english": "Nature",
+              "gender": "die",
+              "example": "Das ist eine Natur."
+            },
+            {
+              "id": "uuid-1021",
+              "type": "noun",
+              "german": "Sonne",
+              "english": "Sun",
+              "gender": "die",
+              "example": "Das ist eine Sonne."
+            },
+            {
+              "id": "uuid-1022",
+              "type": "noun",
+              "german": "Regen",
+              "english": "Rain",
+              "gender": "der",
+              "example": "Das ist ein Regen."
+            },
+            {
+              "id": "uuid-1023",
+              "type": "noun",
+              "german": "Wind",
+              "english": "Wind",
+              "gender": "der",
+              "example": "Das ist ein Wind."
+            },
+            {
+              "id": "uuid-1024",
+              "type": "noun",
+              "german": "Schnee",
+              "english": "Snow",
+              "gender": "der",
+              "example": "Das ist ein Schnee."
+            },
+            {
+              "id": "uuid-1025",
+              "type": "noun",
+              "german": "Wetter",
+              "english": "Weather",
+              "gender": "das",
+              "example": "Das ist ein Wetter."
+            },
+            {
+              "id": "uuid-1026",
+              "type": "noun",
+              "german": "Grad",
+              "english": "Degree",
+              "gender": "der",
+              "example": "Das ist ein Grad."
+            },
+            {
+              "id": "uuid-1027",
+              "type": "noun",
+              "german": "Meer",
+              "english": "Sea",
+              "gender": "das",
+              "example": "Das ist ein Meer."
+            },
+            {
+              "id": "uuid-1028",
+              "type": "noun",
+              "german": "See",
+              "english": "Lake",
+              "gender": "der",
+              "example": "Das ist ein See."
+            },
+            {
+              "id": "uuid-1029",
+              "type": "noun",
+              "german": "Baum",
+              "english": "Tree",
+              "gender": "der",
+              "example": "Das ist ein Baum."
+            },
+            {
+              "id": "uuid-1030",
+              "type": "noun",
+              "german": "Blume",
+              "english": "Flower",
+              "gender": "die",
+              "example": "Das ist eine Blume."
+            },
+            {
+              "id": "uuid-1031",
+              "type": "noun",
+              "german": "Tier",
+              "english": "Animal",
+              "gender": "das",
+              "example": "Das ist ein Tier."
+            },
+            {
+              "id": "uuid-1032",
+              "type": "noun",
+              "german": "Hund",
+              "english": "Dog",
+              "gender": "der",
+              "example": "Das ist ein Hund."
+            },
+            {
+              "id": "uuid-1033",
+              "type": "noun",
+              "german": "Katze",
+              "english": "Cat",
+              "gender": "die",
+              "example": "Das ist eine Katze."
+            },
+            {
+              "id": "uuid-1034",
+              "type": "verb",
+              "german": "spielen",
+              "english": "to play",
+              "gender": "none",
+              "example": "Ich muss spielen."
+            },
+            {
+              "id": "uuid-1035",
+              "type": "verb",
+              "german": "machen",
+              "english": "to do/make",
+              "gender": "none",
+              "example": "Ich muss machen."
+            },
+            {
+              "id": "uuid-1036",
+              "type": "verb",
+              "german": "tanzen",
+              "english": "to dance",
+              "gender": "none",
+              "example": "Ich muss tanzen."
+            },
+            {
+              "id": "uuid-1037",
+              "type": "verb",
+              "german": "schwimmen",
+              "english": "to swim",
+              "gender": "none",
+              "example": "Ich muss schwimmen."
+            },
+            {
+              "id": "uuid-1038",
+              "type": "verb",
+              "german": "wandern",
+              "english": "to hike",
+              "gender": "none",
+              "example": "Ich muss wandern."
+            },
+            {
+              "id": "uuid-1039",
+              "type": "verb",
+              "german": "fotografieren",
+              "english": "to photograph",
+              "gender": "none",
+              "example": "Ich muss fotografieren."
+            },
+            {
+              "id": "uuid-1040",
+              "type": "verb",
+              "german": "rauchen",
+              "english": "to smoke",
+              "gender": "none",
+              "example": "Ich muss rauchen."
+            },
+            {
+              "id": "uuid-1041",
+              "type": "verb",
+              "german": "feiern",
+              "english": "to celebrate",
+              "gender": "none",
+              "example": "Ich muss feiern."
+            },
+            {
+              "id": "uuid-1042",
+              "type": "verb",
+              "german": "schenken",
+              "english": "to give (gift)",
+              "gender": "none",
+              "example": "Ich muss schenken."
+            },
+            {
+              "id": "uuid-1043",
+              "type": "verb",
+              "german": "regnen",
+              "english": "to rain",
+              "gender": "none",
+              "example": "Ich muss regnen."
+            },
+            {
+              "id": "uuid-1044",
+              "type": "verb",
+              "german": "scheinen",
+              "english": "to shine",
+              "gender": "none",
+              "example": "Ich muss scheinen."
             }
           ]
         }
