@@ -1,10 +1,9 @@
-import { Component, inject, signal, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, inject, signal, ChangeDetectionStrategy, OnInit, effect } from '@angular/core';
 import { Router } from '@angular/router';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
+import { ContentSyncService, LevelConfig } from '../../infrastructure/sync/content-sync.service';
 import { LearningSessionService, LearningMode } from '../learning/services/learning-session.service';
-import { CURRICULUM, LevelConfig } from '../../core/config/curriculum.config';
 import { VocabularyItem, LeitnerBox } from '../../core/models/vocabulary.model';
-import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
 
 // View Model for the Template
 interface MissionViewModel {
@@ -20,13 +19,13 @@ interface LevelViewModel {
   config: LevelConfig;
   missions: MissionViewModel[];
 }
-
 @Component({
   selector: 'app-dashboard',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  // ... (Template remains largely the same, just iterates over curriculumData) ...
   template: `
-    <div class="dashboard-container">
+      <div class="dashboard-container">
 <header>
   <h1>My Curriculum</h1>
   <div style="display:flex; gap:1rem;">
@@ -39,9 +38,8 @@ interface LevelViewModel {
     </button>
   </div>
 </header>
-
-      @if (curriculumData(); as levels) {
-        <div class="levels-list">
+    @if (curriculumData(); as levels) {
+       <div class="levels-list">
           @for (level of levels; track level.config.id) {
             <section class="level-section">
               <h2 [style.color]="level.config.color">{{ level.config.title }}</h2>
@@ -122,30 +120,48 @@ interface LevelViewModel {
     .chevron { color: #ccc; font-size: 1.5rem; font-weight: 300; }
   `]
 })
+
 export class DashboardComponent implements OnInit {
   private repo = inject(VocabularyRepository);
+  private syncService = inject(ContentSyncService); // Inject Sync
   private sessionStore = inject(LearningSessionService);
   private router = inject(Router);
-  private syncService = inject(ContentSyncService);
 
   mode = signal<LearningMode>('DE_TO_EN');
-  curriculumData = signal<LevelViewModel[] | null>(null);
+  curriculumData = signal<any[] | null>(null);
 
-  async ngOnInit() {
-    // 1. Fetch ALL items once (Optimization: In a real large app, fetch stats only)
+  // Use an effect or simple method to recalculate when curriculum changes
+  constructor() {
+    // Whenever the Sync Service updates the structure (JSON loaded), 
+    // we recalculate the stats.
+    effect(() => {
+      const structure = this.syncService.curriculum();
+      if (structure.length > 0) {
+        this.calculateStats(structure);
+      }
+    });
+  }
+
+  ngOnInit() {
+    // Trigger a sync check on load
+    // (This updates the signal, which triggers the effect above)
+    this.syncService.sync();
+  }
+
+  async calculateStats(levels: LevelConfig[]) {
+    // 1. Fetch DB items (Your persistent progress)
     const allItems = await this.repo.getAll();
     const now = Date.now();
 
-    // 2. Map Config to View Model
-    const viewData: LevelViewModel[] = CURRICULUM.map(level => {
-
+    // 2. Map the DYNAMIC structure to the View Model
+    const viewData = levels.map(level => {
       const missionViewModels = level.missions.map(mission => {
-        // Filter items for this specific mission
+
+        // Match items by missionId
         const items = allItems.filter(i => i.missionId === mission.id);
 
         const total = items.length;
         const due = items.filter(i => i.nextReviewDate <= now).length;
-        // Logic: "Learned" is anything not in Box 1
         const learnedCount = items.filter(i => i.box > LeitnerBox.Box1).length;
         const learnedPct = total > 0 ? (learnedCount / total) * 100 : 0;
 
@@ -182,4 +198,5 @@ export class DashboardComponent implements OnInit {
     this.sessionStore.startSession(missionId, this.mode());
     this.router.navigate(['/learn']);
   }
+  // ... (start() and manualSync() methods remain the same) ...
 }
