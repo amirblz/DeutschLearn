@@ -1,50 +1,40 @@
 import { Injectable, inject, signal } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
 import { VocabularyItem, LeitnerBox, WordType, Gender } from '../../core/models/vocabulary.model';
 
-// --- Interfaces matching the JSON structure ---
-interface JsonItem {
+// --- API Interfaces (Matching NestJS Responses) ---
+export interface ApiItem {
   id: string;
+  missionId: string;
   type: string;
   german: string;
   english: string;
   gender: string;
-  example: string; // Note: In DB model this is 'exampleSentence'
+  example: string;
 }
 
-interface JsonMission {
+export interface ApiMission {
   id: string;
   title: string;
   icon: string;
-  items: JsonItem[];
-}
-
-interface JsonLevel {
-  id: string;
-  title: string;
-  color: string;
-  missions: JsonMission[];
-}
-
-interface MasterData {
+  levelId: string;
   version: number;
-  levels: JsonLevel[];
+  lastUpdated: string;
 }
 
-// --- Interfaces for UI Consumption ---
-export interface MissionConfig {
-  id: string;
-  title: string;
-  icon: string;
-}
-
-export interface LevelConfig {
+export interface ApiLevel {
   id: string;
   title: string;
   color: string;
-  missions: MissionConfig[];
+  missions: ApiMission[];
+}
+
+// --- Wrapper for Mission Item Response ---
+interface MissionItemsResponse {
+  versionTag: string;
+  data: ApiItem[];
 }
 
 @Injectable({
@@ -54,12 +44,13 @@ export class ContentSyncService {
   private http = inject(HttpClient);
   private repo = inject(VocabularyRepository);
 
-  private readonly DATA_URL = 'assets/data/master-curriculum.json';
-  private readonly STORAGE_KEY_DATA = 'app_curriculum_structure';
-  private readonly STORAGE_KEY_VER = 'app_content_version';
+  // 🔗 Point to your NestJS Backend
+  private readonly API_URL = 'http://localhost:3000/vocabulary';
 
-  // The Source of Truth for the UI
-  readonly curriculum = signal<LevelConfig[]>([]);
+  private readonly STORAGE_KEY_DATA = 'app_curriculum_structure';
+
+  // The Source of Truth for the UI (Dashboard)
+  readonly curriculum = signal<ApiLevel[]>([]);
 
   constructor() {
     this.loadCachedStructure();
@@ -76,81 +67,103 @@ export class ContentSyncService {
     }
   }
 
+  /**
+   * Main Sync Orchestrator
+   * 1. Fetches Hierarchy (Levels/Missions)
+   * 2. Fetches All Words from API
+   * 3. Merges with local DB (preserving progress)
+   */
   async sync() {
-    console.log('[ContentSync] Checking for updates...');
+    console.log('[ContentSync] 🔄 Starting synchronization...');
+
     try {
-      // CACHE BUSTING: Add timestamp to force browser to ignore cache
-      const url = `${this.DATA_URL}?t=${Date.now()}`;
-      const data = await firstValueFrom(this.http.get<MasterData>(url));
+      // 1. Fetch Hierarchy (Fast)
+      const levels = await firstValueFrom(this.http.get<ApiLevel[]>(`${this.API_URL}/levels`));
 
-      // 1. Update UI Structure immediately
-      this.curriculum.set(data.levels);
-      localStorage.setItem(this.STORAGE_KEY_DATA, JSON.stringify(data.levels));
+      // Update UI immediately
+      this.curriculum.set(levels);
+      localStorage.setItem(this.STORAGE_KEY_DATA, JSON.stringify(levels));
 
-      // 2. Check Version & Migrate DB Items
-      const localVersion = Number(localStorage.getItem(this.STORAGE_KEY_VER) || 0);
+      // 2. Fetch All Items (Parallel requests for speed)
+      // We gather all mission IDs first
+      const allMissions = levels.flatMap(lvl => lvl.missions);
+      console.log(`[ContentSync] Found ${allMissions.length} missions. Fetching items...`);
 
-      console.log(`[ContentSync] Local v${localVersion} vs Remote v${data.version}`);
+      // Execute all HTTP requests in parallel
+      const allItemsLists = await Promise.all(
+        allMissions.map(mission => this.fetchMissionItems(mission.id))
+      );
 
-      if (data.version > localVersion) {
-        console.log(`[ContentSync] New version detected. performing migration...`);
-        await this.performMigration(data);
-        localStorage.setItem(this.STORAGE_KEY_VER, data.version.toString());
-        console.log('[ContentSync] Migration complete.');
+      // Flatten into one giant array of API Items
+      const flatApiItems = allItemsLists.flat();
 
-        // Reload page to ensure Dashboard stats refresh with new data
-        window.location.reload();
-      } else {
-        console.log('[ContentSync] Already up to date.');
-      }
+      // 3. Perform Migration / Update Local DB
+      await this.performMigration(flatApiItems);
+
+      console.log('[ContentSync] ✅ Sync complete.');
 
     } catch (err) {
-      console.warn('[ContentSync] Offline or fetch failed. Using cached structure.', err);
+      console.warn('[ContentSync] ⚠️ Offline or API unavailable. Using cached data.', err);
     }
   }
 
-  private async performMigration(data: MasterData) {
-    // 1. Get existing items to preserve user progress (Leitner boxes)
+  /**
+   * Fetches items for a specific mission.
+   * Note: In a real PWA, you could add E-Tag headers here to prevent 
+   * downloading unchanged data (returning 304).
+   */
+  private async fetchMissionItems(missionId: string): Promise<ApiItem[]> {
+    try {
+      const url = `${this.API_URL}/mission/${missionId}/items`;
+      // The backend returns an array of items directly based on your specific Controller setup
+      // If your controller returns { data: [...] }, adjust strictly here.
+      // Based on previous code, we assume it returns Array directly or we handle it:
+      const response = await firstValueFrom(this.http.get<ApiItem[]>(url));
+      return response;
+    } catch (error) {
+      console.error(`[ContentSync] Failed to fetch items for mission ${missionId}`, error);
+      return [];
+    }
+  }
+
+  private async performMigration(apiItems: ApiItem[]) {
+    if (apiItems.length === 0) return;
+
+    // 1. Get existing items from IndexedDB to preserve user progress
     const allExisting = await this.repo.getAll();
-    const existingMap = new Map(allExisting.map(i => [i.id, i])); // ID -> Item
+    const existingMap = new Map(allExisting.map(i => [i.id, i])); // Map for O(1) lookup
 
     const itemsToSave: VocabularyItem[] = [];
 
-    // 2. Iterate through the JSON hierarchy
-    for (const level of data.levels) {
-      for (const mission of level.missions) {
-        for (const rawItem of mission.items) {
+    // 2. Map API items to Internal Model
+    for (const rawItem of apiItems) {
+      const existing = existingMap.get(rawItem.id);
 
-          const existing = existingMap.get(rawItem.id);
+      const newItem: VocabularyItem = {
+        id: rawItem.id,
+        missionId: rawItem.missionId,
 
-          // 3. Map JSON -> Domain Model
-          const newItem: VocabularyItem = {
-            id: rawItem.id,
-            missionId: mission.id,
-            // Cast string types from JSON to strict Enums
-            type: rawItem.type as WordType,
-            german: rawItem.german,
-            english: rawItem.english,
-            gender: rawItem.gender as Gender,
-            exampleSentence: rawItem.example, // Mapping mismatch fixed here
+        // Ensure Types match your Frontend Enums
+        // (Assuming backend sends 'noun', 'verb' etc lowercase)
+        type: rawItem.type as WordType,
+        german: rawItem.german,
+        english: rawItem.english,
+        gender: rawItem.gender as Gender,
+        exampleSentence: rawItem.example, // Mapping backend 'example' to frontend 'exampleSentence'
 
-            // 4. CRITICAL: Preserve Learning State
-            box: existing ? existing.box : LeitnerBox.Box1,
-            nextReviewDate: existing ? existing.nextReviewDate : Date.now(),
-            lastReviewedDate: existing ? existing.lastReviewedDate : undefined
-          };
+        // 3. CRITICAL: Preserve Learning State (The "Merge" logic)
+        box: existing ? existing.box : LeitnerBox.Box1,
+        nextReviewDate: existing ? existing.nextReviewDate : Date.now(),
+        lastReviewedDate: existing ? existing.lastReviewedDate : undefined
+      };
 
-          itemsToSave.push(newItem);
-        }
-      }
+      itemsToSave.push(newItem);
     }
 
-    // 5. Commit to DB
+    // 4. Bulk Save to IndexedDB
     if (itemsToSave.length > 0) {
       await this.repo.addBulk(itemsToSave);
-      console.log(`[ContentSync] Successfully saved ${itemsToSave.length} items to DB.`);
-    } else {
-      console.warn('[ContentSync] Migration run but 0 items found to save.');
+      console.log(`[ContentSync] 💾 Saved/Updated ${itemsToSave.length} vocabulary items.`);
     }
   }
 }

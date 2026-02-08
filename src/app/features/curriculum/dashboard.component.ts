@@ -1,7 +1,7 @@
 import { Component, inject, signal, ChangeDetectionStrategy, OnInit, effect } from '@angular/core';
 import { Router } from '@angular/router';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
-import { ContentSyncService, LevelConfig } from '../../infrastructure/sync/content-sync.service';
+import { ContentSyncService, ApiLevel } from '../../infrastructure/sync/content-sync.service';
 import { LearningSessionService, LearningMode } from '../learning/services/learning-session.service';
 import { VocabularyItem, LeitnerBox } from '../../core/models/vocabulary.model';
 
@@ -16,7 +16,7 @@ interface MissionViewModel {
 }
 
 interface LevelViewModel {
-  config: LevelConfig;
+  config: ApiLevel;
   missions: MissionViewModel[];
 }
 @Component({
@@ -148,7 +148,7 @@ export class DashboardComponent implements OnInit {
     this.syncService.sync();
   }
 
-  async calculateStats(levels: LevelConfig[]) {
+  async calculateStats(levels: ApiLevel[]) {
     // 1. Fetch DB items (Your persistent progress)
     const allItems = await this.repo.getAll();
     const now = Date.now();
