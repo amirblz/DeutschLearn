@@ -8610,6 +8610,222 @@
               "english": "glasses",
               "gender": "die",
               "example": "Wo ist meine Brille?"
+            },
+            {
+              "id": "uuid-2328",
+              "type": "adjective",
+              "german": "dick",
+              "english": "fat / thick",
+              "gender": "none",
+              "example": "Ich bin zu dick. Ich muss weniger essen."
+            },
+            {
+              "id": "uuid-2329",
+              "type": "adjective",
+              "german": "dünn",
+              "english": "thin",
+              "gender": "none",
+              "example": "Das Buch ist sehr dünn."
+            },
+            {
+              "id": "uuid-2330",
+              "type": "noun",
+              "german": "Durst",
+              "english": "thirst",
+              "gender": "der",
+              "example": "Ich habe großen Durst."
+            },
+            {
+              "id": "uuid-2331",
+              "type": "noun",
+              "german": "Dusche",
+              "english": "shower",
+              "gender": "die",
+              "example": "Unsere Wohnung hat nur eine Dusche."
+            },
+            {
+              "id": "uuid-2332",
+              "type": "verb",
+              "german": "duschen",
+              "english": "to shower",
+              "gender": "none",
+              "example": "Ich bade nicht so gern, ich dusche lieber."
+            },
+            {
+              "id": "uuid-2333",
+              "type": "adjective",
+              "german": "erkältet",
+              "english": "cold (sick)",
+              "gender": "none",
+              "example": "Lisa ist erkältet."
+            },
+            {
+              "id": "uuid-2334",
+              "type": "noun",
+              "german": "Fieber",
+              "english": "fever",
+              "gender": "das",
+              "example": "Sie hat hohes Fieber."
+            },
+            {
+              "id": "uuid-2335",
+              "type": "adjective",
+              "german": "fit",
+              "english": "fit / healthy",
+              "gender": "none",
+              "example": "Tom will fit sein."
+            },
+            {
+              "id": "uuid-2336",
+              "type": "verb",
+              "german": "fühlen",
+              "english": "to feel",
+              "gender": "none",
+              "example": "Ich fühle mich heute nicht gut."
+            },
+            {
+              "id": "uuid-2337",
+              "type": "noun",
+              "german": "Fuß",
+              "english": "foot",
+              "gender": "der",
+              "example": "Der linke Fuß tut mir weh."
+            },
+            {
+              "id": "uuid-2446",
+              "type": "noun",
+              "german": "Gesicht",
+              "english": "face",
+              "gender": "das",
+              "example": "Wasch dir bitte das Gesicht."
+            },
+            {
+              "id": "uuid-2447",
+              "type": "noun",
+              "german": "Gesundheit",
+              "english": "health",
+              "gender": "die",
+              "example": "Gesundheit! Sind Sie erkältet?"
+            },
+            {
+              "id": "uuid-2448",
+              "type": "noun",
+              "german": "Grippe",
+              "english": "flu",
+              "gender": "die",
+              "example": "Ich habe eine Grippe und kann leider nicht kommen."
+            },
+            {
+              "id": "uuid-2449",
+              "type": "noun",
+              "german": "Haar",
+              "english": "hair",
+              "gender": "das",
+              "example": "Sie hat lange Haare."
+            },
+            {
+              "id": "uuid-2450",
+              "type": "noun",
+              "german": "Hals",
+              "english": "neck / throat",
+              "gender": "der",
+              "example": "Mir tut der Hals weh."
+            },
+            {
+              "id": "uuid-2451",
+              "type": "noun",
+              "german": "Hand",
+              "english": "hand",
+              "gender": "die",
+              "example": "Wasch dir bitte die Hände vor dem Essen."
+            },
+            {
+              "id": "uuid-2452",
+              "type": "verb",
+              "german": "husten",
+              "english": "to cough",
+              "gender": "none",
+              "example": "Sie hustet seit zwei Tagen."
+            },
+            {
+              "id": "uuid-2453",
+              "type": "noun",
+              "german": "Körper",
+              "english": "body",
+              "gender": "der",
+              "example": "Der Arzt sagt, ich muss etwas für meinen Körper tun."
+            },
+            {
+              "id": "uuid-2454",
+              "type": "noun",
+              "german": "Kosmetik",
+              "english": "cosmetics",
+              "gender": "die",
+              "example": "Kosmetik können Sie im Erdgeschoss kaufen."
+            },
+            {
+              "id": "uuid-2455",
+              "type": "adjective",
+              "german": "krank",
+              "english": "sick",
+              "gender": "none",
+              "example": "Ich kann heute nicht zur Arbeit kommen, ich bin krank."
+            },
+            {
+              "id": "uuid-2456",
+              "type": "noun",
+              "german": "Krankenhaus",
+              "english": "hospital",
+              "gender": "das",
+              "example": "Meine Tante ist im Krankenhaus."
+            },
+            {
+              "id": "uuid-2457",
+              "type": "noun",
+              "german": "Krankenkasse",
+              "english": "health insurance",
+              "gender": "die",
+              "example": "Bei welcher Krankenkasse sind Sie?"
+            },
+            {
+              "id": "uuid-2458",
+              "type": "noun",
+              "german": "Krankheit",
+              "english": "illness / disease",
+              "gender": "die",
+              "example": "Welche Krankheit hat Herr Brandner?"
+            },
+            {
+              "id": "uuid-2643",
+              "type": "noun",
+              "german": "Magen",
+              "english": "stomach",
+              "gender": "der",
+              "example": "Mein Magen tut weh."
+            },
+            {
+              "id": "uuid-2644",
+              "type": "noun",
+              "german": "Medikament",
+              "english": "medicine",
+              "gender": "das",
+              "example": "Nehmen Sie dieses Medikament dreimal pro Tag!"
+            },
+            {
+              "id": "uuid-2645",
+              "type": "noun",
+              "german": "Mund",
+              "english": "mouth",
+              "gender": "der",
+              "example": "Öffnen Sie bitte den Mund."
+            },
+            {
+              "id": "uuid-2646",
+              "type": "noun",
+              "german": "Ohr",
+              "english": "ear",
+              "gender": "das",
+              "example": "Ich habe Ohrenschmerzen."
             }
           ]
         },
@@ -8817,6 +9033,350 @@
               "english": "to spell",
               "gender": "none",
               "example": "Würden Sie bitte Ihren Namen buchstabieren?"
+            },
+            {
+              "id": "uuid-2229",
+              "type": "noun",
+              "german": "Dank",
+              "english": "thanks / gratitude",
+              "gender": "der",
+              "example": "Vielen Dank!"
+            },
+            {
+              "id": "uuid-2230",
+              "type": "particle",
+              "german": "danke",
+              "english": "thank you",
+              "gender": "none",
+              "example": "Soll ich Ihnen helfen? - Sehr freundlich, ja danke!"
+            },
+            {
+              "id": "uuid-2231",
+              "type": "verb",
+              "german": "danken",
+              "english": "to thank",
+              "gender": "none",
+              "example": "Ich danke Ihnen für die Einladung."
+            },
+            {
+              "id": "uuid-2232",
+              "type": "verb",
+              "german": "diskutieren",
+              "english": "to discuss",
+              "gender": "none",
+              "example": "Ich möchte das mit meinen Kollegen diskutieren."
+            },
+            {
+              "id": "uuid-2233",
+              "type": "noun",
+              "german": "E-Book",
+              "english": "e-book",
+              "gender": "das",
+              "example": "Liest du lieber E-Books oder Bücher aus Papier?"
+            },
+            {
+              "id": "uuid-2234",
+              "type": "noun",
+              "german": "E-Mail",
+              "english": "e-mail",
+              "gender": "die",
+              "example": "Ich schreibe Ihnen/dir eine E-Mail."
+            },
+            {
+              "id": "uuid-2235",
+              "type": "noun",
+              "german": "Empfänger",
+              "english": "recipient",
+              "gender": "der",
+              "example": "Auf dem Brief steht dein Name, also bist du der Empfänger."
+            },
+            {
+              "id": "uuid-2236",
+              "type": "verb",
+              "german": "empfehlen",
+              "english": "to recommend",
+              "gender": "none",
+              "example": "Welchen Wein können Sie mir empfehlen?"
+            },
+            {
+              "id": "uuid-2237",
+              "type": "verb",
+              "german": "entschuldigen",
+              "english": "to apologize / excuse",
+              "gender": "none",
+              "example": "Entschuldigen Sie bitte!"
+            },
+            {
+              "id": "uuid-2238",
+              "type": "noun",
+              "german": "Entschuldigung",
+              "english": "apology / excuse me",
+              "gender": "die",
+              "example": "Oh, Entschuldigung! Macht nichts."
+            },
+            {
+              "id": "uuid-2239",
+              "type": "verb",
+              "german": "erklären",
+              "english": "to explain",
+              "gender": "none",
+              "example": "Ich verstehe das nicht. Kannst du mir das erklären?"
+            },
+            {
+              "id": "uuid-2240",
+              "type": "verb",
+              "german": "erzählen",
+              "english": "to tell / narrate",
+              "gender": "none",
+              "example": "Wir müssen euch etwas erzählen!"
+            },
+            {
+              "id": "uuid-2241",
+              "type": "noun",
+              "german": "Frage",
+              "english": "question",
+              "gender": "die",
+              "example": "Ich habe eine Frage."
+            },
+            {
+              "id": "uuid-2242",
+              "type": "verb",
+              "german": "fragen",
+              "english": "to ask",
+              "gender": "none",
+              "example": "Ich möchte Sie etwas fragen."
+            },
+            {
+              "id": "uuid-2459",
+              "type": "noun",
+              "german": "Gespräch",
+              "english": "conversation",
+              "gender": "das",
+              "example": "Sie hören ein Gespräch."
+            },
+            {
+              "id": "uuid-2460",
+              "type": "noun",
+              "german": "Glückwunsch",
+              "english": "congratulation",
+              "gender": "der",
+              "example": "Herzlichen Glückwunsch zum Geburtstag!"
+            },
+            {
+              "id": "uuid-2461",
+              "type": "noun",
+              "german": "Gruß",
+              "english": "greeting",
+              "gender": "der",
+              "example": "Viele Grüße an Ihre Frau."
+            },
+            {
+              "id": "uuid-2462",
+              "type": "noun",
+              "german": "Handy",
+              "english": "mobile phone",
+              "gender": "das",
+              "example": "In der Schule bitte die Handys ausmachen!"
+            },
+            {
+              "id": "uuid-2463",
+              "type": "verb",
+              "german": "heißen",
+              "english": "to be called",
+              "gender": "none",
+              "example": "Ich heiße Charlotte Meier."
+            },
+            {
+              "id": "uuid-2464",
+              "type": "noun",
+              "german": "Homepage",
+              "english": "homepage / website",
+              "gender": "die",
+              "example": "Auf der Homepage von Freiburg gibt es alle wichtigen Informationen."
+            },
+            {
+              "id": "uuid-2465",
+              "type": "noun",
+              "german": "Idee",
+              "english": "idea",
+              "gender": "die",
+              "example": "Hast du eine gute Idee?"
+            },
+            {
+              "id": "uuid-2466",
+              "type": "noun",
+              "german": "Information",
+              "english": "information",
+              "gender": "die",
+              "example": "Wir haben hier einige wichtige Informationen für Sie."
+            },
+            {
+              "id": "uuid-2467",
+              "type": "verb",
+              "german": "informieren",
+              "english": "to inform",
+              "gender": "none",
+              "example": "Ich möchte mich vor der Reise über das Land informieren."
+            },
+            {
+              "id": "uuid-2468",
+              "type": "noun",
+              "german": "Internet",
+              "english": "Internet",
+              "gender": "das",
+              "example": "Das findest du im Internet."
+            },
+            {
+              "id": "uuid-2469",
+              "type": "noun",
+              "german": "Interview",
+              "english": "interview",
+              "gender": "das",
+              "example": "Im Radio kommt ein Interview mit deinem Lieblingssänger."
+            },
+            {
+              "id": "uuid-2470",
+              "type": "verb",
+              "german": "kennen",
+              "english": "to know (be familiar with)",
+              "gender": "none",
+              "example": "Kennen Sie diese Frau?"
+            },
+            {
+              "id": "uuid-2471",
+              "type": "verb",
+              "german": "kennenlernen",
+              "english": "to get to know / meet",
+              "gender": "none",
+              "example": "Wir haben uns in München kennengelernt."
+            },
+            {
+              "id": "uuid-2472",
+              "type": "noun",
+              "german": "Kontakt",
+              "english": "contact",
+              "gender": "der",
+              "example": "Ich habe wenig Kontakt zu meinen Kollegen."
+            },
+            {
+              "id": "uuid-2624",
+              "type": "noun",
+              "german": "Laptop",
+              "english": "laptop",
+              "gender": "der",
+              "example": "Ich brauche einen neuen Laptop."
+            },
+            {
+              "id": "uuid-2625",
+              "type": "noun",
+              "german": "Link",
+              "english": "link",
+              "gender": "der",
+              "example": "Ich schicke dir einen Link zu Deutschübungen."
+            },
+            {
+              "id": "uuid-2626",
+              "type": "noun",
+              "german": "Lüge",
+              "english": "lie",
+              "gender": "die",
+              "example": "Das stimmt nicht! Das ist eine Lüge!"
+            },
+            {
+              "id": "uuid-2627",
+              "type": "verb",
+              "german": "lügen",
+              "english": "to lie",
+              "gender": "none",
+              "example": "Du sollst nicht lügen."
+            },
+            {
+              "id": "uuid-2628",
+              "type": "noun",
+              "german": "Mailbox",
+              "english": "mailbox",
+              "gender": "die",
+              "example": "Hier ist die Mailbox von Susanne König."
+            },
+            {
+              "id": "uuid-2629",
+              "type": "verb",
+              "german": "meinen",
+              "english": "to think / mean",
+              "gender": "none",
+              "example": "Wie meinst du das?"
+            },
+            {
+              "id": "uuid-2630",
+              "type": "noun",
+              "german": "Meinung",
+              "english": "opinion",
+              "gender": "die",
+              "example": "Meine Meinung zu dem Thema ist..."
+            },
+            {
+              "id": "uuid-2631",
+              "type": "noun",
+              "german": "Mobiltelefon",
+              "english": "mobile phone",
+              "gender": "das",
+              "example": "Haben Sie ein Mobiltelefon?"
+            },
+            {
+              "id": "uuid-2632",
+              "type": "noun",
+              "german": "Nachricht",
+              "english": "message / news",
+              "gender": "die",
+              "example": "Ich schreibe dir später eine Nachricht."
+            },
+            {
+              "id": "uuid-2633",
+              "type": "noun",
+              "german": "Paket",
+              "english": "parcel / package",
+              "gender": "das",
+              "example": "Bringst du bitte das Paket zur Post?"
+            },
+            {
+              "id": "uuid-2634",
+              "type": "noun",
+              "german": "Papier",
+              "english": "paper",
+              "gender": "das",
+              "example": "Hier sind Papier und Bleistift."
+            },
+            {
+              "id": "uuid-2635",
+              "type": "noun",
+              "german": "Passwort",
+              "english": "password",
+              "gender": "das",
+              "example": "Bitte schreiben Sie Ihr Passwort."
+            },
+            {
+              "id": "uuid-2636",
+              "type": "noun",
+              "german": "Plakat",
+              "english": "poster",
+              "gender": "das",
+              "example": "Wir machen im Unterricht ein Plakat."
+            },
+            {
+              "id": "uuid-2637",
+              "type": "noun",
+              "german": "Post",
+              "english": "post office / mail",
+              "gender": "die",
+              "example": "Entschuldigung, wo ist die Post?"
+            },
+            {
+              "id": "uuid-2638",
+              "type": "noun",
+              "german": "Postkarte",
+              "english": "postcard",
+              "gender": "die",
+              "example": "Schreibst du mir eine Postkarte aus Kanada?"
             }
           ]
         },
@@ -8880,6 +9440,246 @@
               "english": "cheap",
               "gender": "none",
               "example": "Das Wörterbuch kostet nur fünf Euro. Das ist aber billig!"
+            },
+            {
+              "id": "uuid-2313",
+              "type": "verb",
+              "german": "einkaufen",
+              "english": "to shop",
+              "gender": "none",
+              "example": "Ich muss noch für morgen einkaufen."
+            },
+            {
+              "id": "uuid-2314",
+              "type": "noun",
+              "german": "Einkaufszentrum",
+              "english": "shopping center",
+              "gender": "das",
+              "example": "Kommst du morgen mit ins Einkaufszentrum?"
+            },
+            {
+              "id": "uuid-2315",
+              "type": "noun",
+              "german": "Ermäßigung",
+              "english": "discount / reduction",
+              "gender": "die",
+              "example": "Für Schüler, Studenten und Rentner gibt es eine Ermäßigung."
+            },
+            {
+              "id": "uuid-2552",
+              "type": "noun",
+              "german": "Laden",
+              "english": "shop / store",
+              "gender": "der",
+              "example": "Ich kaufe meine Kleider immer in einem kleinen Laden im Zentrum."
+            },
+            {
+              "id": "uuid-2553",
+              "type": "verb",
+              "german": "leihen",
+              "english": "to lend / borrow",
+              "gender": "none",
+              "example": "Kannst du mir fünf Euro leihen?"
+            },
+            {
+              "id": "uuid-2554",
+              "type": "verb",
+              "german": "liefern",
+              "english": "to deliver",
+              "gender": "none",
+              "example": "Wir liefern Ihnen den Schrank nach Hause."
+            },
+            {
+              "id": "uuid-2555",
+              "type": "noun",
+              "german": "Markt",
+              "english": "market",
+              "gender": "der",
+              "example": "Ich gehe heute auf den Markt."
+            },
+            {
+              "id": "uuid-2556",
+              "type": "noun",
+              "german": "Miete",
+              "english": "rent",
+              "gender": "die",
+              "example": "Wie viel Miete bezahlst du für deine Wohnung?"
+            },
+            {
+              "id": "uuid-2557",
+              "type": "verb",
+              "german": "mieten",
+              "english": "to rent",
+              "gender": "none",
+              "example": "Ich möchte ein Auto mieten."
+            },
+            {
+              "id": "uuid-2558",
+              "type": "noun",
+              "german": "Mode",
+              "english": "fashion",
+              "gender": "die",
+              "example": "Wie findest du die neue Mode?"
+            },
+            {
+              "id": "uuid-2559",
+              "type": "adjective",
+              "german": "modern",
+              "english": "modern",
+              "gender": "none",
+              "example": "Das Stadtzentrum von Frankfurt ist sehr modern."
+            },
+            {
+              "id": "uuid-2560",
+              "type": "verb",
+              "german": "mögen",
+              "english": "to like",
+              "gender": "none",
+              "example": "Magst du Schokolade?"
+            },
+            {
+              "id": "uuid-2561",
+              "type": "adjective",
+              "german": "preiswert",
+              "english": "inexpensive / good value",
+              "gender": "none",
+              "example": "Die Jacke ist sehr preiswert. Sie kostet nur 15 Euro."
+            },
+            {
+              "id": "uuid-2562",
+              "type": "noun",
+              "german": "Produkt",
+              "english": "product",
+              "gender": "das",
+              "example": "Unsere Produkte haben eine sehr hohe Qualität."
+            },
+            {
+              "id": "uuid-2563",
+              "type": "noun",
+              "german": "Prospekt",
+              "english": "brochure / leaflet",
+              "gender": "der",
+              "example": "Bitte schicken Sie mir einen Prospekt von Ihrem Hotel."
+            },
+            {
+              "id": "uuid-2718",
+              "type": "noun",
+              "german": "Qualität",
+              "english": "quality",
+              "gender": "die",
+              "example": "Dieser Fernseher hat eine gute Qualität."
+            },
+            {
+              "id": "uuid-2719",
+              "type": "noun",
+              "german": "Rechnung",
+              "english": "bill / invoice",
+              "gender": "die",
+              "example": "Schicken Sie die Rechnung an mich."
+            },
+            {
+              "id": "uuid-2720",
+              "type": "noun",
+              "german": "Reinigung",
+              "english": "dry cleaners / cleaning",
+              "gender": "die",
+              "example": "Bringst du bitte die Bluse in die Reinigung?"
+            },
+            {
+              "id": "uuid-2721",
+              "type": "noun",
+              "german": "Rest",
+              "english": "change (money) / remainder",
+              "gender": "der",
+              "example": "Hier sind 50 Euro. Den Rest gebe ich dir später."
+            },
+            {
+              "id": "uuid-2722",
+              "type": "noun",
+              "german": "Service",
+              "english": "service",
+              "gender": "der",
+              "example": "Ich bin mit dem Service in der Werkstatt sehr zufrieden."
+            },
+            {
+              "id": "uuid-2723",
+              "type": "verb",
+              "german": "sparen",
+              "english": "to save (money)",
+              "gender": "none",
+              "example": "Ein neues Auto ist sehr teuer. Ich muss sparen."
+            },
+            {
+              "id": "uuid-2724",
+              "type": "noun",
+              "german": "Supermarkt",
+              "english": "supermarket",
+              "gender": "der",
+              "example": "Ich kaufe oft im Supermarkt ein."
+            },
+            {
+              "id": "uuid-2725",
+              "type": "noun",
+              "german": "Taschengeld",
+              "english": "pocket money",
+              "gender": "das",
+              "example": "Wie viel Taschengeld bekommen deine Kinder?"
+            },
+            {
+              "id": "uuid-2726",
+              "type": "adjective",
+              "german": "teuer",
+              "english": "expensive",
+              "gender": "none",
+              "example": "Das ist mir zu teuer."
+            },
+            {
+              "id": "uuid-2727",
+              "type": "verb",
+              "german": "überweisen",
+              "english": "to transfer (money)",
+              "gender": "none",
+              "example": "Sie können das Geld auch überweisen."
+            },
+            {
+              "id": "uuid-2728",
+              "type": "verb",
+              "german": "verkaufen",
+              "english": "to sell",
+              "gender": "none",
+              "example": "Er verkauft sein altes Auto."
+            },
+            {
+              "id": "uuid-2729",
+              "type": "noun",
+              "german": "Verkäufer",
+              "english": "salesman",
+              "gender": "der",
+              "example": "Der Verkäufer berät die Kunden."
+            },
+            {
+              "id": "uuid-2730",
+              "type": "noun",
+              "german": "Verkäuferin",
+              "english": "saleswoman",
+              "gender": "die",
+              "example": "Die Verkäuferin zeigt mir die neuen Schuhe."
+            },
+            {
+              "id": "uuid-2731",
+              "type": "verb",
+              "german": "wechseln",
+              "english": "to change (money)",
+              "gender": "none",
+              "example": "Können Sie mir zehn Dollar wechseln?"
+            },
+            {
+              "id": "uuid-2732",
+              "type": "verb",
+              "german": "zahlen",
+              "english": "to pay",
+              "gender": "none",
+              "example": "Entschuldigung, zahlen bitte!"
             }
           ]
         },
@@ -9007,371 +9807,7 @@
               "english": "to stay",
               "gender": "none",
               "example": "Wir bleiben drei Tage in Berlin."
-            }
-          ]
-        },
-        {
-          "id": "general_attributes",
-          "title": "General Attributes",
-          "icon": "star",
-          "items": [
-            {
-              "id": "uuid-2163",
-              "type": "adjective",
-              "german": "alt",
-              "english": "old",
-              "gender": "none",
-              "example": "Mein Computer ist schon sehr alt."
             },
-            {
-              "id": "uuid-2164",
-              "type": "adjective",
-              "german": "automatisch",
-              "english": "automatic",
-              "gender": "none",
-              "example": "Achtung, die Türen schließen automatisch!"
-            },
-            {
-              "id": "uuid-2165",
-              "type": "adjective",
-              "german": "besetzt",
-              "english": "occupied / busy",
-              "gender": "none",
-              "example": "Ist dieser Platz frei? Nein, er ist besetzt."
-            },
-            {
-              "id": "uuid-2166",
-              "type": "adjective",
-              "german": "bewölkt",
-              "english": "cloudy",
-              "gender": "none",
-              "example": "Heute ist es bewölkt."
-            },
-            {
-              "id": "uuid-2167",
-              "type": "adjective",
-              "german": "blöd",
-              "english": "stupid / silly",
-              "gender": "none",
-              "example": "Ich finde es blöd, dass du morgen gehen musst."
-            },
-            {
-              "id": "uuid-2168",
-              "type": "adjective",
-              "german": "blond",
-              "english": "blond",
-              "gender": "none",
-              "example": "Lisa hat blonde Haare."
-            },
-            {
-              "id": "uuid-2169",
-              "type": "adjective",
-              "german": "bunt",
-              "english": "colorful",
-              "gender": "none",
-              "example": "Anna trägt gern bunte Kleider."
-            }
-          ]
-        },
-        {
-          "id": "leisure_and_entertainment",
-          "title": "Leisure & Entertainment",
-          "icon": "music",
-          "items": [
-            {
-              "id": "uuid-2170",
-              "type": "noun",
-              "german": "Café",
-              "english": "café / coffee shop",
-              "gender": "das",
-              "example": "Kommst du mit ins Café? Ich möchte gern einen Kaffee trinken."
-            },
-            {
-              "id": "uuid-2171",
-              "type": "verb",
-              "german": "chatten",
-              "english": "to chat (online)",
-              "gender": "none",
-              "example": "Luis chattet gern mit seinen Freunden im Internet."
-            },
-            {
-              "id": "uuid-2172",
-              "type": "noun",
-              "german": "Club",
-              "english": "club",
-              "gender": "der",
-              "example": "Gibt es hier einen Tennis-Club?"
-            },
-            {
-              "id": "uuid-2173",
-              "type": "noun",
-              "german": "Comic",
-              "english": "comic book",
-              "gender": "der",
-              "example": "Mein Sohn liest immer nur Comics."
-            },
-            {
-              "id": "uuid-2174",
-              "type": "noun",
-              "german": "Computer",
-              "english": "computer",
-              "gender": "der",
-              "example": "Wann bekommst du deinen neuen Computer?"
-            },
-            {
-              "id": "uuid-2175",
-              "type": "noun",
-              "german": "Disco",
-              "english": "disco / nightclub",
-              "gender": "die",
-              "example": "Wir gehen heute Abend in die Disco."
-            },
-            {
-              "id": "uuid-2176",
-              "type": "noun",
-              "german": "Eintritt",
-              "english": "admission / entry",
-              "gender": "der",
-              "example": "Der Eintritt kostet fünf Euro."
-            },
-            {
-              "id": "uuid-2177",
-              "type": "noun",
-              "german": "Feier",
-              "english": "celebration / party",
-              "gender": "die",
-              "example": "Wir feiern heute meinen Geburtstag. Die Feier war sehr schön."
-            },
-            {
-              "id": "uuid-2178",
-              "type": "verb",
-              "german": "feiern",
-              "english": "to celebrate",
-              "gender": "none",
-              "example": "Wir feiern heute meinen Geburtstag."
-            },
-            {
-              "id": "uuid-2179",
-              "type": "noun",
-              "german": "Ferien",
-              "english": "vacation / holidays",
-              "gender": "die",
-              "example": "Bald haben wir Ferien."
-            },
-            {
-              "id": "uuid-2180",
-              "type": "verb",
-              "german": "fernsehen",
-              "english": "to watch TV",
-              "gender": "none",
-              "example": "Lass uns heute Abend mal fernsehen."
-            },
-            {
-              "id": "uuid-2181",
-              "type": "noun",
-              "german": "Fernseher",
-              "english": "television set",
-              "gender": "der",
-              "example": "Der Fernseher ist kaputt."
-            },
-            {
-              "id": "uuid-2182",
-              "type": "noun",
-              "german": "Fest",
-              "english": "festival / party",
-              "gender": "das",
-              "example": "Am Wochenende feiern wir ein Fest."
-            },
-            {
-              "id": "uuid-2183",
-              "type": "noun",
-              "german": "Festival",
-              "english": "festival",
-              "gender": "das",
-              "example": "Am Wochenende ist in der Stadt ein Musik-Festival."
-            },
-            {
-              "id": "uuid-2184",
-              "type": "noun",
-              "german": "Film",
-              "english": "movie / film",
-              "gender": "der",
-              "example": "Ich möchte gern diesen Film sehen."
-            },
-            {
-              "id": "uuid-2185",
-              "type": "noun",
-              "german": "Flohmarkt",
-              "english": "flea market",
-              "gender": "der",
-              "example": "Ich gehe gern auf den Flohmarkt."
-            },
-            {
-              "id": "uuid-2186",
-              "type": "noun",
-              "german": "Foto",
-              "english": "photo",
-              "gender": "das",
-              "example": "Darf ich ein Foto machen?"
-            },
-            {
-              "id": "uuid-2187",
-              "type": "noun",
-              "german": "Fotoapparat",
-              "english": "camera",
-              "gender": "der",
-              "example": "Ich möchte mir einen Fotoapparat kaufen."
-            },
-            {
-              "id": "uuid-2188",
-              "type": "verb",
-              "german": "fotografieren",
-              "english": "to take photos",
-              "gender": "none",
-              "example": "Ich fotografiere gern."
-            },
-            {
-              "id": "uuid-2189",
-              "type": "noun",
-              "german": "Freizeit",
-              "english": "free time / leisure",
-              "gender": "die",
-              "example": "In meiner Freizeit spiele ich oft Fußball."
-            },
-            {
-              "id": "uuid-2190",
-              "type": "noun",
-              "german": "Fußball",
-              "english": "soccer / football",
-              "gender": "der",
-              "example": "Spielt ihr gern Fußball?"
-            }
-          ]
-        },
-        {
-          "id": "communication_and_media",
-          "title": "Communication & Media",
-          "icon": "comment",
-          "items": [
-            {
-              "id": "uuid-2229",
-              "type": "noun",
-              "german": "Dank",
-              "english": "thanks / gratitude",
-              "gender": "der",
-              "example": "Vielen Dank!"
-            },
-            {
-              "id": "uuid-2230",
-              "type": "particle",
-              "german": "danke",
-              "english": "thank you",
-              "gender": "none",
-              "example": "Soll ich Ihnen helfen? - Sehr freundlich, ja danke!"
-            },
-            {
-              "id": "uuid-2231",
-              "type": "verb",
-              "german": "danken",
-              "english": "to thank",
-              "gender": "none",
-              "example": "Ich danke Ihnen für die Einladung."
-            },
-            {
-              "id": "uuid-2232",
-              "type": "verb",
-              "german": "diskutieren",
-              "english": "to discuss",
-              "gender": "none",
-              "example": "Ich möchte das mit meinen Kollegen diskutieren."
-            },
-            {
-              "id": "uuid-2233",
-              "type": "noun",
-              "german": "E-Book",
-              "english": "e-book",
-              "gender": "das",
-              "example": "Liest du lieber E-Books oder Bücher aus Papier?"
-            },
-            {
-              "id": "uuid-2234",
-              "type": "noun",
-              "german": "E-Mail",
-              "english": "e-mail",
-              "gender": "die",
-              "example": "Ich schreibe Ihnen/dir eine E-Mail."
-            },
-            {
-              "id": "uuid-2235",
-              "type": "noun",
-              "german": "Empfänger",
-              "english": "recipient",
-              "gender": "der",
-              "example": "Auf dem Brief steht dein Name, also bist du der Empfänger."
-            },
-            {
-              "id": "uuid-2236",
-              "type": "verb",
-              "german": "empfehlen",
-              "english": "to recommend",
-              "gender": "none",
-              "example": "Welchen Wein können Sie mir empfehlen?"
-            },
-            {
-              "id": "uuid-2237",
-              "type": "verb",
-              "german": "entschuldigen",
-              "english": "to apologize / excuse",
-              "gender": "none",
-              "example": "Entschuldigen Sie bitte!"
-            },
-            {
-              "id": "uuid-2238",
-              "type": "noun",
-              "german": "Entschuldigung",
-              "english": "apology / excuse me",
-              "gender": "die",
-              "example": "Oh, Entschuldigung! Macht nichts."
-            },
-            {
-              "id": "uuid-2239",
-              "type": "verb",
-              "german": "erklären",
-              "english": "to explain",
-              "gender": "none",
-              "example": "Ich verstehe das nicht. Kannst du mir das erklären?"
-            },
-            {
-              "id": "uuid-2240",
-              "type": "verb",
-              "german": "erzählen",
-              "english": "to tell / narrate",
-              "gender": "none",
-              "example": "Wir müssen euch etwas erzählen!"
-            },
-            {
-              "id": "uuid-2241",
-              "type": "noun",
-              "german": "Frage",
-              "english": "question",
-              "gender": "die",
-              "example": "Ich habe eine Frage."
-            },
-            {
-              "id": "uuid-2242",
-              "type": "verb",
-              "german": "fragen",
-              "english": "to ask",
-              "gender": "none",
-              "example": "Ich möchte Sie etwas fragen."
-            }
-          ]
-        },
-        {
-          "id": "time_and_space",
-          "title": "Time & Space",
-          "icon": "clock",
-          "items": [
             {
               "id": "uuid-2251",
               "type": "adverb",
@@ -9507,425 +9943,7 @@
               "english": "earlier / formerly",
               "gender": "none",
               "example": "Früher habe ich in Berlin gewohnt."
-            }
-          ]
-        },
-        {
-          "id": "general_attributes",
-          "title": "General Attributes",
-          "icon": "star",
-          "items": [
-            {
-              "id": "uuid-2268",
-              "type": "adjective",
-              "german": "deutlich",
-              "english": "clear / distinct",
-              "gender": "none",
-              "example": "Sprechen Sie bitte deutlich!"
             },
-            {
-              "id": "uuid-2269",
-              "type": "adjective",
-              "german": "dringend",
-              "english": "urgent",
-              "gender": "none",
-              "example": "Bitte kommen Sie schnell. Es ist dringend."
-            },
-            {
-              "id": "uuid-2270",
-              "type": "adjective",
-              "german": "dumm",
-              "english": "dumb / stupid",
-              "gender": "none",
-              "example": "Ich finde den Film dumm."
-            },
-            {
-              "id": "uuid-2271",
-              "type": "adjective",
-              "german": "dunkel",
-              "english": "dark",
-              "gender": "none",
-              "example": "Um sechs Uhr ist es schon dunkel."
-            },
-            {
-              "id": "uuid-2272",
-              "type": "adjective",
-              "german": "echt",
-              "english": "real / genuine",
-              "gender": "none",
-              "example": "Ist das Bild ein echter Picasso?"
-            },
-            {
-              "id": "uuid-2273",
-              "type": "adjective",
-              "german": "eigen",
-              "english": "own",
-              "gender": "none",
-              "example": "Nicht alle Kinder haben ein eigenes Zimmer."
-            },
-            {
-              "id": "uuid-2274",
-              "type": "adjective",
-              "german": "eilig",
-              "english": "in a hurry",
-              "gender": "none",
-              "example": "Hast du es eilig?"
-            },
-            {
-              "id": "uuid-2275",
-              "type": "adjective",
-              "german": "einzel",
-              "english": "single / individual",
-              "gender": "none",
-              "example": "Könnt ihr bitte einzeln sprechen?"
-            },
-            {
-              "id": "uuid-2276",
-              "type": "adjective",
-              "german": "eng",
-              "english": "tight / narrow",
-              "gender": "none",
-              "example": "Diese Hose ist zu eng."
-            },
-            {
-              "id": "uuid-2277",
-              "type": "adjective",
-              "german": "fantastisch",
-              "english": "fantastic",
-              "gender": "none",
-              "example": "Dein neues Kleid sieht fantastisch aus!"
-            },
-            {
-              "id": "uuid-2278",
-              "type": "noun",
-              "german": "Farbe",
-              "english": "color",
-              "gender": "die",
-              "example": "Die Farbe gefällt mir gut."
-            },
-            {
-              "id": "uuid-2279",
-              "type": "adjective",
-              "german": "faul",
-              "english": "lazy",
-              "gender": "none",
-              "example": "Heute sind wir faul."
-            },
-            {
-              "id": "uuid-2280",
-              "type": "verb",
-              "german": "fehlen",
-              "english": "to be missing",
-              "gender": "none",
-              "example": "Herr Müller ist nicht da, er fehlt schon seit drei Tagen."
-            },
-            {
-              "id": "uuid-2281",
-              "type": "adjective",
-              "german": "fertig",
-              "english": "ready / finished",
-              "gender": "none",
-              "example": "Das Essen ist gleich fertig."
-            },
-            {
-              "id": "uuid-2282",
-              "type": "adjective",
-              "german": "fleißig",
-              "english": "hard-working / diligent",
-              "gender": "none",
-              "example": "Ibrahim ist sehr fleißig."
-            },
-            {
-              "id": "uuid-2283",
-              "type": "adjective",
-              "german": "frei",
-              "english": "free",
-              "gender": "none",
-              "example": "Entschuldigung, ist dieser Platz noch frei?"
-            },
-            {
-              "id": "uuid-2284",
-              "type": "adjective",
-              "german": "freiwillig",
-              "english": "voluntary",
-              "gender": "none",
-              "example": "Manchmal bleibe ich freiwillig länger im Büro."
-            },
-            {
-              "id": "uuid-2285",
-              "type": "adjective",
-              "german": "fremd",
-              "english": "foreign / strange",
-              "gender": "none",
-              "example": "Das weiß ich nicht, ich bin fremd hier."
-            },
-            {
-              "id": "uuid-2286",
-              "type": "adjective",
-              "german": "freundlich",
-              "english": "friendly",
-              "gender": "none",
-              "example": "Er ist immer sehr freundlich zu mir."
-            },
-            {
-              "id": "uuid-2287",
-              "type": "adjective",
-              "german": "frisch",
-              "english": "fresh",
-              "gender": "none",
-              "example": "Das Brot ist noch ganz frisch."
-            },
-            {
-              "id": "uuid-2288",
-              "type": "adjective",
-              "german": "furchtbar",
-              "english": "terrible / awful",
-              "gender": "none",
-              "example": "Die Hose sieht ja furchtbar aus."
-            }
-          ]
-        },
-        {
-          "id": "shopping_and_economics",
-          "title": "Shopping & Economics",
-          "icon": "shopping-cart",
-          "items": [
-            {
-              "id": "uuid-2313",
-              "type": "verb",
-              "german": "einkaufen",
-              "english": "to shop",
-              "gender": "none",
-              "example": "Ich muss noch für morgen einkaufen."
-            },
-            {
-              "id": "uuid-2314",
-              "type": "noun",
-              "german": "Einkaufszentrum",
-              "english": "shopping center",
-              "gender": "das",
-              "example": "Kommst du morgen mit ins Einkaufszentrum?"
-            },
-            {
-              "id": "uuid-2315",
-              "type": "noun",
-              "german": "Ermäßigung",
-              "english": "discount / reduction",
-              "gender": "die",
-              "example": "Für Schüler, Studenten und Rentner gibt es eine Ermäßigung."
-            }
-          ]
-        },
-        {
-          "id": "health_and_body",
-          "title": "Health & Body",
-          "icon": "heart",
-          "items": [
-            {
-              "id": "uuid-2328",
-              "type": "adjective",
-              "german": "dick",
-              "english": "fat / thick",
-              "gender": "none",
-              "example": "Ich bin zu dick. Ich muss weniger essen."
-            },
-            {
-              "id": "uuid-2329",
-              "type": "adjective",
-              "german": "dünn",
-              "english": "thin",
-              "gender": "none",
-              "example": "Das Buch ist sehr dünn."
-            },
-            {
-              "id": "uuid-2330",
-              "type": "noun",
-              "german": "Durst",
-              "english": "thirst",
-              "gender": "der",
-              "example": "Ich habe großen Durst."
-            },
-            {
-              "id": "uuid-2331",
-              "type": "noun",
-              "german": "Dusche",
-              "english": "shower",
-              "gender": "die",
-              "example": "Unsere Wohnung hat nur eine Dusche."
-            },
-            {
-              "id": "uuid-2332",
-              "type": "verb",
-              "german": "duschen",
-              "english": "to shower",
-              "gender": "none",
-              "example": "Ich bade nicht so gern, ich dusche lieber."
-            },
-            {
-              "id": "uuid-2333",
-              "type": "adjective",
-              "german": "erkältet",
-              "english": "cold (sick)",
-              "gender": "none",
-              "example": "Lisa ist erkältet."
-            },
-            {
-              "id": "uuid-2334",
-              "type": "noun",
-              "german": "Fieber",
-              "english": "fever",
-              "gender": "das",
-              "example": "Sie hat hohes Fieber."
-            },
-            {
-              "id": "uuid-2335",
-              "type": "adjective",
-              "german": "fit",
-              "english": "fit / healthy",
-              "gender": "none",
-              "example": "Tom will fit sein."
-            },
-            {
-              "id": "uuid-2336",
-              "type": "verb",
-              "german": "fühlen",
-              "english": "to feel",
-              "gender": "none",
-              "example": "Ich fühle mich heute nicht gut."
-            },
-            {
-              "id": "uuid-2337",
-              "type": "noun",
-              "german": "Fuß",
-              "english": "foot",
-              "gender": "der",
-              "example": "Der linke Fuß tut mir weh."
-            }
-          ]
-        },
-        {
-          "id": "logic_and_modals",
-          "title": "Logic & Modals",
-          "icon": "lightbulb",
-          "items": [
-            {
-              "id": "uuid-2338",
-              "type": "verb",
-              "german": "dürfen",
-              "english": "allowed to / may",
-              "gender": "none",
-              "example": "Sie dürfen hier nicht parken."
-            },
-            {
-              "id": "uuid-2339",
-              "type": "verb",
-              "german": "erlauben",
-              "english": "to allow",
-              "gender": "none",
-              "example": "Meine Kinder dürfen diesen Film sehen. Ich habe es ihnen erlaubt."
-            },
-            {
-              "id": "uuid-2340",
-              "type": "noun",
-              "german": "Erlaubnis",
-              "english": "permission",
-              "gender": "die",
-              "example": "Haben Sie eine Arbeitserlaubnis?"
-            }
-          ]
-        },
-        {
-          "id": "housing_and_objects",
-          "title": "Housing & Objects",
-          "icon": "home",
-          "items": [
-            {
-              "id": "uuid-2367",
-              "type": "noun",
-              "german": "Garage",
-              "english": "garage",
-              "gender": "die",
-              "example": "Hier ist eine Garage für dein Auto"
-            },
-            {
-              "id": "uuid-2368",
-              "type": "noun",
-              "german": "Garten",
-              "english": "garden",
-              "gender": "der",
-              "example": "Wir haben leider keinen Garten."
-            },
-            {
-              "id": "uuid-2369",
-              "type": "noun",
-              "german": "Gerät",
-              "english": "device / appliance",
-              "gender": "das",
-              "example": "Elektrogeräte finden Sie im dritten Stock."
-            },
-            {
-              "id": "uuid-2370",
-              "type": "noun",
-              "german": "Halle",
-              "english": "hall",
-              "gender": "die",
-              "example": "Wir treffen uns in Halle B."
-            },
-            {
-              "id": "uuid-2371",
-              "type": "noun",
-              "german": "Handtuch",
-              "english": "towel",
-              "gender": "das",
-              "example": "Gibst du mir bitte ein frisches Handtuch?"
-            },
-            {
-              "id": "uuid-2372",
-              "type": "noun",
-              "german": "Haus",
-              "english": "house",
-              "gender": "das",
-              "example": "In welchem Haus wohnst du?"
-            },
-            {
-              "id": "uuid-2373",
-              "type": "noun",
-              "german": "Haushalt",
-              "english": "household",
-              "gender": "der",
-              "example": "Wer macht bei euch den Haushalt?"
-            },
-            {
-              "id": "uuid-2374",
-              "type": "noun",
-              "german": "Heizung",
-              "english": "heating",
-              "gender": "die",
-              "example": "Es ist kalt. Ist die Heizung kaputt?"
-            },
-            {
-              "id": "uuid-2375",
-              "type": "noun",
-              "german": "Herd",
-              "english": "stove",
-              "gender": "der",
-              "example": "In der neuen Küche fehlt noch der Herd."
-            },
-            {
-              "id": "uuid-2376",
-              "type": "noun",
-              "german": "Keller",
-              "english": "cellar / basement",
-              "gender": "der",
-              "example": "Bitte bring die Kartoffeln in den Keller!"
-            }
-          ]
-        },
-        {
-          "id": "time_and_space",
-          "title": "Time & Space",
-          "icon": "clock",
-          "items": [
             {
               "id": "uuid-2377",
               "type": "adjective",
@@ -10109,387 +10127,414 @@
               "english": "year",
               "gender": "das",
               "example": "Ich bin zwanzig Jahre alt."
-            }
-          ]
-        },
-        {
-          "id": "leisure_and_entertainment",
-          "title": "Leisure & Entertainment",
-          "icon": "music",
-          "items": [
-            {
-              "id": "uuid-2428",
-              "type": "noun",
-              "german": "Geschenk",
-              "english": "gift",
-              "gender": "das",
-              "example": "Danke für das schöne Geschenk."
             },
             {
-              "id": "uuid-2429",
-              "type": "noun",
-              "german": "Geschichte",
-              "english": "story / history",
-              "gender": "die",
-              "example": "Erzählst du mir eine Geschichte?"
-            },
-            {
-              "id": "uuid-2430",
-              "type": "verb",
-              "german": "gewinnen",
-              "english": "to win",
+              "id": "uuid-3002",
+              "type": "adverb",
+              "german": "rechts",
+              "english": "right",
               "gender": "none",
-              "example": "Unsere Mannschaft hat gewonnen."
+              "example": "Der Bahnhof ist hier rechts."
             },
             {
-              "id": "uuid-2431",
-              "type": "noun",
-              "german": "Gitarre",
-              "english": "guitar",
-              "gender": "die",
-              "example": "Er kann gut Gitarre spielen."
-            },
-            {
-              "id": "uuid-2432",
-              "type": "noun",
-              "german": "Glück",
-              "english": "luck / happiness",
-              "gender": "das",
-              "example": "Viel Glück!"
-            },
-            {
-              "id": "uuid-2433",
-              "type": "verb",
-              "german": "gratulieren",
-              "english": "to congratulate",
-              "gender": "none",
-              "example": "Ich gratuliere dir!"
-            },
-            {
-              "id": "uuid-2434",
-              "type": "noun",
-              "german": "Hobby",
-              "english": "hobby",
-              "gender": "das",
-              "example": "Meine Hobbys sind Joggen und Schwimmen."
-            },
-            {
-              "id": "uuid-2435",
-              "type": "noun",
-              "german": "Instrument",
-              "english": "instrument",
-              "gender": "das",
-              "example": "Ich spiele Klavier. Spielen Sie auch ein Instrument?"
-            },
-            {
-              "id": "uuid-2436",
-              "type": "noun",
-              "german": "Interesse",
-              "english": "interest",
-              "gender": "das",
-              "example": "Ich habe viele Interessen: Sport, Lesen, Kultur, Reisen."
-            },
-            {
-              "id": "uuid-2437",
-              "type": "verb",
-              "german": "joggen",
-              "english": "to jog",
-              "gender": "none",
-              "example": "Ich jogge gern im Park."
-            },
-            {
-              "id": "uuid-2438",
-              "type": "noun",
-              "german": "Kamera",
-              "english": "camera",
-              "gender": "die",
-              "example": "Hannes hat eine neue Kamera."
-            },
-            {
-              "id": "uuid-2439",
-              "type": "noun",
-              "german": "Karte",
-              "english": "card / ticket",
-              "gender": "die",
-              "example": "Wollen wir Karten spielen?"
-            },
-            {
-              "id": "uuid-2440",
-              "type": "noun",
-              "german": "Kino",
-              "english": "cinema",
-              "gender": "das",
-              "example": "Gehen wir heute Abend zusammen ins Kino?"
-            },
-            {
-              "id": "uuid-2441",
-              "type": "noun",
-              "german": "Klavier",
-              "english": "piano",
-              "gender": "das",
-              "example": "Jakob kann sehr gut Klavier spielen."
-            },
-            {
-              "id": "uuid-2442",
-              "type": "noun",
-              "german": "Konzert",
-              "english": "concert",
-              "gender": "das",
-              "example": "Für das Konzert am Sonntag gibt es noch Karten."
-            },
-            {
-              "id": "uuid-2443",
-              "type": "noun",
-              "german": "Krimi",
-              "english": "detective story / thriller",
-              "gender": "der",
-              "example": "Miriam liest gern spannende Krimis."
-            },
-            {
-              "id": "uuid-2444",
-              "type": "noun",
-              "german": "Kultur",
-              "english": "culture",
-              "gender": "die",
-              "example": "Ich finde fremde Länder und Kulturen sehr interessant."
-            },
-            {
-              "id": "uuid-2445",
-              "type": "noun",
-              "german": "Kunst",
-              "english": "art",
-              "gender": "die",
-              "example": "Ich verstehe nichts von moderner Kunst."
-            }
-          ]
-        },
-        {
-          "id": "health_and_body",
-          "title": "Health & Body",
-          "icon": "heart",
-          "items": [
-            {
-              "id": "uuid-2446",
-              "type": "noun",
-              "german": "Gesicht",
-              "english": "face",
-              "gender": "das",
-              "example": "Wasch dir bitte das Gesicht."
-            },
-            {
-              "id": "uuid-2447",
-              "type": "noun",
-              "german": "Gesundheit",
-              "english": "health",
-              "gender": "die",
-              "example": "Gesundheit! Sind Sie erkältet?"
-            },
-            {
-              "id": "uuid-2448",
-              "type": "noun",
-              "german": "Grippe",
-              "english": "flu",
-              "gender": "die",
-              "example": "Ich habe eine Grippe und kann leider nicht kommen."
-            },
-            {
-              "id": "uuid-2449",
-              "type": "noun",
-              "german": "Haar",
-              "english": "hair",
-              "gender": "das",
-              "example": "Sie hat lange Haare."
-            },
-            {
-              "id": "uuid-2450",
-              "type": "noun",
-              "german": "Hals",
-              "english": "neck / throat",
-              "gender": "der",
-              "example": "Mir tut der Hals weh."
-            },
-            {
-              "id": "uuid-2451",
-              "type": "noun",
-              "german": "Hand",
-              "english": "hand",
-              "gender": "die",
-              "example": "Wasch dir bitte die Hände vor dem Essen."
-            },
-            {
-              "id": "uuid-2452",
-              "type": "verb",
-              "german": "husten",
-              "english": "to cough",
-              "gender": "none",
-              "example": "Sie hustet seit zwei Tagen."
-            },
-            {
-              "id": "uuid-2453",
-              "type": "noun",
-              "german": "Körper",
-              "english": "body",
-              "gender": "der",
-              "example": "Der Arzt sagt, ich muss etwas für meinen Körper tun."
-            },
-            {
-              "id": "uuid-2454",
-              "type": "noun",
-              "german": "Kosmetik",
-              "english": "cosmetics",
-              "gender": "die",
-              "example": "Kosmetik können Sie im Erdgeschoss kaufen."
-            },
-            {
-              "id": "uuid-2455",
+              "id": "uuid-3003",
               "type": "adjective",
-              "german": "krank",
-              "english": "sick",
+              "german": "rund",
+              "english": "round",
               "gender": "none",
-              "example": "Ich kann heute nicht zur Arbeit kommen, ich bin krank."
+              "example": "Unser Wohnzimmertisch ist rund."
             },
             {
-              "id": "uuid-2456",
+              "id": "uuid-3004",
               "type": "noun",
-              "german": "Krankenhaus",
-              "english": "hospital",
-              "gender": "das",
-              "example": "Meine Tante ist im Krankenhaus."
-            },
-            {
-              "id": "uuid-2457",
-              "type": "noun",
-              "german": "Krankenkasse",
-              "english": "health insurance",
-              "gender": "die",
-              "example": "Bei welcher Krankenkasse sind Sie?"
-            },
-            {
-              "id": "uuid-2458",
-              "type": "noun",
-              "german": "Krankheit",
-              "english": "illness / disease",
-              "gender": "die",
-              "example": "Welche Krankheit hat Herr Brandner?"
-            }
-          ]
-        },
-        {
-          "id": "communication_and_media",
-          "title": "Communication & Media",
-          "icon": "comment",
-          "items": [
-            {
-              "id": "uuid-2459",
-              "type": "noun",
-              "german": "Gespräch",
-              "english": "conversation",
-              "gender": "das",
-              "example": "Sie hören ein Gespräch."
-            },
-            {
-              "id": "uuid-2460",
-              "type": "noun",
-              "german": "Glückwunsch",
-              "english": "congratulation",
+              "german": "Schluss",
+              "english": "end",
               "gender": "der",
-              "example": "Herzlichen Glückwunsch zum Geburtstag!"
+              "example": "Ich muss jetzt Schluss machen."
             },
             {
-              "id": "uuid-2461",
-              "type": "noun",
-              "german": "Gruß",
-              "english": "greeting",
-              "gender": "der",
-              "example": "Viele Grüße an Ihre Frau."
-            },
-            {
-              "id": "uuid-2462",
-              "type": "noun",
-              "german": "Handy",
-              "english": "mobile phone",
-              "gender": "das",
-              "example": "In der Schule bitte die Handys ausmachen!"
-            },
-            {
-              "id": "uuid-2463",
-              "type": "verb",
-              "german": "heißen",
-              "english": "to be called",
+              "id": "uuid-3005",
+              "type": "adjective",
+              "german": "schnell",
+              "english": "fast",
               "gender": "none",
-              "example": "Ich heiße Charlotte Meier."
+              "example": "Warum fährst du so schnell?"
             },
             {
-              "id": "uuid-2464",
+              "id": "uuid-3006",
+              "type": "adverb",
+              "german": "schon",
+              "english": "already",
+              "gender": "none",
+              "example": "Ist das Essen schon fertig?"
+            },
+            {
+              "id": "uuid-3007",
               "type": "noun",
-              "german": "Homepage",
-              "english": "homepage / website",
+              "german": "Seite",
+              "english": "side / page",
               "gender": "die",
-              "example": "Auf der Homepage von Freiburg gibt es alle wichtigen Informationen."
+              "example": "Mein Haus ist auf der linken Seite."
             },
             {
-              "id": "uuid-2465",
+              "id": "uuid-3008",
+              "type": "verb",
+              "german": "setzen (sich)",
+              "english": "to sit down",
+              "gender": "none",
+              "example": "Setz dich doch!"
+            },
+            {
+              "id": "uuid-3009",
+              "type": "verb",
+              "german": "sitzen",
+              "english": "to sit",
+              "gender": "none",
+              "example": "Wo möchten Sie sitzen?"
+            },
+            {
+              "id": "uuid-3010",
+              "type": "adverb",
+              "german": "sofort",
+              "english": "immediately",
+              "gender": "none",
+              "example": "Bitte antworten Sie sofort."
+            },
+            {
+              "id": "uuid-3011",
+              "type": "adjective",
+              "german": "spät",
+              "english": "late",
+              "gender": "none",
+              "example": "Es ist schon spät."
+            },
+            {
+              "id": "uuid-3012",
+              "type": "adverb",
+              "german": "später",
+              "english": "later",
+              "gender": "none",
+              "example": "Das können wir später machen."
+            },
+            {
+              "id": "uuid-3013",
+              "type": "verb",
+              "german": "stattfinden",
+              "english": "to take place",
+              "gender": "none",
+              "example": "Das Spiel findet auch bei Regen statt."
+            },
+            {
+              "id": "uuid-3014",
+              "type": "verb",
+              "german": "stehen",
+              "english": "to stand",
+              "gender": "none",
+              "example": "Der Bus steht schon an der Haltestelle."
+            },
+            {
+              "id": "uuid-3015",
+              "type": "verb",
+              "german": "stellen",
+              "english": "to put / place",
+              "gender": "none",
+              "example": "Stell die Milch bitte in den Kühlschrank!"
+            },
+            {
+              "id": "uuid-3016",
               "type": "noun",
-              "german": "Idee",
-              "english": "idea",
+              "german": "Straße",
+              "english": "street",
               "gender": "die",
-              "example": "Hast du eine gute Idee?"
+              "example": "In welcher Straße wohnen Sie?"
             },
             {
-              "id": "uuid-2466",
+              "id": "uuid-3017",
               "type": "noun",
-              "german": "Information",
-              "english": "information",
+              "german": "Stück",
+              "english": "piece",
+              "gender": "das",
+              "example": "Möchten Sie noch ein Stück Kuchen?"
+            },
+            {
+              "id": "uuid-3018",
+              "type": "verb",
+              "german": "suchen",
+              "english": "to search / look for",
+              "gender": "none",
+              "example": "Suchst du etwas?"
+            },
+            {
+              "id": "uuid-3019",
+              "type": "verb",
+              "german": "tauschen",
+              "english": "to swap / exchange",
+              "gender": "none",
+              "example": "Können wir bitte die Plätze tauschen?"
+            },
+            {
+              "id": "uuid-3020",
+              "type": "adjective",
+              "german": "tief",
+              "english": "deep",
+              "gender": "none",
+              "example": "Vorsicht, das Wasser ist tief!"
+            },
+            {
+              "id": "uuid-3021",
+              "type": "noun",
+              "german": "Uhr",
+              "english": "clock / watch",
               "gender": "die",
-              "example": "Wir haben hier einige wichtige Informationen für Sie."
+              "example": "Es ist vier Uhr."
             },
             {
-              "id": "uuid-2467",
-              "type": "verb",
-              "german": "informieren",
-              "english": "to inform",
+              "id": "uuid-3022",
+              "type": "preposition",
+              "german": "um",
+              "english": "at / around",
               "gender": "none",
-              "example": "Ich möchte mich vor der Reise über das Land informieren."
+              "example": "Er kommt um sieben Uhr."
             },
             {
-              "id": "uuid-2468",
+              "id": "uuid-3023",
+              "type": "adverb",
+              "german": "unten",
+              "english": "downstairs / below",
+              "gender": "none",
+              "example": "Er wohnt ganz unten im Haus."
+            },
+            {
+              "id": "uuid-3024",
+              "type": "preposition",
+              "german": "unter",
+              "english": "under",
+              "gender": "none",
+              "example": "Unter uns wohnt eine Familie mit drei Kindern."
+            },
+            {
+              "id": "uuid-3025",
+              "type": "verb",
+              "german": "verschieben",
+              "english": "to postpone",
+              "gender": "none",
+              "example": "Leider muss ich den Termin verschieben."
+            },
+            {
+              "id": "uuid-3026",
+              "type": "adjective",
+              "german": "voll",
+              "english": "full",
+              "gender": "none",
+              "example": "Die Flasche ist noch ganz voll."
+            },
+            {
+              "id": "uuid-3027",
+              "type": "preposition",
+              "german": "von",
+              "english": "from / of",
+              "gender": "none",
+              "example": "Das Auto von Felix ist kaputt."
+            },
+            {
+              "id": "uuid-3028",
+              "type": "preposition",
+              "german": "vor",
+              "english": "before / in front of",
+              "gender": "none",
+              "example": "Das Auto steht vor der Tür."
+            },
+            {
+              "id": "uuid-3029",
+              "type": "adverb",
+              "german": "vorbei",
+              "english": "past / over",
+              "gender": "none",
+              "example": "Die Linie 8 fährt am Krankenhaus vorbei."
+            },
+            {
+              "id": "uuid-3030",
+              "type": "adverb",
+              "german": "vorgestern",
+              "english": "day before yesterday",
+              "gender": "none",
+              "example": "Er hat mich vorgestern angerufen."
+            },
+            {
+              "id": "uuid-3031",
+              "type": "adverb",
+              "german": "vorher",
+              "english": "beforehand",
+              "gender": "none",
+              "example": "Vorher muss ich aber noch zur Bank."
+            },
+            {
+              "id": "uuid-3032",
+              "type": "adverb",
+              "german": "vorn",
+              "english": "at the front",
+              "gender": "none",
+              "example": "Bitte vorn einsteigen!"
+            },
+            {
+              "id": "uuid-3033",
+              "type": "adverb",
+              "german": "vorwärts",
+              "english": "forward",
+              "gender": "none",
+              "example": "Fahren Sie bitte noch ein Stück vorwärts."
+            },
+            {
+              "id": "uuid-3034",
+              "type": "verb",
+              "german": "warten",
+              "english": "to wait",
+              "gender": "none",
+              "example": "Können Sie ein paar Minuten warten?"
+            },
+            {
+              "id": "uuid-3035",
+              "type": "adverb",
+              "german": "weg",
+              "english": "away / gone",
+              "gender": "none",
+              "example": "Meine Brille ist weg."
+            },
+            {
+              "id": "uuid-3036",
+              "type": "adjective",
+              "german": "weit",
+              "english": "far",
+              "gender": "none",
+              "example": "Zum Bahnhof ist es nicht weit."
+            },
+            {
+              "id": "uuid-3037",
+              "type": "adverb",
+              "german": "weiter",
+              "english": "further",
+              "gender": "none",
+              "example": "Der Bus fährt nicht weiter."
+            },
+            {
+              "id": "uuid-3038",
+              "type": "adverb",
+              "german": "wieder",
+              "english": "again",
+              "gender": "none",
+              "example": "Stefan kann wieder zum Fußballtraining kommen."
+            },
+            {
+              "id": "uuid-3039",
+              "type": "pronoun",
+              "german": "wo",
+              "english": "where",
+              "gender": "none",
+              "example": "Wo ist meine Uhr?"
+            },
+            {
+              "id": "uuid-3040",
+              "type": "adverb",
+              "german": "woher",
+              "english": "where from",
+              "gender": "none",
+              "example": "Woher kommen Sie?"
+            },
+            {
+              "id": "uuid-3041",
+              "type": "adverb",
+              "german": "wohin",
+              "english": "where to",
+              "gender": "none",
+              "example": "Wohin fährt dieser Bus?"
+            },
+            {
+              "id": "uuid-3042",
               "type": "noun",
-              "german": "Internet",
-              "english": "Internet",
+              "german": "Zeit",
+              "english": "time",
+              "gender": "die",
+              "example": "Ich habe heute keine Zeit."
+            },
+            {
+              "id": "uuid-3043",
+              "type": "noun",
+              "german": "Zentrum",
+              "english": "center",
               "gender": "das",
-              "example": "Das findest du im Internet."
+              "example": "Der Bahnhof ist im Stadtzentrum."
             },
             {
-              "id": "uuid-2469",
+              "id": "uuid-3044",
+              "type": "verb",
+              "german": "ziehen",
+              "english": "to pull / move",
+              "gender": "none",
+              "example": "An dieser Tür musst du drücken, nicht ziehen."
+            },
+            {
+              "id": "uuid-3045",
               "type": "noun",
-              "german": "Interview",
-              "english": "interview",
+              "german": "Ziel",
+              "english": "goal / destination",
               "gender": "das",
-              "example": "Im Radio kommt ein Interview mit deinem Lieblingssänger."
+              "example": "Was ist dein Ziel im Leben?"
             },
             {
-              "id": "uuid-2470",
-              "type": "verb",
-              "german": "kennen",
-              "english": "to know (be familiar with)",
+              "id": "uuid-3046",
+              "type": "preposition",
+              "german": "zu",
+              "english": "to / at / too",
               "gender": "none",
-              "example": "Kennen Sie diese Frau?"
+              "example": "Der Bus fährt zum Bahnhof."
             },
             {
-              "id": "uuid-2471",
-              "type": "verb",
-              "german": "kennenlernen",
-              "english": "to get to know / meet",
+              "id": "uuid-3047",
+              "type": "adverb",
+              "german": "zuerst",
+              "english": "first",
               "gender": "none",
-              "example": "Wir haben uns in München kennengelernt."
+              "example": "Zuerst müsst ihr die Hausaufgaben machen."
             },
             {
-              "id": "uuid-2472",
-              "type": "noun",
-              "german": "Kontakt",
-              "english": "contact",
-              "gender": "der",
-              "example": "Ich habe wenig Kontakt zu meinen Kollegen."
+              "id": "uuid-3048",
+              "type": "adverb",
+              "german": "zuletzt",
+              "english": "lastly / last",
+              "gender": "none",
+              "example": "Wir haben uns vor drei Jahren zuletzt gesehen."
+            },
+            {
+              "id": "uuid-3049",
+              "type": "verb",
+              "german": "zumachen",
+              "english": "to close",
+              "gender": "none",
+              "example": "Machst du bitte das Fenster zu?"
+            },
+            {
+              "id": "uuid-3050",
+              "type": "adverb",
+              "german": "zurück",
+              "english": "back",
+              "gender": "none",
+              "example": "Eine Fahrkarte nach Frankfurt und zurück, bitte."
+            },
+            {
+              "id": "uuid-3051",
+              "type": "adverb",
+              "german": "zusammen",
+              "english": "together",
+              "gender": "none",
+              "example": "Wollen wir zusammen essen gehen?"
+            },
+            {
+              "id": "uuid-3052",
+              "type": "preposition",
+              "german": "zwischen",
+              "english": "between",
+              "gender": "none",
+              "example": "Heidelberg liegt zwischen Frankfurt und Stuttgart."
             }
           ]
         },
@@ -10498,6 +10543,230 @@
           "title": "General Attributes",
           "icon": "star",
           "items": [
+            {
+              "id": "uuid-2163",
+              "type": "adjective",
+              "german": "alt",
+              "english": "old",
+              "gender": "none",
+              "example": "Mein Computer ist schon sehr alt."
+            },
+            {
+              "id": "uuid-2164",
+              "type": "adjective",
+              "german": "automatisch",
+              "english": "automatic",
+              "gender": "none",
+              "example": "Achtung, die Türen schließen automatisch!"
+            },
+            {
+              "id": "uuid-2165",
+              "type": "adjective",
+              "german": "besetzt",
+              "english": "occupied / busy",
+              "gender": "none",
+              "example": "Ist dieser Platz frei? Nein, er ist besetzt."
+            },
+            {
+              "id": "uuid-2166",
+              "type": "adjective",
+              "german": "bewölkt",
+              "english": "cloudy",
+              "gender": "none",
+              "example": "Heute ist es bewölkt."
+            },
+            {
+              "id": "uuid-2167",
+              "type": "adjective",
+              "german": "blöd",
+              "english": "stupid / silly",
+              "gender": "none",
+              "example": "Ich finde es blöd, dass du morgen gehen musst."
+            },
+            {
+              "id": "uuid-2168",
+              "type": "adjective",
+              "german": "blond",
+              "english": "blond",
+              "gender": "none",
+              "example": "Lisa hat blonde Haare."
+            },
+            {
+              "id": "uuid-2169",
+              "type": "adjective",
+              "german": "bunt",
+              "english": "colorful",
+              "gender": "none",
+              "example": "Anna trägt gern bunte Kleider."
+            },
+            {
+              "id": "uuid-2268",
+              "type": "adjective",
+              "german": "deutlich",
+              "english": "clear / distinct",
+              "gender": "none",
+              "example": "Sprechen Sie bitte deutlich!"
+            },
+            {
+              "id": "uuid-2269",
+              "type": "adjective",
+              "german": "dringend",
+              "english": "urgent",
+              "gender": "none",
+              "example": "Bitte kommen Sie schnell. Es ist dringend."
+            },
+            {
+              "id": "uuid-2270",
+              "type": "adjective",
+              "german": "dumm",
+              "english": "dumb / stupid",
+              "gender": "none",
+              "example": "Ich finde den Film dumm."
+            },
+            {
+              "id": "uuid-2271",
+              "type": "adjective",
+              "german": "dunkel",
+              "english": "dark",
+              "gender": "none",
+              "example": "Um sechs Uhr ist es schon dunkel."
+            },
+            {
+              "id": "uuid-2272",
+              "type": "adjective",
+              "german": "echt",
+              "english": "real / genuine",
+              "gender": "none",
+              "example": "Ist das Bild ein echter Picasso?"
+            },
+            {
+              "id": "uuid-2273",
+              "type": "adjective",
+              "german": "eigen",
+              "english": "own",
+              "gender": "none",
+              "example": "Nicht alle Kinder haben ein eigenes Zimmer."
+            },
+            {
+              "id": "uuid-2274",
+              "type": "adjective",
+              "german": "eilig",
+              "english": "in a hurry",
+              "gender": "none",
+              "example": "Hast du es eilig?"
+            },
+            {
+              "id": "uuid-2275",
+              "type": "adjective",
+              "german": "einzel",
+              "english": "single / individual",
+              "gender": "none",
+              "example": "Könnt ihr bitte einzeln sprechen?"
+            },
+            {
+              "id": "uuid-2276",
+              "type": "adjective",
+              "german": "eng",
+              "english": "tight / narrow",
+              "gender": "none",
+              "example": "Diese Hose ist zu eng."
+            },
+            {
+              "id": "uuid-2277",
+              "type": "adjective",
+              "german": "fantastisch",
+              "english": "fantastic",
+              "gender": "none",
+              "example": "Dein neues Kleid sieht fantastisch aus!"
+            },
+            {
+              "id": "uuid-2278",
+              "type": "noun",
+              "german": "Farbe",
+              "english": "color",
+              "gender": "die",
+              "example": "Die Farbe gefällt mir gut."
+            },
+            {
+              "id": "uuid-2279",
+              "type": "adjective",
+              "german": "faul",
+              "english": "lazy",
+              "gender": "none",
+              "example": "Heute sind wir faul."
+            },
+            {
+              "id": "uuid-2280",
+              "type": "verb",
+              "german": "fehlen",
+              "english": "to be missing",
+              "gender": "none",
+              "example": "Herr Müller ist nicht da, er fehlt schon seit drei Tagen."
+            },
+            {
+              "id": "uuid-2281",
+              "type": "adjective",
+              "german": "fertig",
+              "english": "ready / finished",
+              "gender": "none",
+              "example": "Das Essen ist gleich fertig."
+            },
+            {
+              "id": "uuid-2282",
+              "type": "adjective",
+              "german": "fleißig",
+              "english": "hard-working / diligent",
+              "gender": "none",
+              "example": "Ibrahim ist sehr fleißig."
+            },
+            {
+              "id": "uuid-2283",
+              "type": "adjective",
+              "german": "frei",
+              "english": "free",
+              "gender": "none",
+              "example": "Entschuldigung, ist dieser Platz noch frei?"
+            },
+            {
+              "id": "uuid-2284",
+              "type": "adjective",
+              "german": "freiwillig",
+              "english": "voluntary",
+              "gender": "none",
+              "example": "Manchmal bleibe ich freiwillig länger im Büro."
+            },
+            {
+              "id": "uuid-2285",
+              "type": "adjective",
+              "german": "fremd",
+              "english": "foreign / strange",
+              "gender": "none",
+              "example": "Das weiß ich nicht, ich bin fremd hier."
+            },
+            {
+              "id": "uuid-2286",
+              "type": "adjective",
+              "german": "freundlich",
+              "english": "friendly",
+              "gender": "none",
+              "example": "Er ist immer sehr freundlich zu mir."
+            },
+            {
+              "id": "uuid-2287",
+              "type": "adjective",
+              "german": "frisch",
+              "english": "fresh",
+              "gender": "none",
+              "example": "Das Brot ist noch ganz frisch."
+            },
+            {
+              "id": "uuid-2288",
+              "type": "adjective",
+              "german": "furchtbar",
+              "english": "terrible / awful",
+              "gender": "none",
+              "example": "Die Hose sieht ja furchtbar aus."
+            },
             {
               "id": "uuid-2486",
               "type": "adjective",
@@ -10673,6 +10942,979 @@
               "english": "short",
               "gender": "none",
               "example": "Ricardo hat kurze Haare."
+            },
+            {
+              "id": "uuid-3053",
+              "type": "adjective",
+              "german": "reich",
+              "english": "rich",
+              "gender": "none",
+              "example": "Lotte ist reich."
+            },
+            {
+              "id": "uuid-3054",
+              "type": "noun",
+              "german": "Ruhe",
+              "english": "quiet / peace",
+              "gender": "die",
+              "example": "Ruhe, bitte!"
+            },
+            {
+              "id": "uuid-3055",
+              "type": "adjective",
+              "german": "ruhig",
+              "english": "quiet",
+              "gender": "none",
+              "example": "Ich möchte ein ruhiges Zimmer."
+            },
+            {
+              "id": "uuid-3056",
+              "type": "noun",
+              "german": "Sache",
+              "english": "thing",
+              "gender": "die",
+              "example": "Das ist meine Sache."
+            },
+            {
+              "id": "uuid-3057",
+              "type": "adjective",
+              "german": "sauber",
+              "english": "clean",
+              "gender": "none",
+              "example": "Bringen Sie mir bitte ein sauberes Glas!"
+            },
+            {
+              "id": "uuid-3058",
+              "type": "adjective",
+              "german": "sauer",
+              "english": "sour / angry",
+              "gender": "none",
+              "example": "Zitronen sind mir zu sauer."
+            },
+            {
+              "id": "uuid-3059",
+              "type": "adjective",
+              "german": "schade",
+              "english": "pity / shame",
+              "gender": "none",
+              "example": "Schade, dass du nicht kommen kannst."
+            },
+            {
+              "id": "uuid-3060",
+              "type": "verb",
+              "german": "schaffen",
+              "english": "to manage / do",
+              "gender": "none",
+              "example": "Ich schaffe das nicht alleine."
+            },
+            {
+              "id": "uuid-3061",
+              "type": "adjective",
+              "german": "scharf",
+              "english": "spicy / sharp",
+              "gender": "none",
+              "example": "Die Suppe ist mir zu scharf."
+            },
+            {
+              "id": "uuid-3062",
+              "type": "verb",
+              "german": "scheinen",
+              "english": "to shine / seem",
+              "gender": "none",
+              "example": "Die Sonne scheint."
+            },
+            {
+              "id": "uuid-3063",
+              "type": "adjective",
+              "german": "schlecht",
+              "english": "bad",
+              "gender": "none",
+              "example": "Das Wetter ist schlecht."
+            },
+            {
+              "id": "uuid-3064",
+              "type": "verb",
+              "german": "schließen",
+              "english": "to close",
+              "gender": "none",
+              "example": "Bitte schließen Sie die Tür."
+            },
+            {
+              "id": "uuid-3065",
+              "type": "adjective",
+              "german": "schlimm",
+              "english": "bad / serious",
+              "gender": "none",
+              "example": "Kein Problem, das ist nicht so schlimm."
+            },
+            {
+              "id": "uuid-3066",
+              "type": "adjective",
+              "german": "schmutzig",
+              "english": "dirty",
+              "gender": "none",
+              "example": "Das Handtuch ist schmutzig."
+            },
+            {
+              "id": "uuid-3067",
+              "type": "adjective",
+              "german": "schön",
+              "english": "beautiful / nice",
+              "gender": "none",
+              "example": "Das Bild ist sehr schön."
+            },
+            {
+              "id": "uuid-3068",
+              "type": "adjective",
+              "german": "schrecklich",
+              "english": "terrible",
+              "gender": "none",
+              "example": "Ich finde ihren Rock schrecklich."
+            },
+            {
+              "id": "uuid-3069",
+              "type": "adjective",
+              "german": "schwer",
+              "english": "heavy / difficult",
+              "gender": "none",
+              "example": "Wie schwer ist das Paket?"
+            },
+            {
+              "id": "uuid-3070",
+              "type": "adjective",
+              "german": "schwierig",
+              "english": "difficult",
+              "gender": "none",
+              "example": "Die Prüfung war nicht schwierig."
+            },
+            {
+              "id": "uuid-3071",
+              "type": "adverb",
+              "german": "sehr",
+              "english": "very",
+              "gender": "none",
+              "example": "Das Wetter ist heute sehr schön."
+            },
+            {
+              "id": "uuid-3072",
+              "type": "verb",
+              "german": "sein",
+              "english": "to be",
+              "gender": "none",
+              "example": "Das sind meine Kollegen."
+            },
+            {
+              "id": "uuid-3073",
+              "type": "adjective",
+              "german": "stark",
+              "english": "strong",
+              "gender": "none",
+              "example": "Der Kaffee ist sehr stark."
+            },
+            {
+              "id": "uuid-3074",
+              "type": "verb",
+              "german": "stören",
+              "english": "to disturb",
+              "gender": "none",
+              "example": "Störe ich?"
+            },
+            {
+              "id": "uuid-3075",
+              "type": "adjective",
+              "german": "streng",
+              "english": "strict",
+              "gender": "none",
+              "example": "Der Lehrer von meiner Tochter ist sehr streng."
+            },
+            {
+              "id": "uuid-3076",
+              "type": "adjective",
+              "german": "super",
+              "english": "super / great",
+              "gender": "none",
+              "example": "Der Film ist super."
+            },
+            {
+              "id": "uuid-3077",
+              "type": "adjective",
+              "german": "sympathisch",
+              "english": "likable / nice",
+              "gender": "none",
+              "example": "Der neue Chef ist sehr sympathisch."
+            },
+            {
+              "id": "uuid-3078",
+              "type": "adjective",
+              "german": "toll",
+              "english": "great",
+              "gender": "none",
+              "example": "Der Urlaub war toll."
+            },
+            {
+              "id": "uuid-3079",
+              "type": "adjective",
+              "german": "traurig",
+              "english": "sad",
+              "gender": "none",
+              "example": "Ich bin sehr traurig."
+            },
+            {
+              "id": "uuid-3080",
+              "type": "adjective",
+              "german": "trocken",
+              "english": "dry",
+              "gender": "none",
+              "example": "Die Wäsche ist bald trocken."
+            },
+            {
+              "id": "uuid-3081",
+              "type": "adjective",
+              "german": "typisch",
+              "english": "typical",
+              "gender": "none",
+              "example": "Diese Musik ist typisch für dieses Land."
+            },
+            {
+              "id": "uuid-3082",
+              "type": "adjective",
+              "german": "viel",
+              "english": "much / a lot",
+              "gender": "none",
+              "example": "Ich habe leider nicht viel Zeit."
+            },
+            {
+              "id": "uuid-3083",
+              "type": "adjective",
+              "german": "vorsichtig",
+              "english": "careful",
+              "gender": "none",
+              "example": "Sei vorsichtig!"
+            },
+            {
+              "id": "uuid-3084",
+              "type": "adjective",
+              "german": "warm",
+              "english": "warm",
+              "gender": "none",
+              "example": "Hier ist es sehr warm."
+            },
+            {
+              "id": "uuid-3085",
+              "type": "verb",
+              "german": "wecken",
+              "english": "to wake up",
+              "gender": "none",
+              "example": "Bitte wecken Sie mich morgen früh um fünf."
+            },
+            {
+              "id": "uuid-3086",
+              "type": "adjective",
+              "german": "weich",
+              "english": "soft",
+              "gender": "none",
+              "example": "Das Bett im Hotel war zu weich."
+            },
+            {
+              "id": "uuid-3087",
+              "type": "verb",
+              "german": "weinen",
+              "english": "to cry",
+              "gender": "none",
+              "example": "Warum weint das Baby?"
+            },
+            {
+              "id": "uuid-3088",
+              "type": "adjective",
+              "german": "wenig",
+              "english": "little",
+              "gender": "none",
+              "example": "Er verdient wenig."
+            },
+            {
+              "id": "uuid-3089",
+              "type": "adjective",
+              "german": "wunderbar",
+              "english": "wonderful",
+              "gender": "none",
+              "example": "Diese Schokolade schmeckt wunderbar."
+            },
+            {
+              "id": "uuid-3090",
+              "type": "adjective",
+              "german": "zufrieden",
+              "english": "satisfied",
+              "gender": "none",
+              "example": "Ich bin mit der Wohnung zufrieden."
+            }
+          ]
+        },
+        {
+          "id": "leisure_and_entertainment",
+          "title": "Leisure & Entertainment",
+          "icon": "music",
+          "items": [
+            {
+              "id": "uuid-2170",
+              "type": "noun",
+              "german": "Café",
+              "english": "café / coffee shop",
+              "gender": "das",
+              "example": "Kommst du mit ins Café? Ich möchte gern einen Kaffee trinken."
+            },
+            {
+              "id": "uuid-2171",
+              "type": "verb",
+              "german": "chatten",
+              "english": "to chat (online)",
+              "gender": "none",
+              "example": "Luis chattet gern mit seinen Freunden im Internet."
+            },
+            {
+              "id": "uuid-2172",
+              "type": "noun",
+              "german": "Club",
+              "english": "club",
+              "gender": "der",
+              "example": "Gibt es hier einen Tennis-Club?"
+            },
+            {
+              "id": "uuid-2173",
+              "type": "noun",
+              "german": "Comic",
+              "english": "comic book",
+              "gender": "der",
+              "example": "Mein Sohn liest immer nur Comics."
+            },
+            {
+              "id": "uuid-2174",
+              "type": "noun",
+              "german": "Computer",
+              "english": "computer",
+              "gender": "der",
+              "example": "Wann bekommst du deinen neuen Computer?"
+            },
+            {
+              "id": "uuid-2175",
+              "type": "noun",
+              "german": "Disco",
+              "english": "disco / nightclub",
+              "gender": "die",
+              "example": "Wir gehen heute Abend in die Disco."
+            },
+            {
+              "id": "uuid-2176",
+              "type": "noun",
+              "german": "Eintritt",
+              "english": "admission / entry",
+              "gender": "der",
+              "example": "Der Eintritt kostet fünf Euro."
+            },
+            {
+              "id": "uuid-2177",
+              "type": "noun",
+              "german": "Feier",
+              "english": "celebration / party",
+              "gender": "die",
+              "example": "Wir feiern heute meinen Geburtstag. Die Feier war sehr schön."
+            },
+            {
+              "id": "uuid-2178",
+              "type": "verb",
+              "german": "feiern",
+              "english": "to celebrate",
+              "gender": "none",
+              "example": "Wir feiern heute meinen Geburtstag."
+            },
+            {
+              "id": "uuid-2179",
+              "type": "noun",
+              "german": "Ferien",
+              "english": "vacation / holidays",
+              "gender": "die",
+              "example": "Bald haben wir Ferien."
+            },
+            {
+              "id": "uuid-2180",
+              "type": "verb",
+              "german": "fernsehen",
+              "english": "to watch TV",
+              "gender": "none",
+              "example": "Lass uns heute Abend mal fernsehen."
+            },
+            {
+              "id": "uuid-2181",
+              "type": "noun",
+              "german": "Fernseher",
+              "english": "television set",
+              "gender": "der",
+              "example": "Der Fernseher ist kaputt."
+            },
+            {
+              "id": "uuid-2182",
+              "type": "noun",
+              "german": "Fest",
+              "english": "festival / party",
+              "gender": "das",
+              "example": "Am Wochenende feiern wir ein Fest."
+            },
+            {
+              "id": "uuid-2183",
+              "type": "noun",
+              "german": "Festival",
+              "english": "festival",
+              "gender": "das",
+              "example": "Am Wochenende ist in der Stadt ein Musik-Festival."
+            },
+            {
+              "id": "uuid-2184",
+              "type": "noun",
+              "german": "Film",
+              "english": "movie / film",
+              "gender": "der",
+              "example": "Ich möchte gern diesen Film sehen."
+            },
+            {
+              "id": "uuid-2185",
+              "type": "noun",
+              "german": "Flohmarkt",
+              "english": "flea market",
+              "gender": "der",
+              "example": "Ich gehe gern auf den Flohmarkt."
+            },
+            {
+              "id": "uuid-2186",
+              "type": "noun",
+              "german": "Foto",
+              "english": "photo",
+              "gender": "das",
+              "example": "Darf ich ein Foto machen?"
+            },
+            {
+              "id": "uuid-2187",
+              "type": "noun",
+              "german": "Fotoapparat",
+              "english": "camera",
+              "gender": "der",
+              "example": "Ich möchte mir einen Fotoapparat kaufen."
+            },
+            {
+              "id": "uuid-2188",
+              "type": "verb",
+              "german": "fotografieren",
+              "english": "to take photos",
+              "gender": "none",
+              "example": "Ich fotografiere gern."
+            },
+            {
+              "id": "uuid-2189",
+              "type": "noun",
+              "german": "Freizeit",
+              "english": "free time / leisure",
+              "gender": "die",
+              "example": "In meiner Freizeit spiele ich oft Fußball."
+            },
+            {
+              "id": "uuid-2190",
+              "type": "noun",
+              "german": "Fußball",
+              "english": "soccer / football",
+              "gender": "der",
+              "example": "Spielt ihr gern Fußball?"
+            },
+            {
+              "id": "uuid-2428",
+              "type": "noun",
+              "german": "Geschenk",
+              "english": "gift",
+              "gender": "das",
+              "example": "Danke für das schöne Geschenk."
+            },
+            {
+              "id": "uuid-2429",
+              "type": "noun",
+              "german": "Geschichte",
+              "english": "story / history",
+              "gender": "die",
+              "example": "Erzählst du mir eine Geschichte?"
+            },
+            {
+              "id": "uuid-2430",
+              "type": "verb",
+              "german": "gewinnen",
+              "english": "to win",
+              "gender": "none",
+              "example": "Unsere Mannschaft hat gewonnen."
+            },
+            {
+              "id": "uuid-2431",
+              "type": "noun",
+              "german": "Gitarre",
+              "english": "guitar",
+              "gender": "die",
+              "example": "Er kann gut Gitarre spielen."
+            },
+            {
+              "id": "uuid-2432",
+              "type": "noun",
+              "german": "Glück",
+              "english": "luck / happiness",
+              "gender": "das",
+              "example": "Viel Glück!"
+            },
+            {
+              "id": "uuid-2433",
+              "type": "verb",
+              "german": "gratulieren",
+              "english": "to congratulate",
+              "gender": "none",
+              "example": "Ich gratuliere dir!"
+            },
+            {
+              "id": "uuid-2434",
+              "type": "noun",
+              "german": "Hobby",
+              "english": "hobby",
+              "gender": "das",
+              "example": "Meine Hobbys sind Joggen und Schwimmen."
+            },
+            {
+              "id": "uuid-2435",
+              "type": "noun",
+              "german": "Instrument",
+              "english": "instrument",
+              "gender": "das",
+              "example": "Ich spiele Klavier. Spielen Sie auch ein Instrument?"
+            },
+            {
+              "id": "uuid-2436",
+              "type": "noun",
+              "german": "Interesse",
+              "english": "interest",
+              "gender": "das",
+              "example": "Ich habe viele Interessen: Sport, Lesen, Kultur, Reisen."
+            },
+            {
+              "id": "uuid-2437",
+              "type": "verb",
+              "german": "joggen",
+              "english": "to jog",
+              "gender": "none",
+              "example": "Ich jogge gern im Park."
+            },
+            {
+              "id": "uuid-2438",
+              "type": "noun",
+              "german": "Kamera",
+              "english": "camera",
+              "gender": "die",
+              "example": "Hannes hat eine neue Kamera."
+            },
+            {
+              "id": "uuid-2439",
+              "type": "noun",
+              "german": "Karte",
+              "english": "card / ticket",
+              "gender": "die",
+              "example": "Wollen wir Karten spielen?"
+            },
+            {
+              "id": "uuid-2440",
+              "type": "noun",
+              "german": "Kino",
+              "english": "cinema",
+              "gender": "das",
+              "example": "Gehen wir heute Abend zusammen ins Kino?"
+            },
+            {
+              "id": "uuid-2441",
+              "type": "noun",
+              "german": "Klavier",
+              "english": "piano",
+              "gender": "das",
+              "example": "Jakob kann sehr gut Klavier spielen."
+            },
+            {
+              "id": "uuid-2442",
+              "type": "noun",
+              "german": "Konzert",
+              "english": "concert",
+              "gender": "das",
+              "example": "Für das Konzert am Sonntag gibt es noch Karten."
+            },
+            {
+              "id": "uuid-2443",
+              "type": "noun",
+              "german": "Krimi",
+              "english": "detective story / thriller",
+              "gender": "der",
+              "example": "Miriam liest gern spannende Krimis."
+            },
+            {
+              "id": "uuid-2444",
+              "type": "noun",
+              "german": "Kultur",
+              "english": "culture",
+              "gender": "die",
+              "example": "Ich finde fremde Länder und Kulturen sehr interessant."
+            },
+            {
+              "id": "uuid-2445",
+              "type": "noun",
+              "german": "Kunst",
+              "english": "art",
+              "gender": "die",
+              "example": "Ich verstehe nichts von moderner Kunst."
+            },
+            {
+              "id": "uuid-2733",
+              "type": "noun",
+              "german": "Quiz",
+              "english": "quiz",
+              "gender": "das",
+              "example": "Er schaut gern Quizsendungen an."
+            },
+            {
+              "id": "uuid-2734",
+              "type": "noun",
+              "german": "Radio",
+              "english": "radio",
+              "gender": "das",
+              "example": "Ich höre im Auto gern Radio."
+            },
+            {
+              "id": "uuid-2735",
+              "type": "noun",
+              "german": "Rätsel",
+              "english": "riddle / puzzle",
+              "gender": "das",
+              "example": "Das Rätsel ist schwierig! Ich weiß die Antwort nicht."
+            },
+            {
+              "id": "uuid-2736",
+              "type": "verb",
+              "german": "reiten",
+              "english": "to ride (horse)",
+              "gender": "none",
+              "example": "Möchtest du reiten lernen?"
+            },
+            {
+              "id": "uuid-2737",
+              "type": "verb",
+              "german": "sammeln",
+              "english": "to collect",
+              "gender": "none",
+              "example": "Peter sammelt Briefmarken."
+            },
+            {
+              "id": "uuid-2738",
+              "type": "noun",
+              "german": "Schwimmbad",
+              "english": "swimming pool",
+              "gender": "das",
+              "example": "Kommst du mit ins Schwimmbad?"
+            },
+            {
+              "id": "uuid-2739",
+              "type": "verb",
+              "german": "schwimmen",
+              "english": "to swim",
+              "gender": "none",
+              "example": "Ich schwimme täglich einen Kilometer."
+            },
+            {
+              "id": "uuid-2740",
+              "type": "noun",
+              "german": "See",
+              "english": "lake",
+              "gender": "der",
+              "example": "Morgen fahren wir mal an einen See schwimmen."
+            },
+            {
+              "id": "uuid-2741",
+              "type": "verb",
+              "german": "singen",
+              "english": "to sing",
+              "gender": "none",
+              "example": "Er singt gern."
+            },
+            {
+              "id": "uuid-2742",
+              "type": "noun",
+              "german": "Ski",
+              "english": "ski",
+              "gender": "der",
+              "example": "Gehen wir am Wochenende Ski fahren?"
+            },
+            {
+              "id": "uuid-2743",
+              "type": "noun",
+              "german": "Spaß",
+              "english": "fun",
+              "gender": "der",
+              "example": "Meine Arbeit macht mir Spaß."
+            },
+            {
+              "id": "uuid-2744",
+              "type": "noun",
+              "german": "Spaziergang",
+              "english": "walk",
+              "gender": "der",
+              "example": "Abends mache ich immer einen Spaziergang."
+            },
+            {
+              "id": "uuid-2745",
+              "type": "noun",
+              "german": "Spiel",
+              "english": "game",
+              "gender": "das",
+              "example": "Monopoly ist ein sehr bekanntes Spiel."
+            },
+            {
+              "id": "uuid-2746",
+              "type": "verb",
+              "german": "spielen",
+              "english": "to play",
+              "gender": "none",
+              "example": "Die Kinder spielen draußen."
+            },
+            {
+              "id": "uuid-2747",
+              "type": "noun",
+              "german": "Sport",
+              "english": "sport",
+              "gender": "der",
+              "example": "Ich mache viel Sport."
+            },
+            {
+              "id": "uuid-2748",
+              "type": "noun",
+              "german": "Sportplatz",
+              "english": "sports field",
+              "gender": "der",
+              "example": "Das Fußballtraining ist um 17 Uhr auf dem Sportplatz."
+            },
+            {
+              "id": "uuid-2749",
+              "type": "verb",
+              "german": "surfen",
+              "english": "to surf (internet/water)",
+              "gender": "none",
+              "example": "Surfst du oft im Internet?"
+            },
+            {
+              "id": "uuid-2750",
+              "type": "verb",
+              "german": "tanzen",
+              "english": "to dance",
+              "gender": "none",
+              "example": "Tanzen Sie gern?"
+            },
+            {
+              "id": "uuid-2751",
+              "type": "noun",
+              "german": "Tennis",
+              "english": "tennis",
+              "gender": "das",
+              "example": "Steffi spielt sehr gut Tennis."
+            },
+            {
+              "id": "uuid-2752",
+              "type": "noun",
+              "german": "Theater",
+              "english": "theater",
+              "gender": "das",
+              "example": "Ich gehe nicht gern ins Theater."
+            },
+            {
+              "id": "uuid-2753",
+              "type": "noun",
+              "german": "Training",
+              "english": "training / practice",
+              "gender": "das",
+              "example": "Das Training ist immer dienstags."
+            },
+            {
+              "id": "uuid-2754",
+              "type": "verb",
+              "german": "trainieren",
+              "english": "to train / practice",
+              "gender": "none",
+              "example": "Wir trainieren einmal pro Woche im Sportverein."
+            },
+            {
+              "id": "uuid-2755",
+              "type": "noun",
+              "german": "Verein",
+              "english": "club / association",
+              "gender": "der",
+              "example": "Er ist seit vielen Jahren im Verein."
+            },
+            {
+              "id": "uuid-2756",
+              "type": "verb",
+              "german": "wandern",
+              "english": "to hike",
+              "gender": "none",
+              "example": "Wir gehen oft wandern."
+            },
+            {
+              "id": "uuid-2757",
+              "type": "noun",
+              "german": "Wettbewerb",
+              "english": "competition",
+              "gender": "der",
+              "example": "Mein Sohn hat bei einem Wettbewerb gewonnen."
+            },
+            {
+              "id": "uuid-2758",
+              "type": "verb",
+              "german": "zeichnen",
+              "english": "to draw",
+              "gender": "none",
+              "example": "Caterina kann gut zeichnen."
+            },
+            {
+              "id": "uuid-2759",
+              "type": "noun",
+              "german": "Zelt",
+              "english": "tent",
+              "gender": "das",
+              "example": "Im Sommer schlafen wir manchmal im Zelt."
+            },
+            {
+              "id": "uuid-2760",
+              "type": "noun",
+              "german": "Zirkus",
+              "english": "circus",
+              "gender": "der",
+              "example": "Heute gehen wir mit den Kindern in den Zirkus."
+            },
+            {
+              "id": "uuid-2761",
+              "type": "noun",
+              "german": "Zoo",
+              "english": "zoo",
+              "gender": "der",
+              "example": "Am Sonntag gehen wir in den Zoo."
+            }
+          ]
+        },
+        {
+          "id": "logic_and_modals",
+          "title": "Logic & Modals",
+          "icon": "lightbulb",
+          "items": [
+            {
+              "id": "uuid-2338",
+              "type": "verb",
+              "german": "dürfen",
+              "english": "allowed to / may",
+              "gender": "none",
+              "example": "Sie dürfen hier nicht parken."
+            },
+            {
+              "id": "uuid-2339",
+              "type": "verb",
+              "german": "erlauben",
+              "english": "to allow",
+              "gender": "none",
+              "example": "Meine Kinder dürfen diesen Film sehen. Ich habe es ihnen erlaubt."
+            },
+            {
+              "id": "uuid-2340",
+              "type": "noun",
+              "german": "Erlaubnis",
+              "english": "permission",
+              "gender": "die",
+              "example": "Haben Sie eine Arbeitserlaubnis?"
+            }
+          ]
+        },
+        {
+          "id": "housing_and_objects",
+          "title": "Housing & Objects",
+          "icon": "home",
+          "items": [
+            {
+              "id": "uuid-2367",
+              "type": "noun",
+              "german": "Garage",
+              "english": "garage",
+              "gender": "die",
+              "example": "Hier ist eine Garage für dein Auto"
+            },
+            {
+              "id": "uuid-2368",
+              "type": "noun",
+              "german": "Garten",
+              "english": "garden",
+              "gender": "der",
+              "example": "Wir haben leider keinen Garten."
+            },
+            {
+              "id": "uuid-2369",
+              "type": "noun",
+              "german": "Gerät",
+              "english": "device / appliance",
+              "gender": "das",
+              "example": "Elektrogeräte finden Sie im dritten Stock."
+            },
+            {
+              "id": "uuid-2370",
+              "type": "noun",
+              "german": "Halle",
+              "english": "hall",
+              "gender": "die",
+              "example": "Wir treffen uns in Halle B."
+            },
+            {
+              "id": "uuid-2371",
+              "type": "noun",
+              "german": "Handtuch",
+              "english": "towel",
+              "gender": "das",
+              "example": "Gibst du mir bitte ein frisches Handtuch?"
+            },
+            {
+              "id": "uuid-2372",
+              "type": "noun",
+              "german": "Haus",
+              "english": "house",
+              "gender": "das",
+              "example": "In welchem Haus wohnst du?"
+            },
+            {
+              "id": "uuid-2373",
+              "type": "noun",
+              "german": "Haushalt",
+              "english": "household",
+              "gender": "der",
+              "example": "Wer macht bei euch den Haushalt?"
+            },
+            {
+              "id": "uuid-2374",
+              "type": "noun",
+              "german": "Heizung",
+              "english": "heating",
+              "gender": "die",
+              "example": "Es ist kalt. Ist die Heizung kaputt?"
+            },
+            {
+              "id": "uuid-2375",
+              "type": "noun",
+              "german": "Herd",
+              "english": "stove",
+              "gender": "der",
+              "example": "In der neuen Küche fehlt noch der Herd."
+            },
+            {
+              "id": "uuid-2376",
+              "type": "noun",
+              "german": "Keller",
+              "english": "cellar / basement",
+              "gender": "der",
+              "example": "Bitte bring die Kartoffeln in den Keller!"
             }
           ]
         },
@@ -10744,6 +11986,78 @@
               "english": "clothing",
               "gender": "die",
               "example": "Wo finde ich Kleidung?"
+            },
+            {
+              "id": "uuid-2993",
+              "type": "noun",
+              "german": "Ring",
+              "english": "ring",
+              "gender": "der",
+              "example": "Ich habe meinen Ring verloren."
+            },
+            {
+              "id": "uuid-2994",
+              "type": "noun",
+              "german": "Rock",
+              "english": "skirt",
+              "gender": "der",
+              "example": "Der Rock ist zu eng."
+            },
+            {
+              "id": "uuid-2995",
+              "type": "noun",
+              "german": "Schirm",
+              "english": "umbrella",
+              "gender": "der",
+              "example": "Nimm den Schirm mit, es regnet."
+            },
+            {
+              "id": "uuid-2996",
+              "type": "noun",
+              "german": "Schuh",
+              "english": "shoe",
+              "gender": "der",
+              "example": "Zieh die Schuhe aus!"
+            },
+            {
+              "id": "uuid-2997",
+              "type": "noun",
+              "german": "Stiefel",
+              "english": "boot",
+              "gender": "der",
+              "example": "Wie viel kosten die roten Stiefel?"
+            },
+            {
+              "id": "uuid-2998",
+              "type": "noun",
+              "german": "Tasche",
+              "english": "bag / pocket",
+              "gender": "die",
+              "example": "Ich habe die Schlüssel in der Tasche."
+            },
+            {
+              "id": "uuid-2999",
+              "type": "verb",
+              "german": "tragen",
+              "english": "to wear / carry",
+              "gender": "none",
+              "example": "Er trägt heute einen blauen Anzug."
+            },
+            {
+              "id": "uuid-3000",
+              "type": "noun",
+              "german": "T-Shirt",
+              "english": "T-shirt",
+              "gender": "das",
+              "example": "Haben Sie dieses T-Shirt auch in M?"
+            },
+            {
+              "id": "uuid-3001",
+              "type": "noun",
+              "german": "umziehen (sich)",
+              "english": "to change clothes",
+              "gender": "none",
+              "example": "Ich muss mich noch umziehen."
             }
           ]
         },
@@ -10767,6 +12081,14 @@
               "english": "cat",
               "gender": "die",
               "example": "Meine Tochter wünscht sich eine Katze."
+            },
+            {
+              "id": "uuid-2717",
+              "type": "noun",
+              "german": "Pferd",
+              "english": "horse",
+              "gender": "das",
+              "example": "Amira liebt Pferde."
             }
           ]
         },
@@ -10890,109 +12212,6 @@
           ]
         },
         {
-          "id": "shopping_and_economics",
-          "title": "Shopping & Economics",
-          "icon": "shopping-cart",
-          "items": [
-            {
-              "id": "uuid-2552",
-              "type": "noun",
-              "german": "Laden",
-              "english": "shop / store",
-              "gender": "der",
-              "example": "Ich kaufe meine Kleider immer in einem kleinen Laden im Zentrum."
-            },
-            {
-              "id": "uuid-2553",
-              "type": "verb",
-              "german": "leihen",
-              "english": "to lend / borrow",
-              "gender": "none",
-              "example": "Kannst du mir fünf Euro leihen?"
-            },
-            {
-              "id": "uuid-2554",
-              "type": "verb",
-              "german": "liefern",
-              "english": "to deliver",
-              "gender": "none",
-              "example": "Wir liefern Ihnen den Schrank nach Hause."
-            },
-            {
-              "id": "uuid-2555",
-              "type": "noun",
-              "german": "Markt",
-              "english": "market",
-              "gender": "der",
-              "example": "Ich gehe heute auf den Markt."
-            },
-            {
-              "id": "uuid-2556",
-              "type": "noun",
-              "german": "Miete",
-              "english": "rent",
-              "gender": "die",
-              "example": "Wie viel Miete bezahlst du für deine Wohnung?"
-            },
-            {
-              "id": "uuid-2557",
-              "type": "verb",
-              "german": "mieten",
-              "english": "to rent",
-              "gender": "none",
-              "example": "Ich möchte ein Auto mieten."
-            },
-            {
-              "id": "uuid-2558",
-              "type": "noun",
-              "german": "Mode",
-              "english": "fashion",
-              "gender": "die",
-              "example": "Wie findest du die neue Mode?"
-            },
-            {
-              "id": "uuid-2559",
-              "type": "adjective",
-              "german": "modern",
-              "english": "modern",
-              "gender": "none",
-              "example": "Das Stadtzentrum von Frankfurt ist sehr modern."
-            },
-            {
-              "id": "uuid-2560",
-              "type": "verb",
-              "german": "mögen",
-              "english": "to like",
-              "gender": "none",
-              "example": "Magst du Schokolade?"
-            },
-            {
-              "id": "uuid-2561",
-              "type": "adjective",
-              "german": "preiswert",
-              "english": "inexpensive / good value",
-              "gender": "none",
-              "example": "Die Jacke ist sehr preiswert. Sie kostet nur 15 Euro."
-            },
-            {
-              "id": "uuid-2562",
-              "type": "noun",
-              "german": "Produkt",
-              "english": "product",
-              "gender": "das",
-              "example": "Unsere Produkte haben eine sehr hohe Qualität."
-            },
-            {
-              "id": "uuid-2563",
-              "type": "noun",
-              "german": "Prospekt",
-              "english": "brochure / leaflet",
-              "gender": "der",
-              "example": "Bitte schicken Sie mir einen Prospekt von Ihrem Hotel."
-            }
-          ]
-        },
-        {
           "id": "housing_and_household",
           "title": "Housing & Household",
           "icon": "home",
@@ -11068,6 +12287,230 @@
               "english": "to clean",
               "gender": "none",
               "example": "Ich muss heute noch das Bad putzen."
+            },
+            {
+              "id": "uuid-2871",
+              "type": "noun",
+              "german": "Raum",
+              "english": "room",
+              "gender": "der",
+              "example": "Der Unterricht findet heute in Raum 332 statt."
+            },
+            {
+              "id": "uuid-2872",
+              "type": "verb",
+              "german": "renovieren",
+              "english": "to renovate",
+              "gender": "none",
+              "example": "Wir renovieren das ganze Haus."
+            },
+            {
+              "id": "uuid-2873",
+              "type": "noun",
+              "german": "Reparatur",
+              "english": "repair",
+              "gender": "die",
+              "example": "Die Reparatur ist sehr teuer."
+            },
+            {
+              "id": "uuid-2874",
+              "type": "verb",
+              "german": "reparieren",
+              "english": "to repair",
+              "gender": "none",
+              "example": "Er muss den Motor reparieren."
+            },
+            {
+              "id": "uuid-2875",
+              "type": "noun",
+              "german": "Schlafzimmer",
+              "english": "bedroom",
+              "gender": "das",
+              "example": "Hier ist das Schlafzimmer."
+            },
+            {
+              "id": "uuid-2876",
+              "type": "noun",
+              "german": "Schlüssel",
+              "english": "key",
+              "gender": "der",
+              "example": "Ich finde meinen Schlüssel nicht."
+            },
+            {
+              "id": "uuid-2877",
+              "type": "noun",
+              "german": "Schrank",
+              "english": "cupboard / closet",
+              "gender": "der",
+              "example": "Die Gläser stehen im Schrank."
+            },
+            {
+              "id": "uuid-2878",
+              "type": "noun",
+              "german": "Seife",
+              "english": "soap",
+              "gender": "die",
+              "example": "Hier gibt es keine Seife."
+            },
+            {
+              "id": "uuid-2879",
+              "type": "noun",
+              "german": "Sofa",
+              "english": "sofa",
+              "gender": "das",
+              "example": "Das Sofa ist bequem."
+            },
+            {
+              "id": "uuid-2880",
+              "type": "noun",
+              "german": "Stock",
+              "english": "floor / story",
+              "gender": "der",
+              "example": "Unsere Wohnung liegt im ersten Stock."
+            },
+            {
+              "id": "uuid-2881",
+              "type": "noun",
+              "german": "Stockwerk",
+              "english": "floor / story",
+              "gender": "das",
+              "example": "Das Gebäude hat zwanzig Stockwerke."
+            },
+            {
+              "id": "uuid-2882",
+              "type": "noun",
+              "german": "Stuhl",
+              "english": "chair",
+              "gender": "der",
+              "example": "Ist der Stuhl frei?"
+            },
+            {
+              "id": "uuid-2883",
+              "type": "noun",
+              "german": "Tisch",
+              "english": "table",
+              "gender": "der",
+              "example": "Das Essen steht schon auf dem Tisch."
+            },
+            {
+              "id": "uuid-2884",
+              "type": "noun",
+              "german": "Toilette",
+              "english": "toilet",
+              "gender": "die",
+              "example": "Wo ist die Toilette, bitte?"
+            },
+            {
+              "id": "uuid-2885",
+              "type": "noun",
+              "german": "Topf",
+              "english": "pot",
+              "gender": "der",
+              "example": "Hast du keinen größeren Topf?"
+            },
+            {
+              "id": "uuid-2886",
+              "type": "noun",
+              "german": "Treppe",
+              "english": "stairs",
+              "gender": "die",
+              "example": "Ich nehme die Treppe, nicht den Aufzug."
+            },
+            {
+              "id": "uuid-2887",
+              "type": "noun",
+              "german": "Tür",
+              "english": "door",
+              "gender": "die",
+              "example": "Mach bitte die Tür zu!"
+            },
+            {
+              "id": "uuid-2888",
+              "type": "verb",
+              "german": "umziehen",
+              "english": "to move (house)",
+              "gender": "none",
+              "example": "Nächsten Monat ziehen wir um."
+            },
+            {
+              "id": "uuid-2889",
+              "type": "noun",
+              "german": "Umzug",
+              "english": "move / relocation",
+              "gender": "der",
+              "example": "Der Umzug ist nächste Woche."
+            },
+            {
+              "id": "uuid-2890",
+              "type": "verb",
+              "german": "vermieten",
+              "english": "to rent out",
+              "gender": "none",
+              "example": "Die Wohnung ist schon vermietet."
+            },
+            {
+              "id": "uuid-2891",
+              "type": "noun",
+              "german": "Vermieter",
+              "english": "landlord",
+              "gender": "der",
+              "example": "Unser Vermieter ist nett."
+            },
+            {
+              "id": "uuid-2892",
+              "type": "noun",
+              "german": "Wäsche",
+              "english": "laundry",
+              "gender": "die",
+              "example": "Ich muss noch Wäsche waschen."
+            },
+            {
+              "id": "uuid-2893",
+              "type": "verb",
+              "german": "waschen",
+              "english": "to wash",
+              "gender": "none",
+              "example": "Wo kann ich mir die Hände waschen?"
+            },
+            {
+              "id": "uuid-2894",
+              "type": "verb",
+              "german": "wohnen",
+              "english": "to live / reside",
+              "gender": "none",
+              "example": "Ich wohne in Kiel."
+            },
+            {
+              "id": "uuid-2895",
+              "type": "noun",
+              "german": "Wohnung",
+              "english": "apartment / flat",
+              "gender": "die",
+              "example": "Haben Sie schon eine neue Wohnung gefunden?"
+            },
+            {
+              "id": "uuid-2896",
+              "type": "noun",
+              "german": "Wohnzimmer",
+              "english": "living room",
+              "gender": "das",
+              "example": "Die Kinder sitzen im Wohnzimmer."
+            },
+            {
+              "id": "uuid-2897",
+              "type": "noun",
+              "german": "Zimmer",
+              "english": "room",
+              "gender": "das",
+              "example": "Das Zimmer ist am größten."
+            },
+            {
+              "id": "uuid-2898",
+              "type": "verb",
+              "german": "zumachen",
+              "english": "to close",
+              "gender": "none",
+              "example": "Machst du bitte das Fenster zu?"
             }
           ]
         },
@@ -11167,133 +12610,6 @@
           ]
         },
         {
-          "id": "communication_and_media",
-          "title": "Communication & Media",
-          "icon": "comment",
-          "items": [
-            {
-              "id": "uuid-2624",
-              "type": "noun",
-              "german": "Laptop",
-              "english": "laptop",
-              "gender": "der",
-              "example": "Ich brauche einen neuen Laptop."
-            },
-            {
-              "id": "uuid-2625",
-              "type": "noun",
-              "german": "Link",
-              "english": "link",
-              "gender": "der",
-              "example": "Ich schicke dir einen Link zu Deutschübungen."
-            },
-            {
-              "id": "uuid-2626",
-              "type": "noun",
-              "german": "Lüge",
-              "english": "lie",
-              "gender": "die",
-              "example": "Das stimmt nicht! Das ist eine Lüge!"
-            },
-            {
-              "id": "uuid-2627",
-              "type": "verb",
-              "german": "lügen",
-              "english": "to lie",
-              "gender": "none",
-              "example": "Du sollst nicht lügen."
-            },
-            {
-              "id": "uuid-2628",
-              "type": "noun",
-              "german": "Mailbox",
-              "english": "mailbox",
-              "gender": "die",
-              "example": "Hier ist die Mailbox von Susanne König."
-            },
-            {
-              "id": "uuid-2629",
-              "type": "verb",
-              "german": "meinen",
-              "english": "to think / mean",
-              "gender": "none",
-              "example": "Wie meinst du das?"
-            },
-            {
-              "id": "uuid-2630",
-              "type": "noun",
-              "german": "Meinung",
-              "english": "opinion",
-              "gender": "die",
-              "example": "Meine Meinung zu dem Thema ist..."
-            },
-            {
-              "id": "uuid-2631",
-              "type": "noun",
-              "german": "Mobiltelefon",
-              "english": "mobile phone",
-              "gender": "das",
-              "example": "Haben Sie ein Mobiltelefon?"
-            },
-            {
-              "id": "uuid-2632",
-              "type": "noun",
-              "german": "Nachricht",
-              "english": "message / news",
-              "gender": "die",
-              "example": "Ich schreibe dir später eine Nachricht."
-            },
-            {
-              "id": "uuid-2633",
-              "type": "noun",
-              "german": "Paket",
-              "english": "parcel / package",
-              "gender": "das",
-              "example": "Bringst du bitte das Paket zur Post?"
-            },
-            {
-              "id": "uuid-2634",
-              "type": "noun",
-              "german": "Papier",
-              "english": "paper",
-              "gender": "das",
-              "example": "Hier sind Papier und Bleistift."
-            },
-            {
-              "id": "uuid-2635",
-              "type": "noun",
-              "german": "Passwort",
-              "english": "password",
-              "gender": "das",
-              "example": "Bitte schreiben Sie Ihr Passwort."
-            },
-            {
-              "id": "uuid-2636",
-              "type": "noun",
-              "german": "Plakat",
-              "english": "poster",
-              "gender": "das",
-              "example": "Wir machen im Unterricht ein Plakat."
-            },
-            {
-              "id": "uuid-2637",
-              "type": "noun",
-              "german": "Post",
-              "english": "post office / mail",
-              "gender": "die",
-              "example": "Entschuldigung, wo ist die Post?"
-            },
-            {
-              "id": "uuid-2638",
-              "type": "noun",
-              "german": "Postkarte",
-              "english": "postcard",
-              "gender": "die",
-              "example": "Schreibst du mir eine Postkarte aus Kanada?"
-            }
-          ]
-        },
-        {
           "id": "clothing_and_body",
           "title": "Clothing & Body",
           "icon": "shirt",
@@ -11329,45 +12645,6 @@
               "english": "sweater / pullover",
               "gender": "der",
               "example": "Ich muss mir einen Pullover kaufen."
-            }
-          ]
-        },
-        {
-          "id": "health_and_body",
-          "title": "Health & Body",
-          "icon": "heart",
-          "items": [
-            {
-              "id": "uuid-2643",
-              "type": "noun",
-              "german": "Magen",
-              "english": "stomach",
-              "gender": "der",
-              "example": "Mein Magen tut weh."
-            },
-            {
-              "id": "uuid-2644",
-              "type": "noun",
-              "german": "Medikament",
-              "english": "medicine",
-              "gender": "das",
-              "example": "Nehmen Sie dieses Medikament dreimal pro Tag!"
-            },
-            {
-              "id": "uuid-2645",
-              "type": "noun",
-              "german": "Mund",
-              "english": "mouth",
-              "gender": "der",
-              "example": "Öffnen Sie bitte den Mund."
-            },
-            {
-              "id": "uuid-2646",
-              "type": "noun",
-              "german": "Ohr",
-              "english": "ear",
-              "gender": "das",
-              "example": "Ich habe Ohrenschmerzen."
             }
           ]
         },
@@ -11942,387 +13219,6 @@
               "english": "punctual / on time",
               "gender": "none",
               "example": "Der Bus fährt pünktlich um acht Uhr."
-            }
-          ]
-        },
-        {
-          "id": "animals",
-          "title": "Animals",
-          "icon": "paw",
-          "items": [
-            {
-              "id": "uuid-2717",
-              "type": "noun",
-              "german": "Pferd",
-              "english": "horse",
-              "gender": "das",
-              "example": "Amira liebt Pferde."
-            }
-          ]
-        },
-        {
-          "id": "shopping_and_economics",
-          "title": "Shopping & Economics",
-          "icon": "shopping-cart",
-          "items": [
-            {
-              "id": "uuid-2718",
-              "type": "noun",
-              "german": "Qualität",
-              "english": "quality",
-              "gender": "die",
-              "example": "Dieser Fernseher hat eine gute Qualität."
-            },
-            {
-              "id": "uuid-2719",
-              "type": "noun",
-              "german": "Rechnung",
-              "english": "bill / invoice",
-              "gender": "die",
-              "example": "Schicken Sie die Rechnung an mich."
-            },
-            {
-              "id": "uuid-2720",
-              "type": "noun",
-              "german": "Reinigung",
-              "english": "dry cleaners / cleaning",
-              "gender": "die",
-              "example": "Bringst du bitte die Bluse in die Reinigung?"
-            },
-            {
-              "id": "uuid-2721",
-              "type": "noun",
-              "german": "Rest",
-              "english": "change (money) / remainder",
-              "gender": "der",
-              "example": "Hier sind 50 Euro. Den Rest gebe ich dir später."
-            },
-            {
-              "id": "uuid-2722",
-              "type": "noun",
-              "german": "Service",
-              "english": "service",
-              "gender": "der",
-              "example": "Ich bin mit dem Service in der Werkstatt sehr zufrieden."
-            },
-            {
-              "id": "uuid-2723",
-              "type": "verb",
-              "german": "sparen",
-              "english": "to save (money)",
-              "gender": "none",
-              "example": "Ein neues Auto ist sehr teuer. Ich muss sparen."
-            },
-            {
-              "id": "uuid-2724",
-              "type": "noun",
-              "german": "Supermarkt",
-              "english": "supermarket",
-              "gender": "der",
-              "example": "Ich kaufe oft im Supermarkt ein."
-            },
-            {
-              "id": "uuid-2725",
-              "type": "noun",
-              "german": "Taschengeld",
-              "english": "pocket money",
-              "gender": "das",
-              "example": "Wie viel Taschengeld bekommen deine Kinder?"
-            },
-            {
-              "id": "uuid-2726",
-              "type": "adjective",
-              "german": "teuer",
-              "english": "expensive",
-              "gender": "none",
-              "example": "Das ist mir zu teuer."
-            },
-            {
-              "id": "uuid-2727",
-              "type": "verb",
-              "german": "überweisen",
-              "english": "to transfer (money)",
-              "gender": "none",
-              "example": "Sie können das Geld auch überweisen."
-            },
-            {
-              "id": "uuid-2728",
-              "type": "verb",
-              "german": "verkaufen",
-              "english": "to sell",
-              "gender": "none",
-              "example": "Er verkauft sein altes Auto."
-            },
-            {
-              "id": "uuid-2729",
-              "type": "noun",
-              "german": "Verkäufer",
-              "english": "salesman",
-              "gender": "der",
-              "example": "Der Verkäufer berät die Kunden."
-            },
-            {
-              "id": "uuid-2730",
-              "type": "noun",
-              "german": "Verkäuferin",
-              "english": "saleswoman",
-              "gender": "die",
-              "example": "Die Verkäuferin zeigt mir die neuen Schuhe."
-            },
-            {
-              "id": "uuid-2731",
-              "type": "verb",
-              "german": "wechseln",
-              "english": "to change (money)",
-              "gender": "none",
-              "example": "Können Sie mir zehn Dollar wechseln?"
-            },
-            {
-              "id": "uuid-2732",
-              "type": "verb",
-              "german": "zahlen",
-              "english": "to pay",
-              "gender": "none",
-              "example": "Entschuldigung, zahlen bitte!"
-            }
-          ]
-        },
-        {
-          "id": "leisure_and_entertainment",
-          "title": "Leisure & Entertainment",
-          "icon": "music",
-          "items": [
-            {
-              "id": "uuid-2733",
-              "type": "noun",
-              "german": "Quiz",
-              "english": "quiz",
-              "gender": "das",
-              "example": "Er schaut gern Quizsendungen an."
-            },
-            {
-              "id": "uuid-2734",
-              "type": "noun",
-              "german": "Radio",
-              "english": "radio",
-              "gender": "das",
-              "example": "Ich höre im Auto gern Radio."
-            },
-            {
-              "id": "uuid-2735",
-              "type": "noun",
-              "german": "Rätsel",
-              "english": "riddle / puzzle",
-              "gender": "das",
-              "example": "Das Rätsel ist schwierig! Ich weiß die Antwort nicht."
-            },
-            {
-              "id": "uuid-2736",
-              "type": "verb",
-              "german": "reiten",
-              "english": "to ride (horse)",
-              "gender": "none",
-              "example": "Möchtest du reiten lernen?"
-            },
-            {
-              "id": "uuid-2737",
-              "type": "verb",
-              "german": "sammeln",
-              "english": "to collect",
-              "gender": "none",
-              "example": "Peter sammelt Briefmarken."
-            },
-            {
-              "id": "uuid-2738",
-              "type": "noun",
-              "german": "Schwimmbad",
-              "english": "swimming pool",
-              "gender": "das",
-              "example": "Kommst du mit ins Schwimmbad?"
-            },
-            {
-              "id": "uuid-2739",
-              "type": "verb",
-              "german": "schwimmen",
-              "english": "to swim",
-              "gender": "none",
-              "example": "Ich schwimme täglich einen Kilometer."
-            },
-            {
-              "id": "uuid-2740",
-              "type": "noun",
-              "german": "See",
-              "english": "lake",
-              "gender": "der",
-              "example": "Morgen fahren wir mal an einen See schwimmen."
-            },
-            {
-              "id": "uuid-2741",
-              "type": "verb",
-              "german": "singen",
-              "english": "to sing",
-              "gender": "none",
-              "example": "Er singt gern."
-            },
-            {
-              "id": "uuid-2742",
-              "type": "noun",
-              "german": "Ski",
-              "english": "ski",
-              "gender": "der",
-              "example": "Gehen wir am Wochenende Ski fahren?"
-            },
-            {
-              "id": "uuid-2743",
-              "type": "noun",
-              "german": "Spaß",
-              "english": "fun",
-              "gender": "der",
-              "example": "Meine Arbeit macht mir Spaß."
-            },
-            {
-              "id": "uuid-2744",
-              "type": "noun",
-              "german": "Spaziergang",
-              "english": "walk",
-              "gender": "der",
-              "example": "Abends mache ich immer einen Spaziergang."
-            },
-            {
-              "id": "uuid-2745",
-              "type": "noun",
-              "german": "Spiel",
-              "english": "game",
-              "gender": "das",
-              "example": "Monopoly ist ein sehr bekanntes Spiel."
-            },
-            {
-              "id": "uuid-2746",
-              "type": "verb",
-              "german": "spielen",
-              "english": "to play",
-              "gender": "none",
-              "example": "Die Kinder spielen draußen."
-            },
-            {
-              "id": "uuid-2747",
-              "type": "noun",
-              "german": "Sport",
-              "english": "sport",
-              "gender": "der",
-              "example": "Ich mache viel Sport."
-            },
-            {
-              "id": "uuid-2748",
-              "type": "noun",
-              "german": "Sportplatz",
-              "english": "sports field",
-              "gender": "der",
-              "example": "Das Fußballtraining ist um 17 Uhr auf dem Sportplatz."
-            },
-            {
-              "id": "uuid-2749",
-              "type": "verb",
-              "german": "surfen",
-              "english": "to surf (internet/water)",
-              "gender": "none",
-              "example": "Surfst du oft im Internet?"
-            },
-            {
-              "id": "uuid-2750",
-              "type": "verb",
-              "german": "tanzen",
-              "english": "to dance",
-              "gender": "none",
-              "example": "Tanzen Sie gern?"
-            },
-            {
-              "id": "uuid-2751",
-              "type": "noun",
-              "german": "Tennis",
-              "english": "tennis",
-              "gender": "das",
-              "example": "Steffi spielt sehr gut Tennis."
-            },
-            {
-              "id": "uuid-2752",
-              "type": "noun",
-              "german": "Theater",
-              "english": "theater",
-              "gender": "das",
-              "example": "Ich gehe nicht gern ins Theater."
-            },
-            {
-              "id": "uuid-2753",
-              "type": "noun",
-              "german": "Training",
-              "english": "training / practice",
-              "gender": "das",
-              "example": "Das Training ist immer dienstags."
-            },
-            {
-              "id": "uuid-2754",
-              "type": "verb",
-              "german": "trainieren",
-              "english": "to train / practice",
-              "gender": "none",
-              "example": "Wir trainieren einmal pro Woche im Sportverein."
-            },
-            {
-              "id": "uuid-2755",
-              "type": "noun",
-              "german": "Verein",
-              "english": "club / association",
-              "gender": "der",
-              "example": "Er ist seit vielen Jahren im Verein."
-            },
-            {
-              "id": "uuid-2756",
-              "type": "verb",
-              "german": "wandern",
-              "english": "to hike",
-              "gender": "none",
-              "example": "Wir gehen oft wandern."
-            },
-            {
-              "id": "uuid-2757",
-              "type": "noun",
-              "german": "Wettbewerb",
-              "english": "competition",
-              "gender": "der",
-              "example": "Mein Sohn hat bei einem Wettbewerb gewonnen."
-            },
-            {
-              "id": "uuid-2758",
-              "type": "verb",
-              "german": "zeichnen",
-              "english": "to draw",
-              "gender": "none",
-              "example": "Caterina kann gut zeichnen."
-            },
-            {
-              "id": "uuid-2759",
-              "type": "noun",
-              "german": "Zelt",
-              "english": "tent",
-              "gender": "das",
-              "example": "Im Sommer schlafen wir manchmal im Zelt."
-            },
-            {
-              "id": "uuid-2760",
-              "type": "noun",
-              "german": "Zirkus",
-              "english": "circus",
-              "gender": "der",
-              "example": "Heute gehen wir mit den Kindern in den Zirkus."
-            },
-            {
-              "id": "uuid-2761",
-              "type": "noun",
-              "german": "Zoo",
-              "english": "zoo",
-              "gender": "der",
-              "example": "Am Sonntag gehen wir in den Zoo."
             }
           ]
         },
@@ -13013,237 +13909,6 @@
           ]
         },
         {
-          "id": "housing_and_household",
-          "title": "Housing & Household",
-          "icon": "home",
-          "items": [
-            {
-              "id": "uuid-2871",
-              "type": "noun",
-              "german": "Raum",
-              "english": "room",
-              "gender": "der",
-              "example": "Der Unterricht findet heute in Raum 332 statt."
-            },
-            {
-              "id": "uuid-2872",
-              "type": "verb",
-              "german": "renovieren",
-              "english": "to renovate",
-              "gender": "none",
-              "example": "Wir renovieren das ganze Haus."
-            },
-            {
-              "id": "uuid-2873",
-              "type": "noun",
-              "german": "Reparatur",
-              "english": "repair",
-              "gender": "die",
-              "example": "Die Reparatur ist sehr teuer."
-            },
-            {
-              "id": "uuid-2874",
-              "type": "verb",
-              "german": "reparieren",
-              "english": "to repair",
-              "gender": "none",
-              "example": "Er muss den Motor reparieren."
-            },
-            {
-              "id": "uuid-2875",
-              "type": "noun",
-              "german": "Schlafzimmer",
-              "english": "bedroom",
-              "gender": "das",
-              "example": "Hier ist das Schlafzimmer."
-            },
-            {
-              "id": "uuid-2876",
-              "type": "noun",
-              "german": "Schlüssel",
-              "english": "key",
-              "gender": "der",
-              "example": "Ich finde meinen Schlüssel nicht."
-            },
-            {
-              "id": "uuid-2877",
-              "type": "noun",
-              "german": "Schrank",
-              "english": "cupboard / closet",
-              "gender": "der",
-              "example": "Die Gläser stehen im Schrank."
-            },
-            {
-              "id": "uuid-2878",
-              "type": "noun",
-              "german": "Seife",
-              "english": "soap",
-              "gender": "die",
-              "example": "Hier gibt es keine Seife."
-            },
-            {
-              "id": "uuid-2879",
-              "type": "noun",
-              "german": "Sofa",
-              "english": "sofa",
-              "gender": "das",
-              "example": "Das Sofa ist bequem."
-            },
-            {
-              "id": "uuid-2880",
-              "type": "noun",
-              "german": "Stock",
-              "english": "floor / story",
-              "gender": "der",
-              "example": "Unsere Wohnung liegt im ersten Stock."
-            },
-            {
-              "id": "uuid-2881",
-              "type": "noun",
-              "german": "Stockwerk",
-              "english": "floor / story",
-              "gender": "das",
-              "example": "Das Gebäude hat zwanzig Stockwerke."
-            },
-            {
-              "id": "uuid-2882",
-              "type": "noun",
-              "german": "Stuhl",
-              "english": "chair",
-              "gender": "der",
-              "example": "Ist der Stuhl frei?"
-            },
-            {
-              "id": "uuid-2883",
-              "type": "noun",
-              "german": "Tisch",
-              "english": "table",
-              "gender": "der",
-              "example": "Das Essen steht schon auf dem Tisch."
-            },
-            {
-              "id": "uuid-2884",
-              "type": "noun",
-              "german": "Toilette",
-              "english": "toilet",
-              "gender": "die",
-              "example": "Wo ist die Toilette, bitte?"
-            },
-            {
-              "id": "uuid-2885",
-              "type": "noun",
-              "german": "Topf",
-              "english": "pot",
-              "gender": "der",
-              "example": "Hast du keinen größeren Topf?"
-            },
-            {
-              "id": "uuid-2886",
-              "type": "noun",
-              "german": "Treppe",
-              "english": "stairs",
-              "gender": "die",
-              "example": "Ich nehme die Treppe, nicht den Aufzug."
-            },
-            {
-              "id": "uuid-2887",
-              "type": "noun",
-              "german": "Tür",
-              "english": "door",
-              "gender": "die",
-              "example": "Mach bitte die Tür zu!"
-            },
-            {
-              "id": "uuid-2888",
-              "type": "verb",
-              "german": "umziehen",
-              "english": "to move (house)",
-              "gender": "none",
-              "example": "Nächsten Monat ziehen wir um."
-            },
-            {
-              "id": "uuid-2889",
-              "type": "noun",
-              "german": "Umzug",
-              "english": "move / relocation",
-              "gender": "der",
-              "example": "Der Umzug ist nächste Woche."
-            },
-            {
-              "id": "uuid-2890",
-              "type": "verb",
-              "german": "vermieten",
-              "english": "to rent out",
-              "gender": "none",
-              "example": "Die Wohnung ist schon vermietet."
-            },
-            {
-              "id": "uuid-2891",
-              "type": "noun",
-              "german": "Vermieter",
-              "english": "landlord",
-              "gender": "der",
-              "example": "Unser Vermieter ist nett."
-            },
-            {
-              "id": "uuid-2892",
-              "type": "noun",
-              "german": "Wäsche",
-              "english": "laundry",
-              "gender": "die",
-              "example": "Ich muss noch Wäsche waschen."
-            },
-            {
-              "id": "uuid-2893",
-              "type": "verb",
-              "german": "waschen",
-              "english": "to wash",
-              "gender": "none",
-              "example": "Wo kann ich mir die Hände waschen?"
-            },
-            {
-              "id": "uuid-2894",
-              "type": "verb",
-              "german": "wohnen",
-              "english": "to live / reside",
-              "gender": "none",
-              "example": "Ich wohne in Kiel."
-            },
-            {
-              "id": "uuid-2895",
-              "type": "noun",
-              "german": "Wohnung",
-              "english": "apartment / flat",
-              "gender": "die",
-              "example": "Haben Sie schon eine neue Wohnung gefunden?"
-            },
-            {
-              "id": "uuid-2896",
-              "type": "noun",
-              "german": "Wohnzimmer",
-              "english": "living room",
-              "gender": "das",
-              "example": "Die Kinder sitzen im Wohnzimmer."
-            },
-            {
-              "id": "uuid-2897",
-              "type": "noun",
-              "german": "Zimmer",
-              "english": "room",
-              "gender": "das",
-              "example": "Das Zimmer ist am größten."
-            },
-            {
-              "id": "uuid-2898",
-              "type": "verb",
-              "german": "zumachen",
-              "english": "to close",
-              "gender": "none",
-              "example": "Machst du bitte das Fenster zu?"
-            }
-          ]
-        },
-        {
           "id": "body_and_health",
           "title": "Body & Health",
           "icon": "heart",
@@ -13542,811 +14207,6 @@
               "english": "cloud",
               "gender": "die",
               "example": "Heute gibt es viele Wolken."
-            }
-          ]
-        },
-        {
-          "id": "clothing",
-          "title": "Clothing",
-          "icon": "shirt",
-          "items": [
-            {
-              "id": "uuid-2993",
-              "type": "noun",
-              "german": "Ring",
-              "english": "ring",
-              "gender": "der",
-              "example": "Ich habe meinen Ring verloren."
-            },
-            {
-              "id": "uuid-2994",
-              "type": "noun",
-              "german": "Rock",
-              "english": "skirt",
-              "gender": "der",
-              "example": "Der Rock ist zu eng."
-            },
-            {
-              "id": "uuid-2995",
-              "type": "noun",
-              "german": "Schirm",
-              "english": "umbrella",
-              "gender": "der",
-              "example": "Nimm den Schirm mit, es regnet."
-            },
-            {
-              "id": "uuid-2996",
-              "type": "noun",
-              "german": "Schuh",
-              "english": "shoe",
-              "gender": "der",
-              "example": "Zieh die Schuhe aus!"
-            },
-            {
-              "id": "uuid-2997",
-              "type": "noun",
-              "german": "Stiefel",
-              "english": "boot",
-              "gender": "der",
-              "example": "Wie viel kosten die roten Stiefel?"
-            },
-            {
-              "id": "uuid-2998",
-              "type": "noun",
-              "german": "Tasche",
-              "english": "bag / pocket",
-              "gender": "die",
-              "example": "Ich habe die Schlüssel in der Tasche."
-            },
-            {
-              "id": "uuid-2999",
-              "type": "verb",
-              "german": "tragen",
-              "english": "to wear / carry",
-              "gender": "none",
-              "example": "Er trägt heute einen blauen Anzug."
-            },
-            {
-              "id": "uuid-3000",
-              "type": "noun",
-              "german": "T-Shirt",
-              "english": "T-shirt",
-              "gender": "das",
-              "example": "Haben Sie dieses T-Shirt auch in M?"
-            },
-            {
-              "id": "uuid-3001",
-              "type": "noun",
-              "german": "umziehen (sich)",
-              "english": "to change clothes",
-              "gender": "none",
-              "example": "Ich muss mich noch umziehen."
-            }
-          ]
-        },
-        {
-          "id": "time_and_space",
-          "title": "Time & Space",
-          "icon": "clock",
-          "items": [
-            {
-              "id": "uuid-3002",
-              "type": "adverb",
-              "german": "rechts",
-              "english": "right",
-              "gender": "none",
-              "example": "Der Bahnhof ist hier rechts."
-            },
-            {
-              "id": "uuid-3003",
-              "type": "adjective",
-              "german": "rund",
-              "english": "round",
-              "gender": "none",
-              "example": "Unser Wohnzimmertisch ist rund."
-            },
-            {
-              "id": "uuid-3004",
-              "type": "noun",
-              "german": "Schluss",
-              "english": "end",
-              "gender": "der",
-              "example": "Ich muss jetzt Schluss machen."
-            },
-            {
-              "id": "uuid-3005",
-              "type": "adjective",
-              "german": "schnell",
-              "english": "fast",
-              "gender": "none",
-              "example": "Warum fährst du so schnell?"
-            },
-            {
-              "id": "uuid-3006",
-              "type": "adverb",
-              "german": "schon",
-              "english": "already",
-              "gender": "none",
-              "example": "Ist das Essen schon fertig?"
-            },
-            {
-              "id": "uuid-3007",
-              "type": "noun",
-              "german": "Seite",
-              "english": "side / page",
-              "gender": "die",
-              "example": "Mein Haus ist auf der linken Seite."
-            },
-            {
-              "id": "uuid-3008",
-              "type": "verb",
-              "german": "setzen (sich)",
-              "english": "to sit down",
-              "gender": "none",
-              "example": "Setz dich doch!"
-            },
-            {
-              "id": "uuid-3009",
-              "type": "verb",
-              "german": "sitzen",
-              "english": "to sit",
-              "gender": "none",
-              "example": "Wo möchten Sie sitzen?"
-            },
-            {
-              "id": "uuid-3010",
-              "type": "adverb",
-              "german": "sofort",
-              "english": "immediately",
-              "gender": "none",
-              "example": "Bitte antworten Sie sofort."
-            },
-            {
-              "id": "uuid-3011",
-              "type": "adjective",
-              "german": "spät",
-              "english": "late",
-              "gender": "none",
-              "example": "Es ist schon spät."
-            },
-            {
-              "id": "uuid-3012",
-              "type": "adverb",
-              "german": "später",
-              "english": "later",
-              "gender": "none",
-              "example": "Das können wir später machen."
-            },
-            {
-              "id": "uuid-3013",
-              "type": "verb",
-              "german": "stattfinden",
-              "english": "to take place",
-              "gender": "none",
-              "example": "Das Spiel findet auch bei Regen statt."
-            },
-            {
-              "id": "uuid-3014",
-              "type": "verb",
-              "german": "stehen",
-              "english": "to stand",
-              "gender": "none",
-              "example": "Der Bus steht schon an der Haltestelle."
-            },
-            {
-              "id": "uuid-3015",
-              "type": "verb",
-              "german": "stellen",
-              "english": "to put / place",
-              "gender": "none",
-              "example": "Stell die Milch bitte in den Kühlschrank!"
-            },
-            {
-              "id": "uuid-3016",
-              "type": "noun",
-              "german": "Straße",
-              "english": "street",
-              "gender": "die",
-              "example": "In welcher Straße wohnen Sie?"
-            },
-            {
-              "id": "uuid-3017",
-              "type": "noun",
-              "german": "Stück",
-              "english": "piece",
-              "gender": "das",
-              "example": "Möchten Sie noch ein Stück Kuchen?"
-            },
-            {
-              "id": "uuid-3018",
-              "type": "verb",
-              "german": "suchen",
-              "english": "to search / look for",
-              "gender": "none",
-              "example": "Suchst du etwas?"
-            },
-            {
-              "id": "uuid-3019",
-              "type": "verb",
-              "german": "tauschen",
-              "english": "to swap / exchange",
-              "gender": "none",
-              "example": "Können wir bitte die Plätze tauschen?"
-            },
-            {
-              "id": "uuid-3020",
-              "type": "adjective",
-              "german": "tief",
-              "english": "deep",
-              "gender": "none",
-              "example": "Vorsicht, das Wasser ist tief!"
-            },
-            {
-              "id": "uuid-3021",
-              "type": "noun",
-              "german": "Uhr",
-              "english": "clock / watch",
-              "gender": "die",
-              "example": "Es ist vier Uhr."
-            },
-            {
-              "id": "uuid-3022",
-              "type": "preposition",
-              "german": "um",
-              "english": "at / around",
-              "gender": "none",
-              "example": "Er kommt um sieben Uhr."
-            },
-            {
-              "id": "uuid-3023",
-              "type": "adverb",
-              "german": "unten",
-              "english": "downstairs / below",
-              "gender": "none",
-              "example": "Er wohnt ganz unten im Haus."
-            },
-            {
-              "id": "uuid-3024",
-              "type": "preposition",
-              "german": "unter",
-              "english": "under",
-              "gender": "none",
-              "example": "Unter uns wohnt eine Familie mit drei Kindern."
-            },
-            {
-              "id": "uuid-3025",
-              "type": "verb",
-              "german": "verschieben",
-              "english": "to postpone",
-              "gender": "none",
-              "example": "Leider muss ich den Termin verschieben."
-            },
-            {
-              "id": "uuid-3026",
-              "type": "adjective",
-              "german": "voll",
-              "english": "full",
-              "gender": "none",
-              "example": "Die Flasche ist noch ganz voll."
-            },
-            {
-              "id": "uuid-3027",
-              "type": "preposition",
-              "german": "von",
-              "english": "from / of",
-              "gender": "none",
-              "example": "Das Auto von Felix ist kaputt."
-            },
-            {
-              "id": "uuid-3028",
-              "type": "preposition",
-              "german": "vor",
-              "english": "before / in front of",
-              "gender": "none",
-              "example": "Das Auto steht vor der Tür."
-            },
-            {
-              "id": "uuid-3029",
-              "type": "adverb",
-              "german": "vorbei",
-              "english": "past / over",
-              "gender": "none",
-              "example": "Die Linie 8 fährt am Krankenhaus vorbei."
-            },
-            {
-              "id": "uuid-3030",
-              "type": "adverb",
-              "german": "vorgestern",
-              "english": "day before yesterday",
-              "gender": "none",
-              "example": "Er hat mich vorgestern angerufen."
-            },
-            {
-              "id": "uuid-3031",
-              "type": "adverb",
-              "german": "vorher",
-              "english": "beforehand",
-              "gender": "none",
-              "example": "Vorher muss ich aber noch zur Bank."
-            },
-            {
-              "id": "uuid-3032",
-              "type": "adverb",
-              "german": "vorn",
-              "english": "at the front",
-              "gender": "none",
-              "example": "Bitte vorn einsteigen!"
-            },
-            {
-              "id": "uuid-3033",
-              "type": "adverb",
-              "german": "vorwärts",
-              "english": "forward",
-              "gender": "none",
-              "example": "Fahren Sie bitte noch ein Stück vorwärts."
-            },
-            {
-              "id": "uuid-3034",
-              "type": "verb",
-              "german": "warten",
-              "english": "to wait",
-              "gender": "none",
-              "example": "Können Sie ein paar Minuten warten?"
-            },
-            {
-              "id": "uuid-3035",
-              "type": "adverb",
-              "german": "weg",
-              "english": "away / gone",
-              "gender": "none",
-              "example": "Meine Brille ist weg."
-            },
-            {
-              "id": "uuid-3036",
-              "type": "adjective",
-              "german": "weit",
-              "english": "far",
-              "gender": "none",
-              "example": "Zum Bahnhof ist es nicht weit."
-            },
-            {
-              "id": "uuid-3037",
-              "type": "adverb",
-              "german": "weiter",
-              "english": "further",
-              "gender": "none",
-              "example": "Der Bus fährt nicht weiter."
-            },
-            {
-              "id": "uuid-3038",
-              "type": "adverb",
-              "german": "wieder",
-              "english": "again",
-              "gender": "none",
-              "example": "Stefan kann wieder zum Fußballtraining kommen."
-            },
-            {
-              "id": "uuid-3039",
-              "type": "pronoun",
-              "german": "wo",
-              "english": "where",
-              "gender": "none",
-              "example": "Wo ist meine Uhr?"
-            },
-            {
-              "id": "uuid-3040",
-              "type": "adverb",
-              "german": "woher",
-              "english": "where from",
-              "gender": "none",
-              "example": "Woher kommen Sie?"
-            },
-            {
-              "id": "uuid-3041",
-              "type": "adverb",
-              "german": "wohin",
-              "english": "where to",
-              "gender": "none",
-              "example": "Wohin fährt dieser Bus?"
-            },
-            {
-              "id": "uuid-3042",
-              "type": "noun",
-              "german": "Zeit",
-              "english": "time",
-              "gender": "die",
-              "example": "Ich habe heute keine Zeit."
-            },
-            {
-              "id": "uuid-3043",
-              "type": "noun",
-              "german": "Zentrum",
-              "english": "center",
-              "gender": "das",
-              "example": "Der Bahnhof ist im Stadtzentrum."
-            },
-            {
-              "id": "uuid-3044",
-              "type": "verb",
-              "german": "ziehen",
-              "english": "to pull / move",
-              "gender": "none",
-              "example": "An dieser Tür musst du drücken, nicht ziehen."
-            },
-            {
-              "id": "uuid-3045",
-              "type": "noun",
-              "german": "Ziel",
-              "english": "goal / destination",
-              "gender": "das",
-              "example": "Was ist dein Ziel im Leben?"
-            },
-            {
-              "id": "uuid-3046",
-              "type": "preposition",
-              "german": "zu",
-              "english": "to / at / too",
-              "gender": "none",
-              "example": "Der Bus fährt zum Bahnhof."
-            },
-            {
-              "id": "uuid-3047",
-              "type": "adverb",
-              "german": "zuerst",
-              "english": "first",
-              "gender": "none",
-              "example": "Zuerst müsst ihr die Hausaufgaben machen."
-            },
-            {
-              "id": "uuid-3048",
-              "type": "adverb",
-              "german": "zuletzt",
-              "english": "lastly / last",
-              "gender": "none",
-              "example": "Wir haben uns vor drei Jahren zuletzt gesehen."
-            },
-            {
-              "id": "uuid-3049",
-              "type": "verb",
-              "german": "zumachen",
-              "english": "to close",
-              "gender": "none",
-              "example": "Machst du bitte das Fenster zu?"
-            },
-            {
-              "id": "uuid-3050",
-              "type": "adverb",
-              "german": "zurück",
-              "english": "back",
-              "gender": "none",
-              "example": "Eine Fahrkarte nach Frankfurt und zurück, bitte."
-            },
-            {
-              "id": "uuid-3051",
-              "type": "adverb",
-              "german": "zusammen",
-              "english": "together",
-              "gender": "none",
-              "example": "Wollen wir zusammen essen gehen?"
-            },
-            {
-              "id": "uuid-3052",
-              "type": "preposition",
-              "german": "zwischen",
-              "english": "between",
-              "gender": "none",
-              "example": "Heidelberg liegt zwischen Frankfurt und Stuttgart."
-            }
-          ]
-        },
-        {
-          "id": "general_attributes",
-          "title": "General Attributes",
-          "icon": "star",
-          "items": [
-            {
-              "id": "uuid-3053",
-              "type": "adjective",
-              "german": "reich",
-              "english": "rich",
-              "gender": "none",
-              "example": "Lotte ist reich."
-            },
-            {
-              "id": "uuid-3054",
-              "type": "noun",
-              "german": "Ruhe",
-              "english": "quiet / peace",
-              "gender": "die",
-              "example": "Ruhe, bitte!"
-            },
-            {
-              "id": "uuid-3055",
-              "type": "adjective",
-              "german": "ruhig",
-              "english": "quiet",
-              "gender": "none",
-              "example": "Ich möchte ein ruhiges Zimmer."
-            },
-            {
-              "id": "uuid-3056",
-              "type": "noun",
-              "german": "Sache",
-              "english": "thing",
-              "gender": "die",
-              "example": "Das ist meine Sache."
-            },
-            {
-              "id": "uuid-3057",
-              "type": "adjective",
-              "german": "sauber",
-              "english": "clean",
-              "gender": "none",
-              "example": "Bringen Sie mir bitte ein sauberes Glas!"
-            },
-            {
-              "id": "uuid-3058",
-              "type": "adjective",
-              "german": "sauer",
-              "english": "sour / angry",
-              "gender": "none",
-              "example": "Zitronen sind mir zu sauer."
-            },
-            {
-              "id": "uuid-3059",
-              "type": "adjective",
-              "german": "schade",
-              "english": "pity / shame",
-              "gender": "none",
-              "example": "Schade, dass du nicht kommen kannst."
-            },
-            {
-              "id": "uuid-3060",
-              "type": "verb",
-              "german": "schaffen",
-              "english": "to manage / do",
-              "gender": "none",
-              "example": "Ich schaffe das nicht alleine."
-            },
-            {
-              "id": "uuid-3061",
-              "type": "adjective",
-              "german": "scharf",
-              "english": "spicy / sharp",
-              "gender": "none",
-              "example": "Die Suppe ist mir zu scharf."
-            },
-            {
-              "id": "uuid-3062",
-              "type": "verb",
-              "german": "scheinen",
-              "english": "to shine / seem",
-              "gender": "none",
-              "example": "Die Sonne scheint."
-            },
-            {
-              "id": "uuid-3063",
-              "type": "adjective",
-              "german": "schlecht",
-              "english": "bad",
-              "gender": "none",
-              "example": "Das Wetter ist schlecht."
-            },
-            {
-              "id": "uuid-3064",
-              "type": "verb",
-              "german": "schließen",
-              "english": "to close",
-              "gender": "none",
-              "example": "Bitte schließen Sie die Tür."
-            },
-            {
-              "id": "uuid-3065",
-              "type": "adjective",
-              "german": "schlimm",
-              "english": "bad / serious",
-              "gender": "none",
-              "example": "Kein Problem, das ist nicht so schlimm."
-            },
-            {
-              "id": "uuid-3066",
-              "type": "adjective",
-              "german": "schmutzig",
-              "english": "dirty",
-              "gender": "none",
-              "example": "Das Handtuch ist schmutzig."
-            },
-            {
-              "id": "uuid-3067",
-              "type": "adjective",
-              "german": "schön",
-              "english": "beautiful / nice",
-              "gender": "none",
-              "example": "Das Bild ist sehr schön."
-            },
-            {
-              "id": "uuid-3068",
-              "type": "adjective",
-              "german": "schrecklich",
-              "english": "terrible",
-              "gender": "none",
-              "example": "Ich finde ihren Rock schrecklich."
-            },
-            {
-              "id": "uuid-3069",
-              "type": "adjective",
-              "german": "schwer",
-              "english": "heavy / difficult",
-              "gender": "none",
-              "example": "Wie schwer ist das Paket?"
-            },
-            {
-              "id": "uuid-3070",
-              "type": "adjective",
-              "german": "schwierig",
-              "english": "difficult",
-              "gender": "none",
-              "example": "Die Prüfung war nicht schwierig."
-            },
-            {
-              "id": "uuid-3071",
-              "type": "adverb",
-              "german": "sehr",
-              "english": "very",
-              "gender": "none",
-              "example": "Das Wetter ist heute sehr schön."
-            },
-            {
-              "id": "uuid-3072",
-              "type": "verb",
-              "german": "sein",
-              "english": "to be",
-              "gender": "none",
-              "example": "Das sind meine Kollegen."
-            },
-            {
-              "id": "uuid-3073",
-              "type": "adjective",
-              "german": "stark",
-              "english": "strong",
-              "gender": "none",
-              "example": "Der Kaffee ist sehr stark."
-            },
-            {
-              "id": "uuid-3074",
-              "type": "verb",
-              "german": "stören",
-              "english": "to disturb",
-              "gender": "none",
-              "example": "Störe ich?"
-            },
-            {
-              "id": "uuid-3075",
-              "type": "adjective",
-              "german": "streng",
-              "english": "strict",
-              "gender": "none",
-              "example": "Der Lehrer von meiner Tochter ist sehr streng."
-            },
-            {
-              "id": "uuid-3076",
-              "type": "adjective",
-              "german": "super",
-              "english": "super / great",
-              "gender": "none",
-              "example": "Der Film ist super."
-            },
-            {
-              "id": "uuid-3077",
-              "type": "adjective",
-              "german": "sympathisch",
-              "english": "likable / nice",
-              "gender": "none",
-              "example": "Der neue Chef ist sehr sympathisch."
-            },
-            {
-              "id": "uuid-3078",
-              "type": "adjective",
-              "german": "toll",
-              "english": "great",
-              "gender": "none",
-              "example": "Der Urlaub war toll."
-            },
-            {
-              "id": "uuid-3079",
-              "type": "adjective",
-              "german": "traurig",
-              "english": "sad",
-              "gender": "none",
-              "example": "Ich bin sehr traurig."
-            },
-            {
-              "id": "uuid-3080",
-              "type": "adjective",
-              "german": "trocken",
-              "english": "dry",
-              "gender": "none",
-              "example": "Die Wäsche ist bald trocken."
-            },
-            {
-              "id": "uuid-3081",
-              "type": "adjective",
-              "german": "typisch",
-              "english": "typical",
-              "gender": "none",
-              "example": "Diese Musik ist typisch für dieses Land."
-            },
-            {
-              "id": "uuid-3082",
-              "type": "adjective",
-              "german": "viel",
-              "english": "much / a lot",
-              "gender": "none",
-              "example": "Ich habe leider nicht viel Zeit."
-            },
-            {
-              "id": "uuid-3083",
-              "type": "adjective",
-              "german": "vorsichtig",
-              "english": "careful",
-              "gender": "none",
-              "example": "Sei vorsichtig!"
-            },
-            {
-              "id": "uuid-3084",
-              "type": "adjective",
-              "german": "warm",
-              "english": "warm",
-              "gender": "none",
-              "example": "Hier ist es sehr warm."
-            },
-            {
-              "id": "uuid-3085",
-              "type": "verb",
-              "german": "wecken",
-              "english": "to wake up",
-              "gender": "none",
-              "example": "Bitte wecken Sie mich morgen früh um fünf."
-            },
-            {
-              "id": "uuid-3086",
-              "type": "adjective",
-              "german": "weich",
-              "english": "soft",
-              "gender": "none",
-              "example": "Das Bett im Hotel war zu weich."
-            },
-            {
-              "id": "uuid-3087",
-              "type": "verb",
-              "german": "weinen",
-              "english": "to cry",
-              "gender": "none",
-              "example": "Warum weint das Baby?"
-            },
-            {
-              "id": "uuid-3088",
-              "type": "adjective",
-              "german": "wenig",
-              "english": "little",
-              "gender": "none",
-              "example": "Er verdient wenig."
-            },
-            {
-              "id": "uuid-3089",
-              "type": "adjective",
-              "german": "wunderbar",
-              "english": "wonderful",
-              "gender": "none",
-              "example": "Diese Schokolade schmeckt wunderbar."
-            },
-            {
-              "id": "uuid-3090",
-              "type": "adjective",
-              "german": "zufrieden",
-              "english": "satisfied",
-              "gender": "none",
-              "example": "Ich bin mit der Wohnung zufrieden."
             }
           ]
         },
