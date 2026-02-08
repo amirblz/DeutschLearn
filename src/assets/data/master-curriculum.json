@@ -1,5 +1,5 @@
 {
-  "version": 1.2,
+  "version": 1.3,
   "lastUpdated": "2026-02-07",
   "levels": [
     {
@@ -5049,7 +5049,7 @@
               "german": "Schwimmbad",
               "english": "Pool",
               "gender": "das",
-              "example": "Das ist ein Schwimmbad."
+              "example": "Wir gehen ins Schwimmbad."
             },
             {
               "id": "uuid-1006",
@@ -5057,7 +5057,7 @@
               "german": "Kino",
               "english": "Cinema",
               "gender": "das",
-              "example": "Das ist ein Kino."
+              "example": "Kommst du mit ins Kino?"
             },
             {
               "id": "uuid-1007",
@@ -5065,7 +5065,7 @@
               "german": "Film",
               "english": "Movie",
               "gender": "der",
-              "example": "Das ist ein Film."
+              "example": "Der Film war gut."
             },
             {
               "id": "uuid-1008",
@@ -5073,7 +5073,7 @@
               "german": "Theater",
               "english": "Theater",
               "gender": "das",
-              "example": "Das ist ein Theater."
+              "example": "Ich gehe gern ins Theater."
             },
             {
               "id": "uuid-1009",
@@ -5081,7 +5081,7 @@
               "german": "Museum",
               "english": "Museum",
               "gender": "das",
-              "example": "Das ist ein Museum."
+              "example": "Wir besuchen das Museum."
             },
             {
               "id": "uuid-1010",
@@ -5089,7 +5089,7 @@
               "german": "Disko",
               "english": "Disco",
               "gender": "die",
-              "example": "Das ist eine Disko."
+              "example": "Wir gehen in die Disko."
             },
             {
               "id": "uuid-1011",
@@ -5097,7 +5097,7 @@
               "german": "Party",
               "english": "Party",
               "gender": "die",
-              "example": "Das ist eine Party."
+              "example": "Die Party ist am Samstag."
             },
             {
               "id": "uuid-1012",
@@ -5105,7 +5105,7 @@
               "german": "Einladung",
               "english": "Invitation",
               "gender": "die",
-              "example": "Das ist eine Einladung."
+              "example": "Danke für die Einladung."
             },
             {
               "id": "uuid-1013",
@@ -5113,7 +5113,7 @@
               "german": "Geschenk",
               "english": "Gift",
               "gender": "das",
-              "example": "Das ist ein Geschenk."
+              "example": "Das ist ein schönes Geschenk."
             },
             {
               "id": "uuid-1014",
@@ -5121,7 +5121,7 @@
               "german": "Zeitung",
               "english": "Newspaper",
               "gender": "die",
-              "example": "Das ist eine Zeitung."
+              "example": "Ich lese die Zeitung."
             },
             {
               "id": "uuid-1015",
@@ -5129,7 +5129,7 @@
               "german": "Bild",
               "english": "Picture",
               "gender": "das",
-              "example": "Das ist ein Bild."
+              "example": "Das Bild gefällt mir."
             },
             {
               "id": "uuid-1016",
@@ -5137,7 +5137,7 @@
               "german": "Foto",
               "english": "Photo",
               "gender": "das",
-              "example": "Das ist ein Foto."
+              "example": "Darf ich ein Foto machen?"
             },
             {
               "id": "uuid-1017",
@@ -5145,7 +5145,7 @@
               "german": "Kamera",
               "english": "Camera",
               "gender": "die",
-              "example": "Das ist eine Kamera."
+              "example": "Meine Kamera ist teuer."
             },
             {
               "id": "uuid-1018",
@@ -5153,7 +5153,7 @@
               "german": "Lied",
               "english": "Song",
               "gender": "das",
-              "example": "Das ist ein Lied."
+              "example": "Ich kenne das Lied."
             },
             {
               "id": "uuid-1019",
@@ -5161,7 +5161,7 @@
               "german": "Welt",
               "english": "World",
               "gender": "die",
-              "example": "Das ist eine Welt."
+              "example": "Er reist um die Welt."
             },
             {
               "id": "uuid-1020",
@@ -5169,7 +5169,7 @@
               "german": "Natur",
               "english": "Nature",
               "gender": "die",
-              "example": "Das ist eine Natur."
+              "example": "Ich liebe die Natur."
             },
             {
               "id": "uuid-1021",
@@ -5177,7 +5177,7 @@
               "german": "Sonne",
               "english": "Sun",
               "gender": "die",
-              "example": "Das ist eine Sonne."
+              "example": "Die Sonne scheint."
             },
             {
               "id": "uuid-1022",
@@ -5185,7 +5185,7 @@
               "german": "Regen",
               "english": "Rain",
               "gender": "der",
-              "example": "Das ist ein Regen."
+              "example": "Ich mag keinen Regen."
             },
             {
               "id": "uuid-1023",
@@ -5193,7 +5193,7 @@
               "german": "Wind",
               "english": "Wind",
               "gender": "der",
-              "example": "Das ist ein Wind."
+              "example": "Der Wind ist stark."
             },
             {
               "id": "uuid-1024",
@@ -5201,7 +5201,7 @@
               "german": "Schnee",
               "english": "Snow",
               "gender": "der",
-              "example": "Das ist ein Schnee."
+              "example": "Der Schnee ist weiß."
             },
             {
               "id": "uuid-1025",
@@ -5209,7 +5209,7 @@
               "german": "Wetter",
               "english": "Weather",
               "gender": "das",
-              "example": "Das ist ein Wetter."
+              "example": "Das Wetter ist schön."
             },
             {
               "id": "uuid-1026",
@@ -5217,7 +5217,7 @@
               "german": "Grad",
               "english": "Degree",
               "gender": "der",
-              "example": "Das ist ein Grad."
+              "example": "Heute sind 25 Grad."
             },
             {
               "id": "uuid-1027",
@@ -5225,7 +5225,7 @@
               "german": "Meer",
               "english": "Sea",
               "gender": "das",
-              "example": "Das ist ein Meer."
+              "example": "Wir fahren ans Meer."
             },
             {
               "id": "uuid-1028",
@@ -5233,7 +5233,7 @@
               "german": "See",
               "english": "Lake",
               "gender": "der",
-              "example": "Das ist ein See."
+              "example": "Der See ist ruhig."
             },
             {
               "id": "uuid-1029",
@@ -5241,7 +5241,7 @@
               "german": "Baum",
               "english": "Tree",
               "gender": "der",
-              "example": "Das ist ein Baum."
+              "example": "Der Baum ist alt."
             },
             {
               "id": "uuid-1030",
@@ -5249,7 +5249,7 @@
               "german": "Blume",
               "english": "Flower",
               "gender": "die",
-              "example": "Das ist eine Blume."
+              "example": "Die Blume riecht gut."
             },
             {
               "id": "uuid-1031",
@@ -5257,7 +5257,7 @@
               "german": "Tier",
               "english": "Animal",
               "gender": "das",
-              "example": "Das ist ein Tier."
+              "example": "Ich mag Tiere."
             },
             {
               "id": "uuid-1032",
@@ -5265,7 +5265,7 @@
               "german": "Hund",
               "english": "Dog",
               "gender": "der",
-              "example": "Das ist ein Hund."
+              "example": "Der Hund bellt."
             },
             {
               "id": "uuid-1033",
@@ -5273,7 +5273,7 @@
               "german": "Katze",
               "english": "Cat",
               "gender": "die",
-              "example": "Das ist eine Katze."
+              "example": "Die Katze schläft."
             },
             {
               "id": "uuid-1034",
@@ -5281,7 +5281,7 @@
               "german": "spielen",
               "english": "to play",
               "gender": "none",
-              "example": "Ich muss spielen."
+              "example": "Wir spielen Karten."
             },
             {
               "id": "uuid-1035",
@@ -5289,7 +5289,7 @@
               "german": "machen",
               "english": "to do/make",
               "gender": "none",
-              "example": "Ich muss machen."
+              "example": "Das macht Spaß!"
             },
             {
               "id": "uuid-1036",
@@ -5297,7 +5297,7 @@
               "german": "tanzen",
               "english": "to dance",
               "gender": "none",
-              "example": "Ich muss tanzen."
+              "example": "Ich tanze gern."
             },
             {
               "id": "uuid-1037",
@@ -5305,7 +5305,7 @@
               "german": "schwimmen",
               "english": "to swim",
               "gender": "none",
-              "example": "Ich muss schwimmen."
+              "example": "Ich kann gut schwimmen."
             },
             {
               "id": "uuid-1038",
@@ -5313,7 +5313,7 @@
               "german": "wandern",
               "english": "to hike",
               "gender": "none",
-              "example": "Ich muss wandern."
+              "example": "Wir gehen am Wochenende wandern."
             },
             {
               "id": "uuid-1039",
@@ -5321,7 +5321,7 @@
               "german": "fotografieren",
               "english": "to photograph",
               "gender": "none",
-              "example": "Ich muss fotografieren."
+              "example": "Ich fotografiere gern."
             },
             {
               "id": "uuid-1040",
@@ -5329,7 +5329,7 @@
               "german": "rauchen",
               "english": "to smoke",
               "gender": "none",
-              "example": "Ich muss rauchen."
+              "example": "Rauchen ist ungesund."
             },
             {
               "id": "uuid-1041",
@@ -5337,7 +5337,7 @@
               "german": "feiern",
               "english": "to celebrate",
               "gender": "none",
-              "example": "Ich muss feiern."
+              "example": "Wir feiern meinen Geburtstag."
             },
             {
               "id": "uuid-1042",
@@ -5345,7 +5345,7 @@
               "german": "schenken",
               "english": "to give (gift)",
               "gender": "none",
-              "example": "Ich muss schenken."
+              "example": "Was schenkst du ihr?"
             },
             {
               "id": "uuid-1043",
@@ -5353,7 +5353,7 @@
               "german": "regnen",
               "english": "to rain",
               "gender": "none",
-              "example": "Ich muss regnen."
+              "example": "Es regnet heute."
             },
             {
               "id": "uuid-1044",
@@ -5361,7 +5361,7 @@
               "german": "scheinen",
               "english": "to shine",
               "gender": "none",
-              "example": "Ich muss scheinen."
+              "example": "Die Sonne scheint."
             }
           ]
         }
