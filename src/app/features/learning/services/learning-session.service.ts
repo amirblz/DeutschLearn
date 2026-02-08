@@ -37,6 +37,12 @@ export class LearningSessionService {
         this._currentIndex() >= this._sessionItems().length
     );
 
+    readonly nextCard = computed(() => {
+        const nextIndex = this._currentIndex() + 1;
+        const items = this._sessionItems();
+        return nextIndex < items.length ? items[nextIndex] : null;
+    });
+
     constructor() {
         this.loadDueCards();
     }

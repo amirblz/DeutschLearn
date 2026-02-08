@@ -1,198 +1,195 @@
-import { Component, inject, ChangeDetectionStrategy, effect } from '@angular/core';
+import { Component, inject, signal, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { LearningSessionService } from './services/learning-session.service';
 import { FlipCardComponent } from '../../shared/ui/flip-card/flip-card.component';
+import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.component';
 
 @Component({
   selector: 'app-learning',
   standalone: true,
-  imports: [FlipCardComponent],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    '(window:keydown)': 'handleKeyboardEvent($event)'
-  },
+  imports: [CommonModule, FlipCardComponent, SwipeCardComponent],
   template: `
-    <div class="layout-container">
+    <div class="dating-layout">
       
-      <header class="session-header">
-        <div class="progress-container">
-          <div class="progress-bar" [style.width.%]="store.progress().percentage"></div>
-        </div>
-        <span class="progress-text">
-          {{ store.progress().current }} / {{ store.progress().total }}
-        </span>
-      </header>
+      <div class="progress-line">
+        <div class="fill" [style.width.%]="store.progress().percentage"></div>
+      </div>
 
-      <main class="card-area">
-        @if (store.isLoading()) {
-          <div class="loading">Laden...</div>
-        } 
-        @else if (store.isSessionComplete()) {
-          <div class="complete-state">
-            <h2>Session Complete!</h2>
-            <p>Great job today.</p>
-            <button class="btn-primary" (click)="store.loadDueCards()">Check for more</button>
+      <div class="stack-container">
+        
+        @if (store.nextCard(); as next) {
+          <div class="card-bg">
+            <app-flip-card 
+              [item]="next" 
+              [isFlipped]="false" 
+              [mode]="store.mode()">
+            </app-flip-card>
           </div>
-        } 
-        @else if (store.currentCard(); as card) {
-<app-flip-card 
-  [item]="card" 
-  [isFlipped]="store.isFlipped()"
-  [mode]="store.mode()"   (click)="flipAndSpeak()">
-</app-flip-card>
         }
-      </main>
 
-      <footer class="controls">
-        @if (store.isFlipped()) {
-          <button class="btn-action wrong" (click)="store.submitAnswer(false)" aria-label="Mark Wrong">
-            Recall Failed (←)
-          </button>
-          <button class="btn-action correct" (click)="store.submitAnswer(true)" aria-label="Mark Correct">
-            Correct (→)
-          </button>
-        } @else {
-          <button class="btn-action flip" (click)="flipAndSpeak()">
-            Reveal (Space)
-          </button>
+        @if (store.currentCard(); as current) {
+          <app-swipe-card 
+            class="card-top"
+            [itemKey]="current.id" 
+            (swipedLeft)="handleSwipe(false)"
+            (swipedRight)="handleSwipe(true)"
+            (cardTapped)="flipAndSpeak()"
+            (pointerdown)="dismissTutorial()">
+            
+            <app-flip-card 
+              [item]="current" 
+              [isFlipped]="store.isFlipped()" 
+              [mode]="store.mode()">
+            </app-flip-card>
+
+          </app-swipe-card>
         }
-      </footer>
+
+        @if (showTutorial()) {
+          <div class="tutorial-overlay">
+            <div class="hand-animation">
+              <div class="hand">👆</div>
+            </div>
+            <div class="tutorial-text">
+              <div class="hint left"><span>← AGAIN</span></div>
+              <div class="hint right"><span>GOT IT →</span></div>
+            </div>
+            <p class="tutorial-sub">Tap to Flip</p>
+          </div>
+        }
+
+        @if (store.isSessionComplete()) {
+          <div class="complete-overlay">
+            <div class="trophy">🏆</div>
+            <h2>Session Complete</h2>
+            <p>You're all caught up!</p>
+            <button class="btn-primary" (click)="store.loadDueCards()">Check Again</button>
+          </div>
+        }
+      </div>
 
     </div>
   `,
   styles: [`
-    .layout-container {
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      height: 100vh;
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 1rem;
-      box-sizing: border-box;
+    :host { display: block; height: 100vh; background: #f0f2f5; overflow: hidden; }
+
+    .dating-layout {
+      height: 100%; display: flex; flex-direction: column;
+      max-width: 500px; margin: 0 auto;
     }
 
-    .session-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
+    /* Progress Line */
+    .progress-line { height: 4px; background: #e2e8f0; width: 100%; }
+    .fill { height: 100%; background: #6366f1; transition: width 0.3s; }
+
+    /* Stack Layout */
+    .stack-container {
+      flex: 1; position: relative;
+      /* Centered with breathing room, no footer space needed anymore */
+      margin: 2rem 1.5rem 3rem 1.5rem; 
+      perspective: 1000px;
     }
 
-    .progress-container {
-      flex-grow: 1;
-      height: 4px;
-      background: #e0e0e0;
-      border-radius: 2px;
-      margin-right: 1rem;
-      overflow: hidden;
+    /* Background Card Styling */
+    .card-bg {
+      position: absolute; inset: 0;
+      transform: scale(0.95) translateY(12px); /* Peeking from behind */
+      border-radius: 24px; background: #fff;
+      opacity: 0.6; pointer-events: none;
+      filter: blur(0.5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
+    .card-top { z-index: 10; }
 
-    .progress-bar {
-      height: 100%;
-      background-color: var(--color-text);
-      transition: width 0.3s ease;
+    /* --- TUTORIAL OVERLAY --- */
+    .tutorial-overlay {
+      position: absolute; inset: 0; z-index: 50; pointer-events: none;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      background: rgba(255,255,255,0.1); /* Very subtle tint */
     }
-
-    .card-area {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .controls {
-      display: flex;
-      gap: 1rem;
-      padding: 2rem 0;
-    }
-
-    .btn-action {
-      flex: 1;
-      padding: 1.2rem;
-      border: none;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: transform 0.1s;
-    }
-
-    .btn-action:active { transform: scale(0.98); }
-
-    .flip { background: var(--color-text); color: #fff; }
-    .wrong { background: #fee2e2; color: #991b1b; }
-    .correct { background: #dcfce7; color: #166534; }
     
-    .complete-state { text-align: center; }
+    .hand-animation {
+      font-size: 4rem;
+      animation: swipe-hint 2s infinite ease-in-out;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+    }
+
+    .tutorial-text {
+      width: 100%; display: flex; justify-content: space-between;
+      position: absolute; top: 50%; transform: translateY(-50%);
+      padding: 0 1rem; box-sizing: border-box;
+    }
+    .hint span {
+      background: rgba(0,0,0,0.7); color: white;
+      padding: 6px 12px; border-radius: 8px; font-weight: 800; font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+    .tutorial-sub {
+        position: absolute; bottom: 10%; 
+        background: rgba(0,0,0,0.7); color: white;
+        padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+    }
+
+    @keyframes swipe-hint {
+      0% { transform: translateX(0) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      25% { transform: translateX(-50px) rotate(-10deg); } /* Left hint */
+      50% { transform: translateX(0) rotate(0deg); }
+      75% { transform: translateX(50px) rotate(10deg); } /* Right hint */
+      90% { opacity: 1; }
+      100% { transform: translateX(0) rotate(0deg); opacity: 0; }
+    }
+
+    /* Complete State */
+    .complete-overlay {
+      text-align: center; margin-top: 30%;
+      animation: popIn 0.5s;
+    }
+    .trophy { font-size: 5rem; margin-bottom: 1rem; }
+    .complete-overlay h2 { color: #1e293b; margin: 0; }
+    .complete-overlay p { color: #64748b; margin-top: 0.5rem; margin-bottom: 2rem; }
+    
+    .btn-primary {
+      background: #1e293b; color: white; border: none; padding: 1rem 3rem;
+      border-radius: 30px; font-weight: 600; font-size: 1.1rem; cursor: pointer;
+      box-shadow: 0 4px 15px rgba(30, 41, 59, 0.3);
+    }
+    @keyframes popIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
   `]
 })
-export class LearningComponent {
+export class LearningComponent implements OnInit {
   store = inject(LearningSessionService);
+  showTutorial = signal(false);
 
-  constructor() {
-    // Optional: Effect to auto-play audio when card loads (if preferred)
-    // effect(() => { ... })
+  ngOnInit() {
+    // Check if user has seen tutorial before
+    const seen = localStorage.getItem('app_tutorial_seen');
+    if (!seen) {
+      this.showTutorial.set(true);
+    }
   }
 
-  // 1. Handling Audio (Web Speech API)
-  speak(text: string) {
-    if ('speechSynthesis' in window) {
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'de-DE'; // Force German
-      utterance.rate = 0.9;     // Slightly slower for learning
-      window.speechSynthesis.speak(utterance);
+  dismissTutorial() {
+    if (this.showTutorial()) {
+      this.showTutorial.set(false);
+      localStorage.setItem('app_tutorial_seen', 'true');
     }
+  }
+
+  handleSwipe(correct: boolean) {
+    this.store.submitAnswer(correct);
   }
 
   flipAndSpeak() {
-    const mode = this.store.mode();
-    const current = this.store.currentCard();
-
-    if (!current) return;
-
-    if (!this.store.isFlipped()) {
-      // We are about to flip. 
-      // If DE->EN, we see German, we flip to see English.
-      // If EN->DE, we see English, we flip to see German.
-
-      // Speak German only when the German side is VISIBLE.
-
-      // Case 1: Mode DE->EN. German is front. Speak on initial load or click? 
-      // Usually, you speak the target language.
-
-      if (mode === 'DE_TO_EN') {
-        // Front is German. It's already visible. Speaking now is fine.
-        this.speak(current.german);
-      } else {
-        // Front is English. Back is German. 
-        // We are flipping to Back. So speak German NOW as we reveal it.
-        this.speak(current.german);
-      }
-
-      this.store.toggleFlip();
-    } else {
-      // Card is flipped back to front.
-      this.store.toggleFlip();
+    // Logic: If flipping to German side, speak.
+    const item = this.store.currentCard();
+    if (item && !this.store.isFlipped()) {
+      // Optional: Add TTS here if you want
+      // this.speak(item.german);
     }
-  }
-
-  // 2. Keyboard Logic
-  handleKeyboardEvent(event: KeyboardEvent) {
-    if (this.store.isLoading() || this.store.isSessionComplete()) return;
-
-    // Prevent default scrolling for Space/Arrows
-    if (['Space', 'ArrowLeft', 'ArrowRight'].includes(event.code)) {
-      event.preventDefault();
-    }
-
-    switch (event.code) {
-      case 'Space':
-        this.flipAndSpeak();
-        break;
-      case 'ArrowLeft':
-        if (this.store.isFlipped()) this.store.submitAnswer(false);
-        break;
-      case 'ArrowRight':
-        if (this.store.isFlipped()) this.store.submitAnswer(true);
-        break;
-    }
+    this.store.toggleFlip();
   }
 }
