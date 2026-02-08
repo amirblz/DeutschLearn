@@ -190,8 +190,11 @@ export class DashboardComponent implements OnInit {
 
     await this.syncService.sync();
 
-    // Refresh page to load new data from DB
-    window.location.reload();
+    // No reload needed! 
+    // The sync service updates the 'curriculum' signal.
+    // The Dashboard 'effect' detects this and runs 'calculateStats' again.
+
+    if (btn) btn.innerText = '🔄';
   }
 
   start(missionId: string) {

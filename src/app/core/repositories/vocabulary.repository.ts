@@ -6,6 +6,8 @@ export abstract class VocabularyRepository {
     abstract getDueItems(timestamp: number): Promise<VocabularyItem[]>;
 
     abstract addBulk(items: VocabularyItem[]): Promise<void>;
+    abstract deleteBulk(ids: string[]): Promise<void>;
+
 
     // Updates specific fields for Leitner logic
     abstract updateProgress(

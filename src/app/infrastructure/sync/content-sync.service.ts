@@ -112,14 +112,19 @@ export class ContentSyncService {
    * Note: In a real PWA, you could add E-Tag headers here to prevent 
    * downloading unchanged data (returning 304).
    */
+  /**
+     * FIX APPLIED: Unwrap the { data: [...] } response from the backend
+     */
   private async fetchMissionItems(missionId: string): Promise<ApiItem[]> {
     try {
       const url = `${this.API_URL}/mission/${missionId}/items`;
-      // The backend returns an array of items directly based on your specific Controller setup
-      // If your controller returns { data: [...] }, adjust strictly here.
-      // Based on previous code, we assume it returns Array directly or we handle it:
-      const response = await firstValueFrom(this.http.get<ApiItem[]>(url));
-      return response;
+
+      // 1. Fetch as 'any' or a specific wrapper interface
+      const response = await firstValueFrom(this.http.get<any>(url));
+
+      // 2. Return ONLY the .data array
+      return response.data || [];
+
     } catch (error) {
       console.error(`[ContentSync] Failed to fetch items for mission ${missionId}`, error);
       return [];
@@ -127,15 +132,20 @@ export class ContentSyncService {
   }
 
   private async performMigration(apiItems: ApiItem[]) {
-    if (apiItems.length === 0) return;
-
-    // 1. Get existing items from IndexedDB to preserve user progress
+    // 1. Get ALL local items
     const allExisting = await this.repo.getAll();
-    const existingMap = new Map(allExisting.map(i => [i.id, i])); // Map for O(1) lookup
+    const existingMap = new Map(allExisting.map(i => [i.id, i]));
 
+    // 2. Create Set of new API IDs for fast lookup
+    const validApiIds = new Set(apiItems.map(i => i.id));
+
+    // 3. Identify Stale Items (Exist locally but NOT in API)
+    const staleIds = allExisting
+      .filter(local => !validApiIds.has(local.id))
+      .map(local => local.id);
+
+    // 4. Upsert Logic (Your existing logic)
     const itemsToSave: VocabularyItem[] = [];
-
-    // 2. Map API items to Internal Model
     for (const rawItem of apiItems) {
       const existing = existingMap.get(rawItem.id);
 
@@ -160,10 +170,14 @@ export class ContentSyncService {
       itemsToSave.push(newItem);
     }
 
-    // 4. Bulk Save to IndexedDB
+    // 5. Bulk Operation: Save New + Delete Stale
     if (itemsToSave.length > 0) {
       await this.repo.addBulk(itemsToSave);
-      console.log(`[ContentSync] 💾 Saved/Updated ${itemsToSave.length} vocabulary items.`);
+    }
+
+    if (staleIds.length > 0) {
+      console.warn(`[ContentSync] Removing ${staleIds.length} stale items.`);
+      await this.repo.deleteBulk(staleIds); // <--- NEED TO IMPLEMENT THIS IN REPO
     }
   }
 }

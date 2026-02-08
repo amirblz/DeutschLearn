@@ -57,6 +57,19 @@ export class IdbVocabularyRepository implements VocabularyRepository {
         await Promise.all([...promises, tx.done]);
     }
 
+    // src/app/infrastructure/repositories/idb-vocabulary.repository.ts
+
+    // Add this method to the Interface and Class
+    async deleteBulk(ids: string[]): Promise<void> {
+        const db = await this.dbPromise;
+        const tx = db.transaction('vocabulary', 'readwrite');
+        // Queue all deletes
+        const promises = ids.map(id => tx.store.delete(id));
+        await Promise.all([...promises, tx.done]);
+    }
+
+    // Optimization for addBulk (No change needed, your implementation is actually fine for <5000 items)
+
     async updateProgress(id: string, newBox: LeitnerBox, nextReviewDate: number): Promise<void> {
         const db = await this.dbPromise;
         const tx = db.transaction('vocabulary', 'readwrite');
