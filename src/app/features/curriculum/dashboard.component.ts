@@ -1,205 +1,76 @@
-import { Component, inject, signal, ChangeDetectionStrategy, OnInit, effect } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
-import { ContentSyncService, ApiLevel } from '../../infrastructure/sync/content-sync.service';
-import { LearningSessionService, LearningMode } from '../learning/services/learning-session.service';
-import { VocabularyItem, LeitnerBox } from '../../core/models/vocabulary.model';
+import { CommonModule } from '@angular/common';
+import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
 
-// View Model for the Template
-interface MissionViewModel {
-  id: string;
-  title: string;
-  icon: string;
-  total: number;
-  due: number;
-  learnedPct: number; // 0 to 100
-}
-
-interface LevelViewModel {
-  config: ApiLevel;
-  missions: MissionViewModel[];
-}
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  // ... (Template remains largely the same, just iterates over curriculumData) ...
+  imports: [CommonModule],
   template: `
-      <div class="dashboard-container">
-<header>
-  <h1>My Curriculum</h1>
-  <div style="display:flex; gap:1rem;">
-    <div class="mode-toggle">...</div>
-    
-    <button id="syncBtn" (click)="manualSync()" 
-            style="border:none; background:transparent; font-size:1.2rem; cursor:pointer;"
-            title="Check for content updates">
-      🔄
-    </button>
-  </div>
-</header>
-    @if (curriculumData(); as levels) {
-       <div class="levels-list">
-          @for (level of levels; track level.config.id) {
-            <section class="level-section">
-              <h2 [style.color]="level.config.color">{{ level.config.title }}</h2>
-              
-              <div class="mission-grid">
-                @for (m of level.missions; track m.id) {
-                  <div class="mission-card" (click)="start(m.id)">
-                    <div class="mission-icon">{{ m.icon }}</div>
-                    
-                    <div class="mission-info">
-                      <h3>{{ m.title }}</h3>
-                      <div class="mission-meta">
-                        <span>{{ m.total }} Words</span>
-                        @if (m.due > 0) {
-                          <span class="badge-due">{{ m.due }} Due</span>
-                        } @else {
-                          <span class="badge-done">Done</span>
-                        }
-                      </div>
-                      
-                      <div class="progress-track">
-                        <div class="progress-fill" [style.width.%]="m.learnedPct"></div>
-                      </div>
-                    </div>
-                    
-                    <div class="chevron">›</div>
-                  </div>
-                }
+    <div class="container">
+      <header>
+        <h1>My Journey</h1>
+        <button class="sync-btn" (click)="sync.sync()">🔄</button>
+      </header>
+
+      <div class="level-grid">
+        @for (level of sync.curriculum(); track level.id) {
+          <div class="level-card" 
+               [style.background]="level.color"
+               (click)="openLevel(level.id)">
+            
+            <div class="level-content">
+              <span class="level-id">{{ level.id }}</span>
+              <h2>{{ level.title }}</h2>
+              <div class="stats">
+                <span>{{ level.missions.length }} Topics</span>
               </div>
-            </section>
-          }
-        </div>
-      } @else {
-        <div class="loading">Loading Curriculum...</div>
-      }
+            </div>
+
+            <div class="play-icon">▶</div>
+          </div>
+        }
+      </div>
     </div>
   `,
   styles: [`
-    .dashboard-container { padding: 1rem; max-width: 600px; margin: 0 auto; padding-bottom: 4rem; }
+    .container { padding: 2rem; max-width: 600px; margin: 0 auto; }
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; }
+    h1 { font-size: 2rem; font-weight: 800; color: #1e293b; margin: 0; }
     
-    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
-    h1 { margin: 0; font-family: var(--font-serif); font-size: 1.5rem; }
+    .sync-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
 
-    .mode-toggle { 
-      background: #e2e8f0; border-radius: 20px; padding: 4px; display: flex; gap: 4px; 
+    .level-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .level-card {
+      border-radius: 24px; padding: 2rem;
+      color: white; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .mode-toggle span {
-      padding: 4px 12px; border-radius: 16px; font-size: 0.8rem; font-weight: bold; cursor: pointer; color: #64748b;
-    }
-    .mode-toggle span.active { background: #fff; color: #1e293b; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-
-    .level-section { margin-bottom: 2rem; }
-    .level-section h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
-
-    .mission-grid { display: flex; flex-direction: column; gap: 1rem; }
-
-    .mission-card {
-      background: #fff; border-radius: 12px; padding: 1rem;
-      display: flex; align-items: center; gap: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid transparent;
-      transition: all 0.2s; cursor: pointer;
-    }
-    .mission-card:active { transform: scale(0.98); background: #fafafa; }
-
-    .mission-icon { font-size: 2rem; width: 50px; text-align: center; }
-
-    .mission-info { flex: 1; }
-    .mission-info h3 { margin: 0 0 0.5rem 0; font-size: 1.1rem; }
-
-    .mission-meta { display: flex; gap: 0.8rem; font-size: 0.8rem; color: #666; margin-bottom: 0.5rem; align-items: center; }
+    .level-card:active { transform: scale(0.98); }
     
-    .badge-due { background: #fee2e2; color: #b91c1c; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
-    .badge-done { background: #dcfce7; color: #166534; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
-
-    .progress-track { height: 4px; background: #f1f1f1; border-radius: 2px; overflow: hidden; width: 100%; }
-    .progress-fill { height: 100%; background: var(--color-masc); transition: width 0.5s ease; }
-
-    .chevron { color: #ccc; font-size: 1.5rem; font-weight: 300; }
+    .level-id { 
+      background: rgba(255,255,255,0.2); padding: 4px 12px; 
+      border-radius: 20px; font-weight: 700; font-size: 0.9rem;
+    }
+    h2 { margin: 0.5rem 0; font-size: 1.8rem; }
+    .stats { opacity: 0.9; font-size: 0.9rem; }
+    
+    .play-icon { 
+      background: rgba(255,255,255,0.2); width: 50px; height: 50px; 
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; backdrop-filter: blur(4px);
+    }
   `]
 })
+export class DashboardComponent {
+  sync = inject(ContentSyncService);
+  router = inject(Router);
 
-export class DashboardComponent implements OnInit {
-  private repo = inject(VocabularyRepository);
-  private syncService = inject(ContentSyncService); // Inject Sync
-  private sessionStore = inject(LearningSessionService);
-  private router = inject(Router);
-
-  mode = signal<LearningMode>('DE_TO_EN');
-  curriculumData = signal<any[] | null>(null);
-
-  // Use an effect or simple method to recalculate when curriculum changes
-  constructor() {
-    // Whenever the Sync Service updates the structure (JSON loaded), 
-    // we recalculate the stats.
-    effect(() => {
-      const structure = this.syncService.curriculum();
-      if (structure.length > 0) {
-        this.calculateStats(structure);
-      }
-    });
+  openLevel(id: string) {
+    this.router.navigate(['/level', id]);
   }
-
-  ngOnInit() {
-    // Trigger a sync check on load
-    // (This updates the signal, which triggers the effect above)
-    this.syncService.sync();
-  }
-
-  async calculateStats(levels: ApiLevel[]) {
-    // 1. Fetch DB items (Your persistent progress)
-    const allItems = await this.repo.getAll();
-    const now = Date.now();
-
-    // 2. Map the DYNAMIC structure to the View Model
-    const viewData = levels.map(level => {
-      const missionViewModels = level.missions.map(mission => {
-
-        // Match items by missionId
-        const items = allItems.filter(i => i.missionId === mission.id);
-
-        const total = items.length;
-        const due = items.filter(i => i.nextReviewDate <= now).length;
-        const learnedCount = items.filter(i => i.box > LeitnerBox.Box1).length;
-        const learnedPct = total > 0 ? (learnedCount / total) * 100 : 0;
-
-        return {
-          id: mission.id,
-          title: mission.title,
-          icon: mission.icon,
-          total,
-          due,
-          learnedPct
-        };
-      });
-
-      return {
-        config: level,
-        missions: missionViewModels
-      };
-    });
-
-    this.curriculumData.set(viewData);
-  }
-
-  async manualSync() {
-    const btn = document.getElementById('syncBtn') as HTMLButtonElement;
-    if (btn) btn.innerText = 'Syncing...';
-
-    await this.syncService.sync();
-
-    // No reload needed! 
-    // The sync service updates the 'curriculum' signal.
-    // The Dashboard 'effect' detects this and runs 'calculateStats' again.
-
-    if (btn) btn.innerText = '🔄';
-  }
-
-  start(missionId: string) {
-    this.sessionStore.startSession(missionId, this.mode());
-    this.router.navigate(['/learn']);
-  }
-  // ... (start() and manualSync() methods remain the same) ...
 }
