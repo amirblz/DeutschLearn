@@ -5,11 +5,10 @@ import { ContentSyncService } from '../../infrastructure/sync/content-sync.servi
 
 @Component({
   selector: 'app-dashboard',
-  standalone: true,
   imports: [CommonModule],
   template: `
     <div class="container">
-      <header>
+<header>
         <h1>My Journey</h1>
         <button class="sync-btn" (click)="sync.sync()">🔄</button>
       </header>

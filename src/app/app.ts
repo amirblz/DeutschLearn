@@ -1,4 +1,3 @@
-/* src/app/app.component.ts */
 import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { UpdateNotificationService } from './core/services/update-notification.service';
@@ -10,8 +9,9 @@ import { UpdateNotificationService } from './core/services/update-notification.s
   template: `
     <nav class="library-nav">
       <div class="nav-content">
-        <a routerLink="/" class="brand"><span class="brand-icon">📚</span>DeuVocab</a>
+        <a routerLink="/" class="brand">Dashboard</a>
         <div class="nav-links">
+           <a routerLink="/review" class="nav-item"><span class="badge">🧠</span>Boxes</a>
            <a routerLink="/dashboard" routerLinkActive="active">Library</a>
            <a routerLink="/learn" routerLinkActive="active" class="btn-study">Study</a>
         </div>
@@ -65,7 +65,7 @@ import { UpdateNotificationService } from './core/services/update-notification.s
       gap: 0.5rem;
     }
     
-    .highlight { color: var(--color-masc); } /* Branding color */
+    .highlight { color: var(--color-masc); } 
 
     .nav-links {
       display: flex;
