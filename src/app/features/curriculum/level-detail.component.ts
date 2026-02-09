@@ -20,12 +20,14 @@ import { VocabularyItem, LeitnerBox } from '../../core/models/vocabulary.model';
       <div class="tabs-scroll">
         <div class="tabs-track">
           @for (group of missionGroups(); track group.baseId) {
-            <button class="tab-chip" 
-                    [class.active]="activeGroupId() === group.baseId"
-                    (click)="activeGroupId.set(group.baseId)">
-              <span class="tab-icon">{{ group.icon }}</span>
-              <span>{{ group.title }}</span>
-            </button>
+<button class="tab-chip" ... >
+     
+     <div class="icon-ring" [style.background]="getGroupGradient(group.baseId)">
+        <span class="tab-icon">{{ group.icon }}</span>
+     </div>
+
+     <span>{{ group.title }}</span>
+   </button>
           }
         </div>
       </div>
@@ -79,13 +81,22 @@ import { VocabularyItem, LeitnerBox } from '../../core/models/vocabulary.model';
     .tabs-track::-webkit-scrollbar { display: none; }
 
     .tab-chip {
-      background: #f1f5f9; border: none; padding: 0.6rem 1.2rem;
+      background: #f1f5f9; border: none; padding: 0.4rem 1.2rem 0.4rem 0.6rem;
       border-radius: 20px; font-weight: 600; color: #64748b;
-      display: flex; align-items: center; gap: 0.5rem; white-space: nowrap; cursor: pointer; transition: all 0.2s;
+      display: flex; align-items: center; gap: 0.8rem; white-space: nowrap; cursor: pointer; transition: all 0.2s;
     }
     .tab-chip.active { background: #1e293b; color: white; box-shadow: 0 4px 12px rgba(30,41,59,0.2); }
-    .tab-icon { font-size: 1.1rem; }
-
+    .icon-ring {
+     width: 32px; height: 32px; border-radius: 50%;
+     padding: 3px; /* Ring thickness */
+     display: flex; align-items: center; justify-content: center;
+   }
+.tab-icon {
+     background: white; width: 100%; height: 100%; border-radius: 50%;
+     display: flex; align-items: center; justify-content: center;
+     font-size: 1rem;
+   }
+   .tab-chip.active .tab-icon { color: #1e293b; }
     .content-area { flex: 1; padding: 1.5rem; overflow-y: auto; }
     .section-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 1rem; }
 
@@ -216,5 +227,24 @@ export class LevelDetailComponent implements OnInit {
   startSession(missionId: string) {
     this.session.startSession(missionId, 'DE_TO_EN');
     this.router.navigate(['/learn']);
+  }
+
+  getGroupGradient(baseId: string) {
+    const group = this.missionGroups().find(g => g.baseId === baseId);
+    if (!group) return 'none';
+
+    let total = 0;
+    let learned = 0;
+
+    group.parts.forEach(p => {
+      const s = this.getProgress(p.id); // Re-use your existing unit progress logic
+      total += s.total;
+      learned += s.learned;
+    });
+
+    const pct = total > 0 ? (learned / total) * 100 : 0;
+
+    // Blue progress ring, Grey track
+    return `conic-gradient(#3b82f6 ${pct}%, #e2e8f0 0)`;
   }
 }
