@@ -12,126 +12,145 @@ import { VocabularyItem, LeitnerBox } from '../../core/models/vocabulary.model';
   template: `
     <div class="page-container">
       
-      <header>
-        <button class="back-btn" (click)="goBack()">← Back</button>
-        <h1>{{ levelTitle() }}</h1>
-      </header>
+      <header class="glass-header">
+        <button class="nav-btn" (click)="goBack()">
+          <span class="icon">←</span>
+        </button>
+        <span class="header-title">{{ levelTitle() }}</span>
+        <div class="placeholder"></div> </header>
 
-      <div class="tabs-scroll">
-        <div class="tabs-track">
-          @for (group of missionGroups(); track group.baseId) {
-<button class="tab-chip" ... >
-     
-     <div class="icon-ring" [style.background]="getGroupGradient(group.baseId)">
-        <span class="tab-icon">{{ group.icon }}</span>
-     </div>
+      <div class="mission-path">
+        
+        <div class="path-line"></div>
 
-     <span>{{ group.title }}</span>
-   </button>
-          }
-        </div>
-      </div>
+        @for (group of missionGroups(); track group.baseId) {
+          <div class="mission-cluster">
+            
+            <div class="cluster-label">
+              <span class="icon">{{ group.icon }}</span>
+              <span class="text">{{ group.title }}</span>
+            </div>
 
-      <div class="content-area">
-        @if (activeGroup(); as group) {
-          <h3 class="section-title">Units</h3>
-          
-          <div class="units-list">
-            @for (mission of group.parts; track mission.id) {
-              
-              <div class="unit-card" (click)="startSession(mission.id)">
+            <div class="units-stack">
+              @for (mission of group.parts; track mission.id) {
                 
-                <div class="card-top-row">
-                  <div class="unit-info">
-                    <span class="unit-name">{{ mission.title }}</span>
-                    <span class="unit-count">
-                      {{ getProgress(mission.id).learned }} / {{ getProgress(mission.id).total }} Words
-                    </span>
+                <div class="unit-island" 
+                     (click)="startSession(mission.id)"
+                     [class.locked]="isLocked(mission.id)">
+                  
+                  <div class="island-content">
+                    <div class="island-info">
+                      <h3>{{ mission.title }}</h3>
+                      <div class="progress-pill">
+                        <div class="bar" [style.width.%]="getProgress(mission.id).percent"></div>
+                      </div>
+                    </div>
+                    
+                    <button class="play-fab">
+                       {{ getProgress(mission.id).percent >= 100 ? '↺' : '▶' }}
+                    </button>
                   </div>
-                  <button class="start-btn">
-                    {{ getProgress(mission.id).percent >= 100 ? 'REVIEW' : 'START' }}
-                  </button>
+
                 </div>
-
-                <div class="progress-track">
-                  <div class="progress-fill" 
-                       [style.width.%]="getProgress(mission.id).percent"
-                       [class.complete]="getProgress(mission.id).percent >= 100">
-                  </div>
-                </div>
-
-              </div>
-
-            }
+              }
+            </div>
           </div>
         }
+        
+        <div class="spacer"></div>
       </div>
-
     </div>
   `,
   styles: [`
-    .page-container { height: 100vh; display: flex; flex-direction: column; background: #f8fafc; }
-    
-    header { padding: 1.5rem; background: white; }
-    .back-btn { border: none; background: none; color: #64748b; font-weight: 600; cursor: pointer; margin-bottom: 0.5rem; padding: 0; }
-    h1 { margin: 0; font-size: 1.8rem; color: #1e293b; }
+    .page-container { background: var(--bg-app); min-height: 100vh; position: relative; }
 
-    .tabs-scroll { background: white; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem; }
-    .tabs-track { display: flex; gap: 0.8rem; overflow-x: auto; padding: 0 1.5rem; scrollbar-width: none; }
-    .tabs-track::-webkit-scrollbar { display: none; }
-
-    .tab-chip {
-      background: #f1f5f9; border: none; padding: 0.4rem 1.2rem 0.4rem 0.6rem;
-      border-radius: 20px; font-weight: 600; color: #64748b;
-      display: flex; align-items: center; gap: 0.8rem; white-space: nowrap; cursor: pointer; transition: all 0.2s;
-    }
-    .tab-chip.active { background: #1e293b; color: white; box-shadow: 0 4px 12px rgba(30,41,59,0.2); }
-    .icon-ring {
-     width: 32px; height: 32px; border-radius: 50%;
-     padding: 3px; /* Ring thickness */
-     display: flex; align-items: center; justify-content: center;
-   }
-.tab-icon {
-     background: white; width: 100%; height: 100%; border-radius: 50%;
-     display: flex; align-items: center; justify-content: center;
-     font-size: 1rem;
-   }
-   .tab-chip.active .tab-icon { color: #1e293b; }
-    .content-area { flex: 1; padding: 1.5rem; overflow-y: auto; }
-    .section-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 1rem; }
-
-    .units-list { display: flex; flex-direction: column; gap: 1rem; }
-
-    /* --- UNIT CARD STYLES --- */
-    .unit-card {
-      background: white; padding: 1.2rem; border-radius: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03); border: 1px solid transparent;
-      cursor: pointer; transition: transform 0.1s;
-      display: flex; flex-direction: column; gap: 1rem;
-    }
-    .unit-card:active { transform: scale(0.98); background: #f8fafc; }
-
-    .card-top-row { display: flex; justify-content: space-between; align-items: center; }
-
-    .unit-name { font-weight: 700; color: #334155; font-size: 1rem; display: block; margin-bottom: 4px; }
-    .unit-count { font-size: 0.8rem; color: #94a3b8; font-weight: 500; }
-    
-    .start-btn {
-      background: #e0e7ff; color: #4338ca; border: none; 
-      padding: 6px 16px; border-radius: 8px; font-weight: 700; font-size: 0.75rem;
+    /* --- GLASS HEADER --- */
+    .glass-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      height: calc(60px + var(--safe-top));
+      padding-top: var(--safe-top);
+      padding-left: 1.5rem; padding-right: 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      
+      background: var(--glass-panel);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
     }
 
-    /* --- PROGRESS BAR STYLES --- */
-    .progress-track {
-      height: 6px; width: 100%;
-      background: #f1f5f9; border-radius: 3px;
-      overflow: hidden;
+    .nav-btn {
+      background: transparent; border: none; color: var(--text-primary);
+      font-size: 1.5rem; cursor: pointer; padding: 0;
     }
-    .progress-fill {
-      height: 100%; background: #6366f1; border-radius: 3px;
-      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    .header-title { font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; }
+    .placeholder { width: 24px; }
+
+    /* --- MISSION PATH --- */
+    .mission-path {
+      padding-top: calc(80px + var(--safe-top));
+      padding-left: 1.5rem; padding-right: 1.5rem;
+      max-width: 600px; margin: 0 auto;
+      position: relative;
     }
-    .progress-fill.complete { background: #22c55e; } /* Green when done */
+
+    /* Vertical Line connecting clusters */
+    .path-line {
+      position: absolute; left: 2.5rem; top: 0; bottom: 0; width: 2px;
+      background: linear-gradient(to bottom, var(--bg-app), var(--border-subtle) 10%, var(--border-subtle) 90%, var(--bg-app));
+      z-index: 0;
+    }
+
+    .mission-cluster { margin-bottom: 3rem; position: relative; z-index: 1; }
+
+    .cluster-label {
+      display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;
+    }
+    .cluster-label .icon {
+      width: 40px; height: 40px; background: var(--bg-surface-2);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; border: 2px solid var(--bg-app);
+      box-shadow: var(--shadow-sm);
+    }
+    .cluster-label .text {
+      font-weight: 700; color: var(--text-secondary); text-transform: uppercase; 
+      font-size: 0.8rem; letter-spacing: 1px;
+    }
+
+    .units-stack { display: flex; flex-direction: column; gap: 1rem; padding-left: 3.5rem; }
+
+    /* --- THE ISLAND CARD --- */
+    .unit-island {
+      background: var(--bg-surface);
+      border-radius: 20px;
+      padding: 1.2rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+      cursor: pointer;
+    }
+
+    .unit-island:active { transform: scale(0.96); }
+
+    .island-content { display: flex; justify-content: space-between; align-items: center; }
+
+    h3 { margin: 0 0 0.5rem 0; font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+    .progress-pill {
+      height: 4px; width: 100px; background: var(--bg-surface-2);
+      border-radius: 2px; overflow: hidden;
+    }
+    .bar { height: 100%; background: var(--primary); transition: width 0.3s; }
+
+    .play-fab {
+      width: 44px; height: 44px; border-radius: 50%; border: none;
+      background: var(--bg-surface-2); color: var(--text-primary);
+      font-size: 1.2rem; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .unit-island:hover .play-fab {
+      background: var(--primary); color: white;
+    }
+
+    .spacer { height: 100px; }
   `]
 })
 export class LevelDetailComponent implements OnInit {
@@ -143,6 +162,7 @@ export class LevelDetailComponent implements OnInit {
 
   activeGroupId = signal<string | null>(null);
 
+  isLocked(id: string) { return false; }
   // Store progress map: "mission_id" -> { total: 20, learned: 5, percent: 25 }
   progressMap = signal<Map<string, { total: number, learned: number, percent: number }>>(new Map());
 

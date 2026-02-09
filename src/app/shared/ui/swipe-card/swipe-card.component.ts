@@ -22,38 +22,39 @@ import { CommonModule } from '@angular/common';
     </div>
   `,
   styles: [`
-    :host { display: block; position: absolute; width: 100%; height: 100%; top: 0; left: 0; touch-action: none; }
+  :host { display: block; position: absolute; width: 100%; height: 100%; top: 0; left: 0; touch-action: none; }
 
-    .card-container {
-      width: 100%; height: 100%;
-      background: white;
-      border-radius: 24px;
-      /* Deep shadow for "floating" effect */
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
-      position: relative;
-      overflow: hidden;
-      cursor: grab;
-      user-select: none;
-      /* Hardware acceleration */
-      will-change: transform; 
-    }
-
-    .card-container:active { cursor: grabbing; }
+  .card-container {
+    width: 100%; height: 100%;
+    /* No background here, the flip-card handles background */
+    border-radius: 32px;
+    position: relative;
+    cursor: grab;
+    will-change: transform;
     
-    /* Smooth snap-back animation */
-    .is-animating { transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); }
+    /* THE PREMIUM SHADOW */
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5); 
+  }
 
-    /* Stamps Styling */
-    .stamp {
-      position: absolute; top: 40px; 
-      font-size: 2.5rem; font-weight: 800; text-transform: uppercase;
-      border: 4px solid; border-radius: 8px; padding: 0.2rem 1rem;
-      z-index: 10; pointer-events: none;
-      transform: rotate(-15deg);
-    }
-    .stamp-nope { right: 40px; color: #ef4444; border-color: #ef4444; transform: rotate(15deg); }
-    .stamp-like { left: 40px; color: #22c55e; border-color: #22c55e; transform: rotate(-15deg); }
-  `]
+  .card-container:active { cursor: grabbing; }
+
+  /* Stamps (Like/Nope) - Make them bolder */
+  .stamp {
+    position: absolute; top: 40px;
+    font-size: 3rem; font-weight: 900; text-transform: uppercase;
+    border: 6px solid; border-radius: 12px; padding: 0.2rem 1.5rem;
+    z-index: 20; opacity: 0; 
+    /* Add backdrop blur behind stamp for legibility */
+    backdrop-filter: blur(4px); 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  .stamp-like {
+     left: 1rem;
+  }
+  .stamp-nope {
+     right: 1rem;
+  }
+`]
 })
 export class SwipeCardComponent {
   // --- Inputs & Outputs ---

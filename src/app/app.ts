@@ -1,129 +1,182 @@
-import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { UpdateNotificationService } from './core/services/update-notification.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule],
   template: `
-    <nav class="library-nav">
-      <div class="nav-content">
-        <a routerLink="/" class="brand" routerLinkActive="active">Dashboard</a>
-        <div class="nav-links">
-           <a routerLink="/review" routerLinkActive="active">Brain</a>
-           <a routerLink="/learn" routerLinkActive="active">Study</a>
+    <div class="app-shell">
+      
+      <nav class="desktop-nav">
+        <div class="nav-top">
+          <div class="logo">
+             <div class="logo-mark">DE</div>
+          </div>
+          <div class="links">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              <span class="icon">Home</span>
+            </a>
+            <a routerLink="/learn" routerLinkActive="active">
+              <span class="icon">Study</span>
+            </a>
+            <a routerLink="/review" routerLinkActive="active">
+              <span class="icon">Profile</span>
+            </a>
+          </div>
         </div>
-      </div>
-    </nav>
+        
+        <div class="nav-footer">
+          <span class="version">v1.0.0 (Beta)</span>
+        </div>
+      </nav>
 
-    <main class="main-content">
-      <router-outlet></router-outlet>
-    </main>
+      <main class="stage">
+        <div class="stage-content">
+          <router-outlet></router-outlet>
+        </div>
+      </main>
 
-    @if (updateService.updateAvailable()) {
-      <div class="update-toast">
-        <span>New content available.</span>
-        <button (click)="updateService.activateUpdate()">Update Now</button>
-      </div>
-    }
+      <nav class="mobile-bar">
+        <div class="bar-blur"></div>
+        
+        <div class="nav-grid">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span class="label">Home</span>
+          </a>
+
+          <a routerLink="/learn" routerLinkActive="active">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span class="label">Learn</span>
+          </a>
+
+          <a routerLink="/review" routerLinkActive="active">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 20V10"></path>
+              <path d="M12 20V4"></path>
+              <path d="M6 20v-6"></path>
+            </svg>
+            <span class="label">Stats</span>
+          </a>
+        </div>
+      </nav>
+
+      @if (updateService.updateAvailable()) {
+        <div class="toast">
+          <span>Update Ready</span>
+          <button (click)="updateService.activateUpdate()">⟳</button>
+        </div>
+      }
+    </div>
   `,
   styles: [`
-    :host {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+    :host { display: block; height: 100dvh; overflow: hidden; }
+
+    .app-shell { display: flex; height: 100%; width: 100%; }
+
+    /* --- DESKTOP NAV --- */
+    .desktop-nav {
+      width: 260px; background: var(--bg-surface);
+      border-right: 1px solid var(--border-subtle);
+      padding: 2rem; display: none;
+      flex-direction: column; justify-content: space-between;
+    }
+    .logo-mark {
+      width: 40px; height: 40px; background: var(--primary); color: white;
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-weight: 800; margin-bottom: 2rem;
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+    .desktop-nav a {
+      display: block; padding: 1rem; color: var(--text-secondary);
+      text-decoration: none; font-weight: 500; border-radius: 12px;
+      margin-bottom: 0.5rem; transition: all 0.2s;
+    }
+    .desktop-nav a:hover { background: var(--bg-surface-2); color: var(--text-primary); }
+    .desktop-nav a.active { background: var(--bg-surface-2); color: var(--primary); font-weight: 700; }
+
+    .nav-footer .version { font-size: 0.75rem; color: var(--text-tertiary); }
+
+    /* --- MAIN STAGE --- */
+    .stage {
+      flex: 1; position: relative;
+      background: var(--bg-app);
+      overflow-y: auto; overflow-x: hidden;
+      padding-top: var(--safe-top);
+      padding-bottom: calc(65px + var(--safe-bottom)); 
+    }
+    .stage-content {
+      max-width: 1024px; margin: 0 auto; width: 100%; height: 100%;
     }
 
-    .library-nav {
-      background: #fff;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-      padding: 0 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .nav-content {
-      max-width: 800px;
-      margin: 0 auto;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      text-decoration: none;
-      font-weight: 700;
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      color: var(--color-text);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    /* --- MOBILE NAV (Permanent Dark Glass) --- */
+    .mobile-bar {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 100;
+      height: calc(60px + var(--safe-bottom));
+      padding-bottom: var(--safe-bottom);
+      background: rgba(15, 17, 21, 0.85); /* Dark base */
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
     
-    .highlight { color: var(--color-masc); } 
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
+    .bar-blur {
+      position: absolute; inset: 0;
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      z-index: -1;
     }
 
-    .nav-links a {
-      text-decoration: none;
-      color: var(--color-text-light);
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
+    .nav-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 100%; }
+
+    .nav-grid a {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-decoration: none; color: var(--text-secondary);
+      gap: 4px; transition: color 0.2s;
     }
 
-    .nav-links a.active {
-      background: var(--color-text);
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
+    .nav-icon {
+      width: 24px; height: 24px; stroke-width: 2px; opacity: 0.5;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .main-content {
-      flex: 1;
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      padding-top: 2rem;
+    .label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.3px; opacity: 0.5;
     }
 
-    .update-toast {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      background: var(--color-text);
-      color: #fff;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      animation: slideIn 0.3s ease-out;
-      z-index: 100;
+    /* Active State */
+    .nav-grid a.active { color: var(--primary); }
+    .nav-grid a.active .nav-icon { opacity: 1; transform: translateY(-2px); stroke-width: 2.5px; }
+    .nav-grid a.active .label { opacity: 1; }
+    .nav-grid a:active .nav-icon { transform: scale(0.9); }
+
+    /* --- RESPONSIVE --- */
+    @media (min-width: 768px) {
+      .mobile-bar { display: none; }
+      .desktop-nav { display: flex; }
+      .stage { padding-bottom: 0; }
     }
 
-    .update-toast button {
-      background: #fff;
-      color: var(--color-text);
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      font-weight: 600;
-      cursor: pointer;
+    /* Toast */
+    .toast {
+      position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%);
+      background: var(--bg-surface); border: 1px solid var(--border-subtle);
+      color: var(--text-primary);
+      padding: 12px 24px; border-radius: 50px;
+      display: flex; gap: 12px; align-items: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5); z-index: 200;
     }
-
-    @keyframes slideIn {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    .toast button {
+      background: var(--primary); border: none; color: white;
+      padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; cursor: pointer;
     }
   `]
 })

@@ -71,7 +71,7 @@ import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.compon
     </div>
   `,
   styles: [`
-    :host { display: block; height: 100vh; background: #f0f2f5; overflow: hidden; }
+    :host { display: block; height: 100vh; background: var(--bg-surface-2); overflow: hidden; }
 
     .dating-layout {
       height: 100%; display: flex; flex-direction: column;
@@ -79,27 +79,31 @@ import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.compon
     }
 
     /* Progress Line */
-    .progress-line { height: 4px; background: #e2e8f0; width: 100%; }
-    .fill { height: 100%; background: #6366f1; transition: width 0.3s; }
+    .progress-line { height: 4px; background:var(--glass-panel); width: 100%; }
+    .fill { height: 100%; background:var(--primary); transition: width 0.3s; }
 
     /* Stack Layout */
     .stack-container {
       flex: 1; position: relative;
       /* Centered with breathing room, no footer space needed anymore */
-      margin: 2rem 1.5rem 3rem 1.5rem; 
+      margin: 2rem 1.5rem 5rem 1.5rem; 
       perspective: 1000px;
     }
 
     /* Background Card Styling */
-    .card-bg {
-      position: absolute; inset: 0;
-      transform: scale(0.95) translateY(12px); /* Peeking from behind */
-      border-radius: 24px; background: #fff;
-      opacity: 0.6; pointer-events: none;
-      filter: blur(0.5px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    .card-top { z-index: 10; }
+.card-bg {
+    position: absolute; inset: 0;
+    transform: scale(0.92) translateY(30px); /* Pushed back and down */
+    border-radius: 32px;
+    background: var(--bg-surface-2); /* Darker/Lighter depending on theme */
+    box-shadow: var(--shadow-lg);
+    opacity: 1; /* Fully visible */
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* The active card */
+  .card-top { z-index: 10; }
 
     /* --- TUTORIAL OVERLAY --- */
     .tutorial-overlay {

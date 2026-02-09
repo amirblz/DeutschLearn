@@ -1,55 +1,89 @@
 /* src/styles.scss */
 :root {
-    /* "Modern Library" Palette */
-    --color-bg: #f9f7f2;
-    /* Cream/Off-white */
-    --color-text: #2c2c2c;
-    /* Dark Grey (Not black) */
-    --color-text-light: #666;
-    --color-surface: #ffffff;
-    --color-shadow: rgba(0, 0, 0, 0.08);
+    /* --- PALETTE: Deep Space (Permanent Dark) --- */
+    --bg-app: #0f1115;
+    /* Almost black, subtle blue undertone */
+    --bg-surface: #1a1d23;
+    /* Card Background */
+    --bg-surface-2: #262a33;
+    /* Hover/Active States */
 
-    /* Grammar Coding */
-    --color-masc: #2c5282;
-    /* Der - Muted Blue */
-    --color-fem: #9b2c2c;
-    /* Die - Muted Red */
-    --color-neut: #276749;
-    /* Das - Muted Green */
+    /* Typography - High Contrast for Readability */
+    --text-primary: #f2f2f3;
+    --text-secondary: #9aa0a6;
+    --text-tertiary: #5f6368;
 
-    /* Typography */
-    --font-serif: 'Merriweather', serif;
-    /* For German */
-    --font-sans: 'Inter', sans-serif;
-    /* For UI */
+    /* Borders & Glass */
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --glass-panel: rgba(26, 29, 35, 0.7);
+    /* Base for blurred headers */
 
-    /* Type Colors */
-    --color-noun: #2c5282;
-    /* Default Fallback */
-    --color-verb: #dd6b20;
-    /* Orange */
-    --color-phrase: #319795;
-    /* Teal */
-    --color-adj: #805ad5;
-    /* Purple */
+    /* Brand - Electric Indigo */
+    --primary: #8ab4f8;
+    --primary-dim: rgba(138, 180, 248, 0.1);
+    --primary-glow: rgba(138, 180, 248, 0.3);
+
+    /* --- GENDER GRADIENTS (Vibrant Neon) --- */
+    /* Masculine (Der) -> Deep Ocean */
+    --grad-masc: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+
+    /* Feminine (Die) -> Hot Raspberry */
+    --grad-fem: linear-gradient(135deg, #831843 0%, #ec4899 100%);
+
+    /* Neuter (Das) -> Cyber Emerald */
+    --grad-neut: linear-gradient(135deg, #064e3b 0%, #10b981 100%);
+
+    /* Shadows (Depth for Dark Mode) */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+
+    /* Safe Areas */
+    --safe-top: env(safe-area-inset-top, 20px);
+    --safe-bottom: env(safe-area-inset-bottom, 20px);
+}
+
+/* GLOBAL RESET & BASICS */
+html {
+    color-scheme: dark;
+    /* Hints browser UI (scrollbars) to be dark */
 }
 
 body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    font-family: var(--font-sans);
     margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-app);
+    color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: none;
+    /* App-like scroll boundaries */
+
+    /* Desktop Scrollbar Styling */
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-surface-2) var(--bg-app);
 }
 
-/* Utility for screen readers */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-surface-2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* Utility: Glass Effect */
+.glass {
+    background: var(--glass-panel);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
