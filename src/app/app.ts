@@ -9,11 +9,10 @@ import { UpdateNotificationService } from './core/services/update-notification.s
   template: `
     <nav class="library-nav">
       <div class="nav-content">
-        <a routerLink="/" class="brand">Dashboard</a>
+        <a routerLink="/" class="brand" routerLinkActive="active">Dashboard</a>
         <div class="nav-links">
-           <a routerLink="/review" class="nav-item"><span class="badge">🧠</span>Boxes</a>
-           <a routerLink="/dashboard" routerLinkActive="active">Library</a>
-           <a routerLink="/learn" routerLinkActive="active" class="btn-study">Study</a>
+           <a routerLink="/review" routerLinkActive="active">Brain</a>
+           <a routerLink="/learn" routerLinkActive="active">Study</a>
         </div>
       </div>
     </nav>
@@ -82,11 +81,6 @@ import { UpdateNotificationService } from './core/services/update-notification.s
     }
 
     .nav-links a.active {
-      color: var(--color-text);
-      font-weight: 700;
-    }
-
-    .nav-links a.btn-study {
       background: var(--color-text);
       color: #fff;
       padding: 0.5rem 1rem;
