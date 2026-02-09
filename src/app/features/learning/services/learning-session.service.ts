@@ -1,6 +1,7 @@
 import { Injectable, inject, signal, computed, effect } from '@angular/core';
 import { VocabularyRepository } from '../../../core/repositories/vocabulary.repository';
 import { VocabularyItem, LeitnerBox } from '../../../core/models/vocabulary.model';
+import { LeitnerService } from '../../../core/services/leitner.service';
 
 export type LearningMode = 'DE_TO_EN' | 'EN_TO_DE';
 
@@ -9,6 +10,7 @@ export type LearningMode = 'DE_TO_EN' | 'EN_TO_DE';
 })
 export class LearningSessionService {
     private repo = inject(VocabularyRepository);
+    private leitner = inject(LeitnerService);
 
     // --- State Signals ---
     private _mode = signal<LearningMode>('DE_TO_EN'); // Default
@@ -85,32 +87,29 @@ export class LearningSessionService {
         const card = this.currentCard();
         if (!card) return;
 
-        // 1. Calculate new state (Leitner Logic)
-        let newBox = card.box;
-        let daysToAdd = 0;
+        // 1. DELEGATE MATH TO LEITNER SERVICE
+        const result = this.leitner.calculateProgress(card.box, correct);
 
-        if (correct) {
-            newBox = Math.min(card.box + 1, LeitnerBox.Box5);
-            // Simple spacing algorithm: 1d, 3d, 7d, 14d, 30d
-            const spacing = [0, 1, 3, 7, 14, 30];
-            daysToAdd = spacing[newBox];
-        } else {
-            newBox = LeitnerBox.Box1; // Reset on error
-            daysToAdd = 0; // Review immediately (or tomorrow)
-        }
+        // 2. OPTIMISTIC UPDATE (Fire & Forget to DB)
+        // We assume it succeeds. If DB fails, it's a rare edge case in a PWA.
+        this.repo.updateProgress(card.id, result.box, result.nextReview);
 
-        const nextReview = Date.now() + (daysToAdd * 24 * 60 * 60 * 1000);
+        // 3. Mark as "Dirty" for Sync 
+        // (We will handle this in Step 4 - marking items that need to be pushed to backend)
+        this.markForSync(card.id, result.box, result.nextReview);
 
-        // 2. Persist to DB (Fire and forget from UI perspective)
-        this.repo.updateProgress(card.id, newBox, nextReview);
-
-        // 3. Update UI State
+        // 4. Update UI State
         this._isFlipped.set(false);
-        this._currentIndex.update(i => i + 1);
 
-        // 4. Audio Feedback (Simple Haptic/Audio trigger here)
-        if (correct) {
-            // play success sound
-        }
+        // Remove the card from the current session view if you want strictly "Due" cards
+        // OR just move to next index (your current approach)
+        this._currentIndex.update(i => i + 1);
+    }
+
+    private markForSync(id: string, box: number, due: number) {
+        // Store this in a separate "sync_queue" in LocalStorage
+        const queue = JSON.parse(localStorage.getItem('sync_queue') || '[]');
+        queue.push({ id, box, nextReviewDate: due, timestamp: Date.now() });
+        localStorage.setItem('sync_queue', JSON.stringify(queue));
     }
 }

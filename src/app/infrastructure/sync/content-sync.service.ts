@@ -1,5 +1,5 @@
 import { Injectable, inject, signal } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
 import { VocabularyItem, LeitnerBox, WordType, Gender } from '../../core/models/vocabulary.model';
@@ -77,6 +77,8 @@ export class ContentSyncService {
     console.log('[ContentSync] 🔄 Starting synchronization...');
 
     try {
+      await this.pushLocalProgress();
+
       // 1. Fetch Hierarchy (Fast)
       const levels = await firstValueFrom(this.http.get<ApiLevel[]>(`${this.API_URL}/levels`));
 
@@ -104,6 +106,29 @@ export class ContentSyncService {
 
     } catch (err) {
       console.warn('[ContentSync] ⚠️ Offline or API unavailable. Using cached data.', err);
+    }
+  }
+
+  private async pushLocalProgress() {
+    const queueKey = 'sync_queue';
+    const rawQueue = localStorage.getItem(queueKey);
+    if (!rawQueue) return;
+
+    const updates = JSON.parse(rawQueue);
+    if (updates.length === 0) return;
+
+    console.log(`[ContentSync] ⬆️ Pushing ${updates.length} progress updates to cloud...`);
+
+    try {
+      // Send to NestJS endpoint
+      await firstValueFrom(this.http.post(`${this.API_URL}/progress`, updates));
+
+      // Clear queue on success
+      localStorage.removeItem(queueKey);
+      console.log('[ContentSync] ✅ Push successful.');
+    } catch (e) {
+      console.error('[ContentSync] ❌ Push failed. Will retry next time.', e);
+      // Do NOT clear the queue so we retry later
     }
   }
 
