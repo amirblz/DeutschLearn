@@ -1,8 +1,9 @@
-import { Component, inject, signal, OnInit } from '@angular/core'; // Added OnInit
+import { Component, inject, signal, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
-import { VocabularyRepository } from '../../core/repositories/vocabulary.repository'; // Inject Repo
+import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
+import { StudyStateService } from '../../core/services/study-state.service'; // <--- Import State
 import { LeitnerBox } from '../../core/models/vocabulary.model';
 
 @Component({
@@ -16,7 +17,30 @@ import { LeitnerBox } from '../../core/models/vocabulary.model';
           <h1>My Journey</h1>
           <p>Let's continue learning</p>
         </div>
+        <button class="icon-btn" (click)="sync.sync()">🔄</button>
       </header>
+
+      @if (studyState.dueCount() > 0) {
+        <div class="brain-widget critical" (click)="goToSystem()">
+          <div class="widget-content">
+            <div class="pulse-icon">⚡</div>
+            <div class="widget-text">
+              <h3>{{ studyState.dueCount() }} Words Due</h3>
+              <p>Your Leitner system needs attention.</p>
+            </div>
+          </div>
+          <button class="action-btn">Review</button>
+        </div>
+      } @else {
+        <div class="brain-widget optimized">
+          <div class="widget-content">
+            <div class="icon">🧠</div>
+            <div class="widget-text">
+              <h3>System Optimized</h3>
+            </div>
+          </div>
+        </div>
+      }
 
       <div class="level-grid">
         @for (level of sync.curriculum(); track level.id) {
@@ -59,23 +83,65 @@ import { LeitnerBox } from '../../core/models/vocabulary.model';
     
     .icon-btn {
       background: var(--bg-surface); color: var(--text-primary);
-      border: 1px solid var(--border-dim);
+      border: 1px solid var(--border-subtle);
       width: 44px; height: 44px; border-radius: 12px;
       font-size: 1.2rem; cursor: pointer;
     }
 
+    /* --- BRAIN WIDGET --- */
+    .brain-widget {
+      border-radius: 20px; padding: 1.2rem; margin-bottom: 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      cursor: pointer; position: relative; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: transform 0.2s;
+    }
+    .brain-widget:active { transform: scale(0.98); }
+
+    /* Critical State */
+    .brain-widget.critical {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(239, 68, 68, 0.05) 100%);
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+    .critical .pulse-icon {
+      color: #ef4444; font-size: 1.5rem; margin-right: 1rem;
+      animation: pulse 2s infinite;
+    }
+    .critical h3 { color: #fca5a5; margin: 0; font-size: 1rem; }
+    .critical .action-btn {
+      background: #ef4444; color: white; border: none;
+      padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.8rem;
+    }
+
+    /* Optimized State */
+    .brain-widget.optimized {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.05) 100%);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    .optimized .icon { font-size: 1.5rem; margin-right: 1rem; }
+    .optimized h3 { color: #6ee7b7; margin: 0; font-size: 1rem; }
+
+    .widget-content { display: flex; align-items: center; }
+    .widget-text p { margin: 0; font-size: 0.8rem; opacity: 0.7; }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* --- LEVEL GRID --- */
     .level-grid {
       display: grid; gap: 1.5rem;
-      /* Auto-fit for responsive desktop grid */
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 
     .level-card {
       position: relative; overflow: hidden;
-      border-radius: var(--radius-lg);
+      border-radius: 24px; /* radius-lg */
       padding: 1.5rem; cursor: pointer;
       display: flex; align-items: center; justify-content: space-between;
-      border: 1px solid var(--border-dim);
+      border: 1px solid var(--border-subtle);
       background: var(--bg-surface);
       transition: transform 0.2s, box-shadow 0.2s;
     }
@@ -85,11 +151,10 @@ import { LeitnerBox } from '../../core/models/vocabulary.model';
     }
     .level-card:active { transform: scale(0.98); }
 
-    /* Ambient Glow Background */
     .card-bg {
       position: absolute; top: -50%; right: -20%;
       width: 200px; height: 200px; border-radius: 50%;
-      filter: blur(60px); opacity: 0.2; pointer-events: none;
+      filter: blur(60px); opacity: 0.15; pointer-events: none;
     }
 
     .card-content { z-index: 2; flex: 1; }
@@ -116,6 +181,7 @@ export class DashboardComponent implements OnInit {
   sync = inject(ContentSyncService);
   repo = inject(VocabularyRepository);
   router = inject(Router);
+  studyState = inject(StudyStateService); // <--- Inject
 
   // Map: LevelID -> { total, learned, percent }
   levelStats = signal<Map<string, { total: number, learned: number, percent: number }>>(new Map());
@@ -124,15 +190,10 @@ export class DashboardComponent implements OnInit {
     const allItems = await this.repo.getAll();
     const stats = new Map();
 
-    // 1. Get Levels from Sync Service
     const levels = this.sync.curriculum();
 
-    // 2. Calculate Stats
     levels.forEach(lvl => {
-      // Find all mission IDs in this level
       const missionIds = new Set(lvl.missions.map(m => m.id));
-
-      // Filter items belonging to this level
       const items = allItems.filter(i => missionIds.has(i.missionId));
 
       const total = items.length;
@@ -149,14 +210,11 @@ export class DashboardComponent implements OnInit {
     return this.levelStats().get(id) || { total: 0, learned: 0, percent: 0 };
   }
 
-  // Generate CSS for the ring
-  getRingGradient(id: string) {
-    const pct = this.getLevelStats(id).percent;
-    // White progress bar, transparent track
-    return `conic-gradient(#ffffff ${pct}%, rgba(255,255,255,0.2) 0)`;
-  }
-
   openLevel(id: string) {
     this.router.navigate(['/level', id]);
+  }
+
+  goToSystem() {
+    this.router.navigate(['/review']);
   }
 }

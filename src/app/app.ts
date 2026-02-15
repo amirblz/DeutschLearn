@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { UpdateNotificationService } from './core/services/update-notification.service';
+import { StudyStateService } from './core/services/study-state.service'; // <--- Import State
 
 @Component({
   selector: 'app-root',
@@ -12,18 +13,26 @@ import { UpdateNotificationService } from './core/services/update-notification.s
       
       <nav class="desktop-nav">
         <div class="nav-top">
-          <div class="logo">
-             <div class="logo-mark">DE</div>
-          </div>
           <div class="links">
             <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
               <span class="icon">Home</span>
             </a>
+            
+            <a routerLink="/library" routerLinkActive="active">
+              <span class="icon">Library</span>
+            </a>
+
             <a routerLink="/learn" routerLinkActive="active">
               <span class="icon">Study</span>
             </a>
-            <a routerLink="/review" routerLinkActive="active">
-              <span class="icon">Profile</span>
+
+            <a routerLink="/review" routerLinkActive="active" class="nav-item-desktop">
+              <span class="icon-row">
+                System
+                @if (studyState.dueCount() > 0) {
+                  <span class="badge-desktop">{{ studyState.dueCount() }}</span>
+                }
+              </span>
             </a>
           </div>
         </div>
@@ -51,21 +60,35 @@ import { UpdateNotificationService } from './core/services/update-notification.s
             <span class="label">Home</span>
           </a>
 
+          <a routerLink="/library" routerLinkActive="active">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span class="label">Library</span>
+          </a>
+
           <a routerLink="/learn" routerLinkActive="active">
             <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
               <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
             </svg>
-            <span class="label">Learn</span>
+            <span class="label">Study</span>
           </a>
 
           <a routerLink="/review" routerLinkActive="active">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 20V10"></path>
-              <path d="M12 20V4"></path>
-              <path d="M6 20v-6"></path>
-            </svg>
-            <span class="label">Stats</span>
+            <div class="icon-wrapper">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+              
+              @if (studyState.dueCount() > 0) {
+                <span class="badge-mobile">{{ studyState.dueCount() }}</span>
+              }
+            </div>
+            <span class="label">System</span>
           </a>
         </div>
       </nav>
@@ -87,7 +110,7 @@ import { UpdateNotificationService } from './core/services/update-notification.s
     .desktop-nav {
       width: 260px; background: var(--bg-surface);
       border-right: 1px solid var(--border-subtle);
-      padding: 2rem; display: none;
+      padding: 5rem 2rem 2rem 2rem; display: none;
       flex-direction: column; justify-content: space-between;
     }
     .logo-mark {
@@ -105,6 +128,15 @@ import { UpdateNotificationService } from './core/services/update-notification.s
     .desktop-nav a.active { background: var(--bg-surface-2); color: var(--primary); font-weight: 700; }
 
     .nav-footer .version { font-size: 0.75rem; color: var(--text-tertiary); }
+    
+    /* Desktop Badge */
+    .nav-item-desktop { display: flex; justify-content: space-between; align-items: center; }
+    .icon-row { display: flex; align-items: center; width: 100%; justify-content: space-between; }
+    .badge-desktop {
+      background: #ef4444; color: white;
+      font-size: 0.75rem; font-weight: 700;
+      padding: 2px 8px; border-radius: 12px;
+    }
 
     /* --- MAIN STAGE --- */
     .stage {
@@ -118,13 +150,13 @@ import { UpdateNotificationService } from './core/services/update-notification.s
       max-width: 1024px; margin: 0 auto; width: 100%; height: 100%;
     }
 
-    /* --- MOBILE NAV (Permanent Dark Glass) --- */
+    /* --- MOBILE NAV --- */
     .mobile-bar {
       position: fixed; bottom: 0; left: 0; right: 0;
       z-index: 100;
       height: calc(60px + var(--safe-bottom));
       padding-bottom: var(--safe-bottom);
-      background: rgba(15, 17, 21, 0.85); /* Dark base */
+      background: rgba(15, 17, 21, 0.85);
       border-top: 1px solid rgba(255,255,255,0.08);
     }
     
@@ -134,7 +166,12 @@ import { UpdateNotificationService } from './core/services/update-notification.s
       z-index: -1;
     }
 
-    .nav-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 100%; }
+    .nav-grid { 
+      display: grid; 
+      /* 4 Items Grid */
+      grid-template-columns: repeat(4, 1fr); 
+      height: 100%; 
+    }
 
     .nav-grid a {
       display: flex; flex-direction: column;
@@ -152,11 +189,28 @@ import { UpdateNotificationService } from './core/services/update-notification.s
       font-size: 10px; font-weight: 600; letter-spacing: 0.3px; opacity: 0.5;
     }
 
-    /* Active State */
     .nav-grid a.active { color: var(--primary); }
     .nav-grid a.active .nav-icon { opacity: 1; transform: translateY(-2px); stroke-width: 2.5px; }
     .nav-grid a.active .label { opacity: 1; }
     .nav-grid a:active .nav-icon { transform: scale(0.9); }
+
+    /* Mobile Badge */
+    .icon-wrapper { position: relative; display: flex; justify-content: center; }
+    .badge-mobile {
+      position: absolute; top: -4px; right: -8px;
+      background: #ef4444; color: white;
+      font-size: 0.65rem; font-weight: 800;
+      min-width: 18px; height: 18px;
+      padding: 0 4px; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0); }
+      to { transform: scale(1); }
+    }
 
     /* --- RESPONSIVE --- */
     @media (min-width: 768px) {
@@ -165,7 +219,6 @@ import { UpdateNotificationService } from './core/services/update-notification.s
       .stage { padding-bottom: 0; }
     }
 
-    /* Toast */
     .toast {
       position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%);
       background: var(--bg-surface); border: 1px solid var(--border-subtle);
@@ -180,6 +233,12 @@ import { UpdateNotificationService } from './core/services/update-notification.s
     }
   `]
 })
-export class App {
+export class App implements OnInit {
   updateService = inject(UpdateNotificationService);
+  studyState = inject(StudyStateService);
+
+  ngOnInit() {
+    // Check for due cards on app load
+    this.studyState.refreshCount();
+  }
 }
