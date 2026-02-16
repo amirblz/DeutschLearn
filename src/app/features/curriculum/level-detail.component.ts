@@ -1,5 +1,5 @@
 import { Component, inject, signal, computed, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository'; // <--- Inject Repo
@@ -8,7 +8,6 @@ import { VocabularyItem, LeitnerBox } from '../../core/models/vocabulary.model';
 
 @Component({
   selector: 'app-level-detail',
-  imports: [CommonModule],
   template: `
     <div class="page-container">
       

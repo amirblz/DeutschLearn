@@ -1,6 +1,6 @@
 import { Component, inject, signal, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
+
 import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
 import { StudyStateService } from '../../core/services/study-state.service'; // <--- Import State
@@ -8,8 +8,6 @@ import { LeitnerBox } from '../../core/models/vocabulary.model';
 
 @Component({
   selector: 'app-dashboard',
-  standalone: true,
-  imports: [CommonModule],
   template: `
     <div class="content-wrapper">
       <header>

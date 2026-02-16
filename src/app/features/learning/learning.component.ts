@@ -1,13 +1,12 @@
 import { Component, inject, signal, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { LearningSessionService } from './services/learning-session.service';
 import { FlipCardComponent } from '../../shared/ui/flip-card/flip-card.component';
 import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.component';
 
 @Component({
   selector: 'app-learning',
-  standalone: true,
-  imports: [CommonModule, FlipCardComponent, SwipeCardComponent],
+  imports: [FlipCardComponent, SwipeCardComponent],
   template: `
     <div class="dating-layout">
       

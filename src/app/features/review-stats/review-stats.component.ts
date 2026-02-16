@@ -1,13 +1,11 @@
-import { Component, inject, signal, computed, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, inject, signal, OnInit, ChangeDetectionStrategy } from '@angular/core';
+
 import { Router } from '@angular/router';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
-import { LearningSessionService } from '../../features/learning/services/learning-session.service';
 
 @Component({
   selector: 'app-review-stats',
-  standalone: true,
-  imports: [CommonModule],
+  imports: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="leitner-page">

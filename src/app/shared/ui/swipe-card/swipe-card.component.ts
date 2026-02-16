@@ -1,10 +1,8 @@
 import { Component, ElementRef, output, signal, computed, effect, input, untracked } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-swipe-card',
-  standalone: true,
-  imports: [CommonModule],
   template: `
     <div class="card-container" 
          [style.transform]="transformStyle()"

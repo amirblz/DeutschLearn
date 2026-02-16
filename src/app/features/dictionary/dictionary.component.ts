@@ -1,5 +1,5 @@
 import { Component, inject, signal, computed, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
 import { VocabularyItem } from '../../core/models/vocabulary.model';
@@ -7,8 +7,7 @@ import { FlipCardComponent } from '../../shared/ui/flip-card/flip-card.component
 
 @Component({
   selector: 'app-library',
-  standalone: true,
-  imports: [CommonModule, FormsModule, FlipCardComponent],
+  imports: [FormsModule, FlipCardComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="library-container">

@@ -1,13 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { UpdateNotificationService } from './core/services/update-notification.service';
-import { StudyStateService } from './core/services/study-state.service'; // <--- Import State
 
+import { UpdateNotificationService } from './core/services/update-notification.service';
+import { StudyStateService } from './core/services/study-state.service';
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   template: `
     <div class="app-shell">
       
