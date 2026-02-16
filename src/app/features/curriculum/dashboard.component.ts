@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
-import { StudyStateService } from '../../core/services/study-state.service'; // <--- Import State
+import { StudyStateService } from '../../core/services/study-state.service';
 import { LeitnerBox } from '../../core/models/vocabulary.model';
 
 @Component({
@@ -136,7 +136,7 @@ import { LeitnerBox } from '../../core/models/vocabulary.model';
 
     .level-card {
       position: relative; overflow: hidden;
-      border-radius: 24px; /* radius-lg */
+      border-radius: 24px;
       padding: 1.5rem; cursor: pointer;
       display: flex; align-items: center; justify-content: space-between;
       border: 1px solid var(--border-subtle);
@@ -179,7 +179,7 @@ export class DashboardComponent implements OnInit {
   sync = inject(ContentSyncService);
   repo = inject(VocabularyRepository);
   router = inject(Router);
-  studyState = inject(StudyStateService); // <--- Inject
+  studyState = inject(StudyStateService);
 
   // Map: LevelID -> { total, learned, percent }
   levelStats = signal<Map<string, { total: number, learned: number, percent: number }>>(new Map());

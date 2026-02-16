@@ -33,7 +33,7 @@ export class LeitnerService {
             newBox = next as LeitnerBox;
         } else {
             // DEMOTION: Reset to Box 1 (Strict Leitner)
-            // Alternative: You could implement "Soft Punishment" (go back 1 box) here if desired.
+            // Alternative: We could implement "Soft Punishment" (go back 1 box) here if desired.
             newBox = LeitnerBox.Box1;
         }
 
@@ -46,7 +46,6 @@ export class LeitnerService {
     private addDaysToNow(days: number): number {
         const date = new Date();
         // Reset time to midnight to avoid "due in 23.9 hours" issues
-        // (Optional: depending on if you want precise timing or day-based)
         date.setHours(0, 0, 0, 0);
         date.setDate(date.getDate() + days);
         return date.getTime();

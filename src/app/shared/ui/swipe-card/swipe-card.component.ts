@@ -36,7 +36,7 @@ import { Component, ElementRef, output, signal, computed, effect, input, untrack
 
   .card-container:active { cursor: grabbing; }
 
-  /* Stamps (Like/Nope) - Make them bolder */
+  /* Stamps (Like/Nope) */
   .stamp {
     position: absolute; top: 40px;
     font-size: 3rem; font-weight: 900; text-transform: uppercase;
@@ -55,20 +55,17 @@ import { Component, ElementRef, output, signal, computed, effect, input, untrack
 `]
 })
 export class SwipeCardComponent {
-  // --- Inputs & Outputs ---
   itemKey = input.required<string>(); // CRITICAL: To detect when card changes
 
   swipedLeft = output<void>();
   swipedRight = output<void>();
   cardTapped = output<void>();
 
-  // --- Internal State ---
   private startX = 0;
   private currentX = signal(0);
   private currentY = signal(0);
   isAnimating = signal(false);
 
-  // --- Computed Styles ---
   transformStyle = computed(() => {
     const x = this.currentX();
     const y = this.currentY();
@@ -83,7 +80,7 @@ export class SwipeCardComponent {
     // Bind to window to handle dragging outside the card area
     window.addEventListener('pointermove', this.onDragMove.bind(this));
 
-    // --- CRITICAL FIX: Reset Position when Data Changes ---
+    // --- Reset Position when Data Changes ---
     effect(() => {
       // Trigger whenever itemKey changes (e.g. uuid-1 -> uuid-2)
       const key = this.itemKey();

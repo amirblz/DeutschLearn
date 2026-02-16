@@ -1,26 +1,24 @@
-import { Injectable, inject, signal, computed, effect } from '@angular/core';
+import { Injectable, inject, signal, computed } from '@angular/core';
 import { VocabularyRepository } from '../../../core/repositories/vocabulary.repository';
-import { VocabularyItem, LeitnerBox } from '../../../core/models/vocabulary.model';
+import { VocabularyItem } from '../../../core/models/vocabulary.model';
 import { LeitnerService } from '../../../core/services/leitner.service';
 
 export type LearningMode = 'DE_TO_EN' | 'EN_TO_DE';
 
 @Injectable({
-    providedIn: 'root' // Scoped to root for simplicity, could be component-scoped
+    providedIn: 'root'
 })
 export class LearningSessionService {
     private repo = inject(VocabularyRepository);
     private leitner = inject(LeitnerService);
 
-    // --- State Signals ---
-    private _mode = signal<LearningMode>('DE_TO_EN'); // Default
+    private _mode = signal<LearningMode>('DE_TO_EN');
     private _sessionItems = signal<VocabularyItem[]>([]);
     private _currentIndex = signal<number>(0);
     private _isFlipped = signal<boolean>(false);
     private _isLoading = signal<boolean>(true);
     private _activeMissionId = signal<string | null>(null);
 
-    // --- Computed State ---
     readonly currentCard = computed(() => this._sessionItems()[this._currentIndex()] || null);
 
     readonly mode = this._mode.asReadonly();
@@ -101,8 +99,7 @@ export class LearningSessionService {
         // 4. Update UI State
         this._isFlipped.set(false);
 
-        // Remove the card from the current session view if you want strictly "Due" cards
-        // OR just move to next index (your current approach)
+        // move to next index 
         this._currentIndex.update(i => i + 1);
     }
 

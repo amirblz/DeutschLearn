@@ -98,7 +98,7 @@ import { FlipCardComponent } from '../../shared/ui/flip-card/flip-card.component
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       color: var(--text-primary);
-      padding: 14px 14px 14px 48px; /* Room for icon */
+      padding: 14px 14px 14px 48px; 
       border-radius: 16px;
       font-size: 1rem;
       outline: none;
@@ -157,7 +157,6 @@ import { FlipCardComponent } from '../../shared/ui/flip-card/flip-card.component
 export class DictionaryComponent implements OnInit {
   private repo = inject(VocabularyRepository);
 
-  // Data Signals
   allItems = signal<VocabularyItem[]>([]);
   query = signal<string>('');
 
@@ -205,13 +204,10 @@ export class DictionaryComponent implements OnInit {
     const q = this.query().toLowerCase().trim();
     const all = this.allItems();
 
-    // 1. If empty, maybe show nothing? Or show all?
-    // Let's show nothing initially to keep UI clean, or top 20 recent.
-    // User asked "if i input 'ye' ... i can see". Implies filtering.
+    // 1. If empty, show nothing?
     if (!q) return [];
 
     return all.filter(item => {
-      // "Starts with" logic as requested
       const matchGerman = item.german.toLowerCase().startsWith(q);
       const matchEnglish = item.english.toLowerCase().startsWith(q);
       return matchGerman || matchEnglish;

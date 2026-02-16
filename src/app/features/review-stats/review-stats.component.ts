@@ -5,7 +5,6 @@ import { VocabularyRepository } from '../../core/repositories/vocabulary.reposit
 
 @Component({
   selector: 'app-review-stats',
-  imports: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="leitner-page">
@@ -90,7 +89,6 @@ import { VocabularyRepository } from '../../core/repositories/vocabulary.reposit
     </div>
   `,
   styles: [`
-    /* ... (Keep your existing styles, they are perfect) ... */
     :host { display: block; min-height: 100%; padding-bottom: 100px; }
 
     .leitner-page { padding: 1.5rem; max-width: 800px; margin: 0 auto; }
@@ -187,7 +185,7 @@ export class ReviewStatsComponent implements OnInit {
   boxes = signal<any[]>([]);
   totalCards = signal(0);
   dueCount = signal(0);
-  newCount = signal(0); // Added this
+  newCount = signal(0);
 
   private readonly INTERVALS = {
     1: '1 Day',
@@ -213,7 +211,7 @@ export class ReviewStatsComponent implements OnInit {
     }));
 
     all.forEach(item => {
-      // LOGIC FIX: Check if the card is actually "In the System"
+      // Check if the card is actually "In the System"
       if (!item.lastReviewedDate) {
         // This is a NEW card. It doesn't belong in the "Review" buckets yet.
         newItems++;
@@ -245,7 +243,6 @@ export class ReviewStatsComponent implements OnInit {
 
   reviewSpecificBox(boxId: number) {
     console.log(`Reviewing Box ${boxId}`);
-    // Note: You'll need to update LearningSession to filter by Box & Due
     this.router.navigate(['/learn']);
   }
 }

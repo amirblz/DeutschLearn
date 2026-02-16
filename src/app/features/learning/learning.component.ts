@@ -32,7 +32,7 @@ import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.compon
             [itemKey]="current.id" 
             (swipedLeft)="handleSwipe(false)"
             (swipedRight)="handleSwipe(true)"
-            (cardTapped)="flipAndSpeak()"
+            (cardTapped)="flip()"
             (pointerdown)="dismissTutorial()">
             
             <app-flip-card 
@@ -84,7 +84,6 @@ import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.compon
     /* Stack Layout */
     .stack-container {
       flex: 1; position: relative;
-      /* Centered with breathing room, no footer space needed anymore */
       margin: 2rem 1.5rem 5rem 1.5rem; 
       perspective: 1000px;
     }
@@ -92,11 +91,11 @@ import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.compon
     /* Background Card Styling */
 .card-bg {
     position: absolute; inset: 0;
-    transform: scale(0.92) translateY(30px); /* Pushed back and down */
+    transform: scale(0.92) translateY(30px); 
     border-radius: 32px;
-    background: var(--bg-surface-2); /* Darker/Lighter depending on theme */
+    background: var(--bg-surface-2);
     box-shadow: var(--shadow-lg);
-    opacity: 1; /* Fully visible */
+    opacity: 1;
     pointer-events: none;
     z-index: 1;
   }
@@ -186,13 +185,7 @@ export class LearningComponent implements OnInit {
     this.store.submitAnswer(correct);
   }
 
-  flipAndSpeak() {
-    // Logic: If flipping to German side, speak.
-    const item = this.store.currentCard();
-    if (item && !this.store.isFlipped()) {
-      // Optional: Add TTS here if you want
-      // this.speak(item.german);
-    }
+  flip() {
     this.store.toggleFlip();
   }
 }

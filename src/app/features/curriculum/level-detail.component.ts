@@ -2,7 +2,7 @@ import { Component, inject, signal, computed, OnInit } from '@angular/core';
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
-import { VocabularyRepository } from '../../core/repositories/vocabulary.repository'; // <--- Inject Repo
+import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
 import { LearningSessionService } from '../../features/learning/services/learning-session.service';
 import { VocabularyItem, LeitnerBox } from '../../core/models/vocabulary.model';
 
@@ -157,7 +157,7 @@ export class LevelDetailComponent implements OnInit {
   private router = inject(Router);
   private sync = inject(ContentSyncService);
   private session = inject(LearningSessionService);
-  private repo = inject(VocabularyRepository); // Inject Repo
+  private repo = inject(VocabularyRepository);
 
   activeGroupId = signal<string | null>(null);
 
@@ -173,8 +173,6 @@ export class LevelDetailComponent implements OnInit {
   levelTitle = computed(() => this.currentLevel()?.title || 'Loading...');
 
   missionGroups = computed(() => {
-    // ... (Your existing grouping logic) ...
-    // Note: Copy the logic from the previous turn exactly
     const level = this.currentLevel();
     if (!level) return [];
     const groups = new Map<string, any>();
@@ -202,7 +200,6 @@ export class LevelDetailComponent implements OnInit {
       this.activeGroupId.set(this.missionGroups()[0].baseId);
     }
 
-    // LOAD PROGRESS
     this.calculateProgress();
   }
 
@@ -234,7 +231,6 @@ export class LevelDetailComponent implements OnInit {
     this.progressMap.set(map);
   }
 
-  // Helper for Template
   getProgress(missionId: string) {
     return this.progressMap().get(missionId) || { total: 0, learned: 0, percent: 0 };
   }
@@ -256,14 +252,13 @@ export class LevelDetailComponent implements OnInit {
     let learned = 0;
 
     group.parts.forEach(p => {
-      const s = this.getProgress(p.id); // Re-use your existing unit progress logic
+      const s = this.getProgress(p.id);
       total += s.total;
       learned += s.learned;
     });
 
     const pct = total > 0 ? (learned / total) * 100 : 0;
 
-    // Blue progress ring, Grey track
     return `conic-gradient(#3b82f6 ${pct}%, #e2e8f0 0)`;
   }
 }

@@ -1,11 +1,10 @@
 import { Component, input, computed, ChangeDetectionStrategy, signal, effect, untracked } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VocabularyItem, Gender } from '../../../core/models/vocabulary.model';
+import { VocabularyItem } from '../../../core/models/vocabulary.model';
 import { LearningMode } from '../../../features/learning/services/learning-session.service';
 
 @Component({
   selector: 'app-flip-card',
-  standalone: true,
   imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
@@ -78,21 +77,17 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
     /* --- FACE LAYOUT --- */
     .face {
       position: absolute; inset: 0;
-      backface-visibility: hidden; /* Hides back of card when rotated */
+      backface-visibility: hidden; 
       border-radius: 32px;
       overflow: hidden;
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
       display: flex; flex-direction: column; justify-content: space-between;
-      background: var(--bg-surface); /* Fallback */
+      background: var(--bg-surface); 
     }
 
-    /* 👇 THIS WAS MISSING! 👇 */
     .back {
       transform: rotateY(180deg);
     }
-    /* 👆 WITHOUT THIS, BACK SITS ON TOP OF FRONT 👆 */
-
-    /* --- THEMES --- */
     /* German Sides */
     .masc { background: var(--grad-masc); color: white; }
     .fem  { background: var(--grad-fem); color: white; }

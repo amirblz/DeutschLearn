@@ -17,7 +17,7 @@ export class StudyStateService {
     const now = Date.now();
     const allItems = await this.repo.getAll();
 
-    // FIX: Only count items that are "Due" AND have been reviewed before.
+    // Only count items that are "Due" AND have been reviewed before.
     // New items (no lastReviewedDate) should be ignored by the notification badge.
     const due = allItems.filter(item =>
       item.nextReviewDate <= now && item.lastReviewedDate

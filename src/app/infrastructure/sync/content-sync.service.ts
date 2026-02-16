@@ -4,7 +4,6 @@ import { firstValueFrom } from 'rxjs';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
 import { VocabularyItem, LeitnerBox, WordType, Gender } from '../../core/models/vocabulary.model';
 
-// --- API Interfaces (Matching NestJS Responses) ---
 export interface ApiItem {
   id: string;
   missionId: string;
@@ -31,12 +30,6 @@ export interface ApiLevel {
   missions: ApiMission[];
 }
 
-// --- Wrapper for Mission Item Response ---
-interface MissionItemsResponse {
-  versionTag: string;
-  data: ApiItem[];
-}
-
 @Injectable({
   providedIn: 'root'
 })
@@ -44,7 +37,7 @@ export class ContentSyncService {
   private http = inject(HttpClient);
   private repo = inject(VocabularyRepository);
 
-  // 🔗 Point to your NestJS Backend
+  // 🔗 Point to NestJS Backend
   private readonly API_URL = 'http://localhost:3000/vocabulary';
 
   private readonly STORAGE_KEY_DATA = 'app_curriculum_structure';
@@ -79,7 +72,7 @@ export class ContentSyncService {
     try {
       await this.pushLocalProgress();
 
-      // 1. Fetch Hierarchy (Fast)
+      // 1. Fetch Hierarchy
       const levels = await firstValueFrom(this.http.get<ApiLevel[]>(`${this.API_URL}/levels`));
 
       // Update UI immediately
@@ -134,12 +127,9 @@ export class ContentSyncService {
 
   /**
    * Fetches items for a specific mission.
-   * Note: In a real PWA, you could add E-Tag headers here to prevent 
+   * Note: In a real PWA, we could add E-Tag headers here to prevent 
    * downloading unchanged data (returning 304).
    */
-  /**
-     * FIX APPLIED: Unwrap the { data: [...] } response from the backend
-     */
   private async fetchMissionItems(missionId: string): Promise<ApiItem[]> {
     try {
       const url = `${this.API_URL}/mission/${missionId}/items`;
@@ -169,7 +159,7 @@ export class ContentSyncService {
       .filter(local => !validApiIds.has(local.id))
       .map(local => local.id);
 
-    // 4. Upsert Logic (Your existing logic)
+    // 4. Upsert Logic 
     const itemsToSave: VocabularyItem[] = [];
     for (const rawItem of apiItems) {
       const existing = existingMap.get(rawItem.id);
@@ -178,13 +168,12 @@ export class ContentSyncService {
         id: rawItem.id,
         missionId: rawItem.missionId,
 
-        // Ensure Types match your Frontend Enums
         // (Assuming backend sends 'noun', 'verb' etc lowercase)
         type: rawItem.type as WordType,
         german: rawItem.german,
         english: rawItem.english,
         gender: rawItem.gender as Gender,
-        exampleSentence: rawItem.example, // Mapping backend 'example' to frontend 'exampleSentence'
+        exampleSentence: rawItem.example,
 
         // 3. CRITICAL: Preserve Learning State (The "Merge" logic)
         box: existing ? existing.box : LeitnerBox.Box1,
@@ -202,7 +191,7 @@ export class ContentSyncService {
 
     if (staleIds.length > 0) {
       console.warn(`[ContentSync] Removing ${staleIds.length} stale items.`);
-      await this.repo.deleteBulk(staleIds); // <--- NEED TO IMPLEMENT THIS IN REPO
+      await this.repo.deleteBulk(staleIds);
     }
   }
 }

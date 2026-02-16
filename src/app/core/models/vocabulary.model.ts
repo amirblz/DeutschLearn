@@ -27,5 +27,5 @@ export interface VocabularyItem {
     // Learning State
     box: LeitnerBox;
     nextReviewDate: number;     // When is it due?
-    lastReviewedDate?: number;  // NEW: When did we last look at it? (Optional)
+    lastReviewedDate?: number;  // When did we last look at it?
 }
