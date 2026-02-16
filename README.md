@@ -1,59 +1,90 @@
-# Flashcard
+# DeuVocab PWA
+A high-performance, offline-first Progressive Web App (PWA) for learning German vocabulary using the Leitner Spaced Repetition System. Built with Angular 18+, Signals, and IndexedDB.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
+## Key Features
+Local-First Architecture: Uses IndexedDB (via idb) as the primary data source. The app functions 100% offline after the initial sync.
 
-## Development server
+Spaced Repetition (Leitner): Implements a 5-Box Leitner system with specific interval algorithms (1, 3, 7, 14, 30 days).
 
-To start a local development server, run:
+Reactive State: Fully Signal-based architecture (signal, computed, effect) for fine-grained change detection and OnPush optimization.
 
-```bash
+Interactive UI:
+
+Tinder-style Swiping: Custom implementation using Pointer Events (touch/mouse) for "Know/Don't Know" logic.
+
+3D Flip Cards: CSS 3D transforms for flashcard interactions.
+
+Glassmorphism: Modern UI design using CSS variables and backdrop filters.
+
+Smart Sync:
+
+Optimistic UI updates (instant feedback).
+
+Background synchronization queue for progress updates.
+
+Differential downloading (only fetches changed missions).
+
+## Tech Stack
+Framework: Angular (Standalone Components)
+
+State Management: Angular Signals
+
+Storage: IndexedDB (wraps idb)
+
+PWA: @angular/service-worker
+
+Styles: SCSS, CSS Variables, CSS Grid/Flexbox
+
+Routing: Angular Router with View Transitions
+
+## Project Structure
+Plaintext
+src/app/
+├── core/
+│   ├── models/          # Types (VocabularyItem, LeitnerBox)
+│   ├── repositories/    # Abstract Repository Interfaces
+│   └── services/        # Business Logic (Leitner calc, Study State)
+├── infrastructure/
+│   ├── repositories/    # IDB Implementation (IdbVocabularyRepository)
+│   └── sync/            # HTTP Sync Service (ContentSyncService)
+├── features/
+│   ├── curriculum/      # Dashboard & Level Logic
+│   ├── dictionary/      # Searchable Library
+│   ├── learning/        # Study Session & Swipe Logic
+│   └── review-stats/    # Leitner Box Visualization
+└── shared/
+    └── ui/              # Reusable UI (FlipCard, SwipeCard)
+
+## Getting Started
+Install Dependencies:
+
+Bash
+npm install
+Run Development Server:
+
+Bash
 ng serve
-```
+Navigate to http://localhost:4200.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Test PWA (Service Worker):
+Service workers do not run in standard ng serve. To test offline capabilities:
 
-## Code scaffolding
+Bash
+npm run build
+npx http-server dist/deu-vocab/browser
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Architecture Highlights
+The Repository Pattern
+The app does not use HttpClient directly in components.
 
-```bash
-ng generate component component-name
-```
+Interface: VocabularyRepository (Core)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Implementation: IdbVocabularyRepository (Infrastructure)
+This allows the app to swap data sources easily and ensures components only interact with local data.
 
-```bash
-ng generate --help
-```
+Sync Strategy (ContentSyncService)
+Pull: On startup, checks the backend for curriculum structure.
 
-## Building
+Merge: Fetches items for missions, merging them into IndexedDB while preserving the user's local Leitner progress (Box/Due Date).
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Push: Flushes a local "Sync Queue" of progress updates to the backend.
