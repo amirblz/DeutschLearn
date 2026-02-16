@@ -41,7 +41,7 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
         
         <div class="back-content">
           <span class="label-lang">
-            {{ isGermanFront() ? 'English Translation' : 'German Answer' }}
+            {{ isGermanFront() ? 'English' : 'Deutsch' }}
           </span>
           
           <h2 class="sub-text">{{ backText() }}</h2>
@@ -146,7 +146,7 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
     .dot { width: 6px; height: 6px; background: white; border-radius: 50%; }
 
     /* Back Content Specifics */
-    .back-content { padding: 2.5rem; text-align: center; width: 100%; }
+    .back-content { padding: 2.5rem; text-align: center; width: 100%;box-sizing: border-box; }
     
     .label-lang {
       font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
