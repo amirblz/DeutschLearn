@@ -7,7 +7,6 @@ export enum Gender {
     None = 'none'
 }
 
-// FSRS State
 export enum CardState {
     New = 0,
     Learning = 1,
@@ -16,10 +15,10 @@ export enum CardState {
 }
 
 export enum Rating {
-    Again = 1, // Forgot (Swipe Left)
-    Hard = 2,  // Remembered with hesitation (Button)
-    Good = 3,  // Remembered instantly (Swipe Right)
-    Easy = 4   // Too easy (Button)
+    Again = 1,
+    Hard = 2,
+    Good = 3,
+    Easy = 4
 }
 
 export interface VocabularyItem {
@@ -31,14 +30,17 @@ export interface VocabularyItem {
     gender: Gender;
     exampleSentence?: string;
 
-    // --- FSRS-5 Data ---
+    // FSRS Data
     state: CardState;
-    difficulty: number; // D: 1 (Easy) to 10 (Hard)
-    stability: number;  // S: Interval in days
-    retrievability: number; // R: Current probability of recall (calculated dynamic)
+    difficulty: number;
+    stability: number;
+    retrievability: number;
+    reps: number;
+    lapses: number;
+
+    // ✅ NEW: Efficiency Metric
+    isLeech?: boolean; // True if the user fails this card repeatedly (Efficiency Drain)
 
     lastReviewedDate?: number;
     nextReviewDate: number;
-    reps: number;       // Total repetition count
-    lapses: number;     // How many times forgotten?
 }
