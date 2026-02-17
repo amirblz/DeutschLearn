@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
 import { StudyStateService } from '../../core/services/study-state.service';
-import { LeitnerBox } from '../../core/models/vocabulary.model';
+import { CardState } from '../../core/models/vocabulary.model'; // ✅ FIXED: Import CardState
 
 @Component({
   selector: 'app-dashboard',
@@ -24,7 +24,7 @@ import { LeitnerBox } from '../../core/models/vocabulary.model';
             <div class="pulse-icon">⚡</div>
             <div class="widget-text">
               <h3>{{ studyState.dueCount() }} Words Due</h3>
-              <p>Your Leitner system needs attention.</p>
+              <p>Your memory stream needs attention.</p>
             </div>
           </div>
           <button class="action-btn">Review</button>
@@ -195,7 +195,12 @@ export class DashboardComponent implements OnInit {
       const items = allItems.filter(i => missionIds.has(i.missionId));
 
       const total = items.length;
-      const learned = items.filter(i => i.box > LeitnerBox.Box1).length;
+
+      // ✅ FSRS UPDATE: 
+      // Count items that have graduated from "New"(0) or "Learning"(1).
+      // State >= 2 (Review) means the user has "learned" it at least once.
+      const learned = items.filter(i => i.state >= CardState.Review).length;
+
       const percent = total > 0 ? (learned / total) * 100 : 0;
 
       stats.set(lvl.id, { total, learned, percent });

@@ -1,10 +1,10 @@
 import { Component, inject, signal, computed, OnInit } from '@angular/core';
-
 import { ActivatedRoute, Router } from '@angular/router';
+
 import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
 import { LearningSessionService } from '../../features/learning/services/learning-session.service';
-import { VocabularyItem, LeitnerBox } from '../../core/models/vocabulary.model';
+import { VocabularyItem, CardState } from '../../core/models/vocabulary.model'; // ✅ FIXED: Import CardState
 
 @Component({
   selector: 'app-level-detail',
@@ -209,7 +209,6 @@ export class LevelDetailComponent implements OnInit {
     const map = new Map<string, { total: number, learned: number, percent: number }>();
 
     // 2. Iterate items and aggregate
-    // (Optimization: Group items by missionId first)
     const itemsByMission: Record<string, VocabularyItem[]> = {};
 
     allItems.forEach(item => {
@@ -221,8 +220,12 @@ export class LevelDetailComponent implements OnInit {
     for (const missionId in itemsByMission) {
       const items = itemsByMission[missionId];
       const total = items.length;
-      // "Learned" = Moved out of Box 1
-      const learned = items.filter(i => i.box > LeitnerBox.Box1).length;
+
+      // ✅ FIXED: Calculate "Learned" using FSRS CardState
+      // A card is "Learned" if it is in Review(2) or Relearning(3).
+      // If it is New(0) or Learning(1), it's not fully learned yet.
+      const learned = items.filter(i => i.state >= CardState.Review).length;
+
       const percent = total > 0 ? (learned / total) * 100 : 0;
 
       map.set(missionId, { total, learned, percent });

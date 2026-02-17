@@ -4,15 +4,22 @@ export enum Gender {
     Masculine = 'der',
     Feminine = 'die',
     Neuter = 'das',
-    None = 'none' // For verbs/adjectives
+    None = 'none'
 }
 
-export enum LeitnerBox {
-    Box1 = 1, // Daily
-    Box2 = 2, // Every 3 days
-    Box3 = 3, // Every week
-    Box4 = 4, // Every 2 weeks
-    Box5 = 5  // Retired / Monthly
+// FSRS State
+export enum CardState {
+    New = 0,
+    Learning = 1,
+    Review = 2,
+    Relearning = 3
+}
+
+export enum Rating {
+    Again = 1, // Forgot (Swipe Left)
+    Hard = 2,  // Remembered with hesitation (Button)
+    Good = 3,  // Remembered instantly (Swipe Right)
+    Easy = 4   // Too easy (Button)
 }
 
 export interface VocabularyItem {
@@ -24,8 +31,14 @@ export interface VocabularyItem {
     gender: Gender;
     exampleSentence?: string;
 
-    // Learning State
-    box: LeitnerBox;
-    nextReviewDate: number;     // When is it due?
-    lastReviewedDate?: number;  // When did we last look at it?
+    // --- FSRS-5 Data ---
+    state: CardState;
+    difficulty: number; // D: 1 (Easy) to 10 (Hard)
+    stability: number;  // S: Interval in days
+    retrievability: number; // R: Current probability of recall (calculated dynamic)
+
+    lastReviewedDate?: number;
+    nextReviewDate: number;
+    reps: number;       // Total repetition count
+    lapses: number;     // How many times forgotten?
 }

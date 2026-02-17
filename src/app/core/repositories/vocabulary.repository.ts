@@ -1,13 +1,12 @@
-import { VocabularyItem, LeitnerBox } from '../models/vocabulary.model';
+import { VocabularyItem } from '../models/vocabulary.model';
 
-// The "Physical" shape of data in IndexedDB
+// ✅ SHARED DEFINITION: No 'box'. FSRS data lives inside the encrypted 'payload'.
 export interface EncryptedWrapper {
     id: string;
     missionId: string;
-    box: LeitnerBox;
     nextReviewDate: number;
     lastReviewedDate?: number;
-    payload: string; // The secured content blob
+    payload: string; // Encrypted blob containing { state, difficulty, stability, german, english... }
 }
 
 export abstract class VocabularyRepository {
@@ -18,13 +17,14 @@ export abstract class VocabularyRepository {
     abstract addBulk(items: VocabularyItem[]): Promise<void>;
     abstract deleteBulk(ids: string[]): Promise<void>;
 
+    // ✅ UNIFIED SIGNATURE: We pass the full item because FSRS data (D/S/R) 
+    // needs to be re-encrypted into the payload.
     abstract updateProgress(
         id: string,
-        newBox: LeitnerBox,
-        nextReviewDate: number
+        updatedItem: VocabularyItem
     ): Promise<void>;
 
-    // ✅ New methods for High-Performance Sync
+    // ✅ RAW ACCESS: For Sync
     abstract upsertRawWrappers(wrappers: EncryptedWrapper[]): Promise<void>;
     abstract getAllWrappers(): Promise<EncryptedWrapper[]>;
 }

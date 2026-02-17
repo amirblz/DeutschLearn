@@ -2,13 +2,12 @@ import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { VocabularyRepository, EncryptedWrapper } from '../../core/repositories/vocabulary.repository';
-import { LeitnerBox } from '../../core/models/vocabulary.model';
+import { CardState } from '../../core/models/vocabulary.model'; // ✅ Use CardState
 
-// Interface for what the Backend Batch Endpoint returns
 export interface ApiBatchItem {
   id: string;
   missionId: string;
-  payload: string; // Encrypted Blob
+  payload: string;
 }
 
 export interface ApiLevel {
@@ -42,31 +41,20 @@ export class ContentSyncService {
   }
 
   async sync() {
-    console.time('SyncDuration');
-    console.log('[ContentSync] 🔄 Starting High-Performance Sync...');
-
+    console.log('[ContentSync] 🔄 Starting FSRS Sync...');
     try {
       await this.pushLocalProgress();
 
-      // 1. Fetch Hierarchy
       const levels = await firstValueFrom(this.http.get<ApiLevel[]>(`${this.API_URL}/levels`));
       this.curriculum.set(levels);
       localStorage.setItem(this.STORAGE_KEY_DATA, JSON.stringify(levels));
 
-      // 2. ⚡️ BATCH FETCH: Get ALL items in ONE compressed request
-      console.log('[ContentSync] ⬇️ Downloading Batch Data...');
       const response = await firstValueFrom(
         this.http.post<{ data: ApiBatchItem[] }>(`${this.API_URL}/sync/batch`, { missionIds: [] })
       );
 
-      const serverItems = response.data;
-      console.log(`[ContentSync] Received ${serverItems.length} items. Saving to Safe...`);
-
-      // 3. ⚡️ PASS-THROUGH SAVE (Zero Decryption)
-      await this.performFastMigration(serverItems);
-
+      await this.performFastMigration(response.data);
       console.log('[ContentSync] ✅ Sync complete.');
-      console.timeEnd('SyncDuration');
 
     } catch (err) {
       console.warn('[ContentSync] ⚠️ Sync failed', err);
@@ -74,44 +62,30 @@ export class ContentSyncService {
   }
 
   private async performFastMigration(serverItems: ApiBatchItem[]) {
-    // 1. Get current local state (Wrappers only, no decryption)
-    // This allows us to preserve user progress without reading the words
+    // 1. Get current local wrappers (Raw)
     const currentWrappers = await this.repo.getAllWrappers();
     const localMap = new Map(currentWrappers.map(w => [w.id, w]));
 
     const wrappersToSave: EncryptedWrapper[] = [];
 
-    // 2. Merge Server Blob + Local Progress
     for (const serverItem of serverItems) {
       const local = localMap.get(serverItem.id);
 
-      // If we have local progress, keep it. Otherwise default.
-      const box = local ? local.box : LeitnerBox.Box1;
+      // ✅ PERSIST LOCAL SCHEDULING DATA
+      // If we have local data, we prefer its schedule over the server's default
       const nextReviewDate = local ? local.nextReviewDate : Date.now();
       const lastReviewedDate = local ? local.lastReviewedDate : undefined;
 
       wrappersToSave.push({
         id: serverItem.id,
         missionId: serverItem.missionId,
-        box,
         nextReviewDate,
         lastReviewedDate,
-        payload: serverItem.payload // <--- The secure payload from server
+        payload: serverItem.payload
       });
     }
 
-    // 3. Batch Save
     await this.repo.upsertRawWrappers(wrappersToSave);
-
-    // 4. Cleanup Stale Items (Items that exist locally but not on server)
-    const serverIdSet = new Set(serverItems.map(i => i.id));
-    const staleIds = currentWrappers
-      .filter(local => !serverIdSet.has(local.id))
-      .map(local => local.id);
-
-    if (staleIds.length > 0) {
-      await this.repo.deleteBulk(staleIds);
-    }
   }
 
   private async pushLocalProgress() {

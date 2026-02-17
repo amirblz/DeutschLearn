@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { openDB, DBSchema, IDBPDatabase } from 'idb';
 import { VocabularyRepository, EncryptedWrapper } from '../../core/repositories/vocabulary.repository';
-import { VocabularyItem, LeitnerBox } from '../../core/models/vocabulary.model';
+import { VocabularyItem, CardState } from '../../core/models/vocabulary.model';
 import { EncryptionService } from '../../core/services/encryption.service';
 
 interface GermanAppDB extends DBSchema {
@@ -23,7 +23,7 @@ export class IdbVocabularyRepository implements VocabularyRepository {
     private dbPromise: Promise<IDBPDatabase<GermanAppDB>>;
 
     constructor() {
-        this.dbPromise = openDB<GermanAppDB>('german-learning-db', 3, { // Version Bumped
+        this.dbPromise = openDB<GermanAppDB>('german-learning-db', 4, {
             upgrade(db) {
                 if (db.objectStoreNames.contains('vocabulary')) {
                     db.deleteObjectStore('vocabulary');
@@ -34,8 +34,6 @@ export class IdbVocabularyRepository implements VocabularyRepository {
             },
         });
     }
-
-    // --- Fast Raw Access for Sync (Pass-Through) ---
 
     async upsertRawWrappers(wrappers: EncryptedWrapper[]): Promise<void> {
         const db = await this.dbPromise;
@@ -50,8 +48,6 @@ export class IdbVocabularyRepository implements VocabularyRepository {
         const db = await this.dbPromise;
         return db.getAll('vocabulary');
     }
-
-    // --- Application Access (Decrypts on demand) ---
 
     async getAll(): Promise<VocabularyItem[]> {
         const db = await this.dbPromise;
@@ -77,18 +73,9 @@ export class IdbVocabularyRepository implements VocabularyRepository {
         const tx = db.transaction('vocabulary', 'readwrite');
 
         const promises = items.map(async (item) => {
-            // Extract content to encrypt
-            const { id, missionId, box, nextReviewDate, lastReviewedDate, ...content } = item;
+            const { id, missionId, nextReviewDate, lastReviewedDate, ...content } = item;
             const payload = await this.crypto.encrypt(content, id);
-
-            return tx.store.put({
-                id,
-                missionId,
-                box,
-                nextReviewDate,
-                lastReviewedDate,
-                payload
-            });
+            return tx.store.put({ id, missionId, nextReviewDate, lastReviewedDate, payload });
         });
 
         await Promise.all([...promises, tx.done]);
@@ -100,36 +87,48 @@ export class IdbVocabularyRepository implements VocabularyRepository {
         await Promise.all([...ids.map(id => tx.store.delete(id)), tx.done]);
     }
 
-    async updateProgress(id: string, newBox: LeitnerBox, nextReviewDate: number): Promise<void> {
+    // ✅ FIXED SIGNATURE: Matches Abstract Class
+    async updateProgress(id: string, updatedItem: VocabularyItem): Promise<void> {
         const db = await this.dbPromise;
         const tx = db.transaction('vocabulary', 'readwrite');
         const wrapper = await tx.store.get(id);
 
         if (wrapper) {
-            // Only update metadata. Payload remains encrypted.
-            wrapper.box = newBox;
-            wrapper.nextReviewDate = nextReviewDate;
-            wrapper.lastReviewedDate = Date.now();
+            wrapper.nextReviewDate = updatedItem.nextReviewDate;
+            wrapper.lastReviewedDate = updatedItem.lastReviewedDate;
+
+            // Re-encrypt payload with new FSRS data
+            const { id: _id, missionId: _mid, nextReviewDate: _nrd, lastReviewedDate: _lrd, ...content } = updatedItem;
+            wrapper.payload = await this.crypto.encrypt(content, id);
+
             await tx.store.put(wrapper);
         }
         await tx.done;
     }
 
-    // --- Helper: Merge Decrypted Content + Local Progress ---
     private async decryptWrappers(wrappers: EncryptedWrapper[]): Promise<VocabularyItem[]> {
-        return Promise.all(
+        const results = await Promise.all(
             wrappers.map(async (w) => {
-                const content = await this.crypto.decrypt<any>(w.payload, w.id);
-
-                return {
-                    id: w.id,
-                    missionId: w.missionId,
-                    box: w.box,
-                    nextReviewDate: w.nextReviewDate,
-                    lastReviewedDate: w.lastReviewedDate,
-                    ...content // Spread: german, english, type, etc.
-                };
+                try {
+                    const content = await this.crypto.decrypt<any>(w.payload, w.id);
+                    return {
+                        id: w.id,
+                        missionId: w.missionId,
+                        nextReviewDate: w.nextReviewDate,
+                        lastReviewedDate: w.lastReviewedDate,
+                        // Defaults for FSRS
+                        state: content.state ?? CardState.New,
+                        difficulty: content.difficulty ?? 0,
+                        stability: content.stability ?? 0,
+                        reps: content.reps ?? 0,
+                        lapses: content.lapses ?? 0,
+                        ...content
+                    };
+                } catch (e) {
+                    return null;
+                }
             })
         );
+        return results.filter((i): i is VocabularyItem => i !== null);
     }
 }
