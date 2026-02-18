@@ -261,7 +261,7 @@ export class LevelDetailComponent implements OnInit {
       'A1': 'Black Forest',
       'A2': 'Alpine Ascent',
       'B1': 'Fuji Crater',
-      'B2': 'Kilimanjaro',
+      'B2-C1': 'Kilimanjaro',
       'C1': 'K2 Summit',
       'C2': 'The Void'
     };
@@ -275,7 +275,7 @@ export class LevelDetailComponent implements OnInit {
       'A1': 'The jungle is chaotic. You cannot map it all at once. You camp here to learn the names of the trees and the paths of survival. Do not rush; observe the roots before you climb.',
       'A2': 'The incline begins. The air clears, revealing the structure of the land. Grammar rises like granite cliffs—intimidating from below, but sturdy once you find your grip.',
       'B1': 'The river widens. The flow of language is strong here. You must stop fighting the current and learn to move with it. Rhythm becomes more important than raw strength.',
-      'B2': 'The plateau is vast and unforgiving. The air is thin. Mistakes here cost energy. You must refine your gear, shedding simple words for precise, technical instruments.',
+      'B2-C1': 'The plateau is vast and unforgiving. The air is thin. Mistakes here cost energy. You must refine your gear, shedding simple words for precise, technical instruments.',
       'C1': 'You have entered the cloud layer. Visibility is low. You navigate by instinct and nuance. You are no longer a guest in this land; you are a survivor.',
       'C2': 'The summit is silent. There is no translation here, only being. Thought and speech have become one.'
     };
@@ -331,13 +331,13 @@ export class LevelDetailComponent implements OnInit {
   // --- Dynamic Stats ---
   getAltitude(): string {
     const id = this.currentLevel()?.id || '';
-    const alts: Record<string, string> = { 'A1': '850', 'A2': '2100', 'B1': '3400', 'B2': '5200', 'C1': '7800', 'C2': '8848' };
+    const alts: Record<string, string> = { 'A1': '850', 'A2': '2100', 'B1': '3400', 'B2-C1': '5200', 'C1': '7800', 'C2': '8848' };
     return alts[id] || '0';
   }
 
   getOxygenLevel(): string {
     const id = this.currentLevel()?.id || '';
-    const ox: Record<string, string> = { 'A1': '98', 'A2': '85', 'B1': '72', 'B2': '55', 'C1': '40', 'C2': '33' };
+    const ox: Record<string, string> = { 'A1': '98', 'A2': '85', 'B1': '72', 'B2-C1': '55', 'C1': '40', 'C2': '33' };
     return ox[id] || '100';
   }
 

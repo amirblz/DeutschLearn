@@ -17,7 +17,7 @@ import { CardState } from '../../core/models/vocabulary.model';
         <div class="user-rank">
           <div class="rank-icon"></div>
           <div class="rank-info">
-            <span class="label">Current Altitude</span>
+            <span class="label">Path Covered</span>
             <span class="value">{{ currentAltitude() }}m</span>
           </div>
         </div>
@@ -51,7 +51,6 @@ import { CardState } from '../../core/models/vocabulary.model';
               <div class="active-core">
                 <span class="sub">TARGET</span>
                 <span class="count">{{ dailyProgress() }}</span>
-                <button class="resume-btn">INITIATE</button>
               </div>
             }
           </div>
@@ -71,7 +70,7 @@ import { CardState } from '../../core/models/vocabulary.model';
                        class="bg-video"
                        [src]="getVideoPath(level.id)"
                        [poster]="getPosterPath(level.id)"
-                       loop muted playsinline autoplay
+                       muted playsinline autoplay
                        [style.opacity]="0.6">
                 </video>
               } @placeholder {
@@ -91,7 +90,7 @@ import { CardState } from '../../core/models/vocabulary.model';
                   </div>
                   
                   <div class="meta-row">
-                    <span class="pct">{{ getLevelStats(level.id).percent | number:'1.0-0' }}% SYNCED</span>
+                    <span class="pct">{{ getLevelStats(level.id).percent | number:'1.0-0' }}% Covered</span>
                     <span class="status-indicator" 
                           [class.active]="getLevelStats(level.id).percent > 0">
                        {{ getLevelStats(level.id).percent >= 100 ? 'SECURED' : 'LIVE' }}
@@ -226,11 +225,19 @@ export class DashboardComponent implements OnInit {
   levelStats = signal<Map<string, { percent: number }>>(new Map());
 
   constructor() {
-    // Cinematic Effect: Slow down videos to 0.8x speed once they load
     effect(() => {
-      this.videoElements().forEach(el => {
+      const videos = this.videoElements();
+
+      videos.forEach(el => {
         const video = el.nativeElement;
-        video.playbackRate = 0.8; // Dreamy/Heavy feel
+
+        video.playbackRate = 0.7;
+        video.muted = true;
+
+        // Force Play
+        video.play().catch(err => {
+          console.warn('Autoplay prevented by browser:', err);
+        });
       });
     });
   }
@@ -263,7 +270,7 @@ export class DashboardComponent implements OnInit {
       'A1': 'The Black Forest',
       'A2': 'Alpine Ascent',
       'B1': 'River Crossing',
-      'B2': 'High Plateau',
+      'B2-C1': 'High Plateau',
       'C1': 'Cloud Peaks',
       'C2': 'The Void'
     };
@@ -277,7 +284,7 @@ export class DashboardComponent implements OnInit {
       'A1': 'assets/videos/forest.webm',
       'A2': 'assets/videos/mountain.webm',
       'B1': 'assets/videos/river.webm',
-      'B2': 'assets/videos/plateau.webm',
+      'B2-C1': 'assets/videos/plateau.webm',
       'C1': 'assets/videos/clouds.webm',
       'C2': 'assets/videos/void.webm',
     };
@@ -290,7 +297,7 @@ export class DashboardComponent implements OnInit {
       'A1': 'assets/images/forest-thumb.jpg',
       'A2': 'assets/images/mountain-thumb.jpg',
       'B1': 'assets/images/river-thumb.jpg',
-      'B2': 'assets/images/plateau-thumb.jpg',
+      'B2-C1': 'assets/images/plateau-thumb.jpg',
       'C1': 'assets/images/clouds-thumb.jpg',
       'C2': 'assets/images/void-thumb.jpg',
     };
