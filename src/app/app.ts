@@ -145,7 +145,7 @@ import { StudyStateService } from './core/services/study-state.service';
       padding-bottom: calc(65px + var(--safe-bottom)); 
     }
     .stage-content {
-      max-width: 1024px; margin: 0 auto; width: 100%; height: 100%;
+      margin: 0 auto; width: 100%; height: 100%;
     }
 
     /* --- MOBILE NAV --- */
