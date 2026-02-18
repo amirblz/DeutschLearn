@@ -1,0 +1,15 @@
+# Replace with your domain (or use :80 for testing if no domain yet)
+:80 {
+    root * /srv
+    try_files {path} {path}/ /index.html
+    file_server
+
+    # Proxy API requests to the backend container
+    handle /api/* {
+        reverse_proxy server:3000
+    }
+    
+    handle /auth/* {
+        reverse_proxy server:3000
+    }
+}
