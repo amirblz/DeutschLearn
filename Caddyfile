@@ -1,4 +1,8 @@
-balazlee.ir {
+{
+    email abalazade@gmail.com
+}
+
+balazlee.ir, www.balazlee.ir {
     encode gzip
     
     # 1. Route all API traffic to your Node.js container
