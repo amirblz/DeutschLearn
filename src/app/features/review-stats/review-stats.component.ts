@@ -40,10 +40,6 @@ import { CardState } from '../../core/models/vocabulary.model';
 
         <div class="metric-grid">
             <div class="metric glass">
-                <span class="num">{{ counts().new }}</span>
-                <span class="txt">New</span>
-            </div>
-            <div class="metric glass">
                 <span class="num">{{ counts().learning }}</span>
                 <span class="txt">Active</span>
             </div>

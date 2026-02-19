@@ -1,0 +1,52 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build Client Image
+        # Notice we use '.' instead of './client'
+        run: docker build -t journey-client:latest .
+
+      - name: Save & Compress Image
+        run: |
+          echo "📦 Saving client image..."
+          docker save journey-client:latest -o client.tar
+          gzip client.tar
+          sudo chmod 644 client.tar.gz
+
+      - name: Upload to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          # We ONLY upload the client image
+          source: "client.tar.gz"
+          target: "/root/app"
+
+      - name: Load & Start Client
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /root/app
+            
+            gunzip -f client.tar.gz
+            docker load -i client.tar
+            
+            # Tell Docker Compose to update ONLY the client container
+            docker compose -f docker-compose.prod.yml up -d client
+            
+            rm client.tar
+            docker image prune -f
+            echo "✅ Frontend Deployed!"

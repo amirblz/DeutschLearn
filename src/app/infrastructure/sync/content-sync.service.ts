@@ -24,7 +24,7 @@ export class ContentSyncService {
   private http = inject(HttpClient);
   private repo = inject(VocabularyRepository);
 
-  private readonly API_URL = 'http://localhost:3000/vocabulary';
+  private readonly API_URL = '/api/vocabulary';
   private readonly STORAGE_KEY_DATA = 'app_curriculum_structure';
 
   readonly curriculum = signal<ApiLevel[]>([]);
