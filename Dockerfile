@@ -11,5 +11,5 @@ RUN npm run build --configuration=production
 FROM caddy:2-alpine
 # COPY the built files. 
 # REPLACE 'deu-vocab' with the name found in your angular.json 'outputPath'
-COPY --from=builder /app/dist/deu-vocab/browser /srv
+COPY --from=builder /app/dist/flashcard/browser /srv
 COPY Caddyfile /etc/caddy/Caddyfile
