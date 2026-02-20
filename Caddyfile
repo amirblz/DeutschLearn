@@ -1,17 +1,10 @@
-{
-    email abalazade@gmail.com
-}
-
-balazlee.ir, www.balazlee.ir {
+http://balazlee.ir, http://www.balazlee.ir {
     encode gzip
     
-    # 1. Route all API traffic to your Node.js container
-    # (Assuming your Node container is named 'server' and uses port 3000)
     handle_path /api/* {
         reverse_proxy server:3000
     }
 
-    # 2. Serve the Angular frontend for everything else
     handle {
         root * /srv
         try_files {path} /index.html
