@@ -5,7 +5,7 @@ import { firstValueFrom } from 'rxjs';
 @Injectable({ providedIn: 'root' })
 export class AuthService {
     private http = inject(HttpClient);
-    private readonly API_URL = '/api/auth';
+    private readonly API_URL = 'https://api.balazlee.ir/auth';
 
     // State
     currentUser = signal<string | null>(null); // Null = Anonymous
