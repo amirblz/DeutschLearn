@@ -1,15 +1,24 @@
-import { Component, ElementRef, output, signal, computed, effect, input, untracked } from '@angular/core';
-
+import { Component, ElementRef, output, signal, computed, effect, input, untracked, inject, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-swipe-card',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '(window:pointermove)': 'onDragMove($event)',
+    '(window:pointerup)': 'onDragEnd($event)',
+    '(window:pointercancel)': 'onDragEnd($event)',
+    'role': 'application',
+    'tabindex': '0',
+    '(keydown.ArrowLeft)': 'flyAway(-1000); emitLeft()',
+    '(keydown.ArrowRight)': 'flyAway(1000); emitRight()',
+    '(keydown.Enter)': 'onCardClick($event)',
+    '(keydown.Space)': 'onCardClick($event)'
+  },
   template: `
     <div class="card-container" 
          [style.transform]="transformStyle()"
          [class.is-animating]="isAnimating()"
          (pointerdown)="onDragStart($event)"
-         (pointerup)="onDragEnd($event)"
-         (pointercancel)="onDragEnd($event)"
          (click)="onCardClick($event)">
 
       <div class="stamp stamp-nope" [style.opacity]="nopeOpacity()">AGAIN</div>
@@ -20,42 +29,46 @@ import { Component, ElementRef, output, signal, computed, effect, input, untrack
     </div>
   `,
   styles: [`
-  :host { display: block; position: absolute; width: 100%; height: 100%; top: 0; left: 0; touch-action: none; }
+  :host { display: block; position: absolute; width: 100%; height: 100%; top: 0; left: 0; touch-action: none; outline: none; }
 
   .card-container {
     width: 100%; height: 100%;
-    /* No background here, the flip-card handles background */
     border-radius: 32px;
     position: relative;
     cursor: grab;
     will-change: transform;
-    
-    /* THE PREMIUM SHADOW */
     box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5); 
+  }
+
+  /* ✅ ADDED: The missing transition class */
+  .card-container.is-animating {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .card-container:active { cursor: grabbing; }
 
-  /* Stamps (Like/Nope) */
   .stamp {
     position: absolute; top: 40px;
     font-size: 3rem; font-weight: 900; text-transform: uppercase;
     border: 6px solid; border-radius: 12px; padding: 0.2rem 1.5rem;
     z-index: 20; opacity: 0; 
-    /* Add backdrop blur behind stamp for legibility */
     backdrop-filter: blur(4px); 
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   }
   .stamp-like {
      left: 1rem;
+     color: #4ade80;
+     border-color: #4ade80;
   }
   .stamp-nope {
      right: 1rem;
+     color: #f87171;
+     border-color: #f87171;
   }
 `]
 })
 export class SwipeCardComponent {
-  itemKey = input.required<string>(); // CRITICAL: To detect when card changes
+  itemKey = input.required<string>();
 
   swipedLeft = output<void>();
   swipedRight = output<void>();
@@ -69,37 +82,36 @@ export class SwipeCardComponent {
   transformStyle = computed(() => {
     const x = this.currentX();
     const y = this.currentY();
-    const rotate = x * 0.05; // Rotate 5deg per 100px moved
+    const rotate = x * 0.05;
     return `translate3d(${x}px, ${y}px, 0) rotate(${rotate}deg)`;
   });
 
   nopeOpacity = computed(() => this.currentX() < 0 ? Math.min(Math.abs(this.currentX()) / 120, 1) : 0);
   likeOpacity = computed(() => this.currentX() > 0 ? Math.min(Math.abs(this.currentX()) / 120, 1) : 0);
 
-  constructor(private el: ElementRef) {
-    // Bind to window to handle dragging outside the card area
-    window.addEventListener('pointermove', this.onDragMove.bind(this));
+  private el = inject(ElementRef);
+  private isDragging = false;
 
-    // --- Reset Position when Data Changes ---
+  constructor() {
     effect(() => {
-      // Trigger whenever itemKey changes (e.g. uuid-1 -> uuid-2)
       const key = this.itemKey();
 
       untracked(() => {
-        // Instant reset (no animation) so the new card appears in center immediately
         this.isAnimating.set(false);
-        this.currentX.set(0);
-        this.currentY.set(0);
+
+        // ✅ CRITICAL iOS FIX: Wait for the DOM to process the removal of `.is-animating`
+        // before snapping the coordinates back to 0. This breaks the batch update!
+        setTimeout(() => {
+          this.currentX.set(0);
+          this.currentY.set(0);
+        }, 20);
       });
     });
   }
 
-  // --- Drag Logic ---
-  private isDragging = false;
-
   onDragStart(event: PointerEvent) {
     this.isDragging = true;
-    this.isAnimating.set(false); // Disable smoothing for instant 1:1 tracking
+    this.isAnimating.set(false);
     this.startX = event.clientX;
     (event.target as HTMLElement).setPointerCapture(event.pointerId);
   }
@@ -109,40 +121,40 @@ export class SwipeCardComponent {
 
     const delta = event.clientX - this.startX;
     this.currentX.set(delta);
-
-    // Add slight vertical dip based on horizontal distance (pendulum effect)
     this.currentY.set(Math.abs(delta) * 0.1);
   }
 
   onDragEnd(event: PointerEvent) {
     if (!this.isDragging) return;
     this.isDragging = false;
-    this.isAnimating.set(true); // Re-enable smoothing for snap/fly
+    this.isAnimating.set(true);
 
-    const threshold = 120; // Pixels required to commit action
+    const threshold = 120;
     const x = this.currentX();
 
     if (x > threshold) {
-      this.flyAway(1000); // Swipe Right
+      this.flyAway(1000);
       setTimeout(() => this.swipedRight.emit(), 300);
     } else if (x < -threshold) {
-      this.flyAway(-1000); // Swipe Left
+      this.flyAway(-1000);
       setTimeout(() => this.swipedLeft.emit(), 300);
     } else {
-      this.resetPosition(); // Snap Back
+      this.resetPosition();
     }
   }
 
   onCardClick(event: Event) {
-    // Distinguish between a "Tap" and a "Drag that ended"
     if (Math.abs(this.currentX()) < 5) {
       this.cardTapped.emit();
     }
   }
 
-  private flyAway(toX: number) {
+  flyAway(toX: number) {
     this.currentX.set(toX);
   }
+
+  emitLeft() { setTimeout(() => this.swipedLeft.emit(), 300); }
+  emitRight() { setTimeout(() => this.swipedRight.emit(), 300); }
 
   private resetPosition() {
     this.currentX.set(0);

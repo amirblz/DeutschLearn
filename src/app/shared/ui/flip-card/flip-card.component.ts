@@ -1,11 +1,9 @@
 import { Component, input, computed, ChangeDetectionStrategy, signal, effect, untracked } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { VocabularyItem } from '../../../core/models/vocabulary.model';
 import { LearningMode } from '../../../features/learning/services/learning-session.service';
 
 @Component({
   selector: 'app-flip-card',
-  imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="flip-inner" 
@@ -13,7 +11,7 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
          [class.no-transition]="isSwitching()">
       
       <div class="face front" 
-           [ngClass]="isGermanFront() ? getGenderClass() : 'neutral'">
+           [class]="isGermanFront() ? getGenderClass() : 'neutral'">
          
          <div class="card-header">
            <span class="type-pill">{{ item().type }}</span>
@@ -37,7 +35,7 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
       </div>
 
       <div class="face back" 
-           [ngClass]="!isGermanFront() ? getGenderClass() : 'clean'">
+           [class]="!isGermanFront() ? getGenderClass() : 'clean'">
         
         <div class="back-content">
           <span class="label-lang">
@@ -74,7 +72,6 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
     .no-transition { transition: none !important; }
     .is-flipped { transform: rotateY(180deg); }
 
-    /* --- FACE LAYOUT --- */
     .face {
       position: absolute; inset: 0;
       backface-visibility: hidden; 
@@ -85,33 +82,26 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
       background: var(--bg-surface); 
     }
 
-    .back {
-      transform: rotateY(180deg);
-    }
-    /* German Sides */
+    .back { transform: rotateY(180deg); }
     .masc { background: var(--grad-masc); color: white; }
     .fem  { background: var(--grad-fem); color: white; }
     .neut { background: var(--grad-neut); color: white; }
     .verb { background: #1e293b; color: white; }
 
-    /* English Side (Question) */
     .neutral {
       background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
       color: #f8fafc;
     }
 
-    /* English Side (Answer) */
     .clean {
       background: var(--bg-surface);
       color: var(--text-primary);
       align-items: center; justify-content: center;
     }
-    /* If back is colored (German Answer), center it */
     .masc.back, .fem.back, .neut.back, .verb.back {
       align-items: center; justify-content: center;
     }
 
-    /* --- TYPOGRAPHY & ELEMENTS --- */
     .card-header { padding: 1.5rem; display: flex; justify-content: flex-end; }
     .type-pill {
       background: rgba(0,0,0,0.2); backdrop-filter: blur(10px);
@@ -124,12 +114,8 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
       padding: 0 1rem; text-align: center;
     }
 
-    .article-bubble {
-      font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; opacity: 0.9;
-    }
-    .revealed-article {
-      margin-top: 0.5rem; font-weight: 800; opacity: 0.8; font-size: 1.2rem;
-    }
+    .article-bubble { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; opacity: 0.9; }
+    .revealed-article { margin-top: 0.5rem; font-weight: 800; opacity: 0.8; font-size: 1.2rem; }
 
     .main-text {
       font-family: 'Merriweather', serif;
@@ -145,31 +131,15 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
     }
     .dot { width: 6px; height: 6px; background: white; border-radius: 50%; }
 
-    /* Back Content Specifics */
-    .back-content { padding: 2.5rem; text-align: center; width: 100%;box-sizing: border-box; }
+    .back-content { padding: 2.5rem; text-align: center; width: 100%; box-sizing: border-box; }
     
-    .label-lang {
-      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
-      opacity: 0.7; margin-bottom: 1rem; display: block;
-    }
-
-    .sub-text {
-      font-size: 2.5rem; font-weight: 700; margin: 0;
-    }
-
-    .divider {
-      height: 1px; width: 40px; background: currentColor; opacity: 0.2;
-      margin: 2rem auto;
-    }
+    .label-lang { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; margin-bottom: 1rem; display: block; }
+    .sub-text { font-size: 2.5rem; font-weight: 700; margin: 0; }
+    .divider { height: 1px; width: 40px; background: currentColor; opacity: 0.2; margin: 2rem auto; }
 
     .context-section { opacity: 0.9; }
-    .label-context {
-      font-size: 0.7rem; font-weight: 700; opacity: 0.7;
-      text-transform: uppercase; margin-bottom: 0.5rem; display: block;
-    }
-    .sentence {
-      font-style: italic; font-size: 1.1rem; line-height: 1.5; margin: 0;
-    }
+    .label-context { font-size: 0.7rem; font-weight: 700; opacity: 0.7; text-transform: uppercase; margin-bottom: 0.5rem; display: block; }
+    .sentence { font-style: italic; font-size: 1.1rem; line-height: 1.5; margin: 0; }
   `]
 })
 export class FlipCardComponent {
