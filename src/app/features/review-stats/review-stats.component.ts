@@ -1,5 +1,4 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, inject, signal, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
 import { CardState } from '../../core/models/vocabulary.model';
@@ -7,6 +6,7 @@ import { CardState } from '../../core/models/vocabulary.model';
 @Component({
   selector: 'app-review-stats',
   imports: [CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="stats-bg">
       <header>
@@ -47,15 +47,17 @@ import { CardState } from '../../core/models/vocabulary.model';
                 <span class="num">{{ counts().review }}</span>
                 <span class="txt">Mature</span>
             </div>
-            <div class="metric glass alert" *ngIf="counts().leech > 0">
-                <span class="num">{{ counts().leech }}</span>
-                <span class="txt">Leeches</span>
-            </div>
+            @if (counts().leech > 0) {
+              <div class="metric glass alert">
+                  <span class="num">{{ counts().leech }}</span>
+                  <span class="txt">Leeches</span>
+              </div>
+            }
         </div>
       </div>
-
     </div>
   `,
+  // ... (Keep exact styles)
   styles: [`
     :host { display: block; height: 100vh; background: #0f172a; color: white; overflow-y: auto; }
     .stats-bg { padding: 2rem 1.5rem 6rem 1.5rem; max-width: 600px; margin: 0 auto; }

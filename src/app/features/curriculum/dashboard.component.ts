@@ -1,34 +1,20 @@
-import {
-  Component,
-  inject,
-  signal,
-  effect,
-  computed,
-  OnInit,
-  viewChildren,
-  ElementRef
-} from '@angular/core';
+import { Component, inject, signal, computed, OnInit, viewChildren, ElementRef, ChangeDetectionStrategy, effect } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
-
-// Domain Services & Models
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
 import { StudyStateService } from '../../core/services/study-state.service';
 import { AuthService } from '../../core/services/auth.service';
 import { CardState } from '../../core/models/vocabulary.model';
-
-// Components
 import { LoginModalComponent } from '../auth/login-modal.component';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CommonModule, LoginModalComponent],
+  imports: [CommonModule, LoginModalComponent, NgOptimizedImage],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="obsidian-layout">
-      
       <header class="cyber-header">
-        
         <div class="user-rank">
           <div class="rank-icon"></div>
           <div class="rank-info">
@@ -38,16 +24,13 @@ import { LoginModalComponent } from '../auth/login-modal.component';
         </div>
 
         <div class="hud-controls">
-          
           <button class="uplink-btn" 
                   [class.connected]="auth.isAuthenticated()"
                   (click)="showLogin.set(true)">
-            
             <span class="status-dot"></span>
             <span class="uplink-text">
               {{ auth.isAuthenticated() ? 'SIGNAL ACTIVE' : 'ESTABLISH LINK' }}
             </span>
-          
           </button>
 
           <div class="stats-matrix">
@@ -56,15 +39,13 @@ import { LoginModalComponent } from '../auth/login-modal.component';
                <span class="lbl">Streak</span>
              </div>
           </div>
-
         </div>
       </header>
 
       <section class="orbit-hero">
-        <div class="orbit-visual" (click)="goToSystem()">
-          
+        <div class="orbit-visual" role="button" tabindex="0" (click)="goToSystem()" (keydown.enter)="goToSystem()">
           <div class="glow-ring"></div>
-          <svg class="ring-svg" width="260" height="260">
+          <svg class="ring-svg" width="260" height="260" aria-hidden="true">
             <circle class="track" cx="130" cy="130" r="110"></circle>
             <circle class="progress" cx="130" cy="130" r="110"
                     [attr.stroke-dasharray]="circumference"
@@ -84,7 +65,6 @@ import { LoginModalComponent } from '../auth/login-modal.component';
               </div>
             }
           </div>
-
         </div>
       </section>
 
@@ -93,8 +73,7 @@ import { LoginModalComponent } from '../auth/login-modal.component';
         
         <div class="card-track">
           @for (level of sync.curriculum(); track level.id) {
-            
-            <div class="portal-card" (click)="openLevel(level.id)">
+            <div class="portal-card" role="button" tabindex="0" (click)="openLevel(level.id)" (keydown.enter)="openLevel(level.id)">
               
               @defer (on viewport) {
                 <video #bgVideo
@@ -105,7 +84,7 @@ import { LoginModalComponent } from '../auth/login-modal.component';
                        [style.opacity]="0.5">
                 </video>
               } @placeholder {
-                <img class="bg-poster" [src]="getPosterPath(level.id)" alt="Atmosphere">
+                <img class="bg-poster" [ngSrc]="getPosterPath(level.id)" fill alt="Atmosphere visual representation">
               }
 
               <div class="atmosphere-overlay"></div>
@@ -130,7 +109,6 @@ import { LoginModalComponent } from '../auth/login-modal.component';
                   </div>
                 </div>
               </div>
-
             </div>
           }
         </div>
@@ -139,9 +117,9 @@ import { LoginModalComponent } from '../auth/login-modal.component';
       @if (showLogin()) {
         <app-login-modal (close)="showLogin.set(false)"></app-login-modal>
       }
-
     </div>
   `,
+  // ... (Keep exact styles)
   styles: [`
     :host { display: block; height: 100%; overflow-y: auto; background: #0B0E14; }
 
@@ -448,4 +426,5 @@ export class DashboardComponent implements OnInit {
 
   openLevel(id: string) { this.router.navigate(['/level', id]); }
   goToSystem() { this.router.navigate(['/review']); }
+  // ...
 }

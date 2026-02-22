@@ -1,13 +1,11 @@
 import { Injectable, inject, signal, computed } from '@angular/core';
 import { VocabularyRepository } from '../../../core/repositories/vocabulary.repository';
-import { VocabularyItem, Rating, CardState } from '../../../core/models/vocabulary.model';
+import { VocabularyItem, Rating } from '../../../core/models/vocabulary.model';
 import { SpacedRepetitionService } from '../../../core/services/spaced-repetition.service';
 
 export type LearningMode = 'DE_TO_EN' | 'EN_TO_DE';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class LearningSessionService {
     private repo = inject(VocabularyRepository);
     private algo = inject(SpacedRepetitionService);
@@ -18,11 +16,9 @@ export class LearningSessionService {
     private _isFlipped = signal<boolean>(false);
     private _isLoading = signal<boolean>(true);
 
-    // ✅ TIMING STATE
     private _cardShownAt = 0;
     private _cardFlippedAt = 0;
 
-    // Computeds
     readonly currentCard = computed(() => this._sessionItems()[this._currentIndex()] || null);
     readonly mode = this._mode.asReadonly();
     readonly isFlipped = this._isFlipped.asReadonly();
@@ -73,10 +69,7 @@ export class LearningSessionService {
 
     toggleFlip() {
         if (!this._isFlipped()) {
-            // Capture flip time (Thinking ends here)
             this._cardFlippedAt = Date.now();
-
-            // ✅ TRIGGER HAPTIC GENDER CUE (Sensory Binding)
             const card = this.currentCard();
             if (card) this.playGenderHaptics(card);
         }
@@ -87,24 +80,17 @@ export class LearningSessionService {
         const card = this.currentCard();
         if (!card) return;
 
-        // 1. Calculate Thinking Time
-        // Thinking = (Flip Time) - (Show Time)
         const recallMoment = this._cardFlippedAt > 0 ? this._cardFlippedAt : Date.now();
         const thinkingDuration = recallMoment - this._cardShownAt;
 
-        // 2. Feedback Haptics
         this.playFeedbackHaptics(correct);
 
-        // 3. Run FSRS Algorithm
         const rating = correct ? Rating.Good : Rating.Again;
         const updates = this.algo.processReview(card, rating, thinkingDuration);
 
-        // 4. Persist
-        const updatedCard = { ...card, ...updates };
-        await this.repo.updateProgress(updatedCard.id, updatedCard);
-        this.markForSync(updatedCard);
+        // Update IDB instantly. FSRS is separated from the dictionary payload.
+        await this.repo.updateProgress(card.id, updates);
 
-        // 5. Next Card
         this._isFlipped.set(false);
         this._currentIndex.update(i => i + 1);
 
@@ -116,58 +102,22 @@ export class LearningSessionService {
         this._cardFlippedAt = 0;
     }
 
-    private markForSync(item: VocabularyItem) {
-        const queue = JSON.parse(localStorage.getItem('sync_queue') || '[]');
-        queue.push({
-            id: item.id,
-            state: item.state,
-            difficulty: item.difficulty,
-            stability: item.stability,
-            reps: item.reps,
-            lapses: item.lapses,
-            nextReviewDate: item.nextReviewDate,
-            isLeech: item.isLeech, // Include new flag in sync
-            timestamp: Date.now()
-        });
-        localStorage.setItem('sync_queue', JSON.stringify(queue));
-    }
-
-    // --- HAPTIC ENGINE ---
-
     private playGenderHaptics(card: VocabularyItem) {
-        if (!navigator.vibrate) return;
-
-        // Only play for Nouns that have a gender
-        if (card.type !== 'noun' || card.gender === 'none') return;
-
+        if (!navigator.vibrate || card.type !== 'noun' || card.gender === 'none') return;
         try {
             switch (card.gender) {
-                case 'der':
-                    // Masculine: One Heavy Thud
-                    navigator.vibrate(70);
-                    break;
-                case 'die':
-                    // Feminine: Two Light Ticks
-                    navigator.vibrate([30, 50, 30]);
-                    break;
-                case 'das':
-                    // Neuter: One Long Smooth Hum
-                    navigator.vibrate(150);
-                    break;
+                case 'der': navigator.vibrate(70); break;
+                case 'die': navigator.vibrate([30, 50, 30]); break;
+                case 'das': navigator.vibrate(150); break;
             }
-        } catch (e) {
-            // Ignore haptic errors on unsupported devices
-        }
+        } catch (e) { }
     }
 
     private playFeedbackHaptics(correct: boolean) {
         if (!navigator.vibrate) return;
         try {
-            if (correct) {
-                navigator.vibrate(50); // Crisp "Click"
-            } else {
-                navigator.vibrate([30, 50, 30]); // "Buzz-Buzz" (Error)
-            }
+            if (correct) navigator.vibrate(50);
+            else navigator.vibrate([30, 50, 30]);
         } catch (e) { }
     }
 }

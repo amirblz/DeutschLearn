@@ -30,16 +30,14 @@ export interface VocabularyItem {
     gender: Gender;
     exampleSentence?: string;
 
-    // FSRS Data
+    // FSRS Data (Now handled separately in IDB, but merged for the UI)
     state: CardState;
     difficulty: number;
     stability: number;
     retrievability: number;
     reps: number;
     lapses: number;
-
-    // ✅ NEW: Efficiency Metric
-    isLeech?: boolean; // True if the user fails this card repeatedly (Efficiency Drain)
+    isLeech?: boolean;
 
     lastReviewedDate?: number;
     nextReviewDate: number;

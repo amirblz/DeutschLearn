@@ -1,12 +1,21 @@
 import { VocabularyItem } from '../models/vocabulary.model';
 
-// ✅ SHARED DEFINITION: No 'box'. FSRS data lives inside the encrypted 'payload'.
-export interface EncryptedWrapper {
+export interface DictionaryItem {
     id: string;
     missionId: string;
+    payload: string; // Encrypted static data
+}
+
+export interface ProgressItem {
+    id: string;
+    state: number;
+    difficulty: number;
+    stability: number;
+    reps: number;
+    lapses: number;
     nextReviewDate: number;
     lastReviewedDate?: number;
-    payload: string; // Encrypted blob containing { state, difficulty, stability, german, english... }
+    isLeech?: boolean;
 }
 
 export abstract class VocabularyRepository {
@@ -14,17 +23,12 @@ export abstract class VocabularyRepository {
     abstract getByMissionId(missionId: string): Promise<VocabularyItem[]>;
     abstract getDueItems(timestamp: number): Promise<VocabularyItem[]>;
 
-    abstract addBulk(items: VocabularyItem[]): Promise<void>;
-    abstract deleteBulk(ids: string[]): Promise<void>;
+    // Fast $O(1)$ Updates (No encryption required here anymore!)
+    abstract updateProgress(id: string, progress: Partial<ProgressItem>): Promise<void>;
 
-    // ✅ UNIFIED SIGNATURE: We pass the full item because FSRS data (D/S/R) 
-    // needs to be re-encrypted into the payload.
-    abstract updateProgress(
-        id: string,
-        updatedItem: VocabularyItem
-    ): Promise<void>;
-
-    // ✅ RAW ACCESS: For Sync
-    abstract upsertRawWrappers(wrappers: EncryptedWrapper[]): Promise<void>;
-    abstract getAllWrappers(): Promise<EncryptedWrapper[]>;
+    // Sync Operations
+    abstract upsertDictionary(items: DictionaryItem[]): Promise<void>;
+    abstract upsertProgress(items: ProgressItem[]): Promise<void>;
+    abstract getLocalProgressToSync(): Promise<ProgressItem[]>;
+    abstract clearSyncQueue(): Promise<void>;
 }
