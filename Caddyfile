@@ -1,4 +1,4 @@
-balazlee.ir, www.balazlee.ir {
+http://balazlee.ir, http://www.balazlee.ir {
     encode zstd gzip
     
     handle_path /api/* {
