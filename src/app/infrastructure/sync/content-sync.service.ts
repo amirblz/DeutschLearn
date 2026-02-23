@@ -57,19 +57,13 @@ export class ContentSyncService {
       this.curriculum.set(levels);
       localStorage.setItem(this.STORAGE_KEY_DATA, JSON.stringify(levels));
 
-      // 3. Download Edge-Cached Dictionary in CHUNKS
-      const meta = await firstValueFrom(this.http.get<{ total: number }>(`${this.API_URL}/dictionary/meta`));
-      const limit = 5000;
-      const totalPages = Math.ceil(meta.total / limit);
+      // 3. 🚀 NEW: Download the entire static dictionary export in one shot
+      const dictData = await firstValueFrom(
+        this.http.get<DictionaryItem[]>(`${this.API_URL}/dictionary/export`)
+      );
 
-      for (let page = 1; page <= totalPages; page++) {
-        const dictRes = await firstValueFrom(
-          this.http.get<{ data: DictionaryItem[] }>(`${this.API_URL}/dictionary?page=${page}&limit=${limit}`)
-        );
-
-        if (dictRes.data && dictRes.data.length > 0) {
-          await this.repo.upsertDictionary(dictRes.data);
-        }
+      if (dictData && dictData.length > 0) {
+        await this.repo.upsertDictionary(dictData);
       }
 
       // 4. Download User Progress
@@ -84,7 +78,7 @@ export class ContentSyncService {
       console.log('[ContentSync] ✅ Sync complete.');
 
     } catch (err) {
-      console.warn('[ContentSync] ⚠️ Sync failed (Offline or Auth Error)', err);
+      console.warn('[ContentSync] ⚠️ Sync failed (Offline or Server Error)', err);
     }
   }
 
