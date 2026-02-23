@@ -3,7 +3,11 @@ import { VocabularyItem } from '../models/vocabulary.model';
 export interface DictionaryItem {
     id: string;
     missionId: string;
-    payload: string; // Encrypted static data
+    type: VocabularyItem['type'];     // 🚀 Automatically perfectly matches the base model
+    german: string;
+    english: string;
+    gender: VocabularyItem['gender']; // 🚀 Automatically perfectly matches the base model
+    example?: string;
 }
 
 export interface ProgressItem {
@@ -23,10 +27,8 @@ export abstract class VocabularyRepository {
     abstract getByMissionId(missionId: string): Promise<VocabularyItem[]>;
     abstract getDueItems(timestamp: number): Promise<VocabularyItem[]>;
 
-    // Fast $O(1)$ Updates (No encryption required here anymore!)
     abstract updateProgress(id: string, progress: Partial<ProgressItem>): Promise<void>;
 
-    // Sync Operations
     abstract upsertDictionary(items: DictionaryItem[]): Promise<void>;
     abstract upsertProgress(items: ProgressItem[]): Promise<void>;
     abstract getLocalProgressToSync(): Promise<ProgressItem[]>;

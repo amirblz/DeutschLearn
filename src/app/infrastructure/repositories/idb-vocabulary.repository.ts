@@ -1,8 +1,7 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { openDB, DBSchema, IDBPDatabase } from 'idb';
 import { VocabularyRepository, DictionaryItem, ProgressItem } from '../../core/repositories/vocabulary.repository';
 import { VocabularyItem, CardState } from '../../core/models/vocabulary.model';
-import { EncryptionService } from '../../core/services/encryption.service';
 
 interface GermanAppDB extends DBSchema {
     dictionary: {
@@ -23,11 +22,10 @@ interface GermanAppDB extends DBSchema {
 
 @Injectable({ providedIn: 'root' })
 export class IdbVocabularyRepository implements VocabularyRepository {
-    private crypto = inject(EncryptionService);
     private dbPromise: Promise<IDBPDatabase<GermanAppDB>>;
 
     constructor() {
-        this.dbPromise = openDB<GermanAppDB>('german-learning-db', 5, {
+        this.dbPromise = openDB<GermanAppDB>('german-learning-db', 6, {
             upgrade(db) {
                 if (!db.objectStoreNames.contains('dictionary')) {
                     const dictStore = db.createObjectStore('dictionary', { keyPath: 'id' });
@@ -59,7 +57,6 @@ export class IdbVocabularyRepository implements VocabularyRepository {
     async updateProgress(id: string, progressUpdates: Partial<ProgressItem>): Promise<void> {
         const db = await this.dbPromise;
 
-        // 1. Update active progress store
         const tx = db.transaction('progress', 'readwrite');
         let current = await tx.store.get(id);
         if (!current) current = this.getDefaultProgress(id);
@@ -67,7 +64,6 @@ export class IdbVocabularyRepository implements VocabularyRepository {
         await tx.store.put(updated);
         await tx.done;
 
-        // 2. Add to Sync Queue
         const syncTx = db.transaction('sync_queue', 'readwrite');
         await syncTx.store.put(updated);
         await syncTx.done;
@@ -83,9 +79,6 @@ export class IdbVocabularyRepository implements VocabularyRepository {
         await db.clear('sync_queue');
     }
 
-    /**
-     * O(1) Fast fetch. Only reads FSRS numbers first, then ONLY decrypts the 50 cards you actually need.
-     */
     async getDueItems(timestamp: number): Promise<VocabularyItem[]> {
         const db = await this.dbPromise;
         const range = IDBKeyRange.upperBound(timestamp);
@@ -97,8 +90,12 @@ export class IdbVocabularyRepository implements VocabularyRepository {
         for (const prog of dueProgress) {
             const dictItem = await tx.store.get(prog.id);
             if (dictItem) {
-                const content = await this.crypto.decrypt<any>(dictItem.payload, dictItem.id);
-                results.push({ ...content, ...prog, missionId: dictItem.missionId });
+                results.push({
+                    ...prog,
+                    ...dictItem,
+                    exampleSentence: dictItem.example, // Map example to UI model
+                    retrievability: 1 // ✅ FIXED: Provide default FSRS baseline
+                });
             }
         }
         return results;
@@ -110,16 +107,17 @@ export class IdbVocabularyRepository implements VocabularyRepository {
         const progItems = await db.getAll('progress');
         const progMap = new Map(progItems.map(p => [p.id, p]));
 
-        return Promise.all(dictItems.map(async d => {
-            const content = await this.crypto.decrypt<any>(d.payload, d.id);
+        return dictItems.map(d => {
             const p = progMap.get(d.id) || this.getDefaultProgress(d.id);
-            return { ...content, ...p, missionId: d.missionId };
-        }));
+            return {
+                ...p,
+                ...d,
+                exampleSentence: d.example,
+                retrievability: 1 // ✅ FIXED
+            };
+        });
     }
 
-    /**
-     * Asynchronous chunking guarantees native-alike UI performance even when crunching 100,000 items.
-     */
     async getAll(): Promise<VocabularyItem[]> {
         const db = await this.dbPromise;
         const dictItems = await db.getAll('dictionary');
@@ -127,21 +125,22 @@ export class IdbVocabularyRepository implements VocabularyRepository {
         const progMap = new Map(progItems.map(p => [p.id, p]));
 
         const results: VocabularyItem[] = [];
-        const BATCH_SIZE = 250;
+        const BATCH_SIZE = 1000;
 
         for (let i = 0; i < dictItems.length; i += BATCH_SIZE) {
             const batch = dictItems.slice(i, i + BATCH_SIZE);
-            const decryptedBatch = await Promise.all(batch.map(async d => {
-                try {
-                    const content = await this.crypto.decrypt<any>(d.payload, d.id);
-                    const p = progMap.get(d.id) || this.getDefaultProgress(d.id);
-                    return { ...content, ...p, missionId: d.missionId };
-                } catch { return null; }
-            }));
+            const mappedBatch = batch.map(d => {
+                const p = progMap.get(d.id) || this.getDefaultProgress(d.id);
+                return {
+                    ...p,
+                    ...d,
+                    exampleSentence: d.example,
+                    retrievability: 1 // ✅ FIXED
+                };
+            });
 
-            results.push(...decryptedBatch.filter((x): x is VocabularyItem => x !== null));
-
-            // Yield to event loop to keep the UI from freezing
+            results.push(...mappedBatch);
+            // Yield to event loop
             await new Promise(resolve => setTimeout(resolve, 0));
         }
 
