@@ -70,7 +70,7 @@ import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.compon
     </div>
   `,
   styles: [`
-    :host { display: block; height: 100vh; background: var(--bg-surface-2); overflow: hidden; }
+    :host { display: block; height: 100%; background: var(--bg-surface-2); overflow: hidden; }
 
     .dating-layout {
       height: 100%; display: flex; flex-direction: column;

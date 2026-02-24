@@ -100,7 +100,7 @@ import { StudyStateService } from './core/services/study-state.service';
     </div>
   `,
   styles: [`
-    :host { display: block; height: 100dvh; overflow: hidden; }
+    :host { display: block; height: 100vh; width: 100%; overflow: hidden; }
 
     .app-shell { display: flex; height: 100%; width: 100%; }
 

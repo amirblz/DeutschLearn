@@ -28,18 +28,17 @@
     --safe-bottom: env(safe-area-inset-bottom, 20px);
 }
 
-html {
-    color-scheme: dark;
-}
-
+html,
 body {
+    color-scheme: dark;
+    width: 100%;
+    height: 100vh;
     margin: 0;
+    padding: 0;
+    overscroll-behavior: contain;
+
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--bg-app);
-    color: var(--text-primary);
-    -webkit-font-smoothing: antialiased;
-    overscroll-behavior-y: none;
-
     scrollbar-width: thin;
     scrollbar-color: var(--bg-surface-2) var(--bg-app);
 }

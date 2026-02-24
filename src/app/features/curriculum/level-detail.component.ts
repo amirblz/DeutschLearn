@@ -105,7 +105,7 @@ import { VocabularyItem, CardState } from '../../core/models/vocabulary.model';
     </div>
   `,
   styles: [`
-    :host { display: block; height: 100vh; background: #0B0E14; color: #E2E8F0; }
+    :host { display: block; height: 100%; background: #0B0E14; color: #E2E8F0; }
 
     .tactical-interface { height: 100%; display: flex; flex-direction: column; }
 

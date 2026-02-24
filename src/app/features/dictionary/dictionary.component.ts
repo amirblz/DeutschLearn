@@ -63,7 +63,7 @@ import { FlipCardComponent } from '../../shared/ui/flip-card/flip-card.component
     :host { display: block; height: 100%; }
 
     .library-container {
-      min-height: 100vh;
+      min-height: 100%;
       background: var(--bg-app);
       display: flex; flex-direction: column;
     }

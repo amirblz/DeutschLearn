@@ -59,7 +59,7 @@ import { CardState } from '../../core/models/vocabulary.model';
   `,
   // ... (Keep exact styles)
   styles: [`
-    :host { display: block; height: 100vh; background: #0f172a; color: white; overflow-y: auto; }
+    :host { display: block; height: 100%; background: #0f172a; color: white; overflow-y: auto; }
     .stats-bg { padding: 2rem 1.5rem 6rem 1.5rem; max-width: 600px; margin: 0 auto; }
 
     header { margin-bottom: 2rem; text-align: center; }
