@@ -36,12 +36,19 @@ import { Component, ElementRef, output, signal, computed, effect, input, untrack
     border-radius: 32px;
     position: relative;
     cursor: grab;
-    will-change: transform;
+    
+    /* 🛑 REMOVED: will-change: transform; (This causes the iOS Z-index freeze) */
+    
+    /* ✅ ADDED: Force iOS to treat this as an isolated 3D plane so it repaints z-index */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    
     box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5); 
   }
 
-  /* ✅ ADDED: The missing transition class */
   .card-container.is-animating {
+    /* ✅ ADDED: WebKit prefix for flawless iOS animations */
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
@@ -83,7 +90,8 @@ export class SwipeCardComponent {
     const x = this.currentX();
     const y = this.currentY();
     const rotate = x * 0.05;
-    return `translate3d(${x}px, ${y}px, 0) rotate(${rotate}deg)`;
+    /* ✅ FIXED: Use rotateZ for stable 3D compositing in iOS Safari */
+    return `translate3d(${x}px, ${y}px, 0) rotateZ(${rotate}deg)`;
   });
 
   nopeOpacity = computed(() => this.currentX() < 0 ? Math.min(Math.abs(this.currentX()) / 120, 1) : 0);
@@ -99,8 +107,6 @@ export class SwipeCardComponent {
       untracked(() => {
         this.isAnimating.set(false);
 
-        // ✅ CRITICAL iOS FIX: Wait for the DOM to process the removal of `.is-animating`
-        // before snapping the coordinates back to 0. This breaks the batch update!
         setTimeout(() => {
           this.currentX.set(0);
           this.currentY.set(0);
@@ -113,7 +119,7 @@ export class SwipeCardComponent {
     this.isDragging = true;
     this.isAnimating.set(false);
     this.startX = event.clientX;
-    (event.target as HTMLElement).setPointerCapture(event.pointerId);
+    /* 🛑 REMOVED: setPointerCapture. It conflicts with (window:pointerup) on iOS Safari */
   }
 
   onDragMove(event: PointerEvent) {
