@@ -24,8 +24,21 @@
     --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.2);
     --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
 
-    --safe-top: env(safe-area-inset-top, 20px);
-    --safe-bottom: env(safe-area-inset-bottom, 20px);
+    --safe-top: 0.5rem;
+
+    @supports (-webkit-touch-callout: none) {
+        @media (display-mode: standalone) {
+            --safe-top: env(safe-area-inset-top) !important;
+        }
+    }
+
+    --safe-bottom: 0.5rem;
+
+    @supports (-webkit-touch-callout: none) {
+        @media (display-mode: standalone) {
+            --safe-bottom: env(safe-area-inset-bottom) !important;
+        }
+    }
 }
 
 html,
