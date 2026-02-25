@@ -71,8 +71,7 @@ import { FlipCardComponent } from '../../shared/ui/flip-card/flip-card.component
     /* --- SEARCH HEADER --- */
     .search-header {
       position: sticky; top: 0; z-index: 50;
-      padding: 1rem 1.5rem;
-      /* Glass effect handled by global .glass class */
+      padding: var(--safe-top) 1rem 1rem 1rem;
       border-bottom: 1px solid var(--border-subtle);
     }
 

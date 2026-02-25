@@ -60,7 +60,7 @@ import { CardState } from '../../core/models/vocabulary.model';
   // ... (Keep exact styles)
   styles: [`
     :host { display: block; height: 100%; background: #0f172a; color: white; overflow-y: auto; }
-    .stats-bg { padding: 2rem 1.5rem 6rem 1.5rem; max-width: 600px; margin: 0 auto; }
+    .stats-bg { padding: var(--safe-top) 1.5rem var(--safe-bottom-and-footer) 1.5rem; max-width: 600px; margin: 0 auto; }
 
     header { margin-bottom: 2rem; text-align: center; }
     h1 { margin: 0; font-size: 1.8rem; background: linear-gradient(to right, #a5f3fc, #22d3ee); -webkit-background-clip: text; color: transparent; font-weight: 800; }

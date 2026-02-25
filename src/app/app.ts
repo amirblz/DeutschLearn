@@ -41,9 +41,7 @@ import { StudyStateService } from './core/services/study-state.service';
       </nav>
 
       <main class="stage">
-        <div class="stage-content">
           <router-outlet></router-outlet>
-        </div>
       </main>
 
       <nav class="mobile-bar">
@@ -138,21 +136,19 @@ import { StudyStateService } from './core/services/study-state.service';
 
     /* --- MAIN STAGE --- */
     .stage {
+      margin: 0;
+      padding: 0;
       flex: 1; position: relative;
       background: var(--bg-app);
-      overflow-y: auto; overflow-x: hidden;
-      padding-top: var(--safe-top);
-      padding-bottom: calc(65px + var(--safe-bottom)); 
-    }
-    .stage-content {
-      margin: 0 auto; width: 100%; height: 100%;
+      overflow: hidden;
+      width: 100%; height: 100%;
     }
 
     /* --- MOBILE NAV --- */
     .mobile-bar {
       position: fixed; bottom: 0; left: 0; right: 0;
       z-index: 100;
-      height: calc(60px + var(--safe-bottom));
+      padding-top: 1rem;
       padding-bottom: var(--safe-bottom);
       background: rgba(15, 17, 21, 0.85);
       border-top: 1px solid rgba(255,255,255,0.08);
