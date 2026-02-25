@@ -73,8 +73,9 @@ import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.compon
     :host { display: block; height: 100%; background: var(--bg-surface-2); overflow: hidden; }
 
     .dating-layout {
-      height: 100%; display: flex; flex-direction: column;
+      height: 100%; display: flex; flex-direction: column; 
       max-width: 500px; margin: 0 auto;
+      padding: var(--safe-top) 0 var(--safe-bottom-and-footer) 0;
     }
 
     /* Progress Line */

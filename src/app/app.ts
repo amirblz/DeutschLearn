@@ -3,9 +3,10 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 import { UpdateNotificationService } from './core/services/update-notification.service';
 import { StudyStateService } from './core/services/study-state.service';
+import { PwaInstallComponent } from './shared/components/pwa-install/pwa-install.component';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, PwaInstallComponent],
   template: `
     <div class="app-shell">
       
@@ -42,6 +43,8 @@ import { StudyStateService } from './core/services/study-state.service';
 
       <main class="stage">
           <router-outlet></router-outlet>
+
+          <app-pwa-install></app-pwa-install>
       </main>
 
       <nav class="mobile-bar">
