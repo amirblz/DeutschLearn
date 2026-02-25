@@ -125,6 +125,7 @@ import { LoginModalComponent } from '../auth/login-modal.component';
 
     /* --- LAYOUT --- */
     .obsidian-layout {
+    padding-bottom:var(--safe-bottom-and-footer);
       min-height: 100%;
       color: #E2E8F0;
       font-family: sans-serif;

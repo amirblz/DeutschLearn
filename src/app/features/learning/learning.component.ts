@@ -85,7 +85,7 @@ import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.compon
     /* Stack Layout */
     .stack-container {
       flex: 1; position: relative;
-      margin: 2rem 1.5rem 5rem 1.5rem; 
+      margin: var(--safe-top) 1.5rem var(--safe-bottom-and-footer) 1.5rem; 
       perspective: 1000px;
     }
 
