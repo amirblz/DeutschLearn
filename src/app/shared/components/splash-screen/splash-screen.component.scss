@@ -1,0 +1,104 @@
+.splash-container {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  /* Must sit above absolutely everything */
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Gracefully hides the component when the signal flips */
+.splash-container.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.compass-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: gentle-bob 3s ease-in-out infinite;
+}
+
+.app-title {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin: 0 0 3rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.progress-section {
+  width: 100%;
+}
+
+.message-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.percentage {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.track {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+  border-radius: 999px;
+  transition: width 0.2s ease-out;
+  /* Smooths the jumps between byte packets */
+}
+
+@keyframes gentle-bob {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}

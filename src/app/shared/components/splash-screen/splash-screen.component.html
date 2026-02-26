@@ -1,0 +1,21 @@
+<div class="splash-container" [class.fade-out]="!syncService.isSyncing()" aria-live="polite">
+
+  <div class="splash-content">
+    <div class="compass-icon">🧭</div>
+
+    <h1 class="app-title">Dein Reise</h1>
+    <p class="subtitle">Your German Learning Journey</p>
+
+    <div class="progress-section">
+      <div class="message-container">
+        <span class="status-message">{{ syncService.syncMessage() }}</span>
+        <span class="percentage">{{ syncService.syncProgress() | number:'1.0-0' }}%</span>
+      </div>
+
+      <div class="track" role="progressbar" [attr.aria-valuenow]="syncService.syncProgress()" aria-valuemin="0"
+        aria-valuemax="100">
+        <div class="fill" [style.width.%]="syncService.syncProgress()"></div>
+      </div>
+    </div>
+  </div>
+</div>
