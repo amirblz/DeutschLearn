@@ -1,7 +1,8 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient, HttpEventType } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
-import { VocabularyRepository, DictionaryItem, ProgressItem } from '../../core/repositories/vocabulary.repository';
+import { VocabularyRepository, ProgressItem } from '../repositories/vocabulary.repository';
+import { StudyStateService } from './study-state.service';
 
 export interface ApiLevel {
   id: string;
@@ -22,8 +23,7 @@ export class ContentSyncService {
 
   readonly curriculum = signal<ApiLevel[]>([]);
 
-  // 🚀 NEW: Signals to drive the Splash Screen
-  readonly isSyncing = signal<boolean>(true); // Starts true so it shows immediately
+  readonly isSyncing = signal<boolean>(true);
   readonly syncProgress = signal<number>(0);
   readonly syncMessage = signal<string>('Checking tickets...');
 
@@ -56,17 +56,18 @@ export class ContentSyncService {
     this.syncMessage.set('Boarding the train...');
 
     try {
+      // 1. Push any local offline progress to the server
       await this.pushLocalProgress();
 
+      // 2. Fetch the structure (Levels & Missions)
       this.syncProgress.set(10);
       this.syncMessage.set('Mapping the route...');
       const levels = await firstValueFrom(this.http.get<ApiLevel[]>(`${this.API_URL}/levels`));
       this.curriculum.set(levels);
       localStorage.setItem(this.STORAGE_KEY_DATA, JSON.stringify(levels));
 
+      // 3. Stream the massive dictionary file directly into IndexedDB
       this.syncMessage.set('Gathering your luggage...');
-
-      // 🚀 NEW: Download with real-time byte tracking
       const dictData = await this.downloadDictionaryWithProgress();
 
       if (dictData && Array.isArray(dictData)) {
@@ -77,6 +78,7 @@ export class ContentSyncService {
         }
       }
 
+      // 4. Pull the user's specific spaced-repetition progress
       this.syncProgress.set(90);
       this.syncMessage.set('Checking itinerary...');
       const progRes = await firstValueFrom(
@@ -87,10 +89,13 @@ export class ContentSyncService {
         await this.repo.upsertProgress(progRes.data);
       }
 
+      // 🚀 5. Fetch cloud metadata (Streak & Active Mission Resume State)
+      const studyState = inject(StudyStateService);
+      await studyState.fetchCloudMeta();
+
       this.syncProgress.set(100);
       this.syncMessage.set('Ready for departure!');
 
-      // Give the user a moment to see 100% before dismissing
       setTimeout(() => this.isSyncing.set(false), 600);
 
     } catch (err) {
@@ -109,10 +114,8 @@ export class ContentSyncService {
       }).subscribe({
         next: (event) => {
           if (event.type === HttpEventType.DownloadProgress) {
-            // Estimate 3MB if server drops Content-Length header due to compression
             const total = event.total || 3000000;
             const percent = Math.round((100 * event.loaded) / total);
-            // Scale this phase to represent 10% -> 85% of the total bar
             this.syncProgress.set(10 + (Math.min(percent, 100) * 0.75));
           } else if (event.type === HttpEventType.Response) {
             resolve(event.body || []);

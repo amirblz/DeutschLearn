@@ -16,54 +16,63 @@ import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.compon
 
       <div class="stack-container">
         
-        @if (store.nextCard(); as next) {
-          <div class="card-bg">
-            <app-flip-card 
-              [item]="next" 
-              [isFlipped]="false" 
-              [mode]="store.mode()">
-            </app-flip-card>
+        @if (store.isLoading()) {
+          <div class="loading-overlay">
+            <div class="radar-spinner"></div>
+            <p>Accessing memory banks...</p>
           </div>
-        }
-
-        @if (store.currentCard(); as current) {
-          <app-swipe-card 
-            class="card-top"
-            [itemKey]="current.id" 
-            (swipedLeft)="handleSwipe(false)"
-            (swipedRight)="handleSwipe(true)"
-            (cardTapped)="flip()"
-            (pointerdown)="dismissTutorial()">
-            
-            <app-flip-card 
-              [item]="current" 
-              [isFlipped]="store.isFlipped()" 
-              [mode]="store.mode()">
-            </app-flip-card>
-
-          </app-swipe-card>
-        }
-
-        @if (showTutorial()) {
-          <div class="tutorial-overlay">
-            <div class="hand-animation">
-              <div class="hand">👆</div>
+        } @else {
+          
+          @if (store.nextCard(); as next) {
+            <div class="card-bg">
+              <app-flip-card 
+                [item]="next" 
+                [isFlipped]="false" 
+                [mode]="store.mode()">
+              </app-flip-card>
             </div>
-            <div class="tutorial-text">
-              <div class="hint left"><span>← AGAIN</span></div>
-              <div class="hint right"><span>GOT IT →</span></div>
-            </div>
-            <p class="tutorial-sub">Tap to Flip</p>
-          </div>
-        }
+          }
 
-        @if (store.isSessionComplete()) {
-          <div class="complete-overlay">
-            <div class="trophy">🏆</div>
-            <h2>Session Complete</h2>
-            <p>You're all caught up!</p>
-            <button class="btn-primary" (click)="store.loadDueCards()">Check Again</button>
-          </div>
+          @if (store.currentCard(); as current) {
+            <app-swipe-card 
+              class="card-top"
+              [itemKey]="current.id" 
+              (swipedLeft)="handleSwipe(false)"
+              (swipedRight)="handleSwipe(true)"
+              (cardTapped)="flip()"
+              (pointerdown)="dismissTutorial()">
+              
+              <app-flip-card 
+                [item]="current" 
+                [isFlipped]="store.isFlipped()" 
+                [mode]="store.mode()">
+              </app-flip-card>
+
+            </app-swipe-card>
+          }
+
+          @if (showTutorial() && !store.isSessionComplete()) {
+            <div class="tutorial-overlay">
+              <div class="hand-animation">
+                <div class="hand">👆</div>
+              </div>
+              <div class="tutorial-text">
+                <div class="hint left"><span>← AGAIN</span></div>
+                <div class="hint right"><span>GOT IT →</span></div>
+              </div>
+              <p class="tutorial-sub">Tap to Flip</p>
+            </div>
+          }
+
+          @if (store.isSessionComplete()) {
+            <div class="complete-overlay">
+              <div class="trophy">🏆</div>
+              <h2>Session Complete</h2>
+              <p>You're all caught up!</p>
+              <button class="btn-primary" (click)="store.initializeSession()">Check Again</button>
+            </div>
+          }
+
         }
       </div>
 
@@ -78,42 +87,48 @@ import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.compon
       padding: var(--safe-top) 0 var(--safe-bottom-and-footer) 0;
     }
 
-    /* Progress Line */
     .progress-line { height: 4px; background:var(--glass-panel); width: 100%; }
     .fill { height: 100%; background:var(--primary); transition: width 0.3s; }
 
-    /* Stack Layout */
     .stack-container {
       flex: 1; position: relative;
       margin: var(--safe-top) 1.5rem var(--safe-bottom-and-footer) 1.5rem; 
       perspective: 1000px;
     }
 
-    /* Background Card Styling */
-.card-bg {
-    position: absolute; inset: 0;
-    transform: scale(0.92) translateY(30px); 
-    border-radius: 32px;
-    background: var(--bg-surface-2);
-    box-shadow: var(--shadow-lg);
-    opacity: 1;
-    pointer-events: none;
-    z-index: 1;
-  }
-  
-  /* The active card */
-  .card-top { z-index: 10; }
+    .loading-overlay {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: #64748b; font-family: monospace; font-size: 0.8rem; letter-spacing: 1px;
+    }
+    .radar-spinner {
+      width: 40px; height: 40px; margin-bottom: 1rem;
+      border: 3px solid rgba(59, 130, 246, 0.1);
+      border-top-color: #3B82F6;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* --- TUTORIAL OVERLAY --- */
+    .card-bg {
+      position: absolute; inset: 0;
+      transform: scale(0.92) translateY(30px); 
+      border-radius: 32px;
+      background: var(--bg-surface-2);
+      box-shadow: var(--shadow-lg);
+      opacity: 1; pointer-events: none; z-index: 1;
+    }
+  
+    .card-top { z-index: 10; }
+
     .tutorial-overlay {
       position: absolute; inset: 0; z-index: 50; pointer-events: none;
       display: flex; flex-direction: column; justify-content: center; align-items: center;
-      background: rgba(255,255,255,0.1); /* Very subtle tint */
+      background: rgba(255,255,255,0.1);
     }
     
     .hand-animation {
-      font-size: 4rem;
-      animation: swipe-hint 2s infinite ease-in-out;
+      font-size: 4rem; animation: swipe-hint 2s infinite ease-in-out;
       filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
     }
 
@@ -128,25 +143,22 @@ import { SwipeCardComponent } from '../../shared/ui/swipe-card/swipe-card.compon
       letter-spacing: 1px;
     }
     .tutorial-sub {
-        position: absolute; bottom: 10%; 
-        background: rgba(0,0,0,0.7); color: white;
+        position: absolute; bottom: 10%; background: rgba(0,0,0,0.7); color: white;
         padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
     }
 
     @keyframes swipe-hint {
       0% { transform: translateX(0) rotate(0deg); opacity: 0; }
       10% { opacity: 1; }
-      25% { transform: translateX(-50px) rotate(-10deg); } /* Left hint */
+      25% { transform: translateX(-50px) rotate(-10deg); }
       50% { transform: translateX(0) rotate(0deg); }
-      75% { transform: translateX(50px) rotate(10deg); } /* Right hint */
+      75% { transform: translateX(50px) rotate(10deg); }
       90% { opacity: 1; }
       100% { transform: translateX(0) rotate(0deg); opacity: 0; }
     }
 
-    /* Complete State */
     .complete-overlay {
-      text-align: center; margin-top: 30%;
-      animation: popIn 0.5s;
+      text-align: center; margin-top: 30%; animation: popIn 0.5s;
     }
     .trophy { font-size: 5rem; margin-bottom: 1rem; }
     .complete-overlay h2 { color: #1e293b; margin: 0; }
@@ -168,7 +180,6 @@ export class LearningComponent implements OnInit {
   showTutorial = signal(false);
 
   ngOnInit() {
-    // Check if user has seen tutorial before
     const seen = localStorage.getItem('app_tutorial_seen');
     if (!seen) {
       this.showTutorial.set(true);

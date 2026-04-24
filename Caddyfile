@@ -1,4 +1,7 @@
-http://balazlee.ir, http://www.balazlee.ir {
+wordy.cards, www.wordy.cards {
+    # Tell Caddy to use the Cloudflare Origin Certs
+    tls /etc/caddy/certs/cert.pem /etc/caddy/certs/key.pem
+
     encode zstd gzip
     
     handle_path /api/* {

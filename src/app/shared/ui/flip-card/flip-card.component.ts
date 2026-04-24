@@ -14,7 +14,7 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
            [class]="isGermanFront() ? getGenderClass() : 'neutral'">
          
          <div class="card-header">
-           <span class="type-pill">{{ item().type }}</span>
+           <span class="type-pill">{{ item().type || 'UNKNOWN' }}</span>
          </div>
 
          <div class="center-stage">
@@ -22,7 +22,9 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
               <div class="article-bubble">{{ getArticle() }}</div>
             }
 
-            <h1 class="main-text" [class.long]="isLongText()">
+            <h1 class="main-text" 
+                [class.long]="isLongText()"
+                [class.error-text]="frontText() === '[DATA MISSING]'">
               {{ frontText() }}
             </h1>
          </div>
@@ -42,7 +44,9 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
             {{ isGermanFront() ? 'English' : 'Deutsch' }}
           </span>
           
-          <h2 class="sub-text">{{ backText() }}</h2>
+          <h2 class="sub-text" [class.error-text]="backText() === '[DATA MISSING]'">
+            {{ backText() }}
+          </h2>
           
           @if (!isGermanFront() && hasArticle()) {
             <div class="revealed-article">{{ getArticle() }}</div>
@@ -123,6 +127,8 @@ import { LearningMode } from '../../../features/learning/services/learning-sessi
       text-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .main-text.long { font-size: 2.2rem; }
+    
+    .error-text { color: #F87171 !important; font-family: monospace; font-size: 2rem !important; }
 
     .card-footer { padding: 2rem; display: flex; justify-content: center; }
     .tap-indicator {
@@ -160,19 +166,43 @@ export class FlipCardComponent {
   }
 
   isGermanFront = computed(() => this.mode() === 'DE_TO_EN');
-  hasArticle = computed(() => this.item().type === 'noun' && this.item().gender !== 'none');
-  isLongText = computed(() => this.frontText().length > 10);
 
-  frontText = computed(() => this.isGermanFront() ? this.item().german : this.item().english);
-  backText = computed(() => this.isGermanFront() ? this.item().english : this.item().german);
+  hasArticle = computed(() => {
+    const it = this.item();
+    return it && it.type === 'noun' && it.gender !== 'none';
+  });
 
-  getArticle() { return this.item().gender.toUpperCase(); }
+  frontText = computed(() => {
+    const it = this.item();
+    if (!it) return '[DATA MISSING]';
+    const text = this.isGermanFront() ? it.german : it.english;
+    return text ? text : '[DATA MISSING]';
+  });
+
+  backText = computed(() => {
+    const it = this.item();
+    if (!it) return '[DATA MISSING]';
+    const text = this.isGermanFront() ? it.english : it.german;
+    return text ? text : '[DATA MISSING]';
+  });
+
+  isLongText = computed(() => {
+    const text = this.frontText();
+    return text ? text.length > 10 : false;
+  });
+
+  getArticle() {
+    return this.item()?.gender?.toUpperCase() || '';
+  }
 
   getGenderClass() {
-    if (this.item().type === 'verb') return 'verb';
-    if (this.item().gender === 'der') return 'masc';
-    if (this.item().gender === 'die') return 'fem';
-    if (this.item().gender === 'das') return 'neut';
+    const it = this.item();
+    if (!it) return 'neutral';
+
+    if (it.type === 'verb') return 'verb';
+    if (it.gender === 'der') return 'masc';
+    if (it.gender === 'die') return 'fem';
+    if (it.gender === 'das') return 'neut';
     return 'verb';
   }
 }

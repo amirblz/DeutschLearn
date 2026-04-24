@@ -2,7 +2,7 @@ import { Component, inject, output, signal, ChangeDetectionStrategy } from '@ang
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../../core/services/auth.service';
-import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
+import { ContentSyncService } from '../../core/services/content-sync.service';
 
 @Component({
   selector: 'app-login-modal',

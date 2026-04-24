@@ -3,10 +3,10 @@ import { provideRouter, withComponentInputBinding, withViewTransitions } from '@
 
 import { routes } from './app.routes';
 import { VocabularyRepository } from './core/repositories/vocabulary.repository';
-import { IdbVocabularyRepository } from './infrastructure/repositories/idb-vocabulary.repository';
 import { provideServiceWorker } from '@angular/service-worker';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { ContentSyncService } from './infrastructure/sync/content-sync.service';
+import { ContentSyncService } from './core/services/content-sync.service';
+import { IdbVocabularyRepository } from './core/repositories/idb-vocabulary.repository';
 
 export const appConfig: ApplicationConfig = {
   providers: [

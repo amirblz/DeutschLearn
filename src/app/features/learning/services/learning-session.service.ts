@@ -2,6 +2,7 @@ import { Injectable, inject, signal, computed } from '@angular/core';
 import { VocabularyRepository } from '../../../core/repositories/vocabulary.repository';
 import { VocabularyItem, Rating } from '../../../core/models/vocabulary.model';
 import { SpacedRepetitionService } from '../../../core/services/spaced-repetition.service';
+import { StudyStateService } from '../../../core/services/study-state.service';
 
 export type LearningMode = 'DE_TO_EN' | 'EN_TO_DE';
 
@@ -9,6 +10,7 @@ export type LearningMode = 'DE_TO_EN' | 'EN_TO_DE';
 export class LearningSessionService {
     private repo = inject(VocabularyRepository);
     private algo = inject(SpacedRepetitionService);
+    private studyState = inject(StudyStateService);
 
     private _mode = signal<LearningMode>('DE_TO_EN');
     private _sessionItems = signal<VocabularyItem[]>([]);
@@ -22,12 +24,19 @@ export class LearningSessionService {
     readonly currentCard = computed(() => this._sessionItems()[this._currentIndex()] || null);
     readonly mode = this._mode.asReadonly();
     readonly isFlipped = this._isFlipped.asReadonly();
-    readonly isSessionComplete = computed(() => this._currentIndex() >= this._sessionItems().length);
+    readonly isLoading = this._isLoading.asReadonly();
+
+    readonly isSessionComplete = computed(() => {
+        if (this._isLoading()) return false;
+        return this._currentIndex() >= this._sessionItems().length;
+    });
+
     readonly nextCard = computed(() => {
         const nextIndex = this._currentIndex() + 1;
         const items = this._sessionItems();
         return nextIndex < items.length ? items[nextIndex] : null;
     });
+
     readonly progress = computed(() => ({
         current: this._currentIndex() + 1,
         total: this._sessionItems().length,
@@ -35,33 +44,72 @@ export class LearningSessionService {
     }));
 
     constructor() {
-        this.loadDueCards();
+        this.initializeSession();
+    }
+
+    async initializeSession() {
+        this._isLoading.set(true);
+
+        await new Promise(r => setTimeout(r, 100));
+
+        const now = Date.now();
+        const allItems = await this.repo.getAll();
+
+        // 1. PRIORITY ONE: Global Overdue Reviews
+        const dueReviews = allItems
+            .filter(item => item.lastReviewedDate && item.nextReviewDate <= now)
+            .sort((a, b) => a.nextReviewDate - b.nextReviewDate);
+
+        if (dueReviews.length > 0) {
+            this._sessionItems.set(dueReviews.slice(0, 50));
+            this._currentIndex.set(0);
+            this._isFlipped.set(false);
+            this._isLoading.set(false);
+            this.resetTimers();
+            return;
+        }
+
+        // 2. PRIORITY TWO: Resume Active Mission
+        const activeMissionId = this.studyState.activeMission();
+        if (activeMissionId) {
+            const missionItems = allItems.filter(i => i.missionId === activeMissionId);
+
+            const pendingMissionItems = missionItems
+                .filter(item => !item.lastReviewedDate || item.nextReviewDate <= now)
+                .sort((a, b) => a.nextReviewDate - b.nextReviewDate);
+
+            if (pendingMissionItems.length > 0) {
+                this._sessionItems.set(pendingMissionItems);
+                this._currentIndex.set(0);
+                this._isFlipped.set(false);
+                this._isLoading.set(false);
+                this.resetTimers();
+                return;
+            } else {
+                this.studyState.setActiveMission(null);
+            }
+        }
+
+        this._sessionItems.set([]);
+        this._isLoading.set(false);
     }
 
     async startSession(missionId: string, mode: LearningMode) {
         this._mode.set(mode);
         this._isLoading.set(true);
 
+        this.studyState.setActiveMission(missionId);
+
         const allMissionItems = await this.repo.getByMissionId(missionId);
         const now = Date.now();
-        const dueItems = allMissionItems
-            .filter(item => item.nextReviewDate <= now)
+
+        const sessionItems = allMissionItems
+            .filter(item => !item.lastReviewedDate || item.nextReviewDate <= now)
             .sort((a, b) => a.nextReviewDate - b.nextReviewDate);
 
-        this._sessionItems.set(dueItems);
+        this._sessionItems.set(sessionItems);
         this._currentIndex.set(0);
         this._isFlipped.set(false);
-        this._isLoading.set(false);
-
-        this.resetTimers();
-    }
-
-    async loadDueCards() {
-        this._isLoading.set(true);
-        const items = (await this.repo.getDueItems(Date.now()))
-            .sort((a, b) => a.nextReviewDate - b.nextReviewDate);
-
-        this._sessionItems.set(items.slice(0, 50));
         this._isLoading.set(false);
 
         this.resetTimers();
@@ -88,7 +136,6 @@ export class LearningSessionService {
         const rating = correct ? Rating.Good : Rating.Again;
         const updates = this.algo.processReview(card, rating, thinkingDuration);
 
-        // Update IDB instantly. FSRS is separated from the dictionary payload.
         await this.repo.updateProgress(card.id, updates);
 
         this._isFlipped.set(false);

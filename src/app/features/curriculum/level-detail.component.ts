@@ -1,7 +1,7 @@
 import { Component, inject, signal, computed, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { ContentSyncService } from '../../infrastructure/sync/content-sync.service';
+import { ContentSyncService } from '../../core/services/content-sync.service';
 import { VocabularyRepository } from '../../core/repositories/vocabulary.repository';
 import { LearningSessionService } from '../../features/learning/services/learning-session.service';
 import { VocabularyItem, CardState } from '../../core/models/vocabulary.model';

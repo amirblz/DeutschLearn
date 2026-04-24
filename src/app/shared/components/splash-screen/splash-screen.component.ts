@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
-import { ContentSyncService } from '../../../infrastructure/sync/content-sync.service';
+import { ContentSyncService } from '../../../core/services/content-sync.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
