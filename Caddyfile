@@ -1,13 +1,16 @@
 wordy.cards, www.wordy.cards {
-    # Tell Caddy to use the Cloudflare Origin Certs
+    # 1. Force HTTPS and use the Cloudflare Origin Certificates
     tls /etc/caddy/certs/cert.pem /etc/caddy/certs/key.pem
 
+    # 2. Compression
     encode zstd gzip
     
+    # 3. API Routing (Strips /api and sends to NestJS)
     handle_path /api/* {
         reverse_proxy server:3000
     }
 
+    # 4. Frontend Routing
     handle {
         root * /srv
         try_files {path} /index.html
