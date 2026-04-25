@@ -19,7 +19,7 @@ jobs:
           echo "📦 Saving client image..."
           docker save journey-client:latest -o client.tar
           gzip client.tar
-          sudo chmod 644 client.tar.gz
+          chmod 644 client.tar.gz
 
       - name: Upload to VPS
         uses: appleboy/scp-action@v0.1.7
@@ -28,7 +28,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "client.tar.gz"
-          target: "/root/app"
+          target: "/root/wordy-cards"
 
       - name: Load & Start Client
         uses: appleboy/ssh-action@v1.0.3
@@ -37,14 +37,23 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /root/app
+            # Ensure the unified directory exists
+            mkdir -p /root/wordy-cards
+            cd /root/wordy-cards
             
+            # 1. Inject Cloudflare Certificates from GitHub Secrets
+            mkdir -p certs
+            echo "${{ secrets.CF_CERT_PEM }}" > certs/cert.pem
+            echo "${{ secrets.CF_KEY_PEM }}" > certs/key.pem
+            
+            # 2. Extract and load the new image
             gunzip -f client.tar.gz
             docker load -i client.tar
             
-            # Update ONLY the client container
+            # 3. Start Caddy client (Enforcing the project name)
             docker compose -p wordy-cards -f docker-compose.prod.yml up -d client
 
+            # 4. Clean up temporary files
             rm client.tar
             docker image prune -f
             echo "✅ Frontend Deployed!"
