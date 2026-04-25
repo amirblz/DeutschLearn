@@ -43,8 +43,8 @@ jobs:
             docker load -i client.tar
             
             # Update ONLY the client container
-            docker compose -f docker-compose.prod.yml up -d client
-            
+            docker compose -p wordy-cards -f docker-compose.prod.yml up -d client
+
             rm client.tar
             docker image prune -f
             echo "✅ Frontend Deployed!"
