@@ -1,0 +1,112 @@
+<div class="obsidian-layout">
+  <header class="cyber-header">
+    <div class="user-rank">
+      <div class="rank-icon" aria-hidden="true"></div>
+      <div class="rank-info">
+        <span class="label">Path Covered</span>
+        <span class="value">{{ currentAltitude() | number }}m</span>
+      </div>
+    </div>
+
+    <div class="hud-controls">
+      <button class="uplink-btn" [class.connected]="auth.isAuthenticated()" (click)="showLogin.set(true)">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="uplink-text">
+          {{ auth.isAuthenticated() ? 'SIGNAL ACTIVE' : 'ESTABLISH LINK' }}
+        </span>
+      </button>
+
+      <div class="stats-matrix">
+        <div class="stat-cell">
+          <span class="val">{{ studyState.streakDays() }}</span>
+          <span class="lbl">Streak</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="rectangular-hero-section">
+    <div class="rectangular-hero" role="button" tabindex="0" (click)="goToSystem()" (keydown.enter)="goToSystem()"
+      [attr.aria-label]="heroAriaLabel()">
+
+      <div class="hero-glow" [class.urgent-glow]="studyState.dueCount() > 0"></div>
+
+      <div class="core-data">
+        @if (studyState.dueCount() > 0) {
+        <div class="active-core urgent">
+          <span class="sub text-blue">DUE NOW</span>
+          <span class="count">{{ studyState.dueCount() }}</span>
+          <button class="resume-btn action-btn pulse" (click)="onStartReview($event)">
+            START REVIEW
+          </button>
+        </div>
+        } @else if (dailyProgress() >= dailyGoal()) {
+        <div class="success-core">
+          <span class="icon-check" aria-hidden="true">✓</span>
+          <span class="status">OBJECTIVE MET</span>
+        </div>
+        } @else {
+        <div class="active-core">
+          <span class="sub">DAILY TARGET</span>
+          <span class="count">{{ dailyProgress() }} <span class="total">/ {{ dailyGoal() }}</span></span>
+          <button class="resume-btn" (click)="onViewStats($event)">
+            VIEW STATS
+          </button>
+        </div>
+        }
+      </div>
+
+      <div class="progress-bar-container" aria-hidden="true">
+        <div class="progress-bar-fill" [class.urgent-fill]="studyState.dueCount() > 0"
+          [style.width.%]="progressPercentage()">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="atlas-scroll">
+    <h3 class="section-header">Zones</h3>
+
+    <div class="card-track">
+      @for (level of sync.curriculum(); track level.id) {
+      <div class="portal-card" role="button" tabindex="0" (click)="openLevel(level.id)"
+        (keydown.enter)="openLevel(level.id)">
+
+        @defer (on viewport) {
+        <video #bgVideo class="bg-video" [src]="getVideoPath(level.id)" [poster]="getPosterPath(level.id)" muted
+          playsinline autoplay [style.opacity]="0.5">
+        </video>
+        } @placeholder {
+        <img class="bg-poster" [ngSrc]="getPosterPath(level.id)" fill alt="Atmosphere visual representation">
+        }
+
+        <div class="atmosphere-overlay" aria-hidden="true"></div>
+
+        <div class="data-layer">
+          <div class="level-id" aria-hidden="true">{{ level.id }}</div>
+
+          <div class="level-meta">
+            <h4>{{ getRealWorldName(level.id) }}</h4>
+
+            <div class="progress-line" aria-hidden="true">
+              <div class="fill" [style.width.%]="getLevelStats(level.id).percent"></div>
+            </div>
+
+            <div class="meta-row">
+              <span class="pct">{{ getLevelStats(level.id).percent | number:'1.0-0' }}% Covered</span>
+              <span class="status-indicator" [class.active]="getLevelStats(level.id).percent > 0"
+                [class.complete]="getLevelStats(level.id).percent >= 100">
+                {{ getLevelStatusText(level.id) }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+
+  @if (showLogin()) {
+  <app-login-modal (close)="showLogin.set(false)"></app-login-modal>
+  }
+</div>

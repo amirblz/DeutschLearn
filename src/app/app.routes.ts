@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './features/curriculum/dashboard.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { LearningComponent } from './features/learning/learning.component';
 import { LevelDetailComponent } from './features/curriculum/level-detail.component';
 import { DictionaryComponent } from './features/dictionary/dictionary.component';
